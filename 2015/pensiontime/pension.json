@@ -1,0 +1,40 @@
+{
+    "timeline":
+    {
+        "headline":"State pensions' downfall",
+        "type":"default",
+        "text":"How red ink grew under various governors state pension systems like the Teachers Retirement System.",
+        "startDate":"1933",
+        "date": [
+			{"startDate":"1933","endDate":"1940","headline":"Gov. Henry Horner","text":"Democrat","asset":{"media":"ilgovs_Horner.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1939","endDate":null,"headline":"1939","text":"Teachers’ Retirement System established.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1940","endDate":null,"headline":"1940s on","text":"State contributes to Teachers’ Retirement System based only on making sure there are enough funds to cover that year’s pension checks, with no planning ahead.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1940","endDate":"1941","headline":"Gov. John H. Stelle","text":"Democrat","asset":{"media":"ilgovs_Stelle.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1941","endDate":"1949","headline":"Gov. Dwight H. Green","text":"Republican","asset":{"media":"ilgovs_Green.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1949","endDate":"1953","headline":"Gov. Adlai E.<br>Stevenson II","text":"Democrat","asset":{"media":"ilgovs_Stevenson.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1950","endDate":null,"headline":"1950","text":"Retirement system officials warn state’s contributions are lagging and creating unsound economics.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1953","endDate":"1961","headline":"Gov. Wiliam G.<br>Stratton","text":"Republican","asset":{"media":"ilgovs_Stratton.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1961","endDate":"1968","headline":"Gov. Otto Kerner","text":"Democrat","asset":{"media":"ilgovs_Kerner.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1968","endDate":"1969","headline":"Gov. Samual H. Shapiro","text":"Democrat","asset":{"media":"ilgovs_Shapiro.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1969","endDate":"1973","headline":"Gov. Richard B.<br>Olgilvie","text":"Republican","asset":{"media":"ilgovs_Olgilvie.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1970","endDate":null,"headline":"1970","text":"Teachers’ and other state pensions are guaranteed under the new Illinois Constitution.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1973","endDate":"1977","headline":"Gov. Daniel Walker","text":"Democrat","asset":{"media":"ilgovs_Walker.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1977","endDate":"1991","headline":"Gov. James R. Thompson","text":"Republican","asset":{"media":"ilgovs_Thompson.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1991","endDate":"1999","headline":"Gov. Jim Edgar","text":"Republican","asset":{"media":"ilgovs_Edgar.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1995","endDate":null,"headline":"1995","text":"50-year-payment plan designed to fix the pension shortfall requires lawmakers and the governor to change the law if they wanted to skip or short the pension payments.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1999","endDate":"2003","headline":"Gov. George H. Ryan","text":"Republican","asset":{"media":"ilgovs_Ryan.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2003","endDate":"2009","headline":"Gov. Rod R.<br>Blagojevich","text":"Democrat","asset":{"media":"ilgovs_Blago.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2005","endDate":null,"headline":"2005","text":"Democratic lawmakers and Democratic Gov. Rod Blagojevich pass a law to skip $2.3 billion in pension payments to all the state systems over two years, calling it a 'pension holiday.'","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2007","endDate":null,"headline":"2007","text":"Teachers’ Retirement System investments earn $6.8 billion.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2008","endDate":null,"headline":"2008","text":"Those same investments lose $2 billion.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2009","endDate":"2015","headline":"Gov. Pat Quinn","text":"Democrat","asset":{"media":"ilgovs_Quinn.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2010","endDate":null,"headline":"2010","text":"Lawmakers and Gov. Pat Quinn vote to borrow $3.5 billion — to be paid back over five years — to make the required pension payments.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2011","endDate":"2014","headline":"2011","text":"Lawmakers hike personal and business taxes to make pension payments and pay overdue bills.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2013","endDate":null,"headline":"2013","text":"Lawmakers and Quinn pass sweeping legislation reducing the annual cost-of-living increases for retirees and raising the retirement age for workers 45 and younger. The law is challenged in court.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015","endDate":null,"headline":"2015","text":"Tax hike is allowed to expire, resulting in a $4.3 billion drop in revenue from fiscal year 2014 to fiscal year 2016.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015","endDate":null,"headline":"Gov. Bruce Rauner","text":"Republican","asset":{"media":"ilgovs_Rauner.jpg","credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015","endDate":null,"headline":"2015","text":"Illinois Supreme Court unanimously and forcefully declares the 2013 law unconstitutional. The decision puts in doubt Gov. Rauner's ideas of amending the state constitution to allow adjustments to pensions or putting workers' future benefits into 401(k)-style plans.","asset":{"media":null,"credit":null,"caption":null,"thumbnail":null,"type":null,"tag":null}}
+			]
+		}
+}
+

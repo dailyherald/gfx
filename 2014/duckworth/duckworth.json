@@ -1,0 +1,346 @@
+
+{
+	"storymap":{
+		"slides": [
+			{
+				"type": 					"overview", 
+
+				"date": 					"1",
+				"location": {
+					"lat": 				33.298082,
+					"lon": 				44.387616,
+					"name": 				"Iraq",
+					"zoom": 				13,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"<center><span style=\"font-family:serif;\"><b>&#8216We Were<br>Almost Home&#8217<br></span></center>",
+					"text": 				"<center><span style=\"color:black;font-size:16pt;font-family:serif;\">The Story of Capt. Duckworth<br>and the Soldiers Who Saved Her Life</span><br><span style=\"font-family:serif;\">NOVEMBER 12, 2004, IN IRAQ</span></center>"
+				},
+				"media": {
+					"url": 				"duckworth1.jpg",
+					"credit":				"Credit",
+					"caption":			"Caption for image."
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"2",
+				"location": {
+					"lat": 				33.298082,
+					"lon": 				44.387616,
+					"name": 				"Green Zone",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Baghdad&#8217s Green Zone",
+					"text": 				"<span style=\"color:black;\">After a day of flying missions around Iraq, Duckworth and her crew had an hour to have lunch before heading home. With the holidays approaching, she and gunner Kurt Hanneman bought Christmas ornaments. (Video: It was a really good day)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"3",
+				"location": {
+					"lat": 				33.939879, 
+					"lon": 				44.361164,
+					"name": 				"Balad airbase",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"&#8216Home&#8217 to Balad",
+					"text": 				"<span style=\"color:black;\">Their last flight planned for the day was to their home base, Logistics Support Area Anaconda in Balad. It was late in the afternoon. (Photo: Old photo of Duckworth in Iraq)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				null,
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"4",
+				"location": {
+					"lat": 				33.298082,
+					"lon": 				44.387616,
+					"name": 				"Two Soldiers in Taji",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Two Soldiers in Taji",
+					"text": 				"<span style=\"color:black;\">Before the crew and its sister Black Hawk left Baghdad, they got a call to pick up two soldiers in Taji on their way back to Balad. It had been a long day, but they decided to go. (Video: Decision to divert to Taji)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"5",
+				"location": {
+					"lat": 				33.415664,
+					"lon": 				44.309243,
+					"name": 				"Inside the Black Hawk",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Inside the Black Hawk",
+					"text": 				"<span style=\"color:black;\">Duckworth sat in the right pilot's seat. Pilot in Command Dan Milberg sat in the left pilot's seat. Gunner Kurt Hanneman sat behind Milberg. Gunner Chris Fierce sat behind Duckworth. (video: who sits where.)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				null,
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"6",
+				"location": {
+					"lat": 				33.523081,
+					"lon": 				44.257030,
+					"name": 				"Switching Pilots",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Switching Pilots",
+					"text": 				"<span style=\"color:black;\">The two soldiers they were supposed to pick up weren't there, but a colonel hopped in the second helicopter. Duckworth had been flying hers all day, but now Milberg had control of the stick. (Video: Duckworth says she had just handed controls to Milberg)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				null,
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"7",
+				"location": {
+					"lat": 				33.704078,
+					"lon": 				44.306603,
+					"name": 				"Flying Low",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Flying Low",
+					"text": 				"<span style=\"color:black;\">Milberg flew the Black Hawk back toward Balad, moving about 140 mph about 15 feet over a vast grove of date trees. Pilots stayed low to the ground so enemies couldn't see them coming on the horizon for long.</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"8",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Gunfire",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Gunfire",
+					"text": 				"<span style=\"color:black;\">Milberg wrote in a report two days later \"...I heard what I recognized as gunfire underneath my aircraft. It sounded like three rounds and I thought that I felt the impact from the gunfire. I immediately heard an explosion come from the right side of the cockpit. I felt heat and small particles of debris on my face.\"</span>"
+				},
+				"media": {
+					"url": 				"<blockquote><p>I felt heat and small particles of debris on my face.</p></blockquote>",
+					"credit":				"Dan Milberg",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"9",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Impact",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Impact",
+					"text": 				"<span style=\"color:black;\">A rocket-propelled grenade explodes near the right side of the cockpit, where Duckworth is sitting. Her legs are shredded instantly. (Video: Kurt Hanneman describes sights, smells of cockpit)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"10",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Forced Landing",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Forced Landing",
+					"text": 				"<span style=\"color:black;\">The Black Hawk's flight controls were severely damaged, but Milberg kept control. A clearing in the date grove emerged, but one tree remained. Milberg cleared it, and set the helicopter down.</span>"
+				},
+				"media": {
+					"url": 				"<blockquote><p>I realized that there was a single tree in my flight path...</p></blockquote>",
+					"credit":				"Dan Milberg",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"11",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Wounded",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Wounded",
+					"text": 				"<span style=\"color:black;\">Milberg wrote at the time that Duckworth lost conciousness: \"Just prior to getting out of the aircraft, I looked over at CPT Duckworth and saw her slumped forward against the instrument panel. I saw that she was unconscious and had black residue on her face.\"</span>"
+				},
+				"media": {
+					"url": 					 "<blockquote><p>I looked over at CPT Duckworth and saw her slumped forward...</p></blockquote>",
+					"credit":				"Dan Milberg",
+					"caption":				""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"12",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Despair and Sadness",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"'Despair and Sadness'",
+					"text": 				"<span style=\"color:black;\">On seeing the Duckworth's condition, Milberg remembers, \"I can feel that feeling of dread and despair and sadness.\" (pic of downed copter)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"13",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Enemies Nearby",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Enemies Nearby",
+					"text": 				"<span style=\"color:black;\">On the ground, the crew was sure the insurgents who shot them down were on the way to get them. Gunner Kurt Hanneman, who had taken a bullet in the back, stumbled out of the helicopter with his gun to keep a lookout. (Video: Duckworth praises Kurt Hanneman's response.)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"16",
+				"location": {
+					"lat": 				33.733994,
+					"lon": 				44.312734, 
+					"name": 				"Call for Help",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Call for Help",
+					"text": 				"<span style=\"color:black;\">Milberg and Matt Backues, a gunner on the second helicopter, helped drag Duckworth out. (Video: Sikowski says they had 10 choppers flying and describes the radio call)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				"",
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"17",
+				"date": 					"1851",
+				"location": {
+					"lat": 				33.523081,
+					"lon": 				44.257030,
+					"name": 				"Evacuation to Taji",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Evacuation to Taji",
+					"text": 				"<span style=\"color:black;\">From start to finish, the ordeal took less than 30 minutes, the crew says. A minute to land the Black Hawk. Five minutes on the ground. Five to 10 minutes back to Taji. (video where Backues talks about taxiing)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				null,
+					"caption":			""
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					null,
+				"location": {
+					"lat": 				33.314709,
+					"lon": 				44.403606,
+					"name": 				"Baghdad Hospital",
+					"zoom": 				14,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Baghdad Hospital",
+					"text": 				"<span style=\"color:black;\">Duckworth was taken to Baghdad, for medical attention. She would be at Walter Reed in Washington, DC in 60 hours. She wouldn't wake up until then. (video of Sikowski worst day in Iraq)</span>"
+				},
+				"media": {
+					"url": 				"",
+					"credit":				null,
+					"caption":			null
+				}
+			}
+		],
+	"height": "550px",
+    "width": "100%"
+	}
+}

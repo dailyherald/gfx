@@ -1,0 +1,632 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Military equipment in Illinois
+  </title>
+
+<!-- STYLES --> 
+
+<!-- responsive table -->
+  <link rel="stylesheet" href="../../styles/dist/tablesaw1214.css">
+  <link rel="stylesheet" href="../../styles/dist/icons/icons.data.svg.css">
+  
+<!-- foundation responsive -->
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+<!-- Local styles, including custom UI jquery -->
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+
+
+<!-- SCRIPTS -->
+<!-- jquery, including touch enabling -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+  <!-- responsive table -->
+  <script src="../../styles/dist/tablesaw1214.js"></script>
+
+<style>
+.selectDIV {
+  padding:10px;
+  background:#efefef;
+}
+</style>
+
+
+  </head>
+
+  <body>
+<div class="divgfx">
+<div class="row">
+ <div class="small-12 large-10 centered columns">
+  <h3>Headline headliningly heading</h3>
+  <p>Introductory text here here's some intro text here here is introductory text here.</p>
+  <div id="itemDIV" class="selectDIV">
+    <p><strong>Select an item</strong> from the dropdown list and click the "Find Items" button to view the law enforcement agencies who received the item and the number they have.</p>
+  <p>
+<select name="militaryItems" size="1" id="militaryItems">
+    <option value='' >Select an item</option>
+<option value='All Terrain Vehicle' >All Terrain Vehicle</option>
+<option value='Armor or Armored Vehicle' >Armor or Armored Vehicle</option>
+<option value='Backscatter X-Ray Van' >Backscatter X-Ray Van</option>
+<option value='Boat' >Boat</option>
+<option value='Defibrillator' >Defibrillator</option>
+<option value='Explosive Detector' >Explosive Detector</option>
+<option value='Helicopter' >Helicopter</option>
+<option value='Helmet' >Helmet</option>
+<option value='Infrared Equipment' >Infrared Equipment</option>
+<option value='Mask' >Mask</option>
+<option value='Military Rifles' >Military Rifles</option>
+<option value='Motorcycles, Scooters And Bicycles' >Motorcycles, Scooters And Bicycles</option>
+<option value='Night Vision' >Night Vision</option>
+<option value='Paintball Gun' >Paintball Gun</option>
+<option value='Robot' >Robot</option>
+<option value='Sextant' >Sextant</option>
+<option value='Shotgun' >Shotgun</option>
+<option value='Telescope' >Telescope</option>
+<option value='Thermal Imaging Sys' >Thermal Imaging Sys</option>
+<option value='Trailer' >Trailer</option>
+<option value='Truck' >Truck</option>
+  </select>
+   <input type="button" name="searchItems" id="searchItems"
+  onclick="console.log( $('#militaryItems').val() );" 
+    value="Find items" >
+</form></p>
+<p>Or click here to find items by <a id="agencyCLICK" href="">law enforcement agency</a></p>
+</div>
+
+<div id="itemLIST"></div>
+
+<div id="agencyDIV" class="selectDIV">
+  <p><strong>Select a law enforcement agency</strong> from the dropdown list and click the "Find Agency" button to view all the items the law enforcement agency received.</p>
+
+  <p>
+<select name="lawAgency" size="1" id="lawAgency">
+    <option value='' >Select an agency</option>
+<option value='Abingdon Police' >Abingdon Police</option>
+<option value='Adams County Sheriff' >Adams County Sheriff</option>
+<option value='Alsip Police' >Alsip Police</option>
+<option value='Alton Police' >Alton Police</option>
+<option value='Anna Police' >Anna Police</option>
+<option value='Antioch Police' >Antioch Police</option>
+<option value='Aroma Park Police' >Aroma Park Police</option>
+<option value='Athens Police' >Athens Police</option>
+<option value='Auburn Police' >Auburn Police</option>
+<option value='Avon Police' >Avon Police</option>
+<option value='Barrington Police' >Barrington Police</option>
+<option value='Bartonville Police' >Bartonville Police</option>
+<option value='Beardstown Police' >Beardstown Police</option>
+<option value='Bedford Park Police' >Bedford Park Police</option>
+<option value='Beecher Police' >Beecher Police</option>
+<option value='Belleville Police' >Belleville Police</option>
+<option value='Belvidere Police' >Belvidere Police</option>
+<option value='Benedictine University Police' >Benedictine University Police</option>
+<option value='Berwyn Police' >Berwyn Police</option>
+<option value='Bloomington Police' >Bloomington Police</option>
+<option value='Bolingbrook Police' >Bolingbrook Police</option>
+<option value='Bond County Sheriff' >Bond County Sheriff</option>
+<option value='Bourbonnais Police' >Bourbonnais Police</option>
+<option value='Bradford Police' >Bradford Police</option>
+<option value='Bradley Police' >Bradley Police</option>
+<option value='Breese Police' >Breese Police</option>
+<option value='Broadview Police' >Broadview Police</option>
+<option value='Brooklyn Police' >Brooklyn Police</option>
+<option value='Brookport Police' >Brookport Police</option>
+<option value='Buffalo Mechanicsburg Police' >Buffalo Mechanicsburg Police</option>
+<option value='Byron Police' >Byron Police</option>
+<option value='Cairo Police' >Cairo Police</option>
+<option value='Calumet City Police' >Calumet City Police</option>
+<option value='Calumet Park Police' >Calumet Park Police</option>
+<option value='Cambria Police' >Cambria Police</option>
+<option value='Campton Hills Police' >Campton Hills Police</option>
+<option value='Canton Police' >Canton Police</option>
+<option value='Carlinville Police' >Carlinville Police</option>
+<option value='Carmi Police' >Carmi Police</option>
+<option value='Carterville Police' >Carterville Police</option>
+<option value='Cary Police' >Cary Police</option>
+<option value='Catlin Police' >Catlin Police</option>
+<option value='Cave-In-Rock Police' >Cave-In-Rock Police</option>
+<option value='Champaign County Sheriff' >Champaign County Sheriff</option>
+<option value='Champaign Police' >Champaign Police</option>
+<option value='Charleston Police' >Charleston Police</option>
+<option value='Chatham Police' >Chatham Police</option>
+<option value='Chester Police' >Chester Police</option>
+<option value='Chicago Police' >Chicago Police</option>
+<option value='Christian County Sheriff' >Christian County Sheriff</option>
+<option value='Cicero Police' >Cicero Police</option>
+<option value='Clinton County Sheriff' >Clinton County Sheriff</option>
+<option value='Coal Valley Police' >Coal Valley Police</option>
+<option value='Cobden Police' >Cobden Police</option>
+<option value='Coles County Sheriff' >Coles County Sheriff</option>
+<option value='College Of DuPage Police' >College Of DuPage Police</option>
+<option value='Collinsville Police' >Collinsville Police</option>
+<option value='Columbia Police' >Columbia Police</option>
+<option value='Cook Co Homeland Sec & Emer Mgmt' >Cook Co Homeland Sec & Emer Mgmt</option>
+<option value='Cook County Sheriff Police' >Cook County Sheriff Police</option>
+<option value='Coulterville Police' >Coulterville Police</option>
+<option value='Country Club Hills Police' >Country Club Hills Police</option>
+<option value='Cowden Police' >Cowden Police</option>
+<option value='Crainville Police' >Crainville Police</option>
+<option value='Crawford County Sheriff' >Crawford County Sheriff</option>
+<option value='Crest Hill Police' >Crest Hill Police</option>
+<option value='Crete Police' >Crete Police</option>
+<option value='Creve Coeur Police' >Creve Coeur Police</option>
+<option value='Crystal Lake Park District Police' >Crystal Lake Park District Police</option>
+<option value='Crystal Lake Police' >Crystal Lake Police</option>
+<option value='Danville Police' >Danville Police</option>
+<option value='Darien Police' >Darien Police</option>
+<option value='Decatur Police' >Decatur Police</option>
+<option value='Deer Creek Police' >Deer Creek Police</option>
+<option value='Dekalb Police' >Dekalb Police</option>
+<option value='Delavan Police' >Delavan Police</option>
+<option value='Depue Police' >Depue Police</option>
+<option value='Des Plaines Police' >Des Plaines Police</option>
+<option value='Dewitt County Sheriff' >Dewitt County Sheriff</option>
+<option value='Divernon Police' >Divernon Police</option>
+<option value='Dixon Police' >Dixon Police</option>
+<option value='DuPage County Forest Preserve' >DuPage County Forest Preserve</option>
+<option value='DuPage County Sheriff' >DuPage County Sheriff</option>
+<option value='Dupo Police' >Dupo Police</option>
+<option value='East Alton Police' >East Alton Police</option>
+<option value='East Carondelet Police' >East Carondelet Police</option>
+<option value='East Dubuque Police' >East Dubuque Police</option>
+<option value='East Dundee Police' >East Dundee Police</option>
+<option value='East Galesburg Police' >East Galesburg Police</option>
+<option value='East Hazel Crest Police' >East Hazel Crest Police</option>
+<option value='East Moline Police' >East Moline Police</option>
+<option value='East Peoria Police' >East Peoria Police</option>
+<option value='Eastern Il University Police' >Eastern Il University Police</option>
+<option value='Easton Police' >Easton Police</option>
+<option value='Edgar County Sheriff' >Edgar County Sheriff</option>
+<option value='Edinburg Police' >Edinburg Police</option>
+<option value='Edwards County Sheriff' >Edwards County Sheriff</option>
+<option value='Edwardsville Police' >Edwardsville Police</option>
+<option value='Effingham County Sheriff' >Effingham County Sheriff</option>
+<option value='Elburn Police' >Elburn Police</option>
+<option value='Elgin Police' >Elgin Police</option>
+<option value='Elizabeth Police' >Elizabeth Police</option>
+<option value='Elkville Police' >Elkville Police</option>
+<option value='Ellis Grove Police' >Ellis Grove Police</option>
+<option value='Energy Police' >Energy Police</option>
+<option value='Evanston Police' >Evanston Police</option>
+<option value='Evansville Police' >Evansville Police</option>
+<option value='Evergreen Park Police' >Evergreen Park Police</option>
+<option value='Ewing Police' >Ewing Police</option>
+<option value='Fairfield Police' >Fairfield Police</option>
+<option value='Fairmont City Police' >Fairmont City Police</option>
+<option value='Fairview Heights Police' >Fairview Heights Police</option>
+<option value='Farmer City Police' >Farmer City Police</option>
+<option value='Farmington Police' >Farmington Police</option>
+<option value='Fisher Police' >Fisher Police</option>
+<option value='Flora Police' >Flora Police</option>
+<option value='Fondulac Police' >Fondulac Police</option>
+<option value='Ford County Sheriff' >Ford County Sheriff</option>
+<option value='Forest Park Police' >Forest Park Police</option>
+<option value='Forest Preserve District Will Co' >Forest Preserve District Will Co</option>
+<option value='Fox Lake Police' >Fox Lake Police</option>
+<option value='Fox River Grove Police' >Fox River Grove Police</option>
+<option value='Frankfort Police' >Frankfort Police</option>
+<option value='Freeburg Police' >Freeburg Police</option>
+<option value='Freeman Spur Police' >Freeman Spur Police</option>
+<option value='Freeport Police' >Freeport Police</option>
+<option value='Fulton County Sheriff' >Fulton County Sheriff</option>
+<option value='Galena Police' >Galena Police</option>
+<option value='Geneseo Police' >Geneseo Police</option>
+<option value='Geneva Police' >Geneva Police</option>
+<option value='Germantown Police' >Germantown Police</option>
+<option value='Gilberts Police' >Gilberts Police</option>
+<option value='Girard Police' >Girard Police</option>
+<option value='Glen Carbon Police' >Glen Carbon Police</option>
+<option value='Glen Ellyn Police' >Glen Ellyn Police</option>
+<option value='Glencoe Police' >Glencoe Police</option>
+<option value='Golconda Police' >Golconda Police</option>
+<option value='Goreville Police' >Goreville Police</option>
+<option value='Grand Ridge Police' >Grand Ridge Police</option>
+<option value='Granite City Police' >Granite City Police</option>
+<option value='Grantfork Police' >Grantfork Police</option>
+<option value='Green Valley Police' >Green Valley Police</option>
+<option value='Greenview Police' >Greenview Police</option>
+<option value='Greenville Police' >Greenville Police</option>
+<option value='Hamel Police' >Hamel Police</option>
+<option value='Hamilton County Sheriff' >Hamilton County Sheriff</option>
+<option value='Hancock County Sheriff' >Hancock County Sheriff</option>
+<option value='Hanover Park Police' >Hanover Park Police</option>
+<option value='Hanover Police' >Hanover Police</option>
+<option value='Hardin County Sheriff' >Hardin County Sheriff</option>
+<option value='Harrisburg Police' >Harrisburg Police</option>
+<option value='Harvey Police' >Harvey Police</option>
+<option value='Havana Police' >Havana Police</option>
+<option value='Hawthorn Woods Police' >Hawthorn Woods Police</option>
+<option value='Henderson County Sheriff' >Henderson County Sheriff</option>
+<option value='Henry Police' >Henry Police</option>
+<option value='Herrin Police' >Herrin Police</option>
+<option value='Heyworth Police' >Heyworth Police</option>
+<option value='Highland Police' >Highland Police</option>
+<option value='Hillcrest Police' >Hillcrest Police</option>
+<option value='Hillsboro Police' >Hillsboro Police</option>
+<option value='Hillside Police' >Hillside Police</option>
+<option value='Hinckley Police' >Hinckley Police</option>
+<option value='Hinsdale Police' >Hinsdale Police</option>
+<option value='Homewood Police' >Homewood Police</option>
+<option value='Hutsonville Police' >Hutsonville Police</option>
+<option value='Il Of Central Management' >Il Of Central Management</option>
+<option value='Il Dnr Law Enforcement' >Il Dnr Law Enforcement</option>
+<option value='Il Multi-County Narcotic Group' >Il Multi-County Narcotic Group</option>
+<option value='Il Secretary Of State Police' >Il Secretary Of State Police</option>
+<option value='Il State Police' >Il State Police</option>
+<option value='Il State University Police' >Il State University Police</option>
+<option value='Irving Police' >Irving Police</option>
+<option value='Island Lake Police' >Island Lake Police</option>
+<option value='Jacksonville Police' >Jacksonville Police</option>
+<option value='Jefferson County Sheriff' >Jefferson County Sheriff</option>
+<option value='Jerome Police' >Jerome Police</option>
+<option value='Jo Daviess County Sheriff' >Jo Daviess County Sheriff</option>
+<option value='Johnsburg Police' >Johnsburg Police</option>
+<option value='Joliet Police' >Joliet Police</option>
+<option value='Justice Police' >Justice Police</option>
+<option value='Kane County Forest Preserve' >Kane County Forest Preserve</option>
+<option value='Kane County Sheriff' >Kane County Sheriff</option>
+<option value='Kankakee County Sheriff' >Kankakee County Sheriff</option>
+<option value='Karnak Police' >Karnak Police</option>
+<option value='Kendall County Sheriff' >Kendall County Sheriff</option>
+<option value='Kewanee Police' >Kewanee Police</option>
+<option value='Kildeer Police' >Kildeer Police</option>
+<option value='Kincaid Police' >Kincaid Police</option>
+<option value='Kinmundy Police' >Kinmundy Police</option>
+<option value='Kirkland Police' >Kirkland Police</option>
+<option value='Knox County Sheriff' >Knox County Sheriff</option>
+<option value='Knoxville Police' >Knoxville Police</option>
+<option value='Lacon Police' >Lacon Police</option>
+<option value='Lake County Sheriff' >Lake County Sheriff</option>
+<option value='Lake In The Hills Police' >Lake In The Hills Police</option>
+<option value='Lake Villa Police' >Lake Villa Police</option>
+<option value='Lake Zurich Police' >Lake Zurich Police</option>
+<option value='Lakemoor Police' >Lakemoor Police</option>
+<option value='Lanark Police' >Lanark Police</option>
+<option value='Lasalle County Sheriff' >Lasalle County Sheriff</option>
+<option value='Lasalle Police' >Lasalle Police</option>
+<option value='Lawrence County Sheriff' >Lawrence County Sheriff</option>
+<option value='Lawrenceville Police' >Lawrenceville Police</option>
+<option value='Lebanon Police' >Lebanon Police</option>
+<option value='Leland Grove Police' >Leland Grove Police</option>
+<option value='Leland Police' >Leland Police</option>
+<option value='Lemont Police' >Lemont Police</option>
+<option value='Leroy Police' >Leroy Police</option>
+<option value='Lewistown Police' >Lewistown Police</option>
+<option value='Libertyville Police' >Libertyville Police</option>
+<option value='Lincoln Land Comm College Police' >Lincoln Land Comm College Police</option>
+<option value='Lincoln Police' >Lincoln Police</option>
+<option value='Lisle Police' >Lisle Police</option>
+<option value='Litchfield Police' >Litchfield Police</option>
+<option value='Loami Police' >Loami Police</option>
+<option value='Lockport Police' >Lockport Police</option>
+<option value='Logan County Sheriff' >Logan County Sheriff</option>
+<option value='Lombard Police' >Lombard Police</option>
+<option value='London Mills Police' >London Mills Police</option>
+<option value='Lostant Police' >Lostant Police</option>
+<option value='Lyons Police' >Lyons Police</option>
+<option value='Macomb Police' >Macomb Police</option>
+<option value='Macoupin County Sheriff' >Macoupin County Sheriff</option>
+<option value='Madison Police' >Madison Police</option>
+<option value='Manito Police' >Manito Police</option>
+<option value='Manteno Police' >Manteno Police</option>
+<option value='Maple Park Police' >Maple Park Police</option>
+<option value='Marengo Police' >Marengo Police</option>
+<option value='Marine Police' >Marine Police</option>
+<option value='Marion County Sheriff' >Marion County Sheriff</option>
+<option value='Marion Police' >Marion Police</option>
+<option value='Marissa Police' >Marissa Police</option>
+<option value='Maroa Police' >Maroa Police</option>
+<option value='Marseilles Police' >Marseilles Police</option>
+<option value='Marshall County Sheriff' >Marshall County Sheriff</option>
+<option value='Mascoutah Police' >Mascoutah Police</option>
+<option value='Mason City Police' >Mason City Police</option>
+<option value='Mason County Sheriff' >Mason County Sheriff</option>
+<option value='Massac County Sheriff' >Massac County Sheriff</option>
+<option value='Mattoon Police' >Mattoon Police</option>
+<option value='Maywood Police' >Maywood Police</option>
+<option value='Mccullom Lake Police' >Mccullom Lake Police</option>
+<option value='McHenry County Sheriff' >McHenry County Sheriff</option>
+<option value='McHenry Police' >McHenry Police</option>
+<option value='Mcleansboro Police' >Mcleansboro Police</option>
+<option value='Melrose Park Police' >Melrose Park Police</option>
+<option value='Menard County Sheriff' >Menard County Sheriff</option>
+<option value='Mendota Police' >Mendota Police</option>
+<option value='Meredosia Police' >Meredosia Police</option>
+<option value='Metro East Auto Theft Task Force' >Metro East Auto Theft Task Force</option>
+<option value='Metropolis Police' >Metropolis Police</option>
+<option value='Milan Police' >Milan Police</option>
+<option value='Milledgeville Police' >Milledgeville Police</option>
+<option value='Millstadt Police' >Millstadt Police</option>
+<option value='Minooka Police' >Minooka Police</option>
+<option value='Mokena Police' >Mokena Police</option>
+<option value='Moline Police' >Moline Police</option>
+<option value='Momence Police' >Momence Police</option>
+<option value='Monee Police' >Monee Police</option>
+<option value='Monroe County Sheriff' >Monroe County Sheriff</option>
+<option value='Montgomery County Sheriff' >Montgomery County Sheriff</option>
+<option value='Monticello Police' >Monticello Police</option>
+<option value='Moraine Valley Police.' >Moraine Valley Police.</option>
+<option value='Morgan County Sheriff' >Morgan County Sheriff</option>
+<option value='Morrisonville Police' >Morrisonville Police</option>
+<option value='Moultrie County Sheriff' >Moultrie County Sheriff</option>
+<option value='Mound City Police' >Mound City Police</option>
+<option value='Mounds Police' >Mounds Police</option>
+<option value='Mount Prospect Police' >Mount Prospect Police</option>
+<option value='Mount Zion Police' >Mount Zion Police</option>
+<option value='Mt Olive Police' >Mt Olive Police</option>
+<option value='Murphysboro Police' >Murphysboro Police</option>
+<option value='Murrayville Police' >Murrayville Police</option>
+<option value='Naperville Police' >Naperville Police</option>
+<option value='Nauvoo Police' >Nauvoo Police</option>
+<option value='New Athens Police' >New Athens Police</option>
+<option value='New Baden Police' >New Baden Police</option>
+<option value='New Berlin Police' >New Berlin Police</option>
+<option value='New Lenox Police' >New Lenox Police</option>
+<option value='Niles Police' >Niles Police</option>
+<option value='Nokomis Police' >Nokomis Police</option>
+<option value='North Aurora Police' >North Aurora Police</option>
+<option value='North Chicago Police' >North Chicago Police</option>
+<option value='North Pekin Police' >North Pekin Police</option>
+<option value='Oak Forest Police' >Oak Forest Police</option>
+<option value='Oak Lawn Police' >Oak Lawn Police</option>
+<option value='Oakbrook Terrace Police' >Oakbrook Terrace Police</option>
+<option value='Oakwood Hills Police' >Oakwood Hills Police</option>
+<option value='Oblong Police' >Oblong Police</option>
+<option value='Odin Police' >Odin Police</option>
+<option value='Ofallon Police' >Ofallon Police</option>
+<option value='Ogle County Sheriff' >Ogle County Sheriff</option>
+<option value='Oglesby Police' >Oglesby Police</option>
+<option value='Olympia Fields Police' >Olympia Fields Police</option>
+<option value='Oregon Police' >Oregon Police</option>
+<option value='Orland Park Police' >Orland Park Police</option>
+<option value='Oswego Police' >Oswego Police</option>
+<option value='Ottawa Police' >Ottawa Police</option>
+<option value='Palatine Police' >Palatine Police</option>
+<option value='Palmyra Police' >Palmyra Police</option>
+<option value='Park City Police' >Park City Police</option>
+<option value='Park Forest Police' >Park Forest Police</option>
+<option value='Parkland College Police' >Parkland College Police</option>
+<option value='Pawnee Police' >Pawnee Police</option>
+<option value='Paxton Police' >Paxton Police</option>
+<option value='Pecatonica Police' >Pecatonica Police</option>
+<option value='Pekin Park District' >Pekin Park District</option>
+<option value='Pekin Police' >Pekin Police</option>
+<option value='Peoria County Sheriff' >Peoria County Sheriff</option>
+<option value='Peoria Police' >Peoria Police</option>
+<option value='Peotone Police' >Peotone Police</option>
+<option value='Percy Police' >Percy Police</option>
+<option value='Perry County Sheriff' >Perry County Sheriff</option>
+<option value='Plainfield Police' >Plainfield Police</option>
+<option value='Plano Police' >Plano Police</option>
+<option value='Pleasant Hill Police' >Pleasant Hill Police</option>
+<option value='Pleasant Plains Police' >Pleasant Plains Police</option>
+<option value='Pocahontas Police' >Pocahontas Police</option>
+<option value='Polo Police' >Polo Police</option>
+<option value='Pontoon Beach Police' >Pontoon Beach Police</option>
+<option value='Pope County Sheriff' >Pope County Sheriff</option>
+<option value='Posen Police' >Posen Police</option>
+<option value='Princeton Police' >Princeton Police</option>
+<option value='Prospect Height Police' >Prospect Height Police</option>
+<option value='Pulaski County Sheriff' >Pulaski County Sheriff</option>
+<option value='Putnam County Sheriff' >Putnam County Sheriff</option>
+<option value='Quincy Illinois Police' >Quincy Illinois Police</option>
+<option value='Randolph County Sheriff' >Randolph County Sheriff</option>
+<option value='Richmond Police' >Richmond Police</option>
+<option value='River Forest Police' >River Forest Police</option>
+<option value='River Grove Police' >River Grove Police</option>
+<option value='Riverdale Police.' >Riverdale Police.</option>
+<option value='Riverton Police' >Riverton Police</option>
+<option value='Riverwoods Police' >Riverwoods Police</option>
+<option value='Robinson Police' >Robinson Police</option>
+<option value='Rochelle Police' >Rochelle Police</option>
+<option value='Rochester Police' >Rochester Police</option>
+<option value='Rock Falls Police' >Rock Falls Police</option>
+<option value='Rock Island County Sheriff' >Rock Island County Sheriff</option>
+<option value='Rock Island Cty Metro Airport Auth' >Rock Island Cty Metro Airport Auth</option>
+<option value='Rock Island Police' >Rock Island Police</option>
+<option value='Rockford Fire Arson Invest' >Rockford Fire Arson Invest</option>
+<option value='Rockford Police' >Rockford Police</option>
+<option value='Rockton Police' >Rockton Police</option>
+<option value='Rolling Meadows Police' >Rolling Meadows Police</option>
+<option value='Romeoville Police' >Romeoville Police</option>
+<option value='Roodhouse Police' >Roodhouse Police</option>
+<option value='Roselle Police' >Roselle Police</option>
+<option value='Round Lake Beach Police' >Round Lake Beach Police</option>
+<option value='Round Lake Heights Police' >Round Lake Heights Police</option>
+<option value='Round Lake Park District' >Round Lake Park District</option>
+<option value='Round Lake Park Police' >Round Lake Park Police</option>
+<option value='Roxana Police' >Roxana Police</option>
+<option value='Saint Anne Police' >Saint Anne Police</option>
+<option value='Saint Clair County Sheriff' >Saint Clair County Sheriff</option>
+<option value='Saint Elmo Police' >Saint Elmo Police</option>
+<option value='Saline County Sheriff' >Saline County Sheriff</option>
+<option value='Sangamon County Sheriff' >Sangamon County Sheriff</option>
+<option value='Sauk Village Police' >Sauk Village Police</option>
+<option value='Shannon Police' >Shannon Police</option>
+<option value='Shawneetown Police' >Shawneetown Police</option>
+<option value='Shelbyville Police' >Shelbyville Police</option>
+<option value='Sheridan Police' >Sheridan Police</option>
+<option value='Sherman Police' >Sherman Police</option>
+<option value='Shiloh Police' >Shiloh Police</option>
+<option value='Sleepy Hollow Police' >Sleepy Hollow Police</option>
+<option value='Smithton Police' >Smithton Police</option>
+<option value='Somonauk Police' >Somonauk Police</option>
+<option value='South Jacksonville Police' >South Jacksonville Police</option>
+<option value='South Pekin Police' >South Pekin Police</option>
+<option value='Sparta Police' >Sparta Police</option>
+<option value='Spaulding Police' >Spaulding Police</option>
+<option value='Spring Grove Police' >Spring Grove Police</option>
+<option value='Springfield Park District Police' >Springfield Park District Police</option>
+<option value='Springfield Police' >Springfield Police</option>
+<option value='Stanford Police' >Stanford Police</option>
+<option value='Stark County Sheriff' >Stark County Sheriff</option>
+<option value='Steeleville Police' >Steeleville Police</option>
+<option value='Stephenson County Sheriff' >Stephenson County Sheriff</option>
+<option value='Sterling Police' >Sterling Police</option>
+<option value='Stickney Police' >Stickney Police</option>
+<option value='Stockton Police' >Stockton Police</option>
+<option value='Stone Park Police' >Stone Park Police</option>
+<option value='Stonington Police' >Stonington Police</option>
+<option value='Streator Police' >Streator Police</option>
+<option value='Stronghurst Police' >Stronghurst Police</option>
+<option value='Sugar Grove Police' >Sugar Grove Police</option>
+<option value='Sullivan Police' >Sullivan Police</option>
+<option value='Summit Police' >Summit Police</option>
+<option value='Tampico Police' >Tampico Police</option>
+<option value='Taylorville Police' >Taylorville Police</option>
+<option value='Tazewell County Sheriff' >Tazewell County Sheriff</option>
+<option value='Tazewell County States Attorney' >Tazewell County States Attorney</option>
+<option value='Thornton Police' >Thornton Police</option>
+<option value='Tinley Park Police' >Tinley Park Police</option>
+<option value='Tolono Police' >Tolono Police</option>
+<option value='Toulon Police' >Toulon Police</option>
+<option value='Tower Lakes Police' >Tower Lakes Police</option>
+<option value='Tremont Police' >Tremont Police</option>
+<option value='Triton College Police' >Triton College Police</option>
+<option value='Troy Police' >Troy Police</option>
+<option value='Union County Sheriff' >Union County Sheriff</option>
+<option value='University Park Police' >University Park Police</option>
+<option value='Urbana Police' >Urbana Police</option>
+<option value='Vermilion County Sheriff' >Vermilion County Sheriff</option>
+<option value='Vernon Hills Police' >Vernon Hills Police</option>
+<option value='Vienna Police' >Vienna Police</option>
+<option value='Villa Park Police' >Villa Park Police</option>
+<option value='Virden Police' >Virden Police</option>
+<option value='Warren Police' >Warren Police</option>
+<option value='Warrensburg Police' >Warrensburg Police</option>
+<option value='Washburn Police' >Washburn Police</option>
+<option value='Washington County Sheriff' >Washington County Sheriff</option>
+<option value='Washington Police' >Washington Police</option>
+<option value='Waterloo Police' >Waterloo Police</option>
+<option value='Wauconda Police' >Wauconda Police</option>
+<option value='Waukegan Police' >Waukegan Police</option>
+<option value='Waverly Police' >Waverly Police</option>
+<option value='Wayne Police' >Wayne Police</option>
+<option value='West Dundee Police' >West Dundee Police</option>
+<option value='West Frankfort Police' >West Frankfort Police</option>
+<option value='Westchester Police' >Westchester Police</option>
+<option value='Western Springs Police' >Western Springs Police</option>
+<option value='Wheaton Police' >Wheaton Police</option>
+<option value='Wheeling Police' >Wheeling Police</option>
+<option value='White County Sheriff'S' >White County Sheriff'S</option>
+<option value='Whiteside County Sheriff' >Whiteside County Sheriff</option>
+<option value='Will County Sheriff' >Will County Sheriff</option>
+<option value='Williamsfield Police' >Williamsfield Police</option>
+<option value='Williamson County Sheriff' >Williamson County Sheriff</option>
+<option value='Williamsville Police' >Williamsville Police</option>
+<option value='Willisville Police' >Willisville Police</option>
+<option value='Willow Springs Police' >Willow Springs Police</option>
+<option value='Wilmette Police' >Wilmette Police</option>
+<option value='Wilsonville Police' >Wilsonville Police</option>
+<option value='Winchester Police' >Winchester Police</option>
+<option value='Winfield Police' >Winfield Police</option>
+<option value='Winnetka Police' >Winnetka Police</option>
+<option value='Winslow Police' >Winslow Police</option>
+<option value='Winthrop Harbor Police' >Winthrop Harbor Police</option>
+<option value='Witt Police' >Witt Police</option>
+<option value='Wood Dale Police' >Wood Dale Police</option>
+<option value='Wood River Police' >Wood River Police</option>
+<option value='Woodford County Sheriff' >Woodford County Sheriff</option>
+<option value='Worden Police' >Worden Police</option>
+<option value='Worth Police' >Worth Police</option>
+<option value='Wyanet Police' >Wyanet Police</option>
+<option value='Yorkville Police' >Yorkville Police</option>
+<option value='Zeigler Police' >Zeigler Police</option>
+  </select>
+   <input type="button" name="searchAgency" id="searchAgency"
+  onclick="console.log( $('#lawAgency').val() );" 
+    value="Find Agency" >
+  <p>Or click here to search by <a id="itemCLICK" href="">select items.</a></p>
+</div>
+<div id="agencyLIST"></div>
+
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">-30-</span></p>
+
+</div>
+</div>
+</div>
+<script>
+
+$('#itemLIST').hide();
+$('#agencyDIV').hide();
+$('#agencyLIST').hide();
+
+$("#searchItems").click(function() {
+       $('#itemLIST').show();
+  });
+
+$("#searchAgency").click(function() {
+       $('#agencyLIST').show();
+  });
+
+$("#itemCLICK").click(function() {
+       $('#agencyDIV').hide();
+       $('#agencyLIST').hide();
+       $('#itemDIV').show();
+      return false
+  });
+
+$("#agencyCLICK").click(function() {
+       $('#itemDIV').hide();
+       $('#itemLIST').hide();
+       $('#agencyDIV').show();
+      return false
+  });
+
+var iname;
+var aname;
+
+$.getJSON('militaryIL.json', function(json){
+      console.log(json[1].Items);
+		
+  $('#searchItems').click(function() {
+      var iname = $('#militaryItems').val();
+
+      var milLIST = "";
+      milLIST += '<p><table id="table1" class="tablesaw tablesaw-stack" data-mode="stack" data-tablesaw-sortable data-tablesaw-sortable-switch><thead><th data-tablesaw-sortable-col data-tablesaw-sortable-default-col>Item</th><th data-tablesaw-sortable-col>Agency</th><th data-tablesaw-sortable-col>Quantity</th></tr></thead><tbody id="tablebody">';
+
+      $.each(json, function(i, v) {
+          if (json[i].Items.search(new RegExp(iname)) != -1){
+              milLIST += '<tr><td class="tdLeft"><strong>' + json[i].Specific_Item + '</strong></td><td>' + json[i].Unit + '</td><td>' + json[i].Quantity  + '</td></tr>';
+          }
+      });
+
+      milLIST += '</tbody></table></p>';
+      $('#itemLIST').html(milLIST);
+	  $('#table1').table().data( "table" ).refresh();
+ 
+  });
+
+  $('#searchAgency').click(function() {
+
+  var aname = $('#lawAgency').val();
+
+      var agenLIST = "";
+      agenLIST += '<p><strong><br>Agency: ' + aname + '</strong></p><p><table id="table2" class="tablesaw tablesaw-stack" data-mode="stack" data-tablesaw-sortable data-tablesaw-sortable-switch><thead><th data-tablesaw-sortable-col data-tablesaw-sortable-default-col>Item</th><th data-tablesaw-sortable-col>Quantity</th><th data-tablesaw-sortable-col>Value ($)</th></tr></thead><tbody id="tablebody">';
+
+      $.each(json, function(i, v) {
+          if (json[i].Unit.search(new RegExp(aname)) != -1){
+              agenLIST += '<tr><td class="tdLeft"><strong>' + json[i].Specific_Item + '</strong></td><td>' + json[i].Quantity + '</td><td>' + json[i].Cost  + '</td></tr>';
+          }
+      });
+
+      agenLIST += '</tbody></table></p>';
+      $('#agencyLIST').html(agenLIST);
+	  $('#table2').table().data( "table" ).refresh();
+  });
+
+//$.getScript( "../../styles/dist/tablesaw.js" );
+
+
+});
+
+
+</script>
+  </body>
+</html>

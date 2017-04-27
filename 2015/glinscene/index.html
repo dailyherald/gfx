@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Gliniewicz's final moments
+  </title>
+
+<!-- STYLES --> 
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+
+<!-- SCRIPTS -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+
+<!--   <script src="../../scripts/leaflet.js"></script>
+  <link href="../../styles/leaflet.css" rel="stylesheet" type="text/css"> -->
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+  <!--<script src="http://maps.google.com/maps/api/js?v=3"></script>-->
+  <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+  <script src="../../scripts/Google.js"></script>
+
+<style>
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0,0,0.25,1);
+     -moz-transition:    -moz-transform 1s cubic-bezier(0,0,0.25,1);
+       -o-transition:      -o-transform 1s cubic-bezier(0,0,0.25,1);
+          transition:         transform 1s cubic-bezier(0,0,0.25,1);
+  }
+
+</style>
+
+  </head>
+
+  <body>
+
+<div class="row">
+  <div class="small-12 large-1 columns"></div>
+    <div class="small-12 large-10 columns">
+      <h3>Gliniewicz's final moments</h3>
+      <p>Use the "next" and "back" buttons below to follow the final route of Lt. Charles Joseph Gliniewicz.</p>
+      <div id="pageMap" class="high375"></div>
+      <table class="fullTable"><tr>
+        <td class="tdLEFT"><h5><a id="backCLICK" href="">BACK</a></h5></td><td><h5><a id="nextCLICK" href="">NEXT</a></h5></td>
+      </table>
+      <p class="source">Source: Lake County Major Crimes Task Force</p>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+// This is the main control variable
+var aID = 0;
+
+$('#nextCLICK').show();
+$('#backCLICK').hide();
+var ggl = new L.Google('HYBRID');
+
+// Load in path
+$.getJSON("glinroute.geojson", function(data) {
+  var path53 = L.geoJson(data, {
+    style: function (feature) {
+      return {
+        fillColor: 'red',
+        weight: 3,
+        opacity: 0.6,
+        color: 'red',
+        fillOpacity: 0.6
+      };
+    },    
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(
+        '<p>Path of proposed<br>Route 53 extension</p>'
+      );
+    }
+  });
+
+  $.getJSON('progress.json', function(data){
+
+    // Sets up the start portion of the map
+
+    var map = L.map('pageMap');
+    map.setView(new L.LatLng(42.430179, -88.149499),data[aID].azoom);
+    map.addLayer(ggl);
+    map.addLayer(path53);
+
+    var popupContent = '<p>' + data[aID].Description + '</p>';
+    var popupOptions = {'maxWidth': '215'};
+    var hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+    hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+    console.log( aID );
+
+
+    // When people click Next
+
+    $("#nextCLICK").click(function() {
+      console.log( "Clicked Next" );
+      aID = ++aID;
+      if(aID == 10) {
+        console.log( aID );
+        $('#nextCLICK').hide();
+        
+        // If AID is at the end (21)
+//        var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+//        map.panTo(newLocale, {animate: false, duration: 0.5});
+//        map.setZoom(data[aID].azoom);
+        map.setView(new L.LatLng(data[aID].lat, data[aID].lon),data[aID].azoom, {animate: false});
+        var popupContent = '<p>' + data[aID].Description + '</p>';
+        var popupOptions = {'maxWidth': '215'};
+        map.removeLayer(hellomarker);
+        hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+        hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+        return false;
+      } else {
+        //Otherwise, move along
+        $('#nextCLICK').show();
+        $('#backCLICK').show();
+        console.log( aID );
+        // The mapping portion
+//        var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+//        map.panTo(newLocale, {animate: false, duration: 0.5});
+//        map.setZoom(data[aID].azoom);
+        map.setView(new L.LatLng(data[aID].lat, data[aID].lon),data[aID].azoom, {animate: false});
+        var popupContent = '<p>' + data[aID].Description + '</p>';
+        var popupOptions = {'maxWidth': '215'};
+        map.removeLayer(hellomarker);
+        hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+        hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+        return false;
+      };
+    });
+
+    // When people click Back
+
+    $("#backCLICK").click(function() {
+      console.log( "Clicked Back" );
+      aID = --aID;
+
+      if(aID == 0) {
+        $('#backCLICK').hide();
+        // The mapping portion if back button aid equals zero
+//        var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+//        map.panTo(newLocale, {animate: false, duration: 0.5});
+//        map.setZoom(data[aID].azoom);
+        map.setView(new L.LatLng(data[aID].lat, data[aID].lon),data[aID].azoom, {animate: false});
+        var popupContent = '<p>' + data[aID].Description + '</p>';
+        var popupOptions = {'maxWidth': '215'};
+        map.removeLayer(hellomarker);
+        hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+        hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+        return false;
+      } else {
+        //Else, move to the next one
+        $('#nextCLICK').show();
+        $('#backCLICK').show();
+        console.log( aID );
+        // The mapping portion
+//        var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+//        map.panTo(newLocale, {animate: false, duration: 0.5});
+//        map.setZoom(data[aID].azoom);
+        map.setView(new L.LatLng(data[aID].lat, data[aID].lon),data[aID].azoom, {animate: false});
+        var popupContent = '<p>' + data[aID].Description + '</p>';
+        var popupOptions = {'maxWidth': '215'};
+        map.removeLayer(hellomarker);
+        hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+        hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+        return false;
+      };
+    });
+  });
+return false;
+});
+
+
+  </script>
+  </body>
+</html>

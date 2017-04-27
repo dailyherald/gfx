@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+   Schaumburg license plate tickets
+  </title>
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" />
+
+  <script src="../static/js/jquery-1.9.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div class="container divgfx">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Plate bait</b></h2>
+        <p>Tickets written by Schaumburg police for parked cars with out-of-date license plate stickers skyrocketed after the Illinois secretary of state's office stopped mailing reminders about expiring license registrations in October. <strong>Mouse over the chart to see number of paid, voided and total tickets by month as well as fines paid.</strong></p>
+        </p>
+        <div id='chart'></div>
+        <p><small>* Note: Fine amounts rose to $50 per ticket, up from $40 previously. | Source: Analysis of Schaumburg Police Department data </small></p>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+
+$.getJSON('tickets.json', function(data){
+  console.log(data[0].Paid);
+
+  var elementaryChart = new Highcharts.Chart({
+      chart: {
+      type: 'bar',
+      renderTo: 'chart',
+      height: '350'
+      },
+      title: {
+        text: null
+      },
+      xAxis: {
+        title: {
+          text: 'Month'
+        },
+        categories: ['Dec. 2014', 'Jan. 2015', 'Feb. 2015', 'March 2015', 'April 2015', 'May 2015', 'June 2015', 'July 2015', 'Aug. 2015', 'Sep. 2015', 'Oct. 2015', 'Nov. 2015*', 'Dec. 2015*', 'Jan. 2016*' ],
+       },
+
+      yAxis: {
+        title: {
+          text: 'Total tickets'
+        },
+        labels: {
+          staggerLines: 2,
+          overflow: 'justify',
+         },
+        min: 0,
+        max: 1400,
+        tickInterval: 200
+      },
+
+      plotOptions: {
+        series: {
+          stacking: 'normal'
+        }
+      },
+
+      series: [
+        {
+          name: 'Paid',
+          data: [ data[0].Paid, data[1].Paid, data[2].Paid, data[3].Paid, data[4].Paid, data[5].Paid, data[6].Paid, data[7].Paid, data[8].Paid, data[9].Paid, data[10].Paid, data[11].Paid, data[12].Paid, data[13].Paid]
+        },{
+          name: 'Voided',
+          data: [data[0].Voided, data[1].Voided, data[2].Voided, data[3].Voided, data[4].Voided, data[5].Voided, data[6].Voided, data[7].Voided, data[8].Voided, data[9].Voided, data[10].Voided, data[11].Voided, data[12].Voided, data[13].Voided]
+        }
+     ],
+
+        tooltip: {
+          crosshairs: true,
+          useHTML: true,
+          formatter: function() {
+                return '<b>' + data[this.point.x].Month + '</b><br><table class="mapTable"><tr><td class="tdLEFT"><span style="color:#2f7ed8"> Paid tickets: </span></td><td><b>' + data[this.point.x].Paid + '</b></td></tr><tr><td class="tdLEFT"><span style="color:#89a54e">Voided tickets: </span></td><td><b>' + data[this.point.x].Voided + '</b></td></tr><tr><td class="tdLEFT">Total tickets: </td><td><b>' + data[this.point.x].Total + '</b></td></tr><tr><td class="tdLEFT">Fines: </td><td><b>' + data[this.point.x].Fines + '</b></td></tr></table>';
+            },
+      }
+
+  });
+
+});
+</script>
+
+</body>

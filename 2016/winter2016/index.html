@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		2015-2016 Winter
+	</title>
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" />
+
+  <script src="../static/js/jquery-1.9.1.min.js"></script>
+  <script src="../static/js/highcharts.js"></script>
+  <script src="../static/js/highcharts-more.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+
+<!-- Google page tracking code -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-39205744-20', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- End page tracking -->
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2><strong>A mild winter</strong></h2>
+			<br>
+			<h3>Inches of snow,<small> by month.</small></h3>
+			<div id="snow"></div>
+			<hr>
+			<h3>Daily temperatures <small> since December 22, the first day of winter.</small></h3>
+			<div id="temps"></div>
+			<p class="source">*Through Friday, March. 18. Normal value is for the entire month.<br>
+			Source: National Weather Service monthly climate records for Chicago-O'Hare</p>
+		</div>
+	</div>
+
+	<p><span style="color:white;">---</span></p>
+	<p><span style="color:white;">-30-</span></p>
+
+</div>
+
+
+<script>
+
+$( document ).ready(function() {
+
+	// snowfall chart
+
+var snowfall = new Highcharts.Chart({
+	chart: {
+			renderTo: 'snow',
+			height: 350,
+            type: 'bar'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		title: {
+			text: '2015-\'16 WINTER SEASON'
+            },
+		categories: ['November','December','January','February','March'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	plotLines: [{
+			value: 50,
+			color: '#FFFF99'				
+	}],
+
+	yAxis: {
+		title: {
+			text: null
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 12,
+		tickInterval: 2
+	},
+
+	series: [{
+		name: 'Inches of snow',
+		data: [11.2,4.5,6.3,5.5,2.6]
+			}, {
+		name: 'Normal for month',
+		data: [1.2,8.5,10.8,9.1,5.6]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+	},
+
+});
+
+
+// temperature range
+
+var ranges = [
+[Date.UTC(2015,11,22),41,35],
+[Date.UTC(2015,11,23),59,40],
+[Date.UTC(2015,11,24),42,34],
+[Date.UTC(2015,11,25),44,32],
+[Date.UTC(2015,11,26),42,37],
+[Date.UTC(2015,11,27),40,35],
+[Date.UTC(2015,11,28),39,31],
+[Date.UTC(2015,11,29),39,29],
+[Date.UTC(2015,11,30),29,27],
+[Date.UTC(2015,11,31),28,22],
+[Date.UTC(2016,0,1),31,19],
+[Date.UTC(2016,0,2),32,20],
+[Date.UTC(2016,0,3),29,22],
+[Date.UTC(2016,0,4),31,22],
+[Date.UTC(2016,0,5),33,17],
+[Date.UTC(2016,0,6),36,21],
+[Date.UTC(2016,0,7),41,34],
+[Date.UTC(2016,0,8),42,36],
+[Date.UTC(2016,0,9),40,23],
+[Date.UTC(2016,0,10),23,2],
+[Date.UTC(2016,0,11),24,-1],
+[Date.UTC(2016,0,12),20,3],
+[Date.UTC(2016,0,13),25,-2],
+[Date.UTC(2016,0,14),44,24],
+[Date.UTC(2016,0,15),43,30],
+[Date.UTC(2016,0,16),30,9],
+[Date.UTC(2016,0,17),8,-1],
+[Date.UTC(2016,0,18),7,-4],
+[Date.UTC(2016,0,19),17,0],
+[Date.UTC(2016,0,20),23,12],
+[Date.UTC(2016,0,21),29,9],
+[Date.UTC(2016,0,22),30,19],
+[Date.UTC(2016,0,23),33,20],
+[Date.UTC(2016,0,24),34,24],
+[Date.UTC(2016,0,25),41,24],
+[Date.UTC(2016,0,26),36,24],
+[Date.UTC(2016,0,27),34,23],
+[Date.UTC(2016,0,28),39,29],
+[Date.UTC(2016,0,29),35,20],
+[Date.UTC(2016,0,30),46,35],
+[Date.UTC(2016,0,31),48,33],
+[Date.UTC(2016,1,1),45,30],
+[Date.UTC(2016,1,2),38,32],
+[Date.UTC(2016,1,3),37,28],
+[Date.UTC(2016,1,4),32,19],
+[Date.UTC(2016,1,5),34,25],
+[Date.UTC(2016,1,6),41,24],
+[Date.UTC(2016,1,7),43,32],
+[Date.UTC(2016,1,8),32,20],
+[Date.UTC(2016,1,9),21,13],
+[Date.UTC(2016,1,10),18,9],
+[Date.UTC(2016,1,11),21,7],
+[Date.UTC(2016,1,12),23,7],
+[Date.UTC(2016,1,13),17,2],
+[Date.UTC(2016,1,14),18,9],
+[Date.UTC(2016,1,15),27,18],
+[Date.UTC(2016,1,16),33,24],
+[Date.UTC(2016,1,17),34,21],
+[Date.UTC(2016,1,18),42,23],
+[Date.UTC(2016,1,19),62,41],
+[Date.UTC(2016,1,20),57,38],
+[Date.UTC(2016,1,21),41,29],
+[Date.UTC(2016,1,22),44,26],
+[Date.UTC(2016,1,23),45,26],
+[Date.UTC(2016,1,24),36,32],
+[Date.UTC(2016,1,25),37,31],
+[Date.UTC(2016,1,26),33,24],
+[Date.UTC(2016,1,27),54,28],
+[Date.UTC(2016,1,28),62,36],
+[Date.UTC(2016,1,29),52,28],
+[Date.UTC(2016,2,1),30,18],
+[Date.UTC(2016,2,2),32,11],
+[Date.UTC(2016,2,3),33,27],
+[Date.UTC(2016,2,4),39,20],
+[Date.UTC(2016,2,5),39,29],
+[Date.UTC(2016,2,6),52,33],
+[Date.UTC(2016,2,7),63,44],
+[Date.UTC(2016,2,8),70,58],
+[Date.UTC(2016,2,9),63,48],
+[Date.UTC(2016,2,10),51,37],
+[Date.UTC(2016,2,11),55,34],
+[Date.UTC(2016,2,12),59,33],
+[Date.UTC(2016,2,13),48,43],
+[Date.UTC(2016,2,14),55,43],
+[Date.UTC(2016,2,15),58,46],
+[Date.UTC(2016,2,16),56,45],
+[Date.UTC(2016,2,17),56,40],
+[Date.UTC(2016,2,18),42,33]
+			];
+
+var averages1 = [
+[Date.UTC(2015,11,22),38],
+[Date.UTC(2015,11,23),50],
+[Date.UTC(2015,11,24),38],
+[Date.UTC(2015,11,25),38],
+[Date.UTC(2015,11,26),40],
+[Date.UTC(2015,11,27),38],
+[Date.UTC(2015,11,28),35],
+[Date.UTC(2015,11,29),34],
+[Date.UTC(2015,11,30),28],
+[Date.UTC(2015,11,31),25],
+[Date.UTC(2016,0,1),25],
+[Date.UTC(2016,0,2),26],
+[Date.UTC(2016,0,3),26],
+[Date.UTC(2016,0,4),27],
+[Date.UTC(2016,0,5),25],
+[Date.UTC(2016,0,6),29],
+[Date.UTC(2016,0,7),38],
+[Date.UTC(2016,0,8),39],
+[Date.UTC(2016,0,9),32],
+[Date.UTC(2016,0,10),13],
+[Date.UTC(2016,0,11),12],
+[Date.UTC(2016,0,12),12],
+[Date.UTC(2016,0,13),12],
+[Date.UTC(2016,0,14),34],
+[Date.UTC(2016,0,15),37],
+[Date.UTC(2016,0,16),20],
+[Date.UTC(2016,0,17),4],
+[Date.UTC(2016,0,18),2],
+[Date.UTC(2016,0,19),9],
+[Date.UTC(2016,0,20),18],
+[Date.UTC(2016,0,21),19],
+[Date.UTC(2016,0,22),25],
+[Date.UTC(2016,0,23),27],
+[Date.UTC(2016,0,24),29],
+[Date.UTC(2016,0,25),33],
+[Date.UTC(2016,0,26),30],
+[Date.UTC(2016,0,27),29],
+[Date.UTC(2016,0,28),34],
+[Date.UTC(2016,0,29),28],
+[Date.UTC(2016,0,30),41],
+[Date.UTC(2016,0,31),41],
+[Date.UTC(2016,1,1),38],
+[Date.UTC(2016,1,2),35],
+[Date.UTC(2016,1,3),33],
+[Date.UTC(2016,1,4),26],
+[Date.UTC(2016,1,5),30],
+[Date.UTC(2016,1,6),32],
+[Date.UTC(2016,1,7),38],
+[Date.UTC(2016,1,8),26],
+[Date.UTC(2016,1,9),17],
+[Date.UTC(2016,1,10),14],
+[Date.UTC(2016,1,11),14],
+[Date.UTC(2016,1,12),15],
+[Date.UTC(2016,1,13),10],
+[Date.UTC(2016,1,14),14],
+[Date.UTC(2016,1,15),23],
+[Date.UTC(2016,1,16),29],
+[Date.UTC(2016,1,17),28],
+[Date.UTC(2016,1,18),33],
+[Date.UTC(2016,1,19),52],
+[Date.UTC(2016,1,20),48],
+[Date.UTC(2016,1,21),35],
+[Date.UTC(2016,1,22),35],
+[Date.UTC(2016,1,23),36],
+[Date.UTC(2016,1,24),34],
+[Date.UTC(2016,1,25),34],
+[Date.UTC(2016,1,26),29],
+[Date.UTC(2016,1,27),41],
+[Date.UTC(2016,1,28),49],
+[Date.UTC(2016,1,29),40],
+[Date.UTC(2016,2,1),24],
+[Date.UTC(2016,2,2),22],
+[Date.UTC(2016,2,3),30],
+[Date.UTC(2016,2,4),30],
+[Date.UTC(2016,2,5),34],
+[Date.UTC(2016,2,6),43],
+[Date.UTC(2016,2,7),54],
+[Date.UTC(2016,2,8),64],
+[Date.UTC(2016,2,9),56],
+[Date.UTC(2016,2,10),44],
+[Date.UTC(2016,2,11),45],
+[Date.UTC(2016,2,12),46],
+[Date.UTC(2016,2,13),46],
+[Date.UTC(2016,2,14),49],
+[Date.UTC(2016,2,15),52],
+[Date.UTC(2016,2,16),51],
+[Date.UTC(2016,2,17),48],
+[Date.UTC(2016,2,18),38]
+			];
+
+var averages2 = [
+[Date.UTC(2015,11,22),26],
+[Date.UTC(2015,11,23),26],
+[Date.UTC(2015,11,24),26],
+[Date.UTC(2015,11,25),25],
+[Date.UTC(2015,11,26),25],
+[Date.UTC(2015,11,27),25],
+[Date.UTC(2015,11,28),25],
+[Date.UTC(2015,11,29),25],
+[Date.UTC(2015,11,30),25],
+[Date.UTC(2015,11,31),24],
+[Date.UTC(2016,0,1),24],
+[Date.UTC(2016,0,2),24],
+[Date.UTC(2016,0,3),24],
+[Date.UTC(2016,0,4),24],
+[Date.UTC(2016,0,5),24],
+[Date.UTC(2016,0,6),24],
+[Date.UTC(2016,0,7),24],
+[Date.UTC(2016,0,8),24],
+[Date.UTC(2016,0,9),24],
+[Date.UTC(2016,0,10),24],
+[Date.UTC(2016,0,11),24],
+[Date.UTC(2016,0,12),24],
+[Date.UTC(2016,0,13),24],
+[Date.UTC(2016,0,14),24],
+[Date.UTC(2016,0,15),24],
+[Date.UTC(2016,0,16),24],
+[Date.UTC(2016,0,17),23],
+[Date.UTC(2016,0,18),23],
+[Date.UTC(2016,0,19),23],
+[Date.UTC(2016,0,20),23],
+[Date.UTC(2016,0,21),24],
+[Date.UTC(2016,0,22),24],
+[Date.UTC(2016,0,23),24],
+[Date.UTC(2016,0,24),24],
+[Date.UTC(2016,0,25),24],
+[Date.UTC(2016,0,26),24],
+[Date.UTC(2016,0,27),24],
+[Date.UTC(2016,0,28),24],
+[Date.UTC(2016,0,29),24],
+[Date.UTC(2016,0,30),24],
+[Date.UTC(2016,0,31),24],
+[Date.UTC(2016,1,1),24],
+[Date.UTC(2016,1,2),24],
+[Date.UTC(2016,1,3),25],
+[Date.UTC(2016,1,4),25],
+[Date.UTC(2016,1,5),25],
+[Date.UTC(2016,1,6),25],
+[Date.UTC(2016,1,7),25],
+[Date.UTC(2016,1,8),26],
+[Date.UTC(2016,1,9),26],
+[Date.UTC(2016,1,10),26],
+[Date.UTC(2016,1,11),26],
+[Date.UTC(2016,1,12),27],
+[Date.UTC(2016,1,13),27],
+[Date.UTC(2016,1,14),27],
+[Date.UTC(2016,1,15),28],
+[Date.UTC(2016,1,16),28],
+[Date.UTC(2016,1,17),28],
+[Date.UTC(2016,1,18),28],
+[Date.UTC(2016,1,19),29],
+[Date.UTC(2016,1,20),29],
+[Date.UTC(2016,1,21),30],
+[Date.UTC(2016,1,22),30],
+[Date.UTC(2016,1,23),30],
+[Date.UTC(2016,1,24),31],
+[Date.UTC(2016,1,25),31],
+[Date.UTC(2016,1,26),31],
+[Date.UTC(2016,1,27),32],
+[Date.UTC(2016,1,28),32],
+[Date.UTC(2016,1,29),32],
+[Date.UTC(2016,2,1),32],
+[Date.UTC(2016,2,2),33],
+[Date.UTC(2016,2,3),33],
+[Date.UTC(2016,2,4),34],
+[Date.UTC(2016,2,5),34],
+[Date.UTC(2016,2,6),34],
+[Date.UTC(2016,2,7),35],
+[Date.UTC(2016,2,8),35],
+[Date.UTC(2016,2,9),35],
+[Date.UTC(2016,2,10),36],
+[Date.UTC(2016,2,11),36],
+[Date.UTC(2016,2,12),36],
+[Date.UTC(2016,2,13),37],
+[Date.UTC(2016,2,14),37],
+[Date.UTC(2016,2,15),38],
+[Date.UTC(2016,2,16),38],
+[Date.UTC(2016,2,17),38],
+[Date.UTC(2016,2,18),39]
+			];
+
+var temperatures = new Highcharts.Chart({
+	chart: {
+			renderTo: 'temps',
+			height: 350,
+  //          type: 'column'
+        },
+
+		    title: {
+		        text: null
+		    },
+		
+		    xAxis: {
+		        type: 'datetime'
+		    },
+		    
+		    yAxis: {
+		        title: {
+		            text: null
+		        }
+		    },
+		
+		    tooltip: {
+		        crosshairs: true,
+		        shared: true,
+		        valueSuffix: '°F'
+		    },
+		    
+		    legend: {
+		    },
+
+            series: [{
+                name: 'Average daily temperature',
+                data: averages1,
+                zIndex: 1,
+                marker: {
+                    fillColor: 'white',
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[0]
+                }
+            },{
+                name: 'Normal average',
+                data: averages2,
+                zIndex: 1,
+                marker: {
+                    enabled: false,
+                    states: {
+                        hover: {
+                            enabled: true
+                        }
+                    },
+                    fillColor: 'white',
+                    lineWidth: 2,
+                    lineColor: Highcharts.getOptions().colors[1]
+                }
+            },{
+                name: 'Range',
+                data: ranges,
+                type: 'arearange',
+                lineWidth: 0,
+                linkedTo: ':previous',
+                color: Highcharts.getOptions().colors[0],
+                fillOpacity: 0.3,
+                zIndex: 0
+            }]
+		
+
+		
+	});
+
+});
+
+</script>
+
+
+</body>
+
+
+

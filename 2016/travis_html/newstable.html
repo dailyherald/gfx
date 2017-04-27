@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Newstable
+  </title>
+</head>
+
+<body>
+<div>
+<hr>
+<h1>This is an h1 headline</h1>
+<h2>This is an h2 headline</h2>
+<h3>This is an h3 headline</h3>
+<h4>This is an h4 headline</h4>
+<h5>This is an h5 headline</h5>
+<p>This is a paragraph <strong>that switches to strong/bold text <span style="color:red">and red/bold text</span> </strong>and back to regular text again.<br>
+<b>Here's b/bold text <i>now i/italic bold text</i></b></p>
+<h3>Below is a table with whatever base styles exist</h3>
+<table><thead>
+<th>Heading item</th><th>Heading item</th><th>heading item</th>
+</thead><tbody>
+<tr><td>item</td><td>item</td><td>item</td></tr>
+<tr><td>item</td><td>item</td><td>item</td></tr>
+<tr><td>item</td><td>item</td><td>item</td></tr>
+<tr><td>item</td><td>item</td><td>item</td></tr>
+<tr><td>item</td><td>item</td><td>item</td></tr>
+</tbody></table>
+<hr>
+<h3>Below is a table with styles from classes applied, which works here but not in our cms</h3>
+<style>
+td {text-align:left;}
+td.tdRIGHT {text-align:right;}
+td.tdLEFT {text-align:left;}
+td.tdCENT {text-align:center;}
+table.newstable tr:nth-child(even) {background:#efefef;}
+table.newstable tr td {vertical-align: middle;padding:5px;border-bottom:1px solid #BBBBBB;}
+table.newstable th {vertical-align: middle;padding:5px;border-bottom:1px solid #BBBBBB;}
+</style>
+<table class="newstable"><thead>
+<th>Heading item</th><th>Heading item</th><th>heading item</th>
+</thead><tbody>
+<tr><td>item</td><td class="tdRIGHT">item</td><td class="tdRIGHT">item</td></tr>
+<tr><td>item</td><td class="tdRIGHT">item</td><td class="tdRIGHT">item</td></tr>
+<tr><td>item</td><td class="tdRIGHT">item</td><td class="tdRIGHT">item</td></tr>
+<tr><td>item</td><td class="tdRIGHT">item</td><td class="tdRIGHT">item</td></tr>
+<tr><td>item</td><td class="tdRIGHT">item</td><td class="tdRIGHT">item</td></tr>
+</tbody></table>
+<hr>
+<h3>Below is a table with inline styles, which does work but would not be ideal</h3>
+<table><thead>
+<th style="text-align:left;padding:5px;border-bottom:1px solid #999999;">Heading item</th><th style="text-align:right;padding:5px;border-bottom:1px solid #999999;">Heading item</th><th style="text-align:right;padding:5px;border-bottom:1px solid #999999;">heading item</th>
+</thead><tbody>
+<tr style="background:#efefef"><td style="text-align:left;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td></tr>
+<tr><td style="text-align:left;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td></tr>
+<tr style="background:#efefef"><td style="text-align:left;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td></tr>
+<tr><td style="text-align:left;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td></tr>
+<tr style="background:#efefef"><td style="text-align:left;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td><td style="text-align:right;padding:5px;border-bottom:1px solid #999999;">item</td></tr>
+</tbody></table>
+</div>
+</body>
+</html>

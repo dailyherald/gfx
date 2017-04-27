@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Polar chart
+	</title>
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" />
+
+  <script src="../static/js/jquery-1.9.1.min.js"></script>
+  <script src="../static/js/highcharts2.js"></script>
+  <script src="../static/js/highcharts-more2.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2><strong>Polar Chart</strong></h2>
+			<br>
+			<div id="polar"></div>
+			<p class="source">Source: National Weather Service monthly climate records for Chicago-O'Hare</p>
+		</div>
+	</div>
+
+	<p><span style="color:white;">---</span></p>
+	<p><span style="color:white;">-30-</span></p>
+
+</div>
+
+
+<script>
+
+$(function() {
+
+	// snowfall chart
+
+$('#polar').highcharts({
+	chart: {
+			height: 500,
+            polar: 'true'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+    pane: {
+            startAngle: 0,
+            endAngle: 360
+        },
+
+	xAxis: {
+		tickInterval: 30,
+            min: 0,
+            max: 360,
+            labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+            }
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	yAxis: {
+		title: {
+			text: null
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+	},
+
+    plotOptions: {
+        series: {
+            pointStart: 0,
+            pointInterval: 30
+        },
+        column: {
+            pointPadding: 0,
+            groupPadding: 0
+        }
+    },
+
+    series: [{
+        type: 'column',
+        name: 'Column',
+        data: [1, 0, 8, 41, 27, 47, 15, 31, 10, 5, 9, 0],
+        pointPlacement: 'between'
+	}]
+
+
+});
+
+
+});
+
+</script>
+
+
+</body>
+
+
+

@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Senior exemptions, 2009-2012
+	</title>
+
+<link rel="stylesheet" href="styles/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/foundation.css" type="text/css" media="screen" />
+<link href="styles/smoothness/jquery-ui-1.10.3.customRC.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/styleSort.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/newsArt.css" type="text/css" media="screen" />
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+<script src="scripts/highcharts.js"></script>
+<script src="scripts/jquery.table.js"></script>
+
+<!-- Activate responsiveness in the "child" page
+<script src="scripts/jquery.responsiveiframe.js"></script>
+<script>
+  var ri = responsiveIframe();
+  ri.allowResponsiveEmbedding();
+</script> -->
+
+<script>
+	
+$(document).ready(function(e) {
+	
+		
+	$.getJSON('json/exempt.json', function(data){
+	
+var change0num = parseFloat(data[0].change);
+var change1num = parseFloat(data[1].change);
+var change2num = parseFloat(data[2].change);
+var change3num = parseFloat(data[3].change);
+var change4num = parseFloat(data[4].change);
+var change5num = parseFloat(data[5].change);
+var change6num = parseFloat(data[6].change);
+var change7num = parseFloat(data[7].change);
+var change8num = parseFloat(data[8].change);
+var change9num = parseFloat(data[9].change);
+var change10num = parseFloat(data[10].change);
+var change11num = parseFloat(data[11].change);
+var change12num = parseFloat(data[12].change);
+var change13num = parseFloat(data[13].change);
+var change14num = parseFloat(data[14].change);
+var change15num = parseFloat(data[15].change);
+var change16num = parseFloat(data[16].change);
+var change17num = parseFloat(data[17].change);
+var change18num = parseFloat(data[18].change);
+var change19num = parseFloat(data[19].change);
+var change20num = parseFloat(data[20].change);
+var change21num = parseFloat(data[21].change);
+var change22num = parseFloat(data[22].change);
+var change23num = parseFloat(data[23].change);
+var change24num = parseFloat(data[24].change);
+var change25num = parseFloat(data[25].change);
+var change26num = parseFloat(data[26].change);
+var change27num = parseFloat(data[27].change);
+var change28num = parseFloat(data[28].change);
+var change29num = parseFloat(data[29].change);
+var change30num = parseFloat(data[30].change);
+var change31num = parseFloat(data[31].change);
+var change32num = parseFloat(data[32].change);
+var change33num = parseFloat(data[33].change);
+var change34num = parseFloat(data[34].change);
+var change35num = parseFloat(data[35].change);
+var change36num = parseFloat(data[36].change);
+var change37num = parseFloat(data[37].change);
+var change38num = parseFloat(data[38].change);
+var change39num = parseFloat(data[39].change);
+var change40num = parseFloat(data[40].change);
+var change41num = parseFloat(data[41].change);
+var change42num = parseFloat(data[42].change);
+var change43num = parseFloat(data[43].change);
+var change44num = parseFloat(data[44].change);
+var change45num = parseFloat(data[45].change);
+var change46num = parseFloat(data[46].change);
+var change47num = parseFloat(data[47].change);
+var change48num = parseFloat(data[48].change);
+var change49num = parseFloat(data[49].change);
+var change50num = parseFloat(data[50].change);
+
+	var chartEXEMPT = new Highcharts.Chart({
+        chart: {
+			renderTo: 'EXEMPTchart',
+            type: 'column'
+        },
+        title: {
+	    	text: null
+    	},
+        xAxis: {
+            categories: ['McHenry', 'Algonquin', 'Grafton', 'Nunda', 'Big Rock', 'Elgin', 'Aurora', 'Addison', 'Cuba', 'Dundee', 'Warren', 'Kaneville', 'DuPage', 'Bloomingdale', 'Avon', 'Hampshire', 'St. Charles', 'Wayne', 'Winfield', 'Virgil', 'Fremont', 'Campton', 'Burlington', 'Wauconda', 'Downers Grove', 'York', 'Plato', 'Schaumburg', 'Ela', 'Palatine', 'Vernon', 'Geneva', 'Wheeling', 'Hanover', 'Leyden', 'Libertyville', 'Milton', 'Maine', 'Blackberry', 'Elk Grove', 'Lake Villa', 'Wheatland', 'Rutland', 'Antioch', 'Lisle', 'Barrington', 'Naperville', 'Batavia', 'Sugar Grove', 'Grant', 'Average'],
+			labels: {
+				rotation: -45,
+				align: 'right',
+				fontFamily: 'Arial, sans-serif',
+                style: {
+                    color: '#000',
+                }
+			},
+			plotLines: [{
+                value: 50,
+                color: '#FFFF99',
+                width: 10				
+			}],
+        },
+        yAxis: {
+            title: {
+                text: 'Avg. % change, 2009-2012'
+            },
+			plotLines: [{
+                value: -46.4,
+				dashStyle: 'Dot',
+                color: 'red',
+                width: 2,
+				label: {
+					text: 'AVERAGE % DECLINE IN EXEMPTION',
+					align: 'center',
+	                verticalAlign: 'bottom'
+                }			
+			}],
+        },
+        series: [{
+			type: 'column',
+            name: 'Townships',
+            data: [data[0].change, data[1].change, data[2].change, data[3].change, data[4].change, data[5].change, data[6].change, data[7].change, data[8].change, data[9].change, data[10].change, data[11].change, data[12].change, data[13].change, data[14].change, data[15].change, data[16].change, data[17].change, data[18].change, data[19].change, data[20].change, data[21].change, data[22].change, data[23].change, data[24].change, data[25].change, data[26].change, data[27].change, data[28].change, data[29].change, data[30].change, data[31].change, data[32].change, data[33].change, data[34].change, data[35].change, data[36].change, data[37].change, data[38].change, data[39].change, data[40].change, data[41].change, data[42].change, data[43].change, data[44].change, data[45].change, data[46].change, data[47].change, data[48].change, data[49].change, data[50].change]
+	    }],
+		tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            headerFormat: '<b>{point.key} Twp.</b><br>',
+            pointFormat: '% decrease<br>in exemption: <b>{point.y}%</b>',
+        },
+	});
+
+		var twpHTML = "";
+			twpHTML += '<p><table id="tableTWP" class="tablesorter">';
+			twpHTML += '<thead><tr><th class="tdLEFT">' + "Township" + '</th><th>' + "County" + '</th><th data-sort="false">' + "2012 avg.<br>exemption" + '</th><th data-sort="false">' + "2009 avg.<br>exemption" + '</th><th data-sort="false">' + 'Difference' + '</th></tr></thead><tbody>';
+				$.each(data, function(i) {
+						twpHTML += '<tr class="group"><td class="tdLEFT">' + data[i].Township + '</td><td class="tdCENT">' + data[i].County + '</td><td class="tdCENT">' + data[i].exempt12 + '</td><td class="tdCENT">' + data[i].exempt09 + '</td><td class="tdCENT">' + data[i].difference + '</td></tr>';
+					});
+			twpHTML += '</tbody></table></p>';
+
+
+		$('#tableLIST').html(twpHTML);
+//		table_sorter( '#tableTWP', { groupClass: 'group' } ).hover();
+
+		});
+
+});	
+</script>
+
+</head>
+
+<body>
+
+<div class="row">
+
+<div class="small-12 large-centered columns">
+
+<div>
+<h3>Senior freeze exemptions</h3>
+<p>Since 2009, fixed-income seniors have seen a 46.4% decrease in the value of the "Senior Freeze" property tax exemption. Below is the average individual decrease by township for North and West suburbs.</p>
+</div> 
+
+<div id="EXEMPTchart">
+</div>
+
+<div id="tableText">
+<h3>Township freeze figures</h3>
+<p>The average senior freeze assessment reduction has declined dramatically in most suburban townships over the past four years. 
+<br><strong>Note:</strong> The list below is sortable by Township name and County.</p>
+</div>
+<div class="small-12 large-centered columns" id="tableLIST">
+</div>
+
+<div>
+<p>Source: County clerks and supervisors of assessments</p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

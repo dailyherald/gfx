@@ -1,0 +1,24 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "town": "Chicago-O'Hare", "snow": "19.3", "Lat": -87.907713, "Long": 41.974266 }, "geometry": { "type": "Point", "coordinates": [ -87.907713, 41.974266 ] } },
+{ "type": "Feature", "properties": { "town": "Midway Airport", "snow": "19.2", "Lat": -87.752075, "Long": 41.78644 }, "geometry": { "type": "Point", "coordinates": [ -87.752075, 41.78644 ] } },
+{ "type": "Feature", "properties": { "town": "Aurora", "snow": "15.0", "Lat": -88.317534, "Long": 41.759936 }, "geometry": { "type": "Point", "coordinates": [ -88.317534, 41.759936 ] } },
+{ "type": "Feature", "properties": { "town": "Barrington", "snow": "14.0", "Lat": -88.133219, "Long": 42.151444 }, "geometry": { "type": "Point", "coordinates": [ -88.133219, 42.151444 ] } },
+{ "type": "Feature", "properties": { "town": "Elgin", "snow": "14.0", "Lat": -88.284092, "Long": 42.039929 }, "geometry": { "type": "Point", "coordinates": [ -88.284092, 42.039929 ] } },
+{ "type": "Feature", "properties": { "town": "Harvard", "snow": "13.0", "Lat": -88.617266, "Long": 42.423844 }, "geometry": { "type": "Point", "coordinates": [ -88.617266, 42.423844 ] } },
+{ "type": "Feature", "properties": { "town": "Lisle", "snow": "16.0", "Lat": -88.074321, "Long": 41.807959 }, "geometry": { "type": "Point", "coordinates": [ -88.074321, 41.807959 ] } },
+{ "type": "Feature", "properties": { "town": "Mundelein", "snow": "14.0", "Lat": -88.005504, "Long": 42.270111 }, "geometry": { "type": "Point", "coordinates": [ -88.005504, 42.270111 ] } },
+{ "type": "Feature", "properties": { "town": "Park Forest", "snow": "18.0", "Lat": -87.685677, "Long": 41.485248 }, "geometry": { "type": "Point", "coordinates": [ -87.685677, 41.485248 ] } },
+{ "type": "Feature", "properties": { "town": "Spring Grove", "snow": "14.0", "Lat": -88.242874, "Long": 42.446244 }, "geometry": { "type": "Point", "coordinates": [ -88.242874, 42.446244 ] } },
+{ "type": "Feature", "properties": { "town": "Harvard", "snow": "15.0", "Lat": -88.616923, "Long": 42.42359 }, "geometry": { "type": "Point", "coordinates": [ -88.616923, 42.42359 ] } },
+{ "type": "Feature", "properties": { "town": "Roselle", "snow": "18.0", "Lat": -88.078903, "Long": 41.983077 }, "geometry": { "type": "Point", "coordinates": [ -88.078903, 41.983077 ] } },
+{ "type": "Feature", "properties": { "town": "Elk Grove Village", "snow": "18.0", "Lat": -87.981166, "Long": 42.005717 }, "geometry": { "type": "Point", "coordinates": [ -87.981166, 42.005717 ] } },
+{ "type": "Feature", "properties": { "town": "Morton Grove", "snow": "16.5", "Lat": -87.783044, "Long": 42.042043 }, "geometry": { "type": "Point", "coordinates": [ -87.783044, 42.042043 ] } },
+{ "type": "Feature", "properties": { "town": "Westchester", "snow": "20.0", "Lat": -87.889003, "Long": 41.849599 }, "geometry": { "type": "Point", "coordinates": [ -87.889003, 41.849599 ] } },
+{ "type": "Feature", "properties": { "town": "Sauk Village", "snow": "20.0", "Lat": -87.570318, "Long": 41.493767 }, "geometry": { "type": "Point", "coordinates": [ -87.570318, 41.493767 ] } },
+{ "type": "Feature", "properties": { "town": "Highwood", "snow": "18.3", "Lat": -87.812685, "Long": 42.204514 }, "geometry": { "type": "Point", "coordinates": [ -87.812685, 42.204514 ] } }
+]
+}

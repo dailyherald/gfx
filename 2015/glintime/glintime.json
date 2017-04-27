@@ -1,0 +1,35 @@
+{
+    "timeline":
+    {
+        "headline":"Timeline of the Gliniewicz investigation",
+        "type":"default",
+        "text":"Fox Lake police Lt. Joe Gliniewicz was fatally wounded in early September, touching off a massive manhunt. Click the arrow at right or use the scroll area below to move along the timeline.",
+        "startDate":"2015,9,1",
+        "date": [
+			{"startDate":"2015,9,1,7,52","endDate":null,"headline":"Radio for help","text":"Fox Lake police Lt. Charles Joseph Gliniewicz radios to dispatchers that he notices three suspicious people walking on Honing Road.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,7,55","endDate":null,"headline":"Call for backup","text":"Gliniewicz calls for backup and says he is in a foot chase on Honing Road.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,8,01","endDate":null,"headline":"Help arrives","text":"Two officers arrive at Gliniewicz's location on Honing Road.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,8,09","endDate":null,"headline":"Officer down","text":"Backup officers radio to dispatch that an officer is down.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,8,25","endDate":null,"headline":"Pronounced dead","text":"Gliniewicz is pronounced dead. His gun is found at the scene but not in his holster.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,9,00","endDate":null,"headline":"Manhunt begins","text":"Manhunt for begins for three suspects: two white males and one black male.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,1,10,00","endDate":null,"headline":"Lockdown","text":"Area schools are placed on lockdown, Metra District North Line service suspended temporarily and a no-fly zone established in the Fox Lake Area until the next day.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,2","endDate":null,"headline":"Search continues","text":"Some area schools remain closed as manhunt continues.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,2","endDate":null,"headline":"Vigil","text":"More than 1,000 people attend a candlelight vigil at Nippersink Lake. Gliniewicz's widow, Melodie, attends.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,2","endDate":null,"headline":"Crime report","text":"Police respond to a 30-year-old Vernon Hills woman's claim that two men tried to force their way into her car near Volo.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,3","endDate":null,"headline":"Back to school","text":"Fox Lake area schools reopen.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,3","endDate":null,"headline":"False report","text":"Vernon Hills woman admits the report was false.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,4","endDate":null,"headline":"Reward","text":"Motorola Solutions offers $50,000 reward.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,5","endDate":null,"headline":"Seeking clues","text":"Police begin reviewing video, tips for possible leads.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,5","endDate":null,"headline":"Evidence found","text":"Lake County Major Crimes Task Force announces that a significant piece of evidence was recovered at the crime scene.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,7","endDate":null,"headline":"Funeral","text":"Thousands of mourners turn out for Gliniewicz's visitation and funeral.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,8","endDate":null,"headline":"DNA","text":"Police say DNA evidence recovered at the crime scene, but video provided no new clues.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,9","endDate":null,"headline":"Coroner speaks","text":"Lake County Coroner Dr. Thomas Rudd says Gliniewicz died from a single gunshot wound, but will not rule on manner of death.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,10","endDate":null,"headline":"Warning","text":"Investigating officers warn Rudd to stop speculating about how Gliniewicz could have been killled.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,13","endDate":null,"headline":"Threat","text":"Retired Chicago police officer charged for threatening to harm investigators unless Gliniewicz's death is declared a suicide","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,16","endDate":null,"headline":"Rumours","text":"Gliniewicz's son dismisses rumours of suicide in officer's death.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,9,21","endDate":null,"headline":"Unknown DNA","text":"Authorities say unknown DNA found at several locations at crime scene.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,10,01","endDate":null,"headline":"Weapon used","text":"Investigators say Gliniewicz was killed by the second of two gunshots fired from his own .40-caliber weapon.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"2015,11,03","endDate":null,"headline":"Announcement","text":"Lake County authorities announce a press conference to release new, significant information.","asset":{"media":null,"credit":"","caption":null,"thumbnail":null,"type":null,"tag":null}}
+			]
+    }
+}

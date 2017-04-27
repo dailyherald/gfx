@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Metra fare hikes
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+
+<style>
+
+.farecontrol {
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+/*  padding: 20px; */
+  margin: 2px;
+  height: 25px;
+  background-color: #bbb;
+  text-align: center
+}
+
+.linkContain {
+  display: inline-block;
+  background-color: #bbb
+}
+
+.fareimages {
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+/*  padding: 20px; */
+  margin: 2px;
+  height: 100%;
+  background-color: #ffffff
+}
+
+.fareimages img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div class="divgfx">
+	<div class="row">
+	<div class="small-12 small-centered large-12 large-centered columns">
+		<div class="farecontrol">
+      <strong>
+          <a id="dayCLICK" href=""><div class="linkContain">DAILY FARES</div></a> | <a id="monthCLICK" href=""><div class="linkContain">MONTHLY FARES</div></a>
+        </strong>
+      </div>
+
+		<div class="fareimages" id="dayfare"><img alt="What a daily Metra ticket will cost" width="500" height="1090" src="metraDay.jpg" border="0"></div>
+
+
+		<div class="fareimages" id="monthfare"><img alt="What a Metra monthly pass will cost" width="500" height="1090" src="metraMonth.jpg" border="0"></div>
+
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">-30-</span></p>
+	</div>
+	</div>
+</div>
+
+<script>
+
+$( document ).ready( function() {
+$('#monthfare').hide();
+$('#dayfare').show();
+
+$("#dayCLICK").click(function() {
+       $('#dayfare').show();
+       $('#monthfare').hide();
+      return false
+  });
+
+$("#monthCLICK").click(function() {
+      $('#monthfare').show();
+      $('#dayfare').hide();
+      return false
+  });
+
+  });
+
+
+</script>
+
+</body>
+
+
+

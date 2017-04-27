@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Daily Herald News Art
+	</title>
+
+	<link href="styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="scripts/highcharts.js"></script>
+	<script src="scripts/leaflet.js"></script>
+
+<!--
+	Activate responsiveness in the "child" pageΩ
+	<script src="scripts/jquery.responsiveiframe.js"></script>
+	<script>
+	  var ri = responsiveIframe();
+	  ri.allowResponsiveEmbedding();
+	</script> -->
+
+
+</head>
+
+<body>
+
+<div class="row">
+	<header class="small-12 large-12 columns">
+		<h1 id="opening_header">Daily Herald News Art</h1>
+	</header>
+	<nav class="small-12 large-12 columns text-right gray navSpec">
+		<p><a href="index.html">Home</a></p>
+	</nav>
+</div>
+
+<div class="row">
+	<div class="small-12 large-8 push-4 columns">
+		<div id="suburbs" class="space"></div>
+		<h4>Some notes on the map</h4>
+		<p>Using Qgis, vector->simplify->0.0005 and it should take the file down from about 6mb to 1mb, which is small enough to load quickly but still has good geometry at higher magnification.</p>
+		<p>That size should allow us to insert quite a bit of data into the geojson file we export from arcMap.</p>
+	</div>
+
+	<aside class="small-12 large-4 pull-8 columns">
+ 		<h4>Links I'm using</h4>
+		<ul>
+			<li class="li_position"><a href="http://leafletjs.com/examples.html" target="new">Leaflet tutorials</a></li>
+			<li class="li_position"><a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/" target="new">Using tiles</a> </li>
+			<li class="li_position"><a href="http://lyzidiamond.com/posts/" target="new">Jquery with geojson</a></li>
+			<li class="li_position"><a href="https://gist.github.com/mourner/1804938" target="new">Tile sources</a></li>
+		</ul>
+		<h4>Graphics</h4>
+		<ul>
+			<li class="li_position"><a href="schools_lowinc.html" target="new">Low income students</a></li>
+            <li class="li_position"><a href="watchdog1113.html" target="new">Seniors exemptions</a></li>
+			<li class="li_position"><a href="suburbsmap.html" target="new">Suburbs map</a></li>
+		</ul>
+	</aside>
+ </div>
+
+<div class="row">
+		<footer class="small-12 large-12 columns lightgrey">
+		<p><strong>If you have any questions</strong> or would like to contact me, you can do so at <a href="mailto:tbroderick@dailyherald.com">tbroderick@dailyherald.com</a></p>
+	</footer>
+</div>
+
+	<script>
+
+	var osmUrl='http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';
+	var osmAttrib='Map data <a href="www.openstreetmap.org/copyright">© OpenStreetMap contributors</a> via <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 2, maxZoom: 19, attribution: osmAttrib});
+
+// $.getJSON("geojson/FOID.json", function(data) {
+ $.getJSON("geojson/Mapshape.json", function(data) {
+    var geojson = L.geoJson(data, {
+ 		style: function (feature) {
+			return {
+				fillColor: '#FEB24C',
+				weight: 2,
+				opacity: 1,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.7
+			};
+    	},
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup("<strong>This is " + feature.properties.NAME10 + ",</strong><br>a municipality in Illinois.");
+		}
+     });
+
+    var map = L.map('suburbs');
+  //  .fitBounds(geojson.getBounds());
+
+    map.setView(new L.LatLng(42.1, -87.9),9);
+	map.addLayer(osm);
+	geojson.addTo(map);
+
+  });
+
+	</script>
+
+</body>
+
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Lake County wellness costs
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../../../styles/css/bootstrap.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../../styles/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+	<link href="../../../styles/RCstyles.css" rel="stylesheet" type="text/css">
+
+	<script src="../../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../../scripts/js/bootstrap.min.js"></script>
+	<script src="../../../scripts/highcharts.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container divgfx">
+		<div class="row">
+			<div class="col-md-12">
+				<h2><strong>Wellness pays</strong></h2>
+				<p>For the past nine years, Lake County taxpayers have spent thousands in bonuses paid to county workers for performing routine health-related acitvities.</p>
+				<div id="chart"></div>
+				<br>
+				<div class="wdth97 table-responsive">
+					<table class="table table-hover table-striped table-condensed">
+						<thead><tr><th>Year</th><th class="text-right">Employees</th><th class="text-right">Amount</th><th class="text-right">Average</th></tr></thead>
+						<tbody>
+							<tr><td>2006</td><td class="text-right">82</td><td class="text-right">$7,100.00 </td><td class="text-right">$86.59 </td><td class="text-right"></tr>
+							<tr><td>2007</td><td class="text-right">182</td><td class="text-right">$29,504.44 </td><td class="text-right">$162.11 </td><td class="text-right"></tr>
+							<tr><td>2008</td><td class="text-right">235</td><td class="text-right">$39,606.76 </td><td class="text-right">$168.54 </td><td class="text-right"></tr>
+							<tr><td>2009</td><td class="text-right">262</td><td class="text-right">$42,044.00 </td><td class="text-right">$160.47 </td><td class="text-right"></tr>
+							<tr><td>2010</td><td class="text-right">283</td><td class="text-right">$47,323.50 </td><td class="text-right">$167.22 </td><td class="text-right"></tr>
+							<tr><td>2011</td><td class="text-right">335</td><td class="text-right">$83,883.00 </td><td class="text-right">$250.40 </td><td class="text-right"></tr>
+							<tr><td>2012</td><td class="text-right">315</td><td class="text-right">$85,877.00 </td><td class="text-right">$272.63 </td><td class="text-right"></tr>
+							<tr><td>2013</td><td class="text-right">398</td><td class="text-right">$132,838.00 </td><td class="text-right">$333.76 </td><td class="text-right"></tr>
+							<tr><td>2014</td><td class="text-right">468</td><td class="text-right">$167,373.00 </td><td class="text-right">$357.63 </td><td class="text-right"></tr>
+							<tr><td><strong>TOTAL</strong></td><td class="text-right"><strong>2,560</strong></td><td class="text-right"><strong>$635,549.70 </strong></td><td class="text-right"><strong>$248.26 </strong></td><td class="text-right"></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<p><small>Source: Lake County</small></p>
+
+				<p><span style="color:white;">-30-</span></p>
+
+			</div>
+		</div>
+	</div>
+
+	<script>
+// snowfall chart
+
+var newschart = new Highcharts.Chart({
+	chart: {
+			renderTo: 'chart',
+			height: 350,
+            type: 'column'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+    legend: {
+      enabled: false
+    },
+
+	xAxis: {
+		title: {
+			text: 'YEAR'
+            },
+		categories: ['2006','2007','2008','2009','2010','2011','2012','2013','2014',],
+
+		labels: {
+				fontFamily: 'Arial, sans-serif',
+				style: {
+					color: '#000',
+	                },
+	            staggerLines: 2,
+	            overflow: 'justify'
+				},
+	},
+
+	yAxis: {
+		title: {
+			text: null
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 175000,
+		tickInterval: 25000
+	},
+
+	series: [{
+		name: 'Amount<br>of bonuses',
+		data: [7100.00,29504.44,39606.76,42044.00,47323.50,83883.00,85877.00,132838.00,167373.00]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+			valuePrefix: '$'
+	},
+	
+	plotLines: [{
+			value: 50,
+			color: '#FFFF99'				
+	}],
+
+});
+
+</script>
+
+</body>
+
+
+
+
+

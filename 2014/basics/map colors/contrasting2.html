@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Contrasting color test 2
+	</title>
+
+	<link href="../../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+	<link href="../../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../../scripts/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../../scripts/highcharts.js"></script>
+	<script src="../../../scripts/leaflet.js"></script>
+	<script src="../../../scripts/SliderControl.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../../scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+	<div class="small-12 large-10 columns">
+
+		<div class="row">
+			<div class="small-12 large-6 columns">
+				<h4>Contrasting color test 2</h4>
+				<p>This map shows all of the five colors in my contrasting color palatte. We wouldn't normally use contrasting colors with this kind of map - we'd use the progression palatte.</p>
+			</div>
+			<div class="small-12 large-5 columns">
+				<p>
+                  <style type="text/css">
+					div.bar {
+						display: inline-block;
+						width: 12px;
+						height: 12px;
+						border: 1px solid;
+						}
+					.cont1 {
+						background-color: #B30000;
+						}
+					.cont2 {
+						background-color: #F46856;
+						}
+					.cont3 {
+						background-color: #FDCC8A;
+						}
+					.cont4 {
+						background-color: #B190E4;
+						}
+					.cont5 {
+						background-color: #4E10AE;
+						}
+
+					.prog1 {
+						background-color: #B30000;
+						}
+					.prog2 {
+						background-color: #F46856;
+						}
+					.prog3 {
+						background-color: #FFA560;
+						}
+					.prog4 {
+						background-color: #FDCC8A;
+						}
+					.prog5 {
+						background-color: #FFEDA0;
+						}
+				</style>
+
+                <strong>Contrasting color palette</strong><br>
+                <div class="bar cont1"></div> $75,518+<br>
+				<div class="bar cont2"></div> $61,201 - $75,518<br>
+				<div class="bar cont3"></div> $49,883 - $61,201<br>
+				<div class="bar cont4"></div> $38,566 - $49,883<br>
+				<div class="bar cont5"></div> 0- $38,566<br>
+                </p>
+			</div>
+		</div>
+<div id="medianCOUNTY" class="high375"></div>
+	</div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+
+	<script>
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+	];
+
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+var map = L.map('medianCOUNTY');
+
+var geojson;
+
+	
+$.getJSON("medianCOUNTY.geojson", function(data) {
+    geojson = L.geoJson(data, {
+
+//	For simple colors across the board
+//		style: function (feature) {
+//			return {
+//				fillColor: '#E5D698',
+//				weight: 2,
+//				opacity: 1,
+//				color: 'white',
+//				dashArray: '',
+//				fillOpacity: 0.6
+//			};
+//  	},
+
+//	For varying colors according to content
+
+	 	style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.MedianINCnum),
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.55
+			};
+    	},
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<strong>' + feature.properties.CountyName + '</strong><br><br><table class="mapTable"><tr><td class="tdLEFT">Median income:</td><td>' + feature.properties.MedianINC + '</td></tr></table>'
+			);
+		}
+
+//		onEachFeature: onEachFeature
+
+  });
+
+  		// get color depending on population percFOID value
+		function getColor(d) {
+			return d > 72517 ?	'#B30000' :
+			       d > 61200 ?	'#F46856' :
+			       d > 49882 ?	'#FDCC8A' :
+			       d > 38565 ?	'#B190E4' :
+			       d > 27000 ?	'#4E10AE' :
+			       			 	'#FFFFFF' ;
+    	};
+  
+
+ 
+ 	map.setView(new L.LatLng(40, -89),6);
+	map.addLayer(ggl);
+	geojson.addTo(map);
+
+});
+
+	</script>
+
+</body>
+
+
+

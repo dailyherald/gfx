@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+   Missing data test
+  </title>
+
+<!-- STYLES --> 
+<!-- foundation responsive -->
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+
+<!-- Local styles, including custom UI jquery -->
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+
+<!-- SCRIPTS -->
+<!-- jquery, including touch enabling -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+  <script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+<!-- Charts -->
+  <script src="../../scripts/highcharts.js"></script>
+  
+
+  </head>
+
+  <body>
+
+<div class="row">
+  <div class="small-12 large-6 centered columns">
+    <h4>This is a test on how to handle missing data</h4>
+    <p class="chartEmbed">Use df2.fillna('--') to deal with missing numbers. In highcharts, we can adjust by using the function (below) and avoid parsefloat code. For tables, it will display -- which is acceptable.</p>
+    <div id="testhere"></div>
+    <div id='NEWchart'></div>
+  </div>
+</div>
+
+<script>
+
+
+Highcharts.setOptions({
+    plotOptions: {
+        series: {
+            animation: false
+        }
+    }
+});
+
+//var aID;  
+    
+$.getJSON('pen.json', function(data){
+  console.log(data[1].Year);
+  
+  var y2004 = parseFloat(data[0].BenPerc);
+  var y2005 = parseFloat(data[1].BenPerc);
+  var y2006 = parseFloat(data[2].BenPerc);
+  var y2007 = parseFloat(data[3].BenPerc);
+  var y2008 = parseFloat(data[4].BenPerc);
+  var y2009 = parseFloat(data[5].BenPerc);
+  var y2010 = parseFloat(data[6].BenPerc);
+  var y2011 = parseFloat(data[7].BenPerc);
+  var y2012 = parseFloat(data[8].BenPerc);
+  var y2013 = parseFloat(data[9].BenPerc);
+
+  var chartLOWINC = new Highcharts.Chart({
+    chart: {
+      renderTo: 'NEWchart',
+	  height: '300'
+    },
+    title: {
+      text: null
+    },
+
+    legend: {
+      enabled: false
+    },
+
+    xAxis: {
+      title: {
+        text: 'Avg. pension as % of avg. salary'
+      },
+      categories: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013' ],
+      labels: {
+                staggerLines: 2
+            }
+     },
+
+    yAxis: {
+      title: {
+        text: 'PERCENT'
+      },
+      labels: {
+        overflow: 'justify'
+      },
+      min: 46,
+      max: 60,
+      tickInterval: 2
+    },
+
+    series: [{
+      type: 'line',
+      name: 'Pension',
+//      data: [y2004, y2005, y2006, y2007, y2008, y2009, y2010, y2011, y2012, y2013]
+      data: $.map([y2004, y2005, y2006, y2007, y2008, y2009, y2010, y2011, y2012, data[9].BenPerc], function (valuePSATdis) {
+                return isNaN(valuePSATdis) ? { y: null } : valuePSATdis;
+              })
+       }],
+
+    tooltip: {
+      crosshairs: true,
+      useHTML: true,
+      formatter: function() {
+                return '<b>' + data[this.point.x].Year + ' totals</b><table class="mapTable"><tr><td class="tdLEFT">Average salary: </td><td><b>' + data[this.point.x].AvgSal + '</b></td></tr><tr><td class="tdLEFT">Average pension: </td><td><b>' + data[this.point.x].AvgBen + '</b></td></tr><tr><td class="tdLEFT">As % of avg. salary: </td><td><b>' + this.y + '%</b></td></tr></table>';
+            }
+    },
+
+
+  });
+
+$('#testhere').html(
+  "<p>Just a test: " + y2013 + "</p>" + "<p>Just a test: " + data[9].AvgBen + "</p>"
+  )
+
+});
+  
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="http://reportcards.dailyherald.com/">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    $.getJSON('http://reportcards.dailyherald.com/gfx/2015/militaryequip/militaryIL.json',
+
+                    function (data) {
+                        console.log(data[0].Unit);
+                        //The number 23
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <button>Request a json from our report card site</button>
+        <p>Console logs the first unit, which should be  "Abingdon"</p>
+    </body>
+</html>

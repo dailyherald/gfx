@@ -1,0 +1,20 @@
+{
+    "timeline":
+    {
+        "headline":"Flight 232",
+        "type":"default",
+        "text":"Twenty-five years ago, United Flight 232 bound for O’Hare International Airport cartwheeled across a Sioux City runway, burst into flames and shot into a cornfield. \"It was like a roller coaster in pitch darkness with smoke and fire,\" survivor Sumit Roy of Naperville recalled. Miraculously, 184 of the 296 people on board lived.<br>Click the arrow at right or swipe on a mobile device to move along the timeline.",
+        "startDate":"1989,07,19",
+        "date": [
+			{"startDate":"1989,07,19,14,09","endDate":null,"headline":"Nine minutes after the hour","text":"United Airlines Flight 232, a McDonnell Douglas DC-l0, departed from Stapleton International Airport in Denver, Colorado, with 285 passengers and 11 crewmembers.","asset":{"media":"Flight232_slide1.jpg","credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,16","endDate":null,"headline":"About 16 minutes after the hour","text":"The flightcrew heard a loud bang followed by the plane shuddering. Checking instruments, they found the No. 2 tail-mounted engine had failed.","asset":{"media":"Flight232_slide2.jpg","credit":"NTSB report","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,18","endDate":null,"headline":"About 18 minutes after the hour","text":"The crew discovered they had lost hydraulic power and had to adjust engine thrust to keep from turning right and descending.","asset":{"media":"Flight232_slide3.jpg","credit":"NTSB report","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,20","endDate":null,"headline":"About 20 minutes after the hour","text":"After requesting emergency assistance, the aircraft was directed to the Sioux Gateway Airport at Sioux City, Iowa.","asset":{"media":"Flight232_slide4.jpg","credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,29","endDate":null,"headline":"About 29 minutes after the hour","text":"While preparing for an emergency landing a flight attendant advised the captain that St. Charles resident Dennis Fitch, a UAL DC-10 training pilot, was a passenger and had volunteered to help.","asset":{"media":null,"credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,40","endDate":null,"headline":"About 40 minutes after the hour","text":"Fitch took control of the throttles to free the captain and first officer to operate the flight controls. He used engine power to control pitch and roll but the airplane's tendency to turn right made it difficult to maintain level flight.","asset":{"media":null,"credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,15,49","endDate":null,"headline":"About 49 minutes after the hour","text":"The crew tried to line up the plane with a closed runway about 6,600 feet long, using the airspeed indicator and visual cues to determine the flight path.","asset":{"media":"Flight232_slide7.jpg","credit":"NTSB report","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,16,00","endDate":null,"headline":"The landing","text":"The plane touched down slightly to the left of the runway's centerline. The right wing tip touched down first, followed by the right main landing gear.","asset":{"media":null,"credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+			{"startDate":"1989,07,19,16,01","endDate":null,"headline":"On the ground","text":"The airplane skidded right, rolled and came to rest after crossing another runway. Witnesses said the airplane caught fire and cartwheeled. It was destroyed by the impact and fire.","asset":{"media":"Flight232_slide9.jpg","credit":"AP photo","caption":"","thumbnail":null,"type":null,"tag":null}}
+			]
+    }
+}

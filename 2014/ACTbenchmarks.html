@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		ACT benchmarks
+	</title>
+
+<link rel="stylesheet" href="styles/normalize.css" type="text/css" media="screen" />
+<link href="styles/smoothness/jquery-ui-1.10.3.customRC.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/styleSort.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/newsArt.css" type="text/css" media="screen" />
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+<script src="scripts/highcharts.js"></script>
+<script src="scripts/jquery.table.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="center100">
+<h2>Suburban ACTs and college readiness</h2>
+<p>
+The table below is sortable on a number of measures:<br>
+<ul>
+<li class="li_position"><b>School:</b> Name of the school. Click the school name and you'll be taken to that school's page on <a href="http://reportcards.dailyherald.com">reportcards.dailyherald.com</a> where you can dive deeper into grades, demographics and more.</li>
+<li class="li_position"><b>ACT 2013:</b> Average ACT score in 2013 for students in the high school</li>
+<li class="li_position"><b>Change:</b> Percentage-point change in the average score from 2012</li>
+<li class="li_position"><b>% ACT 21:</b> Percentage of students who scored a composite ACT score of 21 or more, which is about the average composite of the four benchmark scores below.</li>
+<li class="li_position"><b>% English 18:</b> Percentage of students who scored 18 or more on the English subject area of the test.</li>
+<li class="li_position"><b>% Math 22:</b> Percentage of students who scored 22 or more on the Math subject area of the test.</li>
+<li class="li_position"><b>% Reading 22:</b> Percentage of students who scored 22 or more on the Reading portion of the test.</li>
+<li class="li_position"><b>% Science 23:</b> Percentage of students who scored 23 or more on the Science portion of the test.</li>
+</ul>
+</p>
+<h4>What are ACT benchmarks?</h4>
+<p>
+A student scoring at least the benchmark score in the subject areas listed is considered by the ACT to have a 50% chance of scoring a B or higher in the corresponding first-year college course.
+</p>
+<p>
+<table id="tableACT" class="tablesorter fullTable">
+
+<thead><tr><th class="thLEFT">School</th><th data-type="float" class="thCENT">ACT 2013</th><th data-type="float" class="thCENT">Change</th><th class="thCENT">% ACT 21 Comp</th><th data-type="float" class="thCENT">% English 18</th><th data-type="float" class="thCENT">% Math 22</th><th data-type="float" class="thCENT">% Reading 22</th><th data-type="float" class="thCENT">% Science 23</th></tr></thead><tbody>
+
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491250130001"><b>Adlai E Stevenson H.S.</a></b></td><td class="tdCENT">26.5</td><td class="tdCENT">0.3</td><td class="tdCENT">87.4</td><td class="tdCENT">93.6</td><td class="tdCENT">83.5</td><td class="tdCENT">75.8</td><td class="tdCENT">74.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491280160002"><b>Libertyville H.S.</a></b></td><td class="tdCENT">26</td><td class="tdCENT">0.7</td><td class="tdCENT">85.9</td><td class="tdCENT">91.9</td><td class="tdCENT">78.6</td><td class="tdCENT">74.7</td><td class="tdCENT">70.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222040260002"><b>Neuqua Valley H.S.</a></b></td><td class="tdCENT">25.1</td><td class="tdCENT">-0.1</td><td class="tdCENT">82.9</td><td class="tdCENT">90.1</td><td class="tdCENT">77.7</td><td class="tdCENT">70.8</td><td class="tdCENT">68.1</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222030260001"><b>Naperville Central H.S.</a></b></td><td class="tdCENT">25</td><td class="tdCENT">-0.5</td><td class="tdCENT">80.6</td><td class="tdCENT">88.4</td><td class="tdCENT">71.1</td><td class="tdCENT">68.9</td><td class="tdCENT">65.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162110170002"><b>Wm Fremd H.S.</a></b></td><td class="tdCENT">24.9</td><td class="tdCENT">0</td><td class="tdCENT">79.4</td><td class="tdCENT">85.5</td><td class="tdCENT">76.2</td><td class="tdCENT">67.9</td><td class="tdCENT">64.8</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222030260013"><b>Naperville North H.S.</a></b></td><td class="tdCENT">24.7</td><td class="tdCENT">-0.4</td><td class="tdCENT">76.8</td><td class="tdCENT">85.9</td><td class="tdCENT">68.9</td><td class="tdCENT">66.6</td><td class="tdCENT">64.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491280160004"><b>Vernon Hills H.S.</a></b></td><td class="tdCENT">24.7</td><td class="tdCENT">-0.7</td><td class="tdCENT">77.4</td><td class="tdCENT">86.6</td><td class="tdCENT">72.1</td><td class="tdCENT">68</td><td class="tdCENT">61.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453040260001"><b>Geneva Community H.S.</a></b></td><td class="tdCENT">24.6</td><td class="tdCENT">0.7</td><td class="tdCENT">80</td><td class="tdCENT">89.6</td><td class="tdCENT">71.2</td><td class="tdCENT">68.2</td><td class="tdCENT">64.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170004"><b>John Hersey H.S.</a></b></td><td class="tdCENT">24.6</td><td class="tdCENT">-0.6</td><td class="tdCENT">79.8</td><td class="tdCENT">89.4</td><td class="tdCENT">73.8</td><td class="tdCENT">61.4</td><td class="tdCENT">64.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170005"><b>Prospect H.S.</a></b></td><td class="tdCENT">24.3</td><td class="tdCENT">-0.1</td><td class="tdCENT">78.3</td><td class="tdCENT">85.2</td><td class="tdCENT">71.2</td><td class="tdCENT">69</td><td class="tdCENT">61.1</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162070170003"><b>Maine South H.S.</a></b></td><td class="tdCENT">24.2</td><td class="tdCENT">-0.4</td><td class="tdCENT">77.6</td><td class="tdCENT">86.9</td><td class="tdCENT">70.6</td><td class="tdCENT">64.5</td><td class="tdCENT">62.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340492200260004"><b>Barrington H.S.</a></b></td><td class="tdCENT">24.2</td><td class="tdCENT">-1</td><td class="tdCENT">75.7</td><td class="tdCENT">82.4</td><td class="tdCENT">70.3</td><td class="tdCENT">65.3</td><td class="tdCENT">61.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340490950260001"><b>Lake Zurich H.S.</a></b></td><td class="tdCENT">24</td><td class="tdCENT">-0.1</td><td class="tdCENT">75.1</td><td class="tdCENT">87.5</td><td class="tdCENT">70.8</td><td class="tdCENT">63.4</td><td class="tdCENT">59.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222040260005"><b>Metea Valley H.S.</a></b></td><td class="tdCENT">23.9</td><td class="tdCENT">0.3</td><td class="tdCENT">71.4</td><td class="tdCENT">80.7</td><td class="tdCENT">67.7</td><td class="tdCENT">59.8</td><td class="tdCENT">59.6</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453030260012"><b>St Charles North H.S.</a></b></td><td class="tdCENT">23.7</td><td class="tdCENT">0.2</td><td class="tdCENT">74</td><td class="tdCENT">82.4</td><td class="tdCENT">73.6</td><td class="tdCENT">58.6</td><td class="tdCENT">60.6</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222000260021"><b>Wheaton North H.S.</a></b></td><td class="tdCENT">23.6</td><td class="tdCENT">-0.5</td><td class="tdCENT">72.3</td><td class="tdCENT">80.9</td><td class="tdCENT">69.6</td><td class="tdCENT">61.2</td><td class="tdCENT">56.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170008"><b>Buffalo Grove H.S.</a></b></td><td class="tdCENT">23.4</td><td class="tdCENT">0</td><td class="tdCENT">70.7</td><td class="tdCENT">81.2</td><td class="tdCENT">65.7</td><td class="tdCENT">56.7</td><td class="tdCENT">54.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222000260020"><b>Wheaton Warrenville South H S</a></b></td><td class="tdCENT">23.4</td><td class="tdCENT">-0.5</td><td class="tdCENT">69.1</td><td class="tdCENT">76.7</td><td class="tdCENT">63.3</td><td class="tdCENT">61.7</td><td class="tdCENT">57.6</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631550160002"><b>Cary-Grove Community H.S.</a></b></td><td class="tdCENT">23.4</td><td class="tdCENT">-0.7</td><td class="tdCENT">71.4</td><td class="tdCENT">82.1</td><td class="tdCENT">62.8</td><td class="tdCENT">57.2</td><td class="tdCENT">56</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310451010220001"><b>Batavia Sr H.S.</a></b></td><td class="tdCENT">23.3</td><td class="tdCENT">-0.3</td><td class="tdCENT">74.2</td><td class="tdCENT">84.5</td><td class="tdCENT">67.3</td><td class="tdCENT">60.4</td><td class="tdCENT">54.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220870170004"><b>Glenbard South H.S.</a></b></td><td class="tdCENT">23.2</td><td class="tdCENT">-0.3</td><td class="tdCENT">68.7</td><td class="tdCENT">76.6</td><td class="tdCENT">62.3</td><td class="tdCENT">54.7</td><td class="tdCENT">54.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631550160004"><b>Prairie Ridge H.S.</a></b></td><td class="tdCENT">23.1</td><td class="tdCENT">-0.4</td><td class="tdCENT">68.4</td><td class="tdCENT">81.6</td><td class="tdCENT">61.4</td><td class="tdCENT">57</td><td class="tdCENT">57</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453030260011"><b>St Charles East H.S.</a></b></td><td class="tdCENT">23</td><td class="tdCENT">-0.4</td><td class="tdCENT">69.5</td><td class="tdCENT">80.9</td><td class="tdCENT">63.9</td><td class="tdCENT">58.1</td><td class="tdCENT">51.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220870170003"><b>Glenbard West H.S.</a></b></td><td class="tdCENT">23</td><td class="tdCENT">-0.4</td><td class="tdCENT">65.4</td><td class="tdCENT">76</td><td class="tdCENT">56.4</td><td class="tdCENT">59.9</td><td class="tdCENT">53</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491270160001"><b>Grayslake Central H.S.</a></b></td><td class="tdCENT">22.7</td><td class="tdCENT">-0.1</td><td class="tdCENT">63.7</td><td class="tdCENT">76.1</td><td class="tdCENT">54</td><td class="tdCENT">53.1</td><td class="tdCENT">50.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162110170001"><b>J B Conant H.S.</a></b></td><td class="tdCENT">22.7</td><td class="tdCENT">-0.7</td><td class="tdCENT">66.3</td><td class="tdCENT">75.3</td><td class="tdCENT">66.8</td><td class="tdCENT">53.7</td><td class="tdCENT">51.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491170160002"><b>Lakes Community H.S.</a></b></td><td class="tdCENT">22.5</td><td class="tdCENT">-0.2</td><td class="tdCENT">63</td><td class="tdCENT">78.8</td><td class="tdCENT">58.2</td><td class="tdCENT">51.8</td><td class="tdCENT">51.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222040260001"><b>Waubonsie Valley H.S.</a></b></td><td class="tdCENT">22.5</td><td class="tdCENT">-0.7</td><td class="tdCENT">64.6</td><td class="tdCENT">77.3</td><td class="tdCENT">56.7</td><td class="tdCENT">57.3</td><td class="tdCENT">49.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631580220002"><b>Huntley H.S.</a></b></td><td class="tdCENT">22.4</td><td class="tdCENT">-0.1</td><td class="tdCENT">66.6</td><td class="tdCENT">79.2</td><td class="tdCENT">58.1</td><td class="tdCENT">50.6</td><td class="tdCENT">51.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170007"><b>Rolling Meadows H.S.</a></b></td><td class="tdCENT">22.3</td><td class="tdCENT">0.2</td><td class="tdCENT">60.2</td><td class="tdCENT">73.3</td><td class="tdCENT">56.5</td><td class="tdCENT">50.8</td><td class="tdCENT">46.8</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190221080160001"><b>Lake Park H.S.</a></b></td><td class="tdCENT">22.3</td><td class="tdCENT">-0.3</td><td class="tdCENT">65.4</td><td class="tdCENT">78.5</td><td class="tdCENT">58.2</td><td class="tdCENT">51.6</td><td class="tdCENT">49.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190222020260001"><b>Lisle H.S.</a></b></td><td class="tdCENT">22.3</td><td class="tdCENT">-0.9</td><td class="tdCENT">67.2</td><td class="tdCENT">77.6</td><td class="tdCENT">52.8</td><td class="tdCENT">51.2</td><td class="tdCENT">52.8</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453010260001"><b>Central H.S.</a></b></td><td class="tdCENT">22.2</td><td class="tdCENT">-0.6</td><td class="tdCENT">65.6</td><td class="tdCENT">78.9</td><td class="tdCENT">57.5</td><td class="tdCENT">53.2</td><td class="tdCENT">47.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631550160003"><b>Crystal Lake South H.S.</a></b></td><td class="tdCENT">22</td><td class="tdCENT">0.1</td><td class="tdCENT">61.3</td><td class="tdCENT">73.2</td><td class="tdCENT">58.6</td><td class="tdCENT">47.6</td><td class="tdCENT">48</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170002"><b>Elk Grove H.S.</a></b></td><td class="tdCENT">22</td><td class="tdCENT">-0.6</td><td class="tdCENT">60.7</td><td class="tdCENT">72.9</td><td class="tdCENT">64.7</td><td class="tdCENT">42.1</td><td class="tdCENT">43.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453000260004"><b>Harry D Jacobs H.S.</a></b></td><td class="tdCENT">22</td><td class="tdCENT">-0.7</td><td class="tdCENT">57.9</td><td class="tdCENT">74.7</td><td class="tdCENT">49.7</td><td class="tdCENT">50.3</td><td class="tdCENT">44.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491270160002"><b>Grayslake North H.S.</a></b></td><td class="tdCENT">21.9</td><td class="tdCENT">-0.5</td><td class="tdCENT">59.7</td><td class="tdCENT">73.5</td><td class="tdCENT">55.9</td><td class="tdCENT">45.7</td><td class="tdCENT">45.1</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491210170001"><b>Warren Township H.S.</a></b></td><td class="tdCENT">21.9</td><td class="tdCENT">-1.1</td><td class="tdCENT">58</td><td class="tdCENT">72.5</td><td class="tdCENT">54.2</td><td class="tdCENT">47.9</td><td class="tdCENT">44.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220870170002"><b>Glenbard North H.S.</a></b></td><td class="tdCENT">21.7</td><td class="tdCENT">-0.4</td><td class="tdCENT">59.4</td><td class="tdCENT">72</td><td class="tdCENT">53</td><td class="tdCENT">47.7</td><td class="tdCENT">45.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453000260003"><b>Hampshire H.S.</a></b></td><td class="tdCENT">21.5</td><td class="tdCENT">0.1</td><td class="tdCENT">55.2</td><td class="tdCENT">74.4</td><td class="tdCENT">49.8</td><td class="tdCENT">40.1</td><td class="tdCENT">43</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491180260005"><b>Wauconda H.S.</a></b></td><td class="tdCENT">21.3</td><td class="tdCENT">-0.4</td><td class="tdCENT">55.8</td><td class="tdCENT">73.2</td><td class="tdCENT">48.1</td><td class="tdCENT">43.1</td><td class="tdCENT">37.6</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162110170003"><b>Palatine H.S.</a></b></td><td class="tdCENT">21.3</td><td class="tdCENT">-0.5</td><td class="tdCENT">54.8</td><td class="tdCENT">65</td><td class="tdCENT">48.8</td><td class="tdCENT">46.1</td><td class="tdCENT">42.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631550160001"><b>Crystal Lake Central H.S.</a></b></td><td class="tdCENT">21.3</td><td class="tdCENT">-0.9</td><td class="tdCENT">52.6</td><td class="tdCENT">68.3</td><td class="tdCENT">51.6</td><td class="tdCENT">40.5</td><td class="tdCENT">41.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310450460220004"><b>Bartlett H.S.</a></b></td><td class="tdCENT">21.2</td><td class="tdCENT">0.3</td><td class="tdCENT">53.2</td><td class="tdCENT">69.2</td><td class="tdCENT">50.9</td><td class="tdCENT">41</td><td class="tdCENT">39.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453020260001"><b>Kaneland Senior H.S.</a></b></td><td class="tdCENT">21.1</td><td class="tdCENT">0.1</td><td class="tdCENT">52.9</td><td class="tdCENT">68.3</td><td class="tdCENT">46.3</td><td class="tdCENT">42.3</td><td class="tdCENT">35.1</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162140170006"><b>Wheeling H.S.</a></b></td><td class="tdCENT">21.1</td><td class="tdCENT">-0.5</td><td class="tdCENT">52</td><td class="tdCENT">67.9</td><td class="tdCENT">54.3</td><td class="tdCENT">37.2</td><td class="tdCENT">36.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220880160002"><b>Willowbrook H.S.</a></b></td><td class="tdCENT">20.9</td><td class="tdCENT">0</td><td class="tdCENT">49.2</td><td class="tdCENT">67.3</td><td class="tdCENT">39.6</td><td class="tdCENT">42.4</td><td class="tdCENT">39.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162110170004"><b>Schaumburg H.S.</a></b></td><td class="tdCENT">20.9</td><td class="tdCENT">-0.9</td><td class="tdCENT">49.2</td><td class="tdCENT">63.7</td><td class="tdCENT">47.3</td><td class="tdCENT">42</td><td class="tdCENT">36.8</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491170160001"><b>Antioch Comm H.S.</a></b></td><td class="tdCENT">20.8</td><td class="tdCENT">-1.3</td><td class="tdCENT">47.9</td><td class="tdCENT">65.3</td><td class="tdCENT">41.8</td><td class="tdCENT">40.3</td><td class="tdCENT">41.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631560160002"><b>McHenry East H.S.</a></b></td><td class="tdCENT">20.7</td><td class="tdCENT">0.4</td><td class="tdCENT">47.7</td><td class="tdCENT">63</td><td class="tdCENT">36.6</td><td class="tdCENT">42.1</td><td class="tdCENT">35.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162070170004"><b>Maine West H.S.</a></b></td><td class="tdCENT">20.6</td><td class="tdCENT">-0.7</td><td class="tdCENT">48.4</td><td class="tdCENT">64.1</td><td class="tdCENT">45.8</td><td class="tdCENT">41.8</td><td class="tdCENT">39</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220870170001"><b>Glenbard East H.S.</a></b></td><td class="tdCENT">20.5</td><td class="tdCENT">0</td><td class="tdCENT">47.4</td><td class="tdCENT">58.9</td><td class="tdCENT">42.9</td><td class="tdCENT">41.7</td><td class="tdCENT">36.6</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=440631560160001"><b>McHenry H.S.-West Campus</a></b></td><td class="tdCENT">20.5</td><td class="tdCENT">-0.2</td><td class="tdCENT">48.5</td><td class="tdCENT">65</td><td class="tdCENT">42</td><td class="tdCENT">44.2</td><td class="tdCENT">37.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162110170006"><b>Hoffman Estates H.S.</a></b></td><td class="tdCENT">20.5</td><td class="tdCENT">-0.8</td><td class="tdCENT">48.3</td><td class="tdCENT">59.5</td><td class="tdCENT">49.4</td><td class="tdCENT">37.6</td><td class="tdCENT">35.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310450460220005"><b>South Elgin H.S.</a></b></td><td class="tdCENT">20.4</td><td class="tdCENT">-0.5</td><td class="tdCENT">45.8</td><td class="tdCENT">61.2</td><td class="tdCENT">41.8</td><td class="tdCENT">38.1</td><td class="tdCENT">35.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491200130001"><b>Mundelein Cons H.S.</a></b></td><td class="tdCENT">20.4</td><td class="tdCENT">-0.6</td><td class="tdCENT">48.2</td><td class="tdCENT">62.3</td><td class="tdCENT">42.1</td><td class="tdCENT">42.5</td><td class="tdCENT">35.7</td></tr>
+<tr class="group"><td class="tdLEFT"><b>State Average</a></b></td><td class="tdCENT">20.3</td><td class="tdCENT">-0.3</td><td class="tdCENT">45.7</td><td class="tdCENT">61</td><td class="tdCENT">40.1</td><td class="tdCENT">38.9</td><td class="tdCENT">33.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=050162070170001"><b>Maine East H.S.</a></b></td><td class="tdCENT">20.3</td><td class="tdCENT">-0.4</td><td class="tdCENT">45.6</td><td class="tdCENT">61.5</td><td class="tdCENT">47.5</td><td class="tdCENT">34.9</td><td class="tdCENT">33.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190221000160001"><b>Fenton H.S.</a></b></td><td class="tdCENT">20</td><td class="tdCENT">-0.2</td><td class="tdCENT">43.8</td><td class="tdCENT">55.3</td><td class="tdCENT">47.6</td><td class="tdCENT">34.1</td><td class="tdCENT">30.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491240160001"><b>Grant Community H.S.</a></b></td><td class="tdCENT">20</td><td class="tdCENT">-0.4</td><td class="tdCENT">43.7</td><td class="tdCENT">58.8</td><td class="tdCENT">37.6</td><td class="tdCENT">34.6</td><td class="tdCENT">31.7</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=060162120160001"><b>East Leyden H.S.</a></b></td><td class="tdCENT">19.6</td><td class="tdCENT">-0.5</td><td class="tdCENT">39.5</td><td class="tdCENT">56.7</td><td class="tdCENT">38.1</td><td class="tdCENT">29.9</td><td class="tdCENT">24</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220940160001"><b>Community H.S.</a></b></td><td class="tdCENT">19.5</td><td class="tdCENT">-0.4</td><td class="tdCENT">40.7</td><td class="tdCENT">52.5</td><td class="tdCENT">35.4</td><td class="tdCENT">32.5</td><td class="tdCENT">29.2</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310451290220001"><b>West Aurora H.S.</a></b></td><td class="tdCENT">19.3</td><td class="tdCENT">0.3</td><td class="tdCENT">39.3</td><td class="tdCENT">56.7</td><td class="tdCENT">34</td><td class="tdCENT">31.7</td><td class="tdCENT">28.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=190220880160001"><b>Addison Trail H.S.</a></b></td><td class="tdCENT">19</td><td class="tdCENT">-1.3</td><td class="tdCENT">35.4</td><td class="tdCENT">50.8</td><td class="tdCENT">34</td><td class="tdCENT">29</td><td class="tdCENT">21.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310453000260002"><b>Dundee-Crown H.S.</a></b></td><td class="tdCENT">18.8</td><td class="tdCENT">-0.6</td><td class="tdCENT">35.1</td><td class="tdCENT">47.3</td><td class="tdCENT">30.2</td><td class="tdCENT">30.4</td><td class="tdCENT">24.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310450460220003"><b>Streamwood H.S.</a></b></td><td class="tdCENT">18.5</td><td class="tdCENT">-0.2</td><td class="tdCENT">34.4</td><td class="tdCENT">48.9</td><td class="tdCENT">29.9</td><td class="tdCENT">29.4</td><td class="tdCENT">23.4</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=060162120160002"><b>West Leyden H.S.</a></b></td><td class="tdCENT">18.4</td><td class="tdCENT">-0.6</td><td class="tdCENT">30.1</td><td class="tdCENT">46.2</td><td class="tdCENT">25.7</td><td class="tdCENT">22.9</td><td class="tdCENT">20.3</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310450460220001"><b>Elgin H.S.</a></b></td><td class="tdCENT">18.2</td><td class="tdCENT">0.2</td><td class="tdCENT">27.2</td><td class="tdCENT">37.5</td><td class="tdCENT">28.9</td><td class="tdCENT">22.6</td><td class="tdCENT">19.9</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310450460220002"><b>Larkin H.S.</a></b></td><td class="tdCENT">18.1</td><td class="tdCENT">0</td><td class="tdCENT">26.1</td><td class="tdCENT">40</td><td class="tdCENT">28.2</td><td class="tdCENT">25.6</td><td class="tdCENT">18.5</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=340491160260006"><b>Round Lake Senior H.S.</a></b></td><td class="tdCENT">18.1</td><td class="tdCENT">-0.5</td><td class="tdCENT">25.7</td><td class="tdCENT">43.1</td><td class="tdCENT">27</td><td class="tdCENT">19.8</td><td class="tdCENT">14.1</td></tr>
+<tr class="group"><td class="tdLEFT"><a href="../details/?id-name=310451310220001"><b>East Aurora H.S.</a></b></td><td class="tdCENT">17.1</td><td class="tdCENT">0.5</td><td class="tdCENT">18.5</td><td class="tdCENT">32.7</td><td class="tdCENT">20.8</td><td class="tdCENT">16.1</td><td class="tdCENT">10.5</td></tr>
+
+</tbody></table>
+</p>
+
+<p class="source">Source: Daily Herald analysis of Illinois State Board of Education report card data</p>
+</div>
+<script>
+		table_sorter( '#tableACT', { groupClass: 'group' } ).hover();
+</script>
+</body>
+</html>

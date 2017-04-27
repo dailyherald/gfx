@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Low income students and school performance
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/styleSort.css" type="text/css" rel="stylesheet">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/MarkerCluster.css"  rel="stylesheet" type="text/css">
+	<link href="../../styles/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script stype="text/javascript" rc="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script type="text/javascript" src="../../scripts/highcharts.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.table.js"></script>
+	<script type="text/javascript" src="../../scripts/leaflet.js"></script>
+	<script type="text/javascript" src="../../scripts/leaflet.markercluster-src.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script type="text/javascript" src="../../scripts/Google.js"></script>
+	<script type="text/javascript">
+			var lowVAL = 90;
+	</script>
+
+</head>
+
+<body>
+
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div class="small-12 large-10 columns">
+<h2>Low-income schools</h2>
+<p>Schools in Illinois with 90% or more of low-income students</p>
+</div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div id="suburbs" class="small-12 large-10 columns"></div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+
+<script>
+
+
+
+var GGLstyles = [
+	{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},
+	{"featureType":"landscape","stylers":[{"hue":"#B7C7A6"},{"lightness":-5}]},
+	{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c1b5a5"}]},
+	{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+	{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},
+	{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+	{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},
+	{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},
+	{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},
+	{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},
+	{"featureType":"road","stylers":[{"lightness":20}]}
+	];
+
+var ggl = new L.Google('ROADMAP', {	mapOptions: { styles: GGLstyles	} });
+
+//Create the variable for list of districts
+
+
+
+//Create the map and load the geojson
+
+var map = L.map('suburbs');
+
+	console.log( lowVAL + " here" );
+
+	if(lowVAL == 90) {
+		console.log( lowVAL );
+		var jsonFILE = "lowINC90.json";
+		var rangeFILE = "90%-100%";
+		console.log( rangeFILE );
+
+	} else if(lowVAL == 80){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC80.json";
+		var rangeFILE = "80%-89.9%";
+
+	} else if(lowVAL == 70){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC70.json";
+		var rangeFILE = "70%-79.9%";
+
+	} else if(lowVAL == 60){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC60.json";
+		var rangeFILE = "60%-69.9%";
+
+	} else if(lowVAL == 50){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC50.json";
+		var rangeFILE = "50%-59.9%";
+
+	} else if(lowVAL == 40){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC40.json";
+		var rangeFILE = "40%-49.9%";
+
+	} else if(lowVAL == 30){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC30.json";
+		var rangeFILE = "30%-39.9%";
+
+	} else if(lowVAL == 20){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC20.json";
+		var rangeFILE = "20%-29.9%";
+
+	} else if(lowVAL == 10){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC10.json";
+		var rangeFILE = "10%-19.9%";
+
+	} else if(lowVAL == 00){
+		console.log( lowVAL );
+		var jsonFILE = "lowINC00.json";
+		var rangeFILE = "0-9.9%";
+
+	} else {
+
+		console.log( lowVAL );
+
+	};
+
+console.log( jsonFILE );
+
+
+$.getJSON(jsonFILE, function(data) {
+
+
+ 	    var geojson = L.geoJson(data, {
+		
+			onEachFeature: function (feature, layer) {
+				layer.bindPopup(
+					'<strong><a href="http://reportcards.dailyherald.com/details/?id-name='  + feature.properties.RCDTS + '" target="new">' + feature.properties.School + '</a></strong><br>'  + feature.properties.City
+				);
+			}
+
+ 	    });
+
+	var info = L.control();
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+			this._div.innerHTML = '<h4>Find a school</h4><p>Click on a cluster<br>to see individual schools<br>in the ' + rangeFILE + ' range.</p>';
+			return this._div;
+	};
+
+	var markers = L.markerClusterGroup({minZoom: 2, maxZoom: 19});
+	markers.addLayer(geojson);
+  
+	map.setView(new L.LatLng(42.1, -87.9),9);
+	map.addLayer(ggl);
+	map.addLayer(markers);
+//	geojson.addTo(map);
+	info.addTo(map);
+
+});	
+
+</script>
+
+</body>
+
+
+

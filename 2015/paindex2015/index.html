@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    2015 Poverty-Achievement Index for elementary schools
+  </title>
+
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../../styles/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../../../styles/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link href="../../../styles/RCstyles.css" rel="stylesheet" type="text/css">
+
+  <script src="../../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../../scripts/js/bootstrap.min.js"></script>
+  <script src="../../../scripts/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div class="container divgfx">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>2015 Poverty-Achievement Index</h2>
+        <p>Even with the new PARCC tests, the Daily Herald continued to find a strong correlation between a school's percentage of low-income students and composite test results. <strong>Mouse over the chart to see results for each income level by year.</strong></p>
+        </p>
+        <div id='ELEMchart'></div>
+        <p>The chart demonstrates how deeply stratified Illinois schools are by income: It shows the average composite meets/exceeds score for each income range, with 0-9.9% being elementary schools with less than 10% of their student population qualifying as low-income.</p>
+        <p class="source">Note: The shaded areas in the chart indicate differences in the elementary tests. Minimum ISAT standards for elementary schools were adjusted by the state starting in 2013. In 2015, the PARCC test replaced the ISATS.</p>
+        <p><small>Source: Daily Herald analysis of Illinois State Report Card data</small></p>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+
+var elementaryChart = new Highcharts.Chart({
+    chart: {
+      renderTo: 'ELEMchart',
+    height: '350'
+    },
+    title: {
+      text: null
+    },
+
+    legend: {
+      enabled: false
+    },
+    xAxis: {
+      title: {
+        text: 'Year'
+      },
+      plotLines: [
+      {
+        color: 'white',
+        value: 4.5,
+        width: 8,
+        zIndex: 5  
+      },{
+        color: 'black',
+        value: 4.5,
+        width: 1,
+        zIndex: 6  
+      }
+      ],
+      plotBands: {
+                from: 2.5,
+                to: 4.5,
+                color: '#e1e1e1'
+            },
+      categories: ['2010<br>ISAT', '2011<br>ISAT', '2012<br>ISAT', '2013<br>ISAT', '2014<br>ISAT', '<strong>2015</strong><br><strong>PARCC</strong>' ],
+      labels: {
+                staggerLines: 2
+            }
+     },
+
+    yAxis: {
+      title: {
+        text: 'AVG. MEETS/EXCEEDS'
+      },
+      labels: {
+        overflow: 'justify'
+      },
+       min: 0,
+      max: 100,
+      tickInterval: 10
+    },
+
+    series: [
+      {
+        type: 'line',
+        name: '0-9.9%',
+//        data: [90.4, 91.1, 91.6, 92.8, 93.6, 94.7, 95.2, 83.2, 84.0, 63.8]
+        data: [93.6, 94.7, 95.2, 83.2, 84.0, 63.8]
+      },
+      {
+        type: 'line',
+        name: '10-19.9%',
+//        data: [86.8, 87.6, 88.2, 89.2, 90.5, 91.8, 92.2, 77.1, 78.0, 53.4]
+        data: [90.5, 91.8, 92.2, 77.1, 78.0, 53.4]
+      },
+      {
+        type: 'line',
+        name: '20-29.9%',
+//        data: [83.6, 85.2, 86.1, 86.8, 88.1, 89.2, 89.8, 71.2, 72.3, 48.6]
+        data: [88.1, 89.2, 89.8, 71.2, 72.3, 48.6]
+      },
+      {
+        type: 'line',
+        name: '30-39.9%',
+//        data: [81.9, 82.9, 83.5, 84.7, 85.7, 87.3, 87.4, 66.1, 65.5, 40.6]
+        data: [85.7, 87.3, 87.4, 66.1, 65.5, 40.6]
+      },
+      {
+        type: 'line',
+        name: '40-49.9%',
+//        data: [79.4, 79.9, 81.0, 81.5, 83.0, 84.6, 84.8, 60.5, 60.5, 35.2]
+        data: [83.0, 84.6, 84.8, 60.5, 60.5, 35.2]
+      },
+      {
+        type: 'line',
+        name: '50-59.9%',
+//        data: [76.2, 78.0, 77.6, 79.3, 80.0, 81.7, 82.0, 56.8, 56.2, 29.8]
+        data: [80.0, 81.7, 82.0, 56.8, 56.2, 29.8]
+      },
+      {
+        type: 'line',
+        name: '60-69.9%',
+//        data: [71.7, 74.1, 72.7, 75.5, 76.1, 78.9, 79.1, 52.7, 52.0, 25.1]
+        data: [76.1, 78.9, 79.1, 52.7, 52.0, 25.1]
+      },
+      {
+        type: 'line',
+        name: '70-79.9%',
+//        data: [67.2, 68.8, 69.8, 70.4, 72.5, 75.3, 75.4, 48.1, 47.2, 22.1]
+        data: [72.5, 75.3, 75.4, 48.1, 47.2, 22.1]
+      },
+      {
+        type: 'line',
+        name: '80-89.9%',
+//        data: [62.8, 65.2, 65.6, 65.3, 70.8, 72.0, 71.6, 42.9, 42.5, 18.7]
+        data: [70.8, 72.0, 71.6, 42.9, 42.5, 18.7]
+      },
+      {
+        type: 'line',
+        name: '90-100%',
+//        data: [55.4, 57.4, 58.7, 60.5, 62.4, 66.4, 66.9, 38.1, 39.0, 15.6]
+        data: [62.4, 66.4, 66.9, 38.1, 39.0, 15.6]
+      }
+   ],
+
+   tooltip: {
+      crosshairs: true,
+      shared: true,
+      useHTML: true,
+      valueSuffix: '%'
+  },
+
+});
+</script>
+
+</body>

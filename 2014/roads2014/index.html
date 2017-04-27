@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		2014 major road construction
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/highcharts.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div id="suburbs" class="small-12 small-centered large-8 large-centered columns">
+<h2>2014 major road construction</h2>
+<p>Click the lines and markers to learn more about each project.
+<div id="osm" class="high375"></div>
+<p class="source">Source: Daily Herald reporting</p>
+</div>
+</div>
+
+	<script>
+
+var ggl = new L.Google('ROADMAP');
+
+var map = L.map('osm');
+
+
+$.getJSON("interchanges.geojson", function(data) {
+    var geojson = L.geoJson(data, {
+				
+		onEachFeature: function (feature, layer) {
+			popupOptions = {maxWidth: 225, maxHeight: 100};
+			layer.bindPopup(
+				'<p>' + feature.properties.Name + '</p>'
+				);
+		}
+
+     });
+ 
+   $.getJSON("roads2014.geojson", function(data) {
+    var geojsonLINES = L.geoJson(data, {
+		style: function (feature) {
+			return {
+				weight: 5,
+				opacity: .7,
+				color: 'red',
+			};
+    	},
+				
+		onEachFeature: function (feature, layer) {
+			popupOptions = {maxWidth: 225, maxHeight: 100};
+			layer.bindPopup(
+				'<p>' + feature.properties.info + '</p>'
+				);
+		}
+
+     });
+
+
+   $.getJSON("roads2014a.geojson", function(data) {
+    var geojsonLINES2 = L.geoJson(data, {
+		style: function (feature) {
+			return {
+				weight: 5,
+				opacity: .7,
+				color: 'blue',
+			};
+    	},
+				
+		onEachFeature: function (feature, layer) {
+			popupOptions = {maxWidth: 225, maxHeight: 100};
+			layer.bindPopup(
+				'<p>' + feature.properties.info + '</p>'
+				);
+		}
+
+     });
+
+
+ 	map.setView(new L.LatLng(41.9, -88.25),9);
+	map.addLayer(ggl);
+	geojsonLINES.addTo(map);
+	geojsonLINES2.addTo(map);
+	geojson.addTo(map);
+
+});
+});
+});
+
+	</script>
+
+</body>
+
+
+

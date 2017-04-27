@@ -1,0 +1,120 @@
+<p><strong>Below is only a sample of the races that would appear on a DuPage County/Will County election returns page. </strong>This demostrates that we can filter the races by type under their appropriate subhead (state legislatie races appear in under "State Legislature", etc.). This is the backbone of our election results presentation.</p>
+<hr>
+<h3>Congressional races</h3>
+<div id="loadcong"></div>
+<hr>
+<h3>State Legislature</h3>
+<div id="loadlegis"></div>
+<hr>
+<h3>DuPage County races</h3>
+<div id="loadcounty"></div>
+<hr>
+<h3>Judicial races</h3>
+<div id="loadjudicial"></div>
+<hr>
+<h3>Referendums</h3>
+<div id="loadreferendum"></div>
+
+
+<script>
+
+var arr = [ 31, 32, 52, 58, 118, 119, 3010, 30062, 3044, 13011, 30143 ];
+
+function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getObjects(obj[i], key, val));
+        } else if (i == key && obj[key] == val) {
+            objects.push(obj);
+        }
+    }
+    return objects;
+};
+
+$.getJSON('json/dupage_0115.json', function(json){
+
+	var loadcong = "";
+	var loadlegis = "";
+	var loadcounty = "";
+	var loadjudicial = "";
+	var loadreferendum = "";
+
+	$.each(arr, function( index, value ) {
+
+		var test = getObjects(json, "RaceID", value);
+
+		//Insert if statement to check if it's US. Rep races
+		if (test[0].Cat1 == "Congress") {
+
+			loadcong += "<br><h4><strong>" + test[0].Cat2 + " " + test[0].Cat3 + "</strong> <small>" + test[0].Cat4 + "</small></h4><p class='precincts'><small><i>" + test[0].RepTotal + " of " + test[0].PrecTotal + " precincts reporting</i></small></p><table><tbody>";
+
+			$.each(test, function( i, v ) {
+				loadcong += "<tr><td>" + test[i].Candidate + "</td><td class='tdRIGHT'>" + test[i].VotesTotal + "</td></tr>";
+			});
+			loadcong += '</tbody></table>';
+
+		} else //Insert if statement to check if it's US. Rep races
+
+		if (test[0].Cat1 == "State Legislature") {
+
+			loadlegis += "<br><h4><strong>" + test[0].Cat2 + " " + test[0].Cat3 + "</strong> <small>" + test[0].Cat4 + "</small></h4><p class='precincts'><small><i>" + test[0].RepTotal + " of " + test[0].PrecTotal + " precincts reporting</i></small></p><table><tbody>";
+
+			console.log(test);
+			$.each(test, function( i, v ) {
+				loadlegis += "<tr><td>" + test[i].Candidate + "</td><td class='tdRIGHT'>" + test[i].VotesTotal + "</td></tr>";
+			});
+			loadlegis += '</tbody></table>';
+
+		} else //Insert if statement to check if it's DuPage County races
+
+		if (test[0].Cat1 == "DuPage County") {
+
+			loadcounty += "<br><h4><strong>" + test[0].Cat2 + " " + test[0].Cat3 + "</strong> <small>" + test[0].Cat4 + "</small></h4><p class='precincts'><small><i>" + test[0].RepTotal + " of " + test[0].PrecTotal + " precincts reporting</i></small></p><table><tbody>";
+
+			console.log(test);
+			$.each(test, function( i, v ) {
+				loadcounty += "<tr><td>" + test[i].Candidate + "</td><td class='tdRIGHT'>" + test[i].VotesTotal + "</td></tr>";
+			});
+			loadcounty += '</tbody></table>';
+
+		} else //Insert if statement to check if it's Judicial races
+
+		if (test[0].Cat1 == "Judicial") {
+
+			loadjudicial += "<br><h4><strong>" + test[0].Cat2 + " " + test[0].Cat3 + "</strong> <small>" + test[0].Cat4 + "</small></h4><p class='precincts'><small><i>" + test[0].RepTotal + " of " + test[0].PrecTotal + " precincts reporting</i></small></p><table><tbody>";
+
+			console.log(test);
+			$.each(test, function( i, v ) {
+				loadjudicial += "<tr><td>" + test[i].Candidate + "</td><td class='tdRIGHT'>" + test[i].VotesTotal + "</td></tr>";
+			});
+			loadjudicial += '</tbody></table>';
+
+		} else //Insert if statement to check if it's Judicial races
+
+		if (test[0].Cat1 == "Referendum") {
+
+			loadreferendum += "<br><h4><strong>" + test[0].Cat2 + " " + test[0].Cat3 + "</strong> <small>" + test[0].Cat4 + "</small></h4><p><strong>" + test[0].Referendum + "</strong></p><p class='precincts'><small><i>" + test[0].RepTotal + " of " + test[0].PrecTotal + " precincts reporting</i></small></p><table><tbody>";
+
+			console.log(test);
+			$.each(test, function( i, v ) {
+				loadreferendum += "<tr><td>" + test[i].Candidate + "</td><td class='tdRIGHT'>" + test[i].VotesTotal + "</td></tr>";
+			});
+			loadreferendum += '</tbody></table>';
+		};
+
+//end array
+	});
+
+	$('#loadcong').html(loadcong);
+	$('#loadlegis').html(loadlegis);
+	$('#loadcounty').html(loadcounty);
+	$('#loadjudicial').html(loadjudicial);
+	$('#loadreferendum').html(loadreferendum);
+
+//end json
+});
+
+</script>
+<p></p>

@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "fourDevs" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "project": "Algonquin Square", "Address": "2400 Millbrook Drive", "Town": "Algonquin" }, "geometry": { "type": "Point", "coordinates": [ -88.343270279571811, 42.145788477101206 ] } },
+{ "type": "Feature", "properties": { "project": "Randall Highlands", "Address": "1929 Ritter Street", "Town": "North Aurora" }, "geometry": { "type": "Point", "coordinates": [ -88.358345794967221, 41.813462680896869 ] } },
+{ "type": "Feature", "properties": { "project": "Water Street District", "Address": "353 S. Main Street", "Town": "Naperville" }, "geometry": { "type": "Point", "coordinates": [ -88.15054115076353, 41.770997697364294 ] } },
+{ "type": "Feature", "properties": { "project": "Downtown Lisle", "Address": "1014 Burlington Avenue", "Town": "Lisle" }, "geometry": { "type": "Point", "coordinates": [ -88.074329401646935, 41.798467686882695 ] } }
+]
+}

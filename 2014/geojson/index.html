@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Election results 2016
+  </title>
+
+
+<!-- STYLES -->
+    <!-- responsive style sheets -->
+    <link rel="stylesheet" href="static/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="static/css/elec.css" type="text/css">
+
+<!-- SCRIPTS -->
+    <script src="static/js/jquery-1.11.3.min.js"></script>
+    <!-- responsive js. needs jquery loaded first -->
+    <script src="static/js/bootstrap.min.js"></script>
+    <!-- charting -->
+    <script src="static/js/d3.v3.min.js"></script>
+ 
+    <script>var $ = jQuery;</script>
+
+  </head>
+
+  <body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style='width:100%; text-align:center' ><strong>2016 election results</strong></h1>
+        <div id='top'>
+
+            <!-- Dropdown menu -->
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 text-center">
+                        <div class="dropdown">
+                            <button class="btn btn btn-default btn-sm btn-block" id="menu1" type="button" data-toggle="dropdown">Jump to ...
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Congress">Congressional races</a></li>
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Statewide">Statewide races</a></li>
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#State_Legislature">State Legislature races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Cook_County">Cook County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#DuPage_County">DuPage County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Kane_County">Kane County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Lake_County">Lake County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#McHenry_County">McHenry County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Will_County">Will County races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Judicial">Judicial races</a></li>  
+                                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#Referendums">Referendums</a></li>  
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+          <hr class='fancy'>
+          <h2 style='width:100%; text-align:center' class='elexhdd' id='Nation'>President of the United States</h2>
+              <div class="row">
+                <div class="col-md-1"></div>
+              <div class='col-md-10' id='state-grid-map'>
+                <div class="graphic">
+                <svg xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 436 254' preserveAspectRation='xMinyMin meet'>
+             <!--<svg viewBox='0 0 436 254'>-->
+                <title>map</title><desc/><defs/>
+            <g sketch:type='MSPage' fill-rule='evenodd' fill='none' stroke-width='1' stroke='none'>
+                <g fill='#DDDDDD' stroke='#FFFFFF' stroke-width='2' transform='translate(1.000000, 2.000000)' sketch:type='MSLayerGroup' class='map'>
+                    <g sketch:type='MSShapeGroup' class='states'>
+                        <path id='state-alaska' d='M35.5255888,0 L52.8460969,10 L52.8460969,30 L35.5255888,40 L18.2050808,30 L18.2050808,10 L35.5255888,0 Z'/>
+                        <path id='state-maine' d='M416.576766,0 L433.897275,10 L433.897275,30 L416.576766,40 L399.256258,30 L399.256258,10 L416.576766,0 Z'/>
+                        <path id='state-vermont' d='M364.615242,30 L381.93575,40 L381.93575,60 L364.615242,70 L347.294734,60 L347.294734,40 L364.615242,30 Z'/>
+                        <path id='state-new-hampshire' d='M399.256258,30 L416.576766,40 L416.576766,60 L399.256258,70 L381.93575,60 L381.93575,40 L399.256258,30 Z'/>
+                        <path id='state-washington' d='M70.166605,60 L87.4871131,70 L87.4871131,90 L70.166605,100 L52.8460969,90 L52.8460969,70 L70.166605,60 Z'/>
+                        <path id='state-montana' d='M104.807621,60 L122.128129,70 L122.128129,90 L104.807621,100 L87.4871131,90 L87.4871131,70 L104.807621,60 Z'/>
+                        <path id='state-north-dakota' d='M139.448637,60 L156.769145,70 L156.769145,90 L139.448637,100 L122.128129,90 L122.128129,70 L139.448637,60 Z'/>
+                        <path id='state-minnesota' d='M174.089653,60 L191.410162,70 L191.410162,90 L174.089653,100 L156.769145,90 L156.769145,70 L174.089653,60 Z'/>
+                        <path id='state-wisconsin' d='M208.73067,60 L226.051178,70 L226.051178,90 L208.73067,100 L191.410162,90 L191.410162,70 L208.73067,60 Z'/>
+                        <path id='state-michigan' d='M278.012702,60 L295.33321,70 L295.33321,90 L278.012702,100 L260.692194,90 L260.692194,70 L278.012702,60 Z'/>
+                        <path id='state-new-york' d='M347.294734,60 L364.615242,70 L364.615242,90 L347.294734,100 L329.974226,90 L329.974226,70 L347.294734,60 Z'/>
+                        <path id='state-massachusetts' d='M381.93575,60 L399.256258,70 L399.256258,90 L381.93575,100 L364.615242,90 L364.615242,70 L381.93575,60 Z'/>
+                        <path id='state-rhode-island' d='M416.576766,60 L433.897275,70 L433.897275,90 L416.576766,100 L399.256258,90 L399.256258,70 L416.576766,60 Z'/>
+                        <path id='state-idaho' d='M87.4871131,90 L104.807621,100 L104.807621,120 L87.4871131,130 L70.166605,120 L70.166605,100 L87.4871131,90 Z'/>
+                        <path id='state-wyoming' d='M122.128129,90 L139.448637,100 L139.448637,120 L122.128129,130 L104.807621,120 L104.807621,100 L122.128129,90 Z'/>
+                        <path id='state-south-dakota' d='M156.769145,90 L174.089653,100 L174.089653,120 L156.769145,130 L139.448637,120 L139.448637,100 L156.769145,90 Z'/>
+                        <path id='state-iowa' d='M191.410162,90 L208.73067,100 L208.73067,120 L191.410162,130 L174.089653,120 L174.089653,100 L191.410162,90 Z'/>
+                        <path id='state-illinois' d='M226.051178,90 L243.371686,100 L243.371686,120 L226.051178,130 L208.73067,120 L208.73067,100 L226.051178,90 Z'/>
+                        <path id='state-indiana' d='M260.692194,90 L278.012702,100 L278.012702,120 L260.692194,130 L243.371686,120 L243.371686,100 L260.692194,90 Z'/>
+                        <path id='state-ohio' d='M295.33321,90 L312.653718,100 L312.653718,120 L295.33321,130 L278.012702,120 L278.012702,100 L295.33321,90 Z'/>
+                        <path id='state-pennsylvania' d='M329.974226,90 L347.294734,100 L347.294734,120 L329.974226,130 L312.653718,120 L312.653718,100 L329.974226,90 Z'/>
+                        <path id='state-new-jersey' d='M364.615242,90 L381.93575,100 L381.93575,120 L364.615242,130 L347.294734,120 L347.294734,100 L364.615242,90 Z'/>
+                        <path id='state-connecticut' d='M399.256258,90 L416.576766,100 L416.576766,120 L399.256258,130 L381.93575,120 L381.93575,100 L399.256258,90 Z'/>
+                        <path id='state-oregon' d='M70.166605,120 L87.4871131,130 L87.4871131,150 L70.166605,160 L52.8460969,150 L52.8460969,130 L70.166605,120 Z'/>
+                        <path id='state-nevada' d='M104.807621,120 L122.128129,130 L122.128129,150 L104.807621,160 L87.4871131,150 L87.4871131,130 L104.807621,120 Z'/>
+                        <path id='state-colorado' d='M139.448637,120 L156.769145,130 L156.769145,150 L139.448637,160 L122.128129,150 L122.128129,130 L139.448637,120 Z'/>
+                        <path id='state-nebraska' d='M174.089653,120 L191.410162,130 L191.410162,150 L174.089653,160 L156.769145,150 L156.769145,130 L174.089653,120 Z'/>
+                        <path id='state-missouri' d='M208.73067,120 L226.051178,130 L226.051178,150 L208.73067,160 L191.410162,150 L191.410162,130 L208.73067,120 Z'/>
+                        <path id='state-kentucky' d='M243.371686,120 L260.692194,130 L260.692194,150 L243.371686,160 L226.051178,150 L226.051178,130 L243.371686,120 Z'/>
+                        <path id='state-west-virginia' d='M278.012702,120 L295.33321,130 L295.33321,150 L278.012702,160 L260.692194,150 L260.692194,130 L278.012702,120 Z'/>
+                        <path id='state-virginia' d='M312.653718,120 L329.974226,130 L329.974226,150 L312.653718,160 L295.33321,150 L295.33321,130 L312.653718,120 Z'/>
+                        <path id='state-maryland' d='M347.294734,120 L364.615242,130 L364.615242,150 L347.294734,160 L329.974226,150 L329.974226,130 L347.294734,120 Z'/>
+                        <path id='state-delaware' d='M381.93575,120 L399.256258,130 L399.256258,150 L381.93575,160 L364.615242,150 L364.615242,130 L381.93575,120 Z'/>
+                        <path id='state-california' d='M87.4871131,150 L104.807621,160 L104.807621,180 L87.4871131,190 L70.166605,180 L70.166605,160 L87.4871131,150 Z'/>
+                        <path id='state-utah' d='M122.128129,150 L139.448637,160 L139.448637,180 L122.128129,190 L104.807621,180 L104.807621,160 L122.128129,150 Z'/>
+                        <path id='state-new-mexico' d='M156.769145,150 L174.089653,160 L174.089653,180 L156.769145,190 L139.448637,180 L139.448637,160 L156.769145,150 Z'/>
+                        <path id='state-kansas' d='M191.410162,150 L208.73067,160 L208.73067,180 L191.410162,190 L174.089653,180 L174.089653,160 L191.410162,150 Z'/>
+                        <path id='state-arkansas' d='M226.051178,150 L243.371686,160 L243.371686,180 L226.051178,190 L208.73067,180 L208.73067,160 L226.051178,150 Z'/>
+                        <path id='state-tennessee' d='M260.692194,150 L278.012702,160 L278.012702,180 L260.692194,190 L243.371686,180 L243.371686,160 L260.692194,150 Z'/>
+                        <path id='state-north-carolina' d='M295.33321,150 L312.653718,160 L312.653718,180 L295.33321,190 L278.012702,180 L278.012702,160 L295.33321,150 Z'/>
+                        <path id='state-south-carolina' d='M329.974226,150 L347.294734,160 L347.294734,180 L329.974226,190 L312.653718,180 L312.653718,160 L329.974226,150 Z'/>
+                        <path id='state-dc' d='M364.615242,150 L381.93575,160 L381.93575,180 L364.615242,190 L347.294734,180 L347.294734,160 L364.615242,150 Z'/>
+                        <path id='state-arizona' d='M139.448637,180 L156.769145,190 L156.769145,210 L139.448637,220 L122.128129,210 L122.128129,190 L139.448637,180 Z'/>
+                        <path id='state-oklahoma' d='M174.089653,180 L191.410162,190 L191.410162,210 L174.089653,220 L156.769145,210 L156.769145,190 L174.089653,180 Z'/>
+                        <path id='state-louisiana' d='M208.73067,180 L226.051178,190 L226.051178,210 L208.73067,220 L191.410162,210 L191.410162,190 L208.73067,180 Z'/>
+                        <path id='state-mississippi' d='M243.371686,180 L260.692194,190 L260.692194,210 L243.371686,220 L226.051178,210 L226.051178,190 L243.371686,180 Z'/>
+                        <path id='state-alabama' d='M278.012702,180 L295.33321,190 L295.33321,210 L278.012702,220 L260.692194,210 L260.692194,190 L278.012702,180 Z'/>
+                        <path id='state-georgia' d='M312.653718,180 L329.974226,190 L329.974226,210 L312.653718,220 L295.33321,210 L295.33321,190 L312.653718,180 Z'/>
+                        <path id='state-hawaii' d='M18.2050808,210 L35.5255888,220 L35.5255888,240 L18.2050808,250 L0.884572681,240 L0.884572681,220 L18.2050808,210 Z'/>
+                        <path id='state-texas' d='M191.410162,210 L208.73067,220 L208.73067,240 L191.410162,250 L174.089653,240 L174.089653,220 L191.410162,210 Z'/>
+                        <path id='state-florida' d='M295.33321,210 L312.653718,220 L312.653718,240 L295.33321,250 L278.012702,240 L278.012702,220 L295.33321,210 Z'/>
+                    </g>
+                </g>
+            </g>
+        <g>
+            <text id='state-alabamaTXT' text-anchor='middle' class='mlabel' x='278.70553100585937' y='204.8933982849121'>AL</text>
+            <text id='state-alaskaTXT' text-anchor='middle' class='mlabel' x='36.2184073638916' y='24.89339828491211'>AK</text>
+            <text id='state-arizonaTXT' text-anchor='middle' class='mlabel' x='140.14145935058593' y='204.8933982849121'>AZ</text>
+            <text id='state-arkansasTXT' text-anchor='middle' class='mlabel' x='226.74399841308593' y='174.8933982849121'>AR</text>
+            <text id='state-californiaTXT' text-anchor='middle' class='mlabel' x='88.17993041992187' y='174.8933982849121'>CA</text>
+            <text id='state-coloradoTXT' text-anchor='middle' class='mlabel' x='140.14145935058593' y='144.8933982849121'>CO</text>
+            <text id='state-connecticutTXT' text-anchor='middle' class='mlabel' x='399.9490759277344' y='114.89339828491211'>CT</text>
+            <text id='state-delawareTXT' text-anchor='middle' class='mlabel' x='382.6285656738281' y='144.8933982849121'>DE</text>
+            <text id='state-dcTXT' text-anchor='middle' class='mlabel' x='365.30807006835937' y='174.8933982849121'>D.C.</text>
+            <text id='state-floridaTXT' text-anchor='middle' class='mlabel' x='296.0260266113281' y='234.8933982849121'>FL</text>
+            <text id='state-georgiaTXT' text-anchor='middle' class='mlabel' x='313.3465368652344' y='204.8933982849121'>GA</text>
+            <text id='state-hawaiiTXT' text-anchor='middle' class='mlabel' x='18.89790199995041' y='234.8933982849121'>HI</text>
+            <text id='state-idahoTXT' text-anchor='middle' class='mlabel' x='88.17993041992187' y='114.89339828491211'>ID</text>
+            <text id='state-illinoisTXT' text-anchor='middle' class='mlabel' x='226.74399841308593' y='114.89339828491211'>IL</text>
+            <text id='state-indianaTXT' text-anchor='middle' class='mlabel' x='261.38501220703125' y='114.89339828491211'>IN</text>
+            <text id='state-iowaTXT' text-anchor='middle' class='mlabel' x='192.1029766845703' y='114.89339828491211'>IA</text>
+            <text id='state-kansasTXT' text-anchor='middle' class='mlabel' x='192.1029766845703' y='174.8933982849121'>KS</text>
+            <text id='state-kentuckyTXT' text-anchor='middle' class='mlabel' x='244.06450927734375' y='144.8933982849121'>KY</text>
+            <text id='state-louisianaTXT' text-anchor='middle' class='mlabel' x='209.42348754882812' y='204.8933982849121'>LA</text>
+            <text id='state-maineTXT' text-anchor='middle' class='mlabel' x='417.26958740234375' y='24.89339828491211'>ME*</text>
+            <text id='state-marylandTXT' text-anchor='middle' class='mlabel' x='347.9875439453125' y='144.8933982849121'>MD</text>
+            <text id='state-massachusettsTXT' text-anchor='middle' class='mlabel' x='382.6285656738281' y='84.89339828491211'>MA</text>
+            <text id='state-michiganTXT' text-anchor='middle' class='mlabel' x='278.70553100585937' y='84.89339828491211'>MI</text>
+            <text id='state-minnesotaTXT' text-anchor='middle' class='mlabel' x='174.78247314453125' y='84.89339828491211'>MN</text>
+            <text id='state-mississippiTXT' text-anchor='middle' class='mlabel' x='244.06450927734375' y='204.8933982849121'>MS</text>
+            <text id='state-missouriTXT' text-anchor='middle' class='mlabel' x='209.42348754882812' y='144.8933982849121'>MO</text>
+            <text id='state-montanaTXT'text-anchor='middle' class='mlabel' x='105.50044128417969' y='84.89339828491211'>MT</text>
+            <text id='state-nebraskaTXT' text-anchor='middle' class='mlabel' x='174.78247314453125' y='144.8933982849121'>NE*</text>
+            <text id='state-nevadaTXT' text-anchor='middle' class='mlabel' x='105.50044128417969' y='144.8933982849121'>NV</text>
+            <text id='state-new-hampshireTXT' text-anchor='middle' class='mlabel' x='399.9490759277344' y='54.89339828491211'>NH</text>
+            <text id='state-new-jerseyTXT' text-anchor='middle' class='mlabel' x='365.30807006835937' y='114.89339828491211'>NJ</text>
+            <text id='state-new-mexicoTXT' text-anchor='middle' class='mlabel' x='157.46196228027344' y='174.8933982849121'>NM</text>
+            <text id='state-new-yorkTXT' text-anchor='middle' class='mlabel' x='347.9875439453125' y='84.89339828491211'>NY</text>
+            <text id='state-north-carolinaTXT' text-anchor='middle' class='mlabel' x='296.0260266113281' y='174.8933982849121'>NC</text>
+            <text id='state-north-dakotaTXT' text-anchor='middle' class='mlabel' x='140.14145935058593' y='84.89339828491211'>ND</text>
+            <text id='state-ohioTXT' text-anchor='middle' class='mlabel' x='296.0260266113281' y='114.89339828491211'>OH</text>
+            <text id='state-oklahomaTXT' text-anchor='middle' class='mlabel' x='174.78247314453125' y='204.8933982849121'>OK</text>
+            <text id='state-oregonTXT' text-anchor='middle' class='mlabel' x='70.8594253540039' y='144.8933982849121'>OR</text>
+            <text id='state-pennsylvaniaTXT' text-anchor='middle' class='mlabel' x='330.66704833984375' y='114.89339828491211'>PA</text>
+            <text id='state-rhode-islandTXT' text-anchor='middle' class='mlabel' x='417.26958740234375' y='84.89339828491211'>RI</text>
+            <text id='state-south-carolinaTXT' text-anchor='middle' class='mlabel' x='330.66704833984375' y='174.8933982849121'>SC</text>
+            <text id='state-south-dakotaTXT' text-anchor='middle' class='mlabel' x='157.46196228027344' y='114.89339828491211'>SD</text>
+            <text id='state-tennesseeTXT' text-anchor='middle' class='mlabel' x='261.38501220703125' y='174.8933982849121'>TN</text>
+            <text id='state-texasTXT' text-anchor='middle' class='mlabel' x='192.1029766845703' y='234.8933982849121'>TX</text>
+            <text id='state-utahTXT' text-anchor='middle' class='mlabel' x='122.82094848632812' y='174.8933982849121'>UT</text>
+            <text id='state-vermontTXT' text-anchor='middle' class='mlabel' x='365.30807006835937' y='54.89339828491211'>VT</text>
+            <text id='state-virginiaTXT' text-anchor='middle' class='mlabel' x='313.3465368652344' y='144.8933982849121'>VA</text>
+            <text id='state-washingtonTXT' text-anchor='middle' class='mlabel' x='70.8594253540039' y='84.89339828491211'>WA</text>
+            <text id='state-west-virginiaTXT' text-anchor='middle' class='mlabel' x='278.70553100585937' y='144.8933982849121'>WV</text>
+            <text id='state-wisconsinTXT' text-anchor='middle' class='mlabel' x='209.42348754882812' y='84.89339828491211'>WI</text>
+            <text id='state-wyomingTXT' text-anchor='middle' class='mlabel' x='122.82094848632812' y='114.89339828491211'>WY</text>
+        </g>
+    </svg>
+    </div>
+        <p><small>* Proportionally assigns electoral votes. Lighter color means at least one electoral vote went to other party. </small></p>
+    </div>
+</div>
+    <!-- End hex map labels -->
+            <div id="nation"></div>
+          </div>
+     </div>
+    </div>
+  </div>
+<br>
+<div id="creditBox">
+  <div class="row">
+    <div class="col-md-10 center-block center-blockfloat">
+      <p><small>Daily Herald web app by <a href="mailto:tbroderick@dailyherald.com">Tim Broderick</a>. U.S. hexigon map originally created by the <a href="http://blog.apps.npr.org/" target="_blank">NPR Visual Team.</a></small></p>
+    </div>
+  </div>
+</div>
+<div id="underfoot"></div>
+
+<!-- END PAGE CONTENT, BEGIN SCRIPT -->
+
+<script>
+
+
+//BEGIN LOADING NATIONAL CONTENT
+
+$.ajaxSetup({ cache: true});
+
+
+// style the states
+
+
+$.getJSON("json/states-svg.json", function (json) {
+    $.each(json, function( i, v ) {
+      //console.log(json[i].state)
+      if ( json[i].win == 'dem' ){
+        $("#" + json[i].state).attr('class', 'state_dem');
+        $("#" + json[i].state + "TXT").attr('class', 'mlabel mlabel-active');
+      } else if ( json[i].win == 'dem1' ){
+        $("#" + json[i].state).attr('class', 'state_dem1');
+        $("#" + json[i].state + "TXT").attr('class', 'mlabel mlabel-active');
+      } else if ( json[i].win == 'gop' ){
+        $("#" + json[i].state).attr('class', 'state_gop');
+        $("#" + json[i].state + "TXT").attr('class', 'mlabel mlabel-active');
+      } else if ( json[i].win == 'gop1' ){
+        $("#" + json[i].state).attr('class', 'state_gop1');
+        $("#" + json[i].state + "TXT").attr('class', 'mlabel mlabel-active');
+      }
+    });
+    var gopevote = parseInt(json[0].win);
+    var demevote = parseInt(json[1].win);
+    var gopevoteperc = ((gopevote/538)*100).toFixed(1);
+    var demevoteperc = ((demevote/538)*100).toFixed(1);
+
+
+
+// get race data
+$.getJSON("json/result.json", function (data) {
+
+  var result = data;
+
+  var loadnation = "";
+
+  var arr = [ 'Nation', 'Congress', 'Statewide', 'State_Legislature', "Cook_County", "DuPage_County", "Kane_County", "Lake_County", "McHenry_County", "Will_County", "Judicial", "Referendums" ];
+
+  var nest = d3.nest().key(function(d) { return d.dh_raceid; }).entries(result);
+
+  $.each(arr, function( ind, val) {
+
+// ----- the individual offices
+
+
+  if ( arr[ind] == 'Nation' ){
+
+    loadnation += "<h4><strong>Electorial college</strong><span class='precincts'><br>270 out of 538 electoral votes are needed to win the presidency.</span></h4><p style='width:100%; text-align:center' class='ele_spacing'>269 ELECTORAL VOTES</p><p class='ele_spacing'><strong><span style='width:49.83%; float:left;'>Hillary Clinton</span>|<span style='float:right;text-align:right;'>Donald J. Trump</span></strong></p><div class='ele_chartback'><span style='width:" + demevoteperc + "%; float:left;' class='ele_bar_dem'></span><span style='width:" + gopevoteperc + "%; float:right;' class='ele_bar_gop'></span></div><div><span style='width:" + demevoteperc + "%; float:left; text-align:right;' class='ele_text'>" + demevote + "</span><span style='width:" + gopevoteperc + "%; float:right; text-align:left;' class='ele_text'>" + gopevote + "</span></div><br><hr class='btwn'>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Congress' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Congress</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Statewide' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Statewide</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'State_Legislature' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "State Legislature</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Cook_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Cook County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'DuPage_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "DuPage County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Kane_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Kane County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Lake_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Lake County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'McHenry_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "McHenry County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Will_County' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Will County</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Judicial' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Judicial</h2>";
+    racecode(arr[ind]);
+    };
+
+  if ( arr[ind] == 'Referendums' ){
+   loadnation += "<hr class='fancy'><h2 style='width:100%; text-align:center' class='elexhdd' id='" + arr[ind] + "'>" + "Referendums</h2>";
+    racecode(arr[ind]);
+    };
+
+
+
+//--------- Begin racecode
+
+function racecode(nameofoffice) {
+
+  $.each(nest, function( i, v ) {
+
+    if (nest[i].values[0].office_type == nameofoffice){
+      if (nameofoffice == 'Nation'){
+
+     loadnation += "<h4><strong>How Illinois Voted</strong><span class='precincts'><br>" + nest[i].values[0].precinctsreportingpct_state + "% precincts reporting (" + nest[i].values[0].precinctsreporting_state.toLocaleString() + " of " + nest[i].values[0].precinctstotal_state.toLocaleString() + ") | <a href='#top'>Back to top</a></span></h4><table id='main" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "' class='table table-condensed elex'><tbody>";
+
+
+      } else {
+
+    loadnation += "<h4><strong>For " + nest[i].values[0].office;
+
+    if (nest[i].values[0].office2 != ''){
+      loadnation += ", " + nest[i].values[0].office2;
+    };
+
+    //Right here add code to check if APID = none, then use the zone totals
+
+     loadnation += "</strong> <span class='precincts'><br>" + nest[i].values[0].precinctsreportingpct_state + "% precincts reporting (" + nest[i].values[0].precinctsreporting_state.toLocaleString() + " of " + nest[i].values[0].precinctstotal_state.toLocaleString() + ") | <a href='#top'><strong style='color:#FF9C00'> Back to top</a></strong></span></h4><table id='main" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "' class='table table-condensed elex'><tbody>";
+
+      };
+
+
+          $.each(nest[i].values, function(ind, val) {
+
+           if ( nameofoffice == 'Referendums'){
+             loadnation += "<tr class='cand_row'><td class='candidate'><div><h4 class='elexhed'>" + nest[i].values[ind].first_name + "</h4></div><div class='cand_chartback' ><span style='width:" + (nest[i].values[ind].votepct_state * 100).toFixed(2) + "%' ";
+            } else {
+              loadnation += "<tr class='cand_row'><td class='candidate'><div><h4 class='elexhed'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</h4></div><div class='cand_chartback' ><span style='width:" + (nest[i].values[ind].votepct_state * 100).toFixed(2) + "%' ";
+            };
+
+            if ( nest[i].values[ind].party == 'D'){
+              loadnation += "class='cand_bar_dem'";
+            } else if ( nest[i].values[ind].party == 'R'){
+              loadnation += "class='cand_bar_gop'";
+            } else {
+              loadnation += "class='cand_bar_other'";
+            };
+             
+             loadnation += "></span></div></td><td class='votepct'><span class='votespace'><strong>" + (nest[i].values[ind].votepct_state * 100).toFixed(1) +  "%</strong></span></td><td class='votecount'><span class='votespace'>" + nest[i].values[ind].votecount_state.toLocaleString() +  " votes</span></td></tr>";
+
+          });
+
+      loadnation += "</tbody></table>";
+
+      var addem = 0;
+
+      if ( nest[i].values[0].precinctstotal_chi != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_cook != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_dup != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_kane != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_lake != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_mch != 0 ){ addem += 1 };
+      if ( nest[i].values[0].precinctstotal_will != 0 ){ addem += 1 };
+
+      //test to see if there are any result breakdowns
+      if ( addem < 1 ){
+        var junkvar = 0;
+
+      } else {
+
+      loadnation += "<p><a id='ref" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "' data-toggle='collapse' href='#" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "'><small><strong>Click here to view/hide</strong></a> breakdown of results for this race.</small></p><div class='collapse well no-trans' id='" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "'>";
+
+      // Label of this collapse event
+      loadnation += "<table id='table" + nest[i].values[0].office_type + nest[i].values[0].dh_raceid + "' class='table table-condensed'><thead><tr><th>County/candidate</th><th>Votes</th><th>Percent</th></tr></thead><tbody>";
+
+      //Chicago
+
+      if ( nest[i].values[0].precinctstotal_chi != 0){
+        loadnation += "<tr><td><strong>Chicago</strong> <small><br>" + (nest[i].values[0].precinctsreportingpct_chi).toFixed(1) + "% precincts reporting (" + nest[i].values[0].precinctsreporting_chi.toLocaleString() + " of " + nest[i].values[0].precinctstotal_chi.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_chi.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_chi * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //Suburban Cook County
+
+      if ( nest[i].values[0].precinctstotal_subcook != 0){
+        loadnation += "<tr><td><strong>Suburban Cook County</strong> <small><br>" + nest[i].values[0].precinctsreportingpct_subcook + "% precincts reporting (" + nest[i].values[0].precinctsreporting_subcook.toLocaleString() + " of " + nest[i].values[0].precinctstotal_subcook.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_subcook.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_subcook * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //DuPage County
+
+      if ( nest[i].values[0].precinctstotal_dup != 0){
+        loadnation += "<tr><td><strong>DuPage County</strong> <small><br>" + nest[i].values[0].precinctsreportingpct_dup + "% precincts reporting (" + nest[i].values[0].precinctsreporting_dup.toLocaleString() + " of " + nest[i].values[0].precinctstotal_dup.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_dup.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_dup * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //Kane County with Aurora FIX TO WORK IF AURORA IS ZERO
+
+      var kaneaurpct = ( ( (nest[i].values[0].precinctsreporting_kane + nest[i].values[0].precinctsreporting_aur)/(nest[i].values[0].precinctstotal_kane + nest[i].values[0].precinctstotal_aur) ) * 100 ).toFixed(1);
+      if ( nest[i].values[0].precinctstotal_kane != 0){
+        loadnation += "<tr><td><strong>Kane County</strong> <small><br>" + kaneaurpct + "% precincts reporting (" + (nest[i].values[0].precinctsreporting_kane + nest[i].values[0].precinctsreporting_aur).toLocaleString() + " of " + (nest[i].values[0].precinctstotal_kane + nest[i].values[0].precinctstotal_aur).toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + (nest[i].values[ind].votecount_kane + nest[i].values[ind].votecount_aur).toLocaleString() +  "</td><td>" +  ( ( (nest[i].values[ind].votecount_kane + nest[i].values[ind].votecount_aur)/(nest[i].values[ind].totalvotes_kane + nest[i].values[ind].totalvotes_aur)) * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //Lake County
+
+      if ( nest[i].values[0].precinctstotal_lake != 0){
+        loadnation += "<tr><td><strong>Lake County</strong> <small><br>" + nest[i].values[0].precinctsreportingpct_lake + "% precincts reporting (" + nest[i].values[0].precinctsreporting_lake.toLocaleString() + " of " + nest[i].values[0].precinctstotal_lake.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_lake.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_lake * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //McHenry County
+
+      if ( nest[i].values[0].precinctstotal_mch != 0){
+        loadnation += "<tr><td><strong>McHenry County</strong> <small><br>" + nest[i].values[0].precinctsreportingpct_mch + "% precincts reporting (" + nest[i].values[0].precinctsreporting_mch.toLocaleString() + " of " + nest[i].values[0].precinctstotal_mch.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_mch.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_mch * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      //Will County
+
+      if ( nest[i].values[0].precinctstotal_will != 0){
+        loadnation += "<tr><td><strong>Will County</strong> <small><br>" + nest[i].values[0].precinctsreportingpct_will + "% precincts reporting (" + nest[i].values[0].precinctsreporting_will.toLocaleString() + " of " + nest[i].values[0].precinctstotal_will.toLocaleString() + ")</small></td><td></td><td></td></tr>";
+        $.each(nest[i].values, function(ind, val) {
+          loadnation += "<tr><td><li class='li_position'>" + nest[i].values[ind].first_name + " " + nest[i].values[ind].last_name + nest[i].values[ind].incumbent + " (" + nest[i].values[ind].party + ")</li></td><td>" + nest[i].values[ind].votecount_will.toLocaleString() +  "</td><td>" +  (nest[i].values[ind].votepct_will * 100).toFixed(1) +  "%</td></tr>";
+        });
+      };
+
+      loadnation += "</tbody></table></div>";
+    };
+      loadnation += "<br><br>";
+
+  };
+      });
+  };
+
+
+
+//--------- End racecode
+});
+//---------
+
+
+  $('#nation').html(loadnation);
+
+$.ajaxSetup({ cache: false});
+
+});
+ });
+
+//----------------
+$(window).resize();
+
+</script>
+
+  </body>
+</html>

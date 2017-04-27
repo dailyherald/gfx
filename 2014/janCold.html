@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		January cold
+	</title>
+
+	<link href="../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../styles/styleSort.css" type="text/css" rel="stylesheet">
+	<link href="../styles/leaflet.css" rel="stylesheet" type="text/css">
+	<link href="../styles/MarkerCluster.css"  rel="stylesheet" type="text/css">
+	<link href="../styles/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="../scripts/jquery-1.9.1.min.js"></script>
+	<script stype="text/javascript" rc="../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script type="text/javascript" src="../scripts/highcharts.js"></script>
+	<script type="text/javascript" src="../scripts/highcharts-more.js"></script>
+	<script type="text/javascript" src="../scripts/jquery.table.js"></script>
+	<script type="text/javascript" src="../scripts/leaflet.js"></script>
+	<script type="text/javascript" src="../scripts/leaflet.markercluster-src.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script type="text/javascript" src="../scripts/Google.js"></script>
+
+</head>
+
+<script>
+	
+$(document).ready(function(e) {
+
+	var chartCold = new Highcharts.Chart({
+		
+        chart: {
+			renderTo: 'COLDchart',
+			height: 350,
+            type: 'columnrange',
+			inverted: false
+        },
+		
+        title: {
+	    	text: null
+    	},
+
+        xAxis: {
+			tickInterval: 5,
+            categories: ['1/1', '1/2', '1/3', '1/4', '1/5', '1/6', '1/7', '1/8', '1/9', '1/10', '1/11', '1/12', '1/13', '1/14', '1/15', '1/16', '1/17', '1/18', '1/19', '1/20', '1/21', '1/22', '1/23', '1/24', '1/25', '1/26', '1/27', '1/28', '1/29', '1/30', '1/31', '2/1'],
+		plotLines: [{
+                value: 27,
+                color: '#FFFF99',
+                width: 160,
+				label: {
+					text: 'FORECAST',
+					rotation: 0,
+					align: 'center',
+	                verticalAlign: 'top'
+                }				
+		}]
+//			labels: {
+//					fontFamily: 'Arial, sans-serif',
+//				style: {
+//					color: '#000',
+// 		               }
+//			},
+//			plotLines: [{
+//				value: 50,
+//				color: '#FFFF99'				
+//			}],
+	},
+		
+        yAxis: {
+            title: {
+                text: 'Temperatures'
+            },
+		    min: -20,
+			max: 50,
+			tickInterval: 5
+        },
+		
+		tooltip: {
+	        valueSuffix: '°',
+			crosshairs: true
+	    },
+	    
+	    plotOptions: {
+	        columnrange: {
+	        	dataLabels: {
+	        		enabled: true,
+	        		formatter: function () {
+	        			return this.y + '°';
+	        		}
+	        	}
+	        }
+	    },
+	    
+	    legend: {
+	        enabled: false
+	    },
+		
+        series: [{
+            name: 'Temperature range',
+			type: 'columnrange',
+			inverted: false,
+            data: [
+				[10, 22],
+				[-1, 21],
+				[-12, 20],
+				[19, 31],
+				[-3, 29],
+				[-16, -2],
+				[-12, 3],
+				[-6, 17],
+				[-4, 27],
+				[27, 40],
+				[31, 40],
+				[28, 44],
+				[27, 45],
+				[22, 35],
+				[15, 22],
+				[19, 34],
+				[12, 20],
+				[7, 21],
+				[10, 37],
+				[13, 35],
+				[0, 13],
+				[0, 15],
+				[-5, 9],
+				[18, 24],
+				[3, 22],
+				[-4, 18],
+				[-13, 1],
+				[-10, -3],
+				[-2, 3],
+				[7, 16],
+				[7, 22],
+				[17, 20]
+            	]
+	    }],
+		
+	});
+
+});
+	
+</script>
+
+</head>
+
+<body>
+
+<div class="row">
+ <div class="small-12 small-centered large-8 large-centered columns">
+<h3>Dangerous cold returns</h3>
+<p>Average mean temperatures usually hover around 24 degrees in January.</p>
+<div id="COLDchart">
+</div>
+<p class="source">Sources: Wunderground.com, Accuweather</p>
+
+</div>
+
+</body>
+</html>

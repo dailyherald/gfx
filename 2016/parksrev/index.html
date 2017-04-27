@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Park districts revenues
+  </title>
+
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+
+  <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+ 
+<!-- Datatables -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.js"></script>
+
+<!-- End datatables -->
+
+<link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+<script>
+$(document).ready(function() {
+    $('#gfx').DataTable( {
+      responsive: true,
+      columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: -1 }
+        ]
+      } );
+
+} );
+</script>
+
+  </head>
+
+  <body>
+    
+    
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <img alt="Brand" src="../static/img/dh.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.dailyherald.com" target="_blank">Daily Herald</a></li>
+                <li><a href="http://reportcards.dailyherald.com/gfx/" target="_blank">Daily Herald News Art</a></li>
+            </ul>
+        </div>
+    </div><!-- end container-->
+</nav>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h2 class="topmargin"><strong>Taxing recreation</strong></h2>
+        <h4 class="topmargin">Here is the amount of property taxes suburban park districts use to subsidize recreational programs.</h4>
+        <p class="topmargin"><strong>The list below is interactive: <span style="color:red">Sort</span> the list by clicking on the column headings, or <span style="color:red">look for your park district</span> using the search box. You can also <span style="color:red">choose to view</span> more districts at a time with the "Show entries" box.</strong></p>
+
+        <!--<div class="table-responsive">-->
+          <div>
+          <p><table id="gfx" class="table table-hover table-striped table-condensed display" width="100%" ><thead>
+            <th class="thLEFT text-nowrap">Park district</th>
+            <th>Total recreation revenue</th>
+            <th>Revenue from property taxes</th>
+            <th>% of revenue from taxes</th>
+            </thead>
+<tbody>
+<tr><td class="tdLEFT text-nowrap">Rosemont</td><td>$478,909</td><td>$377,740</td><td>78.9%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Winfield</td><td>$933,742</td><td>$561,024</td><td>60.1%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Medinah*</td><td>$527,088</td><td>$314,890</td><td>59.7%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wood Dale</td><td>$1,423,601</td><td>$834,715</td><td>58.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Addison</td><td>$1,607,462</td><td>$823,522</td><td>51.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Warrenville</td><td>$894,939</td><td>$445,754</td><td>49.8%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Round Lake Area</td><td>$3,004,161</td><td>$1,457,520</td><td>48.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Oakbrook Terrace</td><td>$430,887</td><td>$199,192</td><td>46.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wheeling*</td><td>$5,517,633</td><td>$2,512,837</td><td>45.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Bensenville*</td><td>$1,826,821</td><td>$826,666</td><td>45.3%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wheaton*</td><td>$10,438,936</td><td>$4,643,568</td><td>44.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Des Plaines</td><td>$3,366,351</td><td>$1,318,074</td><td>39.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Dundee Township</td><td>$6,006,557</td><td>$2,286,846</td><td>38.1%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Sugar Grove*</td><td>$865,407</td><td>$329,037</td><td>38.0%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Grayslake</td><td>$1,939,881</td><td>$710,337</td><td>36.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Oak Brook*</td><td>$10,090,353</td><td>$3,654,322</td><td>36.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Palatine*</td><td>$12,675,255</td><td>$4,339,796</td><td>34.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Hanover Park</td><td>$1,899,827</td><td>$638,604</td><td>33.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">West Chicago*</td><td>$1,829,057</td><td>$612,026</td><td>33.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">York Center</td><td>$461,547</td><td>$153,769</td><td>33.3%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Streamwood</td><td>$2,929,987</td><td>$935,900</td><td>31.9%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Barrington*</td><td>$4,001,965</td><td>$1,257,134</td><td>31.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Fox Valley*</td><td>$12,933,076</td><td>$3,955,053</td><td>30.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wauconda*</td><td>$1,230,002</td><td>$375,689</td><td>30.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Buffalo Grove</td><td>$5,905,546</td><td>$1,794,499</td><td>30.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Mundelein*</td><td>$4,289,117</td><td>$1,301,503</td><td>30.3%</td></tr>
+<tr><td class="tdLEFT text-nowrap">St. Charles*</td><td>$5,067,593</td><td>$1,507,253</td><td>29.7%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Itasca</td><td>$1,790,294</td><td>$526,627</td><td>29.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Bloomingdale</td><td>$2,475,910</td><td>$713,949</td><td>28.8%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lombard*</td><td>$3,331,643</td><td>$868,080</td><td>26.1%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Elk Grove*</td><td>$7,206,898</td><td>$1,836,866</td><td>25.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Arlington Heights</td><td>$12,331,633</td><td>$3,126,880</td><td>25.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">River Trails*</td><td>$3,003,927</td><td>$748,222</td><td>24.9%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Geneva</td><td>$5,725,680</td><td>$1,408,608</td><td>24.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Naperville*</td><td>$13,881,934</td><td>$3,339,485</td><td>24.1%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Carol Stream*</td><td>$5,512,579</td><td>$1,245,978</td><td>22.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Vernon Hills</td><td>$5,979,485</td><td>$1,281,294</td><td>21.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Prospect Heights*</td><td>$2,735,951</td><td>$566,630</td><td>20.7%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Batavia*</td><td>$2,970,793</td><td>$606,881</td><td>20.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Huntley*</td><td>$5,828,607</td><td>$1,138,906</td><td>19.5%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Mt. Prospect*</td><td>$6,386,233</td><td>$1,225,577</td><td>19.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Rolling Meadows</td><td>$5,106,214</td><td>$902,379</td><td>17.7%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lindenhurst</td><td>$1,355,290</td><td>$238,903</td><td>17.6%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Schaumburg</td><td>$10,892,393</td><td>$1,838,132</td><td>16.9%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Roselle</td><td>$1,485,573</td><td>$247,689</td><td>16.7%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Glen Ellyn*</td><td>$7,204,137</td><td>$995,868</td><td>13.8%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Gurnee</td><td>$8,571,429</td><td>$1,110,469</td><td>13.0%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Salt Creek Rural</td><td>$1,406,906</td><td>$154,671</td><td>11.0%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Hoffman Estates*</td><td>$11,300,809</td><td>$1,064,304</td><td>9.4%</td></tr>
+<tr><td class="tdLEFT text-nowrap">South Barrington*</td><td>$3,627,077</td><td>$338,088</td><td>9.3%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lisle*</td><td>$2,210,689</td><td>$203,649</td><td>9.2%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Bartlett*</td><td>$6,237,682</td><td>$557,928</td><td>8.9%</td></tr>
+<tr><td class="tdLEFT text-nowrap">Hampshire</td><td>$973,022</td><td>$65,836</td><td>6.8%</td></tr>
+          </tbody></table></p></div>
+
+          <p><small>* Most recent audit was 2015. | Source: Park district audits</small></p>
+          <p><span style="color:white;">-30-</span></p>
+          
+    </div>
+  </div>
+</div>
+
+
+<div id="creditBox">
+  <div class="row">
+    <div class="col-md-10 center-block center-blockfloat">
+      <p><small>Daily Herald web app by Tim Broderick <a href="mailto:tbroderick@dailyherald.com">tbroderick@dailyherald.com</a>. You can find some of our open source work at our <a href="https://github.com/dailyherald/SchoolReportCards">github site</a>.
+      </small></p>
+    </div>
+  </div>
+</div>
+<div id="underfoot"></div>
+
+  </body>
+</html>

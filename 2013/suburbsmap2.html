@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Daily Herald News Art
+	</title>
+
+	<link href="styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="scripts/highcharts.js"></script>
+	<script src="scripts/leaflet.js"></script>
+
+<!--
+	Activate responsiveness in the "child" pageΩ
+	<script src="scripts/jquery.responsiveiframe.js"></script>
+	<script>
+	  var ri = responsiveIframe();
+	  ri.allowResponsiveEmbedding();
+	</script> -->
+
+
+</head>
+
+<body>
+
+<div class="row">
+	<header class="small-12 large-12 columns">
+		<h1 id="opening_header">Daily Herald News Art</h1>
+	</header>
+	<nav class="small-12 large-12 columns text-right gray navSpec">
+		<p><a href="index.html">Home</a></p>
+	</nav>
+</div>
+
+<div class="row">
+	<div class="small-12 large-8 push-4 columns">
+		<div id="suburbs" class="space"></div>
+		<h4>Some notes on the map</h4>
+		<p>Using Qgis, vector->simplify->0.0005 and it should take the file down from about 6mb to 1mb, which is small enough to load quickly but still has good geometry at higher magnification.</p>
+		<p>That size should allow us to insert quite a bit of data into the geojson file we export from arcMap.</p>
+	</div>
+
+	<aside class="small-12 large-4 pull-8 columns">
+ 		<h4>Links I'm using</h4>
+		<ul>
+			<li class="li_position"><a href="http://leafletjs.com/examples.html" target="new">Leaflet tutorials</a></li>
+			<li class="li_position"><a href="http://switch2osm.org/using-tiles/getting-started-with-leaflet/" target="new">Using tiles</a> </li>
+			<li class="li_position"><a href="http://lyzidiamond.com/posts/" target="new">Jquery with geojson</a></li>
+			<li class="li_position"><a href="https://gist.github.com/mourner/1804938" target="new">Tile sources</a></li>
+		</ul>
+		<h4>Graphics</h4>
+		<ul>
+			<li class="li_position"><a href="schools_lowinc.html" target="new">Low income students</a></li>
+            <li class="li_position"><a href="watchdog1113.html" target="new">Seniors exemptions</a></li>
+			<li class="li_position"><a href="suburbsmap.html" target="new">Suburbs map</a></li>
+		</ul>
+	</aside>
+ </div>
+
+<div class="row">
+		<footer class="small-12 large-12 columns lightgrey">
+		<p><strong>If you have any questions</strong> or would like to contact me, you can do so at <a href="mailto:tbroderick@dailyherald.com">tbroderick@dailyherald.com</a></p>
+	</footer>
+</div>
+
+	<script>
+
+	var osmUrl='http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png';
+	var osmAttrib='Map data <a href="www.openstreetmap.org/copyright">© OpenStreetMap contributors</a> via <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 0, maxZoom: 19, attribution: osmAttrib});
+
+    var map = L.map('suburbs');
+
+ // control that shows state info on hover
+	var info = L.control();
+
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+
+		info.update = function (props) {
+			this._div.innerHTML = '<h4>FOID cards per capita</h4>'
+			+  (props ? '<strong>' + props.NAME10 + '</strong><br><br><table class="mapTable"><tr><td class="tdLEFT">Population</td><td>' + props.pop + 
+			'</td></tr><tr><td class="tdLEFT">FOID card holders</td><td>' + props.FOIDholders + '</td></tr><tr><td class="tdLEFT"><b>FOID cards per capita</b></td><td><b>' + props.percFOID+ '%</b></td></tr></table>'
+				: 'Hover over or click on a town');
+		};
+
+	function highlightFeature(e) {
+
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 2,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);
+		}
+		
+	function clickFeature(c) {
+
+			var layer = c.target;
+			
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+			map.fitBounds(c.target.getBounds());
+			info.update(layer.feature.properties);
+		}
+
+
+var geojson;
+
+	function tipInfo(t) {
+
+			this.bindPopup("<strong>" + props.percFOID + "% </strong>of people in " + t.NAME10 + "<br>hold FOID cards.");
+		}
+
+
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: clickFeature
+			});
+//			layer.bindPopup("<strong>" + feature.properties.percFOID + "% </strong>of people in " + feature.properties.NAME10 + "<br>hold FOID cards.")
+		}
+
+
+
+ $.getJSON("geojson/FOID.json", function(data) {
+    geojson = L.geoJson(data, {
+
+  		style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.percFOID),
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.7
+			};
+    	},
+		onEachFeature: onEachFeature
+
+     });
+
+
+  		// get color depending on population percFOID value
+		function getColor(d) {
+			return d > 15.8 ?	'#B30000' :
+			       d > 13	?	'#E34A33' :
+			       d > 11.2	?	'#FC8D59' :
+			       d > 8.8	?	'#FDCC8A' :
+			       d > 0.1	?	'#FEE8C8' :
+			       			 	'#FFEDA0' ;
+			};
+
+
+//    var map = L.map('suburbs');
+ 
+    map.setView(new L.LatLng(42.1, -87.9),9);
+	map.addLayer(osm);
+	geojson.addTo(map);
+
+	var legend = L.control({position: 'bottomright'});
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = [0, 8.8, 11.2, 13, 15.8],
+				labels = [],
+				from, to;
+
+			for (var i = 0; i < grades.length; i++) {
+				from = grades[i];
+				to = grades[i + 1];
+
+				labels.push(
+					'<i style="background:' + getColor(from + 1) + '"></i> ' +
+					from + '%' + (to ? '&ndash;' + to + '%' : ' +'));
+			}
+
+			div.innerHTML = labels.join('<br><br>');
+			return div;
+		};
+
+	legend.addTo(map);
+	info.addTo(map);
+
+  });
+
+	</script>
+
+</body>
+
+
+

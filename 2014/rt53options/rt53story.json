@@ -1,0 +1,93 @@
+
+{
+	"storymap":{
+		"test": "test",
+		"slides": [
+			{
+				"type": 					"overview", 
+
+				"date": 					"2014",
+				"location": {
+					"lat": 				42.154020681047179,
+					"lon": 				-88.017383515834808,
+					"name": 				"Overview Slide",
+					"zoom": 				13,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Path through the prairie",
+					"text": 				"This would be the first point of our Route 53 coverage. I'm leaving the media in place."
+				},
+				"media": {
+					"url": 				"http://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mark_Twain_Vanity_Fair_1908-05-13.jpeg/375px-Mark_Twain_Vanity_Fair_1908-05-13.jpeg",
+					"credit":				"Vanity Fair",
+					"caption":			"Twain caricatured by Spy for Vanity Fair, 1908"
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"2014",
+				"location": {
+					"lat": 				42.154611244368851,
+					"lon": 				-88.02271842956543,
+					"name": 				"photo of Long Grove Menard's",
+					"zoom": 				10,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Long Grove Menard's",
+					"text": 				"An image near the beginning of the path of the Menard's store in Long Grove."
+				},
+				"media": {
+					"url": 				"https://twitter.com/MarkTwainQuote/status/441928360583643136",
+					"credit":				"",
+					"caption":			"Mark Twain's birthplace, Florida, Missouri"
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"2014",
+				"location": {
+					"lat": 				42.154611244368851,
+					"lon": 				-88.02271842956543,
+					"name": 				"Hawley Street in Mundelein",
+					"zoom": 				10,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Hawley Street",
+					"text": 				"An image near the center of the path of Hawley Street in Mundelein."
+				},
+				"media": {
+					"url": 				"https://twitter.com/MarkTwainQuote/status/441928360583643136",
+					"credit":				"",
+					"caption":			"Mark Twain's birthplace, Florida, Missouri"
+				}
+			},
+			{
+				"uniqueid": 				"",
+				"date": 					"2014",
+				"location": {
+					"lat": 				42.332439526049818,
+					"lon": 				-88.092498779296875,
+					"name": 				"Round Lake",
+					"zoom": 				10,
+					"icon": 				"http://maps.gstatic.com/intl/en_us/mapfiles/ms/micons/blue-pushpin.png",
+					"line": 				true
+				},
+				"text": {
+					"headline": 			"Route that splits a subdivision",
+					"text": 				"Route that splits a subdivision in Round lake just north of Park Campus school."
+				},
+				"media": {
+					"url": 				"http://instagram.com/p/lEPdm4J20m/",
+					"credit":				"",
+					"caption":			"Mark Twain's boyhood home in Hannibal, Missouri."
+				}
+			}
+		]
+	}
+}

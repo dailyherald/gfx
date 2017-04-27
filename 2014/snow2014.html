@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Snowfall for the 2013-2014 season
+	</title>
+
+	<link href="styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="scripts/jquery-1.9.1.min.js"></script>
+	<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="scripts/highcharts.js"></script>
+	<script src="scripts/leaflet.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div id="head" class="small-12 small-centered large-8 large-centered columns">
+		<h2>Snow days</h2>
+		<p>Number of days with at least a trace of snow, November through January 14. </p>
+</div>
+<div id="snow" class="small-12 small-centered large-8 large-centered columns"></div>
+<div id="head" class="small-12 small-centered large-8 large-centered columns">
+<p class="source">Source: National Weather Service monthly climate records for Chicago-O'Hare</p>
+</div>
+</div>
+
+	<script>
+// now the chart
+
+var chart220 = new Highcharts.Chart({
+	chart: {
+			renderTo: 'snow',
+			height: 350,
+            type: 'bar'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		        title: {
+                text: 'Winter season'
+            },
+            categories: ['2010-11','2011-12','2012-13','2013-14'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	plotLines: [{
+			value: 50,
+			color: '#FFFF99'				
+	}],
+
+	yAxis: {
+            title: {
+                text: null
+            },
+
+          min: 0,
+			max: 30,
+			tickInterval: 5
+	},
+
+	series: [{
+            name: 'Number of days',
+            data: [27,15,18,29]
+	}],
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            headerFormat: '{point.key}<br>',
+			pointFormat: 'Number of<br>days: <b>{point.y}</b>',
+	},
+
+});
+
+</script>
+
+
+</body>
+
+
+

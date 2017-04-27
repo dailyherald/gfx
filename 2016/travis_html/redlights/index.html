@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Red light cameras and injuries
+  </title>
+
+<!-- STYLES -->
+
+  <!-- responsive style sheets -->
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css">
+
+  <!-- mapping -->
+  <link rel="stylesheet" href="../static/css/leaflet.css" type="text/css">
+
+<!-- SCRIPTS -->
+  <!-- jquery is what a lot of the web is based on -->
+  <!-- <script src="static/js/jquery-1.9.1.min.js"></script> This is the older jquery -->
+  <script src="../static/js/jquery-1.11.3.min.js"></script>
+  <!-- responsive js. needs jquery loaded first -->
+  <script src="../static/js/bootstrap.min.js"></script>
+
+<!-- mapping -->
+<script src="../static/js/leaflet.js"></script>
+<script src="http://maps.google.com/maps/api/js?v=3"></script>
+<script src="../static/js/Google.js"></script>
+
+
+  </head>
+
+  <body>
+
+  <div class="container divgfx">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <h3><strong>Spotlight on crashes with injuries</strong></h3>
+            <p>A Daily Herald analysis showed total crashes stayed the same or increased at 14.5 percent of suburban intersections after red-light cameras were installed. But the story was different for accidents with injuries, which increased at 48.8 percent of intersections after cameras were put up. Data show the average number of crashes with injuries per year before and after camera installation.</p>
+          </div>
+          <div class="col-md-5 col-sm-12">
+            <p>
+              <style type="text/css">
+                div.bar {
+                  display: inline-block;
+                  width: 12px;
+                  height: 12px;
+                  border: 1px solid;
+                  opacity: 0.8;
+                }
+                .prog1 {
+                  background-color: #0000ff;
+                  }
+                .prog2 {
+                  background-color: #ff0000;
+                  }
+              </style>
+            <strong>Change in average yearly accidents with injuries</strong> after red-light cameras installed.<br>
+            <div class="bar prog1"></div> Decrease<br>
+            <div class="bar prog2"></div> No change or increase</p>
+          </div>
+        </div>
+        <div id="pageMap" class="high375"></div>
+        <p><small>Source: Daily Herald analysis Illinois Department of Transportation's most recently available one- and three-year reports.</small></p>
+        <p><span style="color:white;">-30-</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+      var GGLstyles = [
+        {"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+        ];
+
+
+      var ggl = new L.Google('ROADMAP', {
+        mapOptions: {
+          styles: GGLstyles
+        }
+      });
+
+
+      var map = L.map('pageMap');
+
+
+      var blueMarker = {
+        radius: 8,
+        stroke: false,
+        fillOpacity: 0.5,
+        fillColor: "#0000ff"
+      };
+
+      var redMarker = {
+        radius: 8,
+        color: "#fff",
+        weight: 1,
+        opacity: 0.75,
+        fillOpacity: 0.5,
+        fillColor: "#ff0000"
+      };
+
+
+      $.getJSON("RL_injuries.geojson", function(data) {
+
+        var geojson = L.geoJson(data, {
+          
+          pointToLayer: function (feature, latlng) {
+
+            if (feature.properties.Injuries_Change == "Same_Increase") {
+              return L.circleMarker(latlng, redMarker);
+
+            } else {
+              return L.circleMarker(latlng, blueMarker);
+            }
+          },
+
+          onEachFeature: function (feature, layer) {
+            layer.bindPopup(
+              '<p><strong>' + feature.properties.Town + '</strong><br>' + feature.properties.Intersection + '</p><table class="mapTable"><tr><td class="tdLEFT">Before</td><td>' + feature.properties.Injuries_Before + '</td><tr><td class="tdLEFT">After</td><td>' + feature.properties.Injuries_After + '</td></tr></table>'
+              );
+          }
+
+        });
+
+      map.setView(new L.LatLng(42.1, -88.1),9);
+      map.addLayer(ggl);
+      geojson.addTo(map);
+
+      });
+
+
+  </script>
+  </body>
+</html>

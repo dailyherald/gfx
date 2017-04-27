@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "TotSort": 1.0, "Town": "Aurora", "Intersection": "Eola Road and Ogden Avenue", "Total_Before": 37.5, "Total_After": 31.0, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -88.251875606317725, 41.738589982779509 ] } },
+{ "type": "Feature", "properties": { "TotSort": 2.0, "Town": "Bensenville", "Intersection": "Route 83 and Thorndale Avenue", "Total_Before": 19.0, "Total_After": 31.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -87.959057658500782, 41.982772620378853 ] } },
+{ "type": "Feature", "properties": { "TotSort": 3.0, "Town": "Deer Park", "Intersection": "Route 12 and Deer Park Road", "Total_Before": 10.0, "Total_After": 8.0, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -88.050649953906358, 42.161077689558169 ] } },
+{ "type": "Feature", "properties": { "TotSort": 4.0, "Town": "Des Plaines", "Intersection": "Route 58 and Route 12", "Total_Before": 11.0, "Total_After": 14.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -87.89822012846453, 42.053875206190526 ] } },
+{ "type": "Feature", "properties": { "TotSort": 5.0, "Town": "East Dundee", "Intersection": "Route 25 and Route 72", "Total_Before": 13.0, "Total_After": 12.5, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -88.25792432851199, 42.093170822665833 ] } },
+{ "type": "Feature", "properties": { "TotSort": 6.0, "Town": "Elk Grove Village", "Intersection": "Route 53 and Nerge Road", "Total_Before": 11.0, "Total_After": 6.3, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -88.031154691251444, 41.995861125039639 ] } },
+{ "type": "Feature", "properties": { "TotSort": 7.0, "Town": "Elk Grove Village", "Intersection": "Route 72 and Landmeir Road", "Total_Before": 12.0, "Total_After": 13.7, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -87.94452377833926, 42.010466604838612 ] } },
+{ "type": "Feature", "properties": { "TotSort": 8.0, "Town": "Fox Lake", "Intersection": "Route 12 and  Route 134", "Total_Before": 17.0, "Total_After": 30.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -88.169560577558485, 42.369569013922053 ] } },
+{ "type": "Feature", "properties": { "TotSort": 9.0, "Town": "Lakemoor", "Intersection": "Route 12 and Route 120", "Total_Before": 17.7, "Total_After": 35.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -88.1646802835957, 42.322993257609966 ] } },
+{ "type": "Feature", "properties": { "TotSort": 10.0, "Town": "Libertyville", "Intersection": "Route 137 and Butterfield Road", "Total_Before": 34.0, "Total_After": 31.0, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -87.98388056678877, 42.305323041983883 ] } },
+{ "type": "Feature", "properties": { "TotSort": 11.0, "Town": "Libertyville", "Intersection": "Route 21 and Artaius Pkwy.", "Total_Before": 35.0, "Total_After": 13.8, "Total_Change": "Decrease" }, "geometry": { "type": "Point", "coordinates": [ -87.94783193612281, 42.258632190751953 ] } },
+{ "type": "Feature", "properties": { "TotSort": 12.0, "Town": "Libertyville", "Intersection": "Route 45 and Peterson Road", "Total_Before": 19.0, "Total_After": 33.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -88.029374864106245, 42.306060701931486 ] } },
+{ "type": "Feature", "properties": { "TotSort": 13.0, "Town": "Wauconda", "Intersection": "Route 12 and Route 176", "Total_Before": 4.0, "Total_After": 4.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -88.153104269661029, 42.258243839625408 ] } },
+{ "type": "Feature", "properties": { "TotSort": 14.0, "Town": "Winfield", "Intersection": "Route 38 and Winfield Road", "Total_Before": 17.0, "Total_After": 21.0, "Total_Change": "Same_Increase" }, "geometry": { "type": "Point", "coordinates": [ -88.161241781053391, 41.856932031509018 ] } }
+]
+}

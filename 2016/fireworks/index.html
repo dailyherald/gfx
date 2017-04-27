@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+   Best fireworks 2016
+  </title>
+
+	<link rel="stylesheet" href="../static/css/normalize.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+	<!-- <link rel="stylesheet" href="../static/css/leaflet.css" type="text/css" media="screen" /> -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" />
+
+	<script src="../static/js/jquery-1.9.1.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/leaflet.js"></script> 
+	<!-- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+
+	<!-- This is the google api needed for development. Comment this out for production -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+
+
+	<!-- This is my API key, for personal use. Need to comment this out for development, but initiate it for production  
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjc-UIpOjUgh456Dj9HMqXQG13cJ7EF7o"></script>-->
+
+	<script src="../static/js/Google.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<h2 class="topmargin"><strong>Top fireworks displays</strong></h2>
+			<h4 class="topmargin">For Sunday or Monday in the suburbs.</h4>
+			<p class="topmargin"><strong>The map below is interactive: Zoom in or out, and <span style="color:red">click</span> or <span style="color:red">touch</span> a marker to see details.</strong></p>
+			<div id="pageMap" class="high375"></div>
+			<p><small>Source: Daily Herald research</small></p>
+		</div>
+	</div>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">-30-</span></p>
+
+</div>
+
+<script>
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-70}]},
+    {"featureType": "road","elementType": "all","stylers": [{"saturation": -20},{"lightness": 50}]}
+	];
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+var map = L.map('pageMap');
+
+$.getJSON("fireworks2016.geojson", function(data) {
+
+	var geojson = L.geoJson(data, {
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<h5><strong>' + feature.properties.Town + '</strong></h5><table class="mapTable table table-hover table-striped table-condensed"><tbody><tr><td class="tdLEFT"><strong>When:</strong> ' + feature.properties.When + '</td></tr><tr><td class="tdLEFT"><strong>Where:</strong> ' + feature.properties.Where + '</td></tr><tr><td class="tdLEFT"><strong>Cost:</strong> ' + feature.properties.Cost + '</td></tr></table>',
+			{maxWidth: 210} );
+
+		}
+
+	});
+
+//layer.bindPopup(msg.join(''), {maxWidth: 200});
+
+map.setView(new L.LatLng(42.1, -88.1),9);
+map.addLayer(ggl);
+geojson.addTo(map);
+
+});
+
+</script>
+
+</body>
+
+
+

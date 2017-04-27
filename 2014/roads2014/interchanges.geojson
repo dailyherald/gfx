@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "2014 interchange construction" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Number": "2.4", "Name": "Roselle Road bridge rebuilding, full interchange construction" }, "geometry": { "type": "Point", "coordinates": [ -88.078744701825698, 42.063505038332451 ] } },
+{ "type": "Feature", "properties": { "Number": "2.5", "Name": "Meacham Road bridge rebuilding and interchange work. Expect lane closures on Meacham." }, "geometry": { "type": "Point", "coordinates": [ -88.044451621001983, 42.059232027893401 ] } },
+{ "type": "Feature", "properties": { "Number": "7.0", "Name": "New interchange at I-290 and Elgin O'Hare expressway (I-390), Eliminate Rohlwing Road and I-390 interchange. Some overnight closures on I-290 plus closures on local roads." }, "geometry": { "type": "Point", "coordinates": [ -88.023343021483271, 41.985389863554374 ] } },
+{ "type": "Feature", "properties": { "Number": "11.0", "Name": "Interchange construction at I-57 and the Tri-State Tollway (I-294)." }, "geometry": { "type": "Point", "coordinates": [ -87.687777226458579, 41.61763506618324 ] } },
+{ "type": "Feature", "properties": { "Number": "2.6", "Name": "Lee Street bridge rebuilding. Some temporary I-90 overnight closures for bridge demolition." }, "geometry": { "type": "Point", "coordinates": [ -87.894022597635555, 42.005271816706951 ] } },
+{ "type": "Feature", "properties": { "Number": "2.1", "Name": "Fox River bridge construction. Bike and pedestrian bridges will be closed." }, "geometry": { "type": "Point", "coordinates": [ -88.272270435594294, 42.066484935946853 ] } },
+{ "type": "Feature", "properties": { "Number": "2.2", "Name": "Route 25 bridge reconstruction and interchange. Expect lane reductions on Route 25." }, "geometry": { "type": "Point", "coordinates": [ -88.264, 42.066484935946853 ] } },
+{ "type": "Feature", "properties": { "Number": "2.3", "Name": "Barrington Road bridge rebuilding and full interchange. Temporary overnight lane closures." }, "geometry": { "type": "Point", "coordinates": [ -88.144166190332527, 42.066484935946853 ] } },
+{ "type": "Feature", "properties": { "Number": "4.0", "Name": "Reconstruction of Kennedy Expressway and Ohio and Ontario feeder ramps" }, "geometry": { "type": "Point", "coordinates": [ -87.653496057647473, 41.893111323030254 ] } },
+{ "type": "Feature", "properties": { "Number": "9.0", "Name": "Rehabilitate bridge from Ogden Avenue and northound I-355 to westbound I-88. Bridge will be closed for a few weeks." }, "geometry": { "type": "Point", "coordinates": [ -88.054, 41.809 ] } }
+]
+}

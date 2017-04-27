@@ -1,0 +1,22 @@
+{
+    "timeline":
+    {
+        "headline":"Timeline test",
+        "type":"default",
+		"text":"Test for Knightlabs interactive timeline",
+		"startDate":"2012,1,26",
+        "date": [
+{"startDate":"2011,9,1","endDate":"2011,9,2","headline":"This is just an item with text","text":"This is a test of using the timeline tool with just a text entry","asset":{"media":"images/rc13teaser-web.jpg","credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,10,1","endDate":"2011,10,2","headline":"A Flickr Example","text":"This is a test of using the timeline tool to embed an image from a flickr photostream","asset":{"media":"http://www.flickr.com/photos/zachwise/6115056146/in/photostream","credit":"Zach Wise/verite.co","caption":"<a href=","thumbnail":"images/rc13teaser-web.jpg","type":null,"tag":null}},
+{"startDate":"2011,11,1","endDate":"2011,11,1","headline":"Still another Flickr Example","text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.","asset":{"media":"http://www.flickr.com/photos/zachwise/6894476777/in/photostream","credit":"Zach Wise/verite.co","caption":"Chicago to NYC","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,11,16","endDate":"2011,11,17","headline":"Vimeo — Jay Z - ","text":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim.","asset":{"media":"https://vimeo.com/10089801","credit":"Greg Solenström","caption":"Jay Z - ","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,12,1","endDate":"2011,12,1","headline":"SoundCloud — Lotus Flower - SBTRKT RMX","text":"","asset":{"media":"http://soundcloud.com/radiohead/radiohead-lotus-flower-sbtrkt","credit":"Radiohead","caption":"Lotus Flower - SBTRKT RMX","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,12,7","endDate":"2011,12,7","headline":"YouTube — Edwin Land on BBC","text":"","asset":{"media":"http://www.youtube.com/watch?v=3DiCvHiDWiY","credit":"","caption":"Edwin Land on BBC","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,12,14","endDate":"2011,12,14","headline":"A Tweet","text":"","asset":{"media":"https://twitter.com/TimBroderick/status/424594704928628736","credit":"","caption":"","thumbnail":null,"type":null,"tag":null}},
+{"startDate":"2011,12,22","endDate":"2011,12,28","headline":"Google Map","text":"Just put a link to the map. Nothing fancy, just a link.","asset":{"media":"http://maps.google.com/maps?q=chicago&hl=en&sll=41.874961,-87.619054&sspn=0.159263,0.351906&t=t&hnear=Chicago,+Cook,+Illinois&z=11","credit":"","caption":"","thumbnail":null,"type":null,"tag":null
+}
+			}
+		]
+
+	}
+}

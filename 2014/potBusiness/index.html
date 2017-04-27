@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		State medical Marijuana
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/Controlsrc/L.Control.Pan.css" rel="stylesheet" type="text/css">
+
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+	<script src="../../styles/Controlsrc/L.Control.Pan.js"></script>
+
+
+</head>
+
+<body>
+<div class="divgfx">
+	<div class="row">
+		<div class="small-12 large-12 columns">
+			<h3>Where to buy medical marijuana</h3>
+			<p>60 medical marijuana dispensaries were allocated by Illinois State Police district. In the Chicago area, they were further assigned by county or township. Click a county or township to see how many were allocated there.</p>
+
+			<div id="pageMap" class="high375"></div>
+			<p class="source">Sources: Analysis of Illinois Department of Revenue and U.S. Census Bureau data</p>
+		</div>
+
+	<p><span style="color:white;">---</span></p>
+	<p><span style="color:white;">-30-</span></p>
+
+	</div>
+</div>
+
+
+<script>
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+	];
+
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+var map = L.map('pageMap', {
+	mapOptions: {
+		zoomControl: false
+	}
+});
+
+	
+$.getJSON("potState.geojson", function(data) {
+
+    var potState = L.geoJson(data, {
+
+		//	For varying colors according to content
+
+	 	style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.STPdist),
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.6
+			};
+    	},
+
+    	onEachFeature: function (feature, layer) {
+ 	    var popupContent =  '<strong>' + feature.properties.County + '</strong><br><table class="mapTable"><tr><td class="tdLEFT"><strong>State Police District: </strong> ' + feature.properties.STPdist + '</td></tr><tr><td class="tdLEFT"><strong>Dispensaries:</strong> ' + feature.properties.Registrati + '</td></tr></table>';
+	    var popupOptions = {
+          'maxWidth': '215'
+        }
+		layer.bindPopup(popupContent, popupOptions);
+		},
+
+	});
+
+	function getColor(d) {
+			return d == '22' ?	'#FDCC8A' :
+				   d == '21' ?	'#FFEDA0' :
+				   d == '20' ?	'#B30000' :
+			       d == '19' ?	'#F46856' :
+			       d == '18' ?	'#FFA560' :
+			       d == '17' ?	'#FDCC8A' :
+			       d == '16' ?	'#FFEDA0' :
+			       d == '15' ?	'#B30000' :
+			       d == '14' ?	'#FDCC8A' :
+			       d == '13' ?	'#FFA560' :
+			       d == '12' ?	'#FDCC8A' :
+			       d == '11' ?	'#FFEDA0' :
+			       d == '10' ?	'#B30000' :
+			       d == '9' ?	'#F46856' :
+			       d == '8' ?	'#FFA560' :
+			       d == '7' ?	'#FFEDA0' :
+			       d == '6' ?	'#FFEDA0' :
+			       d == '5' ?	'#FFA560' :
+			       d == '2' ?	'#F46856' :
+			       d == '1' ?	'#B30000' :
+			       			 	'#FFFFFF' ;
+    };
+
+
+	$.getJSON("potChicago.geojson", function(data) {
+
+		var potChicago = L.geoJson(data, {
+
+		 	style: function (feature) {
+			return {
+				fillColor: '#FDCC8A',
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.6
+			};
+			},
+
+			onEachFeature: function (feature, layer) {
+				var popupContent2 =  '<strong>' + feature.properties.Twp + ' Township</strong><br><table class="mapTable"><tr><td class="tdLEFT"><strong>State Police District: </strong> ' + feature.properties.STPdist + '</td></tr><tr><td class="tdLEFT"><strong>Dispensaries:</strong> ' + feature.properties.registrati + '</td></tr></table>';
+				var popupOptions2 = {
+ 					'maxWidth': '215'
+				}
+				layer.bindPopup(popupContent2, popupOptions2);
+				},
+  			});
+
+
+
+	map.setView(new L.LatLng(41.7, -88.9),8);
+	map.addLayer(ggl);
+	potState.addTo(map);
+	potChicago.addTo(map);
+
+ 	});
+
+});
+
+
+	</script>
+
+</body>
+
+
+

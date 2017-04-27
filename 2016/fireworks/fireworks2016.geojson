@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Town": "Arlington International Racecourse", "When": "Sunday at dusk", "Where": "2200 W. Euclid Avenue", "Cost": "$4-$20", "Long": -88.011231, "Lat": 42.093147 }, "geometry": { "type": "Point", "coordinates": [ -88.011231, 42.093147 ] } },
+{ "type": "Feature", "properties": { "Town": "Wheeling", "When": "9:30 p.m. SUnday", "Where": "Chicago Executive Airport, 1020 Plant Road", "Cost": "Free", "Long": -87.902980, "Lat": 42.120721 }, "geometry": { "type": "Point", "coordinates": [ -87.90298, 42.120721 ] } },
+{ "type": "Feature", "properties": { "Town": "Palatine", "When": "Sunday at dusk", "Where": "Community Park, 262 E. Palatine Road", "Cost": "Free", "Long": -88.035409, "Lat": 42.111815 }, "geometry": { "type": "Point", "coordinates": [ -88.035409, 42.111815 ] } },
+{ "type": "Feature", "properties": { "Town": "Naval Station at Great Lakes", "When": "9:45 p.m. Sunday and 9:30 p.m. Monday", "Where": "530 Farragut Avenue", "Cost": "Free", "Long": -87.844491, "Lat": 42.312102 }, "geometry": { "type": "Point", "coordinates": [ -87.844491, 42.312102 ] } },
+{ "type": "Feature", "properties": { "Town": "Lake Zurich", "When": "8:45 p.m. Monday ", "Where": "Multiple viewing areas. Fireworks set off from a barge on Lake Zurich", "Cost": "$2-$7 at Paulus Park festival, free other areas", "Long": -88.103752, "Lat": 42.197843 }, "geometry": { "type": "Point", "coordinates": [ -88.103752, 42.197843 ] } },
+{ "type": "Feature", "properties": { "Town": "Elgin", "When": "9:15 p.m. Monday", "Where": "Festival Park, 132 S. Grove Avenue", "Cost": "Free", "Long": -88.280945, "Lat": 42.032897 }, "geometry": { "type": "Point", "coordinates": [ -88.280945, 42.032897 ] } },
+{ "type": "Feature", "properties": { "Town": "Batavia", "When": "9:30 p.m. Monday.", "Where": "Engstrom Park, 326 Millview Drive", "Cost": "Free. $5 donations accepted at local parking lots", "Long": -88.329397, "Lat": 41.844853 }, "geometry": { "type": "Point", "coordinates": [ -88.329397, 41.844853 ] } },
+{ "type": "Feature", "properties": { "Town": "Sleepy Hollow", "When": "9:15 p.m. Monday.", "Where": "Sabatino Park, Winmoor Drive and Willow Lane", "Cost": "$5 donations per car are accepted", "Long": -88.310808, "Lat": 42.093339 }, "geometry": { "type": "Point", "coordinates": [ -88.310808, 42.093339 ] } },
+{ "type": "Feature", "properties": { "Town": "Naperville", "When": "9:30 p.m. Monday", "Where": "Ribfest at Knoch Park, 724 N. West Street", "Cost": "Free after 7:30 pm", "Long": -88.156673, "Lat": 41.764701 }, "geometry": { "type": "Point", "coordinates": [ -88.156673, 41.764701 ] } },
+{ "type": "Feature", "properties": { "Town": "Lisle", "When": "9:45 p.m. Sunday", "Where": "Eyes to the Skies Festival at Community Park, 1825 Short Street", "Cost": "$8. Free if viewed outside festival", "Long": -88.083159, "Lat": 41.791711 }, "geometry": { "type": "Point", "coordinates": [ -88.083159, 41.791711 ] } }
+]
+}

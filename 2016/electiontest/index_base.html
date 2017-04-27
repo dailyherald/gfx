@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Election results 2016
+  </title>
+
+<!-- STYLES -->
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../../styles/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../../../styles/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../../../styles/elec.css" type="text/css">
+
+<!-- SCRIPTS -->
+  <script src="../../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../../scripts/js/bootstrap.min.js"></script>
+  <script src="../../../scripts/highcharts.js"></script>
+
+<!-- responsive table
+  <script src="../../styles/dist/tablesaw.js"></script> -->
+
+
+<!-- reads URL paramenters -->
+  <script>
+
+    var getURL = function getUrl(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+
+  </script>
+
+  <script src="scripts/global_v2.js?updated=20120907"></script>
+  <script>var $ = jQuery;</script>
+
+  </head>
+
+  <body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h2><strong>2016 primary results</strong></h2>
+          <hr>
+          <h3>For president</h3>
+            <div id="demprezprec"></div>
+            <div id="demprez"></div>
+            <div id="gopprezprec"></div>
+            <div id="gopprez"></div>
+          <hr>
+          <h3>For U.S. senator</h3>
+            <div id="demsenprec"></div>
+            <div id="demsen"></div>
+            <div id="gopsenprec"></div>
+            <div id="gopsen"></div>
+          <hr>
+          <h3>For Illinois comptroller</h3>
+            <div id="demcomp"></div>
+            <div id="gopcomp"></div>
+         <hr>
+        <p>
+          <form action='index.html' method='get'>
+            <p class="searchOPTIONS">To see all results pertinent to you, select a County, then click "Get County."</p>
+              <select name="county" size="1" id="county">
+                <option value="None">None</option>
+                <option value="Cook">Cook</option>
+                <option value="DuPage">DuPage, Will</option>
+              </select>
+            <input type="submit" value="Get County" style="margin-top:8px;">
+            </p>
+            </form>
+        </p>
+        <hr>
+        <div id="countyresults"></div>
+     </div>
+    </div>
+  </div>
+<br>
+<div id="creditBox">
+  <div class="row">
+    <div class="col-md-10 center-block center-blockfloat">
+      <p><small>Daily Herald web app.</small></p>
+    </div>
+  </div>
+</div>
+<div id="underfoot"></div>
+
+<script>
+
+// Get json for the standard races
+
+$.getJSON('json/prez_0115.json', function(prez){
+
+// The demprez charting info
+
+ $('#demprezprec').html( "<h3><small><strong>" + prez[0].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[0].RepTotal + " of " + prez[0].PrecTotal + " precincts reporting</i></small></p>" );   
+
+  var demprez = new Highcharts.Chart({
+    chart: {
+      renderTo: 'demprez',
+      reflow: true,
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      height: 150,
+          type: 'bar'
+    },
+      title: {
+        text: null
+    },
+      xAxis: {
+        categories: [ prez[0].Candidate, prez[1].Candidate, prez[2].Candidate],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+          text: null
+      },
+      labels: {
+          overflow: 'justify'
+      }
+    },
+    plotOptions: {
+       bar: {
+           dataLabels: {
+                enabled: true,
+                overflow: 'justify'
+            }
+        }
+    },
+    series: [{
+          name: 'Votes',
+          data: $.map([ prez[0].VotesTotal, prez[1].VotesTotal, prez[2].VotesTotal], function (valuedistteach) {
+          return isNaN(valuedistteach) ? { y: null } : parseFloat(valuedistteach);
+              }),
+          index:1,
+          legendIndex:0
+      }],
+    legend: {
+      enabled: false
+    },
+    credits: {
+      enabled: false
+    }
+  });
+
+
+// The gopprez charting info
+
+ $('#gopprezprec').html( "<h3><small><strong>" + prez[3].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[3].RepTotal + " of " + prez[3].PrecTotal + " precincts reporting</i></small></p>" );   
+
+  var gopprez = new Highcharts.Chart({
+    chart: {
+      renderTo: 'gopprez',
+      reflow: true,
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      height: 550,
+          type: 'bar'
+    },
+      title: {
+        text: null
+    },
+      xAxis: {
+        categories: [ prez[3].Candidate, prez[4].Candidate, prez[5].Candidate, prez[6].Candidate, prez[7].Candidate, prez[8].Candidate, prez[9].Candidate, prez[10].Candidate, prez[11].Candidate, prez[12].Candidate, prez[13].Candidate ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+          text: null
+      },
+      labels: {
+          overflow: 'justify'
+      }
+    },
+    plotOptions: {
+       bar: {
+           dataLabels: {
+                enabled: true,
+                overflow: 'justify'
+            }
+        }
+    },
+    series: [{
+          name: 'Votes',
+          data: $.map([ prez[3].VotesTotal, prez[4].VotesTotal, prez[5].VotesTotal, prez[6].VotesTotal, prez[7].VotesTotal, prez[8].VotesTotal, prez[9].VotesTotal, prez[10].VotesTotal, prez[11].VotesTotal, prez[12].VotesTotal, prez[13].VotesTotal ], function (valuedistteach) {
+          return isNaN(valuedistteach) ? { y: null } : parseFloat(valuedistteach);
+              }),
+          index:1,
+          legendIndex:0
+      }],
+    legend: {
+      enabled: false
+    },
+    credits: {
+      enabled: false
+    }
+  });
+
+// The demsen charting info
+
+ $('#demsenprec').html( "<h3><small><strong>" + prez[14].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[14].RepTotal + " of " + prez[14].PrecTotal + " precincts reporting</i></small></p>" );   
+
+  var dempsen = new Highcharts.Chart({
+    chart: {
+      renderTo: 'demsen',
+      reflow: true,
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      height: 150,
+          type: 'bar'
+    },
+      title: {
+        text: null
+    },
+      xAxis: {
+        categories: [ prez[14].Candidate, prez[15].Candidate, prez[16].Candidate ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+          text: null
+      },
+      labels: {
+          overflow: 'justify'
+      }
+    },
+    plotOptions: {
+       bar: {
+           dataLabels: {
+                enabled: true,
+                overflow: 'justify'
+            }
+        }
+    },
+    series: [{
+          name: 'Votes',
+          data: $.map([ prez[14].VotesTotal, prez[15].VotesTotal, prez[16].VotesTotal ], function (valuedistteach) {
+          return isNaN(valuedistteach) ? { y: null } : parseFloat(valuedistteach);
+              }),
+          index:1,
+          legendIndex:0
+      }],
+    legend: {
+      enabled: false
+    },
+    credits: {
+      enabled: false
+    }
+  });
+
+
+// The gop sen charting info
+
+ $('#gopsenprec').html( "<h3><small><strong>" + prez[17].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[17].RepTotal + " of " + prez[17].PrecTotal + " precincts reporting</i></small></p>" );   
+
+  var gopsen = new Highcharts.Chart({
+    chart: {
+      renderTo: 'gopsen',
+      reflow: true,
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      height: 150,
+          type: 'bar'
+    },
+      title: {
+        text: null
+    },
+      xAxis: {
+        categories: [ prez[17].Candidate, prez[18].Candidate, prez[19].Candidate ],
+        title: {
+            text: null
+        }
+    },
+    yAxis: {
+      min: 0,
+      title: {
+          text: null
+      },
+      labels: {
+          overflow: 'justify'
+      }
+    },
+    plotOptions: {
+       bar: {
+           dataLabels: {
+                enabled: true,
+                overflow: 'justify'
+            }
+        }
+    },
+    series: [{
+          name: 'Votes',
+          data: $.map([ prez[17].VotesTotal, prez[18].VotesTotal, prez[19].VotesTotal ], function (valuedistteach) {
+          return isNaN(valuedistteach) ? { y: null } : parseFloat(valuedistteach);
+              }),
+          index:1,
+          legendIndex:0
+      }],
+    legend: {
+      enabled: false
+    },
+    credits: {
+      enabled: false
+    }
+  });
+
+//Comptroller race
+
+ $('#demcomp').html( "<h3><small><strong>" + prez[20].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[20].RepTotal + " of " + prez[20].PrecTotal + " precincts reporting</i></small></p><table><tr><td>" + prez[20].Candidate + "</td><td class='tdRIGHT'>" + prez[20].VotesTotal + "</td></tr></table>" );   
+
+ $('#gopcomp').html( "<h3><small><strong>" + prez[21].Cat4 + "</strong></small></h3><p class='precincts'><small><i>" + prez[21].RepTotal + " of " + prez[21].PrecTotal + " precincts reporting</i></small></p><table><tr><td>" + prez[21].Candidate + "</td><td class='tdRIGHT'>" + prez[21].VotesTotal + "</td></tr></table>" );   
+
+
+//----------------
+$(window).resize();
+
+//---------------
+//End get json
+});
+
+
+// Load in the appropriate page
+
+var eleccounty = getURL('county');
+
+  if ( eleccounty == 'DuPage'){
+    $( "#countyresults" ).load( "dupage.html");
+    console.log('Test equals DuPage');
+
+  } else 
+
+  if ( eleccounty == 'Cook'){
+   $( "#countyresults" ).load( "cook.html");
+     console.log('Test equals Cook');
+
+  } else 
+
+  if ( eleccounty == undefined || eleccounty == "None"){
+    console.log('Nothing requested yet');
+
+} else {
+  console.log("Please don't mess about");
+};
+
+
+    </script>
+
+  <style>
+    .highcharts-data-labels {
+      color: black !important;
+      fill: black !important;
+      font-weight:bold;
+      }
+  </style>
+
+
+  </body>
+</html>

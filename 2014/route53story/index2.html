@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Route 53 tour
+  </title>
+
+<!-- STYLES --> 
+<!-- foundation responsive -->
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+<!--   <link href="../../styles/foundation.css" rel="stylesheet" type="text/css"> -->
+<!-- Local styles, including custom UI jquery -->
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+<!-- mapping -->
+  <link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+<!-- SCRIPTS -->
+<!-- jquery, including touch enabling -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+<!-- mapping -->
+  <script src="../../scripts/leaflet.js"></script>
+   <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+  <script src="../../scripts/Google.js"></script>
+
+<style>
+
+.embed100 {
+  -webkit-overflow-scrolling: touch;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+  padding: 10px;
+  height: 598px;
+  background-color: #D7DBB3;
+}
+
+.beginDIV {
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+  padding: 20px;
+  height: 598px;
+  background-color: #D7DBB3;
+  z-index: 2;
+}
+
+
+.backimage {
+  background-image: url("images/Route53_back.jpg");
+  background-repeat: no-repeat;
+  background-size:100% auto;
+}
+
+.advText {
+  -webkit-overflow-scrolling: touch;
+  position:relative;
+  float:left;
+  width: 100%;
+  height: 110px;
+/*  padding: 20px; */
+  margin: 0px 0px 5px;
+/*    background-color: #ffffff;*/
+  opacity: .99; 
+  z-index: 1;
+}
+
+.advText2 {
+  position:relative;
+  margin: 5px;
+  z-index: 1;
+  opacity: .99;
+}
+
+.pageMap {
+  position:relative;
+  float:left;
+  z-index: 1;
+  width: 100%;
+  height: 425px;
+  margin: 5px 0px 5px;
+  background-color: #ffffff;
+  opacity: .99; 
+}
+
+.pageMap2 {
+  position:relative;
+  float:left;
+  z-index: 1;
+  width: 100%;
+  height: 525px;
+  margin: 5px 0px 5px;
+  background-color: #ffffff;
+  opacity: .99; 
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0,0,0.25,1);
+     -moz-transition:    -moz-transform 1s cubic-bezier(0,0,0.25,1);
+       -o-transition:      -o-transform 1s cubic-bezier(0,0,0.25,1);
+          transition:         transform 1s cubic-bezier(0,0,0.25,1);
+  }
+
+
+
+</style>
+
+  </head>
+
+  <body>
+<div id="introDIV" class="beginDIV backimage">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 align="center">A troubled path</h1><p align="center">The proposed path of the Route 53 extension passes by - and through - developments that have built up over the many years the route has been considered.</p>
+  <p>This interactive tour starts at the south end of the proposed extension, where Route 53 ends at Lake-Cook Road, and moves north to where it forks near Route 120.</p>
+  <p>Along the way, key spots as well as fragile wetlands that may be impacted by the new tollroad have been highlighted. <a class="startTOUR" href=""><strong>Click here to start the tour</strong></a></p>
+  <p>Or, to view the entire proposed route with all the highlighted features, <a class="viewOVER" href=""><strong>click here.</a></strong></p>
+  <p class="source">Daily Herald photos by Steve Lundy, slundy@dailyherald.com, and Paul Valade, pvalade@dailyherald.com. Interactive tour by Tim Broderick, tbroderick@dailyherald.com.</p>
+</div>
+
+<div id="tourContain" class="embed100 backimage">
+  <div id="contain53" class="advText">
+    <div id="advText" class="advText2"></div>
+  </div>
+  <h4 align="center"><a id="backCLICK" href="">BACK</a> | <a id="nextCLICK" href="">NEXT</a></h4>
+  <div id="pageMap" class="pageMap"></div>
+  <p class="source" align="center"><a class="viewOVER" href=""><strong>CLICK HERE FOR OVERVIEW MAP</strong></a></p>
+</div>
+
+<div id="overContain" class="embed100 backimage">
+  <div id="pageMap2" class="pageMap2"></div>
+  <p class="source" align="center"><a class="startTOUR" href="">CLICK HERE TO VIEW THE TOUR</a></p>
+</div>
+
+
+
+
+<script>
+
+$('#tourContain').hide();
+$('#overContain').hide();
+
+//start tour portion
+
+$(".startTOUR").click(function() {
+      console.log( "Clicked startTour" );
+          $('#introDIV').hide();
+          $('#tourContain').show();
+          $('#overContain').hide();
+
+
+var aID = 0;
+
+$('#nextCLICK').show();
+$('#backCLICK').hide();
+var ggl = new L.Google('HYBRID');
+
+
+$.getJSON("rt53optionsPath.geojson", function(data) {
+  var path53 = L.geoJson(data, {
+    style: function (feature) {
+      return {
+        fillColor: 'red',
+        weight: 1,
+        opacity: 0.6,
+        color: 'red',
+        fillOpacity: 0.6
+      };
+    },    
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(
+        '<p>Path of proposed<br>Route 53 extension</p>'
+      );
+    }
+  });
+
+$.getJSON("wetlands.geojson", function(data) {
+  var wetlands = L.geoJson(data, {
+    style: function (feature) {
+      return {
+        fillColor: '#D4A66A',
+        weight: 0,
+        fillOpacity: 0.6
+      };
+    },
+        
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(
+        '<p>' + feature.properties.NAME + '</p>'
+        );
+    }
+  });
+
+
+$.getJSON('rt53photos.json', function(data){
+
+var map = L.map('pageMap');
+map.setView(new L.LatLng(42.15312787, -88.0167532),14);
+map.addLayer(ggl);
+map.addLayer(wetlands);
+map.addLayer(path53);
+
+var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+var popupOptions = {'maxWidth': '215'};
+var hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+console.log( aID );
+
+$('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+
+//The text portion
+
+$("#nextCLICK").click(function() {
+      console.log( "Clicked Next" );
+      aID = ++aID;
+    if(aID == 21) {
+      console.log( aID );
+      $('#nextCLICK').hide();
+      $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+// The mapping portion
+
+var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+map.panTo(newLocale, {animate: true, duration: 0.5});
+var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+var popupOptions = {'maxWidth': '215'};
+map.removeLayer(hellomarker);
+hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+      return false;
+    } else {
+      $('#nextCLICK').show();
+      $('#backCLICK').show();
+      console.log( aID );
+      $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+// The mapping portion
+
+var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+map.panTo(newLocale, {animate: true, duration: 0.5});
+var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+var popupOptions = {'maxWidth': '215'};
+map.removeLayer(hellomarker);
+hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+//map.setZoom(data[aID].azoom);
+hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+          };
+});
+
+$("#backCLICK").click(function() {
+      console.log( "Clicked Back" );
+      aID = --aID;
+
+    if(aID == 0) {
+      $('#backCLICK').hide();
+      $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+// The mapping portion
+
+var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+map.panTo(newLocale, {animate: true, duration: 0.5});
+var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+var popupOptions = {'maxWidth': '215'};
+map.removeLayer(hellomarker);
+hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+     return false;
+    } else {
+      $('#nextCLICK').show();
+      $('#backCLICK').show();
+      console.log( aID );
+      $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+// The mapping portion
+
+var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+map.panTo(newLocale, {animate: true, duration: 0.5});
+var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+var popupOptions = {'maxWidth': '215'};
+map.removeLayer(hellomarker);
+hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+    };
+});
+});
+});
+});
+
+return false;
+});
+
+$(".viewOVER").click(function() {
+      console.log( "Clicked viewOVER" );
+      $('#introDIV').hide();
+      $('#tourContain').hide();
+      $('#overContain').show();
+ 
+// Overview map here
+  var ggl2 = new L.Google('HYBRID');
+
+  $.getJSON("rt53optionsPath.geojson", function(data) {
+    var path53 = L.geoJson(data, {
+      style: function (feature) {
+        return {
+          fillColor: 'red',
+          weight: 1,
+          opacity: 0.6,
+          color: 'red',
+          fillOpacity: 0.6
+        };
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(
+          '<p>Path of proposed<br>Route 53 extension</p>'
+        );
+      }
+    });
+
+  $.getJSON("wetlands.geojson", function(data) {
+    var wetlands = L.geoJson(data, {
+      style: function (feature) {
+        return {
+          fillColor: '#D4A66A',
+          weight: 0,
+          fillOpacity: 0.6
+        };
+      },
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(
+          '<p>' + feature.properties.NAME + '</p>'
+        );
+      }
+    });
+
+  $.getJSON('rt53photos.geojson', function(data){
+    var photoPoints = L.geoJson(data, {
+      onEachFeature: function (feature, layer) {
+        var popupContent = '<img src="images/' + feature.properties.MEDIA + '.jpg" width="200px" height="' + feature.properties.iheight + 'px"><p>' + feature.properties.Description + '</p>';
+        var popupOptions = {
+          'maxWidth': '215'
+        }
+        layer.bindPopup(popupContent, popupOptions);
+      }
+    });
+    var map2 = L.map('pageMap2');
+    map2.setView(new L.LatLng(42.25, -88.0167532),11);
+    map2.addLayer(ggl2);
+    map2.addLayer(wetlands);
+    map2.addLayer(path53);
+    map2.addLayer(photoPoints);
+  });
+
+
+
+});
+});
+return false;
+});
+
+  </script>
+  </body>
+</html>

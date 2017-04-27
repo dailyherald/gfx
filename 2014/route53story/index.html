@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Route 53 tour
+  </title>
+
+<!-- STYLES --> 
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+<!-- SCRIPTS -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../scripts/leaflet.js"></script>
+  <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+  <script src="../../scripts/Google.js"></script>
+
+<style>
+
+.embed100 {
+  -webkit-overflow-scrolling: touch;
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+  padding: 10px;
+  height: 598px;
+  background-color: #D7DBB3;
+}
+
+.beginDIV {
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width: 95%;
+  padding: 20px;
+  height: 598px;
+  background-color: #D7DBB3;
+  z-index: 2;
+}
+
+.backimage {
+  background-image: url("images/Route53_back.jpg");
+  background-repeat: no-repeat;
+  background-size:100% auto;
+}
+
+.advText {
+  -webkit-overflow-scrolling: touch;
+  position:relative;
+  float:left;
+  width: 100%;
+  height: 110px;
+/*  padding: 20px; */
+  margin: 0px 0px 5px;
+/*    background-color: #ffffff;*/
+  opacity: .99; 
+  z-index: 1;
+}
+
+.advText2 {
+  position:relative;
+  margin: 5px;
+  z-index: 1;
+  opacity: .99;
+}
+
+.pageMap {
+  position:relative;
+  float:left;
+  z-index: 1;
+  width: 100%;
+  height: 455px;
+  margin: 5px 0px 5px;
+  background-color: #ffffff;
+  opacity: .99; 
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  -webkit-transition: -webkit-transform 1s cubic-bezier(0,0,0.25,1);
+     -moz-transition:    -moz-transform 1s cubic-bezier(0,0,0.25,1);
+       -o-transition:      -o-transform 1s cubic-bezier(0,0,0.25,1);
+          transition:         transform 1s cubic-bezier(0,0,0.25,1);
+  }
+
+</style>
+
+  </head>
+
+  <body>
+<div id="introDIV" class="beginDIV backimage">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 align="center">A troubled path</h1><p align="center">The proposed path of the Route 53 extension passes by - and through - developments that have built up over the many years the route has been considered.</p>
+  <p>This interactive tour starts at the south end of the proposed extension, where Route 53 ends at Lake-Cook Road, and moves north to where it forks near Route 120.</p>
+  <p>Along the way, key spots as well as fragile wetlands that may be impacted by the new tollroad have been highlighted. <a class="startTOUR" href=""><strong>Click here to start the tour</strong></a></p>
+   <p class="source">Daily Herald photos by Steve Lundy, slundy@dailyherald.com, and Paul Valade, pvalade@dailyherald.com. Interactive tour by Tim Broderick, tbroderick@dailyherald.com.</p>
+</div>
+
+<div id="tourContain" class="embed100 backimage">
+  <div id="contain53" class="advText">
+    <div id="advText" class="advText2"></div>
+  </div>
+  <h4 align="center"><a id="backCLICK" href="">BACK</a> | <a id="nextCLICK" href="">NEXT</a></h4>
+  <div id="pageMap" class="pageMap"></div>
+</div>
+
+
+
+
+<script>
+
+$('#tourContain').hide();
+
+//start tour portion
+
+$(".startTOUR").click(function() {
+  console.log( "Clicked startTour" );
+  $('#introDIV').hide();
+  $('#tourContain').show();
+
+  // This is the main control variable
+  var aID = 0;
+
+  $('#nextCLICK').show();
+  $('#backCLICK').hide();
+  var ggl = new L.Google('HYBRID');
+
+  // Load in path
+  $.getJSON("rt53optionsPath.geojson", function(data) {
+    var path53 = L.geoJson(data, {
+      style: function (feature) {
+        return {
+          fillColor: 'red',
+          weight: 1,
+          opacity: 0.6,
+          color: 'red',
+          fillOpacity: 0.6
+        };
+      },    
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(
+          '<p>Path of proposed<br>Route 53 extension</p>'
+        );
+      }
+    });
+
+    // Load in wetlands layer
+
+    $.getJSON("wetlands.geojson", function(data) {
+      var wetlands = L.geoJson(data, {
+        style: function (feature) {
+          return {
+            fillColor: '#D4A66A',
+            weight: 0,
+            fillOpacity: 0.6
+          };
+        },
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(
+            '<p>' + feature.properties.NAME + '</p>'
+          );
+        }
+      });
+
+      $.getJSON('rt53photos.json', function(data){
+
+        // Sets up the start portion of the map
+
+        var map = L.map('pageMap');
+        map.setView(new L.LatLng(42.15312787, -88.0167532),14);
+        map.addLayer(ggl);
+        map.addLayer(wetlands);
+        map.addLayer(path53);
+
+        var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+        var popupOptions = {'maxWidth': '215'};
+        var hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+        hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+        console.log( aID );
+
+        $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+
+        // When people click Next
+
+        $("#nextCLICK").click(function() {
+          console.log( "Clicked Next" );
+          aID = ++aID;
+          if(aID == 21) {
+            console.log( aID );
+            $('#nextCLICK').hide();
+            $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+            
+            // If AID is at the end (21)
+            var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+            map.panTo(newLocale, {animate: true, duration: 0.5});
+            var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+            var popupOptions = {'maxWidth': '215'};
+            map.removeLayer(hellomarker);
+            hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+            hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+          } else {
+            //Otherwise, move along
+            $('#nextCLICK').show();
+            $('#backCLICK').show();
+            console.log( aID );
+            $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+            // The mapping portion
+
+            var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+            map.panTo(newLocale, {animate: true, duration: 0.5});
+            var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+            var popupOptions = {'maxWidth': '215'};
+            map.removeLayer(hellomarker);
+            hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+            //map.setZoom(data[aID].azoom);
+            hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+          };
+        });
+
+        // When people click Back
+
+        $("#backCLICK").click(function() {
+          console.log( "Clicked Back" );
+          aID = --aID;
+
+          if(aID == 0) {
+            $('#backCLICK').hide();
+            $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+            // The mapping portion if back button aid equals zero
+
+            var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+            map.panTo(newLocale, {animate: true, duration: 0.5});
+            var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+            var popupOptions = {'maxWidth': '215'};
+            map.removeLayer(hellomarker);
+            hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+            hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+          } else {
+            //Else, move to the next one
+            $('#nextCLICK').show();
+            $('#backCLICK').show();
+            console.log( aID );
+            $('#advText').html('<h3 align="center">' + data[aID].Headline + '</h3><p align="center">' + data[aID].Description + '</p>');
+
+            // The mapping portion
+
+            var newLocale = new L.LatLng(data[aID].lat, data[aID].lon);
+            map.panTo(newLocale, {animate: true, duration: 0.5});
+            var popupContent = '<img src="images/' + data[aID].MEDIA + '.jpg" width="200px" height="' + data[aID].iheight + 'px">';
+            var popupOptions = {'maxWidth': '215'};
+            map.removeLayer(hellomarker);
+            hellomarker =  L.marker([data[aID].lat, data[aID].lon]).addTo(map);
+            hellomarker.bindPopup(popupContent, popupOptions).openPopup();
+            return false;
+          };
+        });
+      });
+    });
+  });
+  return false;
+});
+
+  </script>
+  </body>
+</html>

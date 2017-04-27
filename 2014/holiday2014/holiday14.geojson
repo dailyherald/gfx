@@ -1,0 +1,34 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Honor": "Editor's Choice", "Address": "3111 Wolfe Court", "Town": "Naperville", "Lat": 41.707676, "Long": -88.173017 }, "geometry": { "type": "Point", "coordinates": [ -88.173017, 41.707676 ] } },
+{ "type": "Feature", "properties": { "Honor": "Editor's Choice", "Address": "429 Killarney Pass Circle", "Town": "Mundelein", "Lat": 42.280643, "Long": -88.009788 }, "geometry": { "type": "Point", "coordinates": [ -88.009788, 42.280643 ] } },
+{ "type": "Feature", "properties": { "Honor": "Editor's Choice", "Address": "585 Carriage Drive", "Town": "Batavia", "Lat": 41.859397, "Long": -88.32327 }, "geometry": { "type": "Point", "coordinates": [ -88.32327, 41.859397 ] } },
+{ "type": "Feature", "properties": { "Honor": "Editor's Choice", "Address": "1320 Prairie Drive", "Town": "Algonquin", "Lat": 42.161574, "Long": -88.261192 }, "geometry": { "type": "Point", "coordinates": [ -88.261192, 42.161574 ] } },
+{ "type": "Feature", "properties": { "Honor": "Editor's Choice", "Address": "600 S. Pine Street", "Town": "Mout Prospect", "Lat": 42.055502, "Long": -87.939884 }, "geometry": { "type": "Point", "coordinates": [ -87.939884, 42.055502 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "2049 Tiffany Drive", "Town": "Schaumburg", "Lat": 42.025635, "Long": -88.131419 }, "geometry": { "type": "Point", "coordinates": [ -88.131419, 42.025635 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1700 N. Chicago Avenue", "Town": "Arlington Heights", "Lat": 42.106618, "Long": -88.002944 }, "geometry": { "type": "Point", "coordinates": [ -88.002944, 42.106618 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "3N474 Linda Lane", "Town": "Addison", "Lat": 41.928155, "Long": -88.025497 }, "geometry": { "type": "Point", "coordinates": [ -88.025497, 41.928155 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "39W641 Bealer Circle", "Town": "Geneva", "Lat": 41.864138, "Long": -88.387859 }, "geometry": { "type": "Point", "coordinates": [ -88.387859, 41.864138 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "653 Walnut Road", "Town": "Wauconda", "Lat": 42.267629, "Long": -88.157003 }, "geometry": { "type": "Point", "coordinates": [ -88.157003, 42.267629 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "585 Kirk Avenue", "Town": "Elgin", "Lat": 42.024467, "Long": -88.255736 }, "geometry": { "type": "Point", "coordinates": [ -88.255736, 42.024467 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "6N666 Harey Road", "Town": "Medinah", "Lat": 41.974772, "Long": -88.057733 }, "geometry": { "type": "Point", "coordinates": [ -88.057733, 41.974772 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "2908 Carousel Court", "Town": "Grayslake", "Lat": 42.31503, "Long": -88.061056 }, "geometry": { "type": "Point", "coordinates": [ -88.061056, 42.31503 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "385 Congdon Avenue", "Town": "Elgin", "Lat": 42.056699, "Long": -88.276295 }, "geometry": { "type": "Point", "coordinates": [ -88.276295, 42.056699 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "404  Larkdale Lane", "Town": "Mout Prospect", "Lat": 42.082934, "Long": -87.942209 }, "geometry": { "type": "Point", "coordinates": [ -87.942209, 42.082934 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1851 Broadsmore Drive", "Town": "Algonquin", "Lat": 42.138566, "Long": -88.322734 }, "geometry": { "type": "Point", "coordinates": [ -88.322734, 42.138566 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "35 Carlisle Road", "Town": "Hawthorn Woods", "Lat": 42.227285, "Long": -88.040029 }, "geometry": { "type": "Point", "coordinates": [ -88.040029, 42.227285 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "6326 Winston Drive", "Town": "Woodridge", "Lat": 41.771056, "Long": -88.062089 }, "geometry": { "type": "Point", "coordinates": [ -88.062089, 41.771056 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1127 Conann Doyle Road", "Town": "Naperville", "Lat": 41.705076, "Long": -88.170818 }, "geometry": { "type": "Point", "coordinates": [ -88.170818, 41.705076 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1555 Leabrook Lane", "Town": "Wheaton", "Lat": 41.84715, "Long": -88.13255 }, "geometry": { "type": "Point", "coordinates": [ -88.13255, 41.84715 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1100 W. Colfax Street", "Town": "Palatine", "Lat": 42.12281, "Long": -88.068984 }, "geometry": { "type": "Point", "coordinates": [ -88.068984, 42.12281 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "223 W. Wilson Street", "Town": "Palatine", "Lat": 42.111901, "Long": -88.049603 }, "geometry": { "type": "Point", "coordinates": [ -88.049603, 42.111901 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1224 Barberry Lane", "Town": "Round Lake Beach", "Lat": 42.371538, "Long": -88.109233 }, "geometry": { "type": "Point", "coordinates": [ -88.109233, 42.371538 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "347 S. Columbia Street", "Town": "Naperville", "Lat": 41.77094, "Long": -88.138116 }, "geometry": { "type": "Point", "coordinates": [ -88.138116, 41.77094 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "1881 Northshore Avenue", "Town": "Des Plaines", "Lat": 42.001192, "Long": -87.877595 }, "geometry": { "type": "Point", "coordinates": [ -87.877595, 42.001192 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "938 E. Babcock Drive", "Town": "Palatine", "Lat": 42.117308, "Long": -88.02025 }, "geometry": { "type": "Point", "coordinates": [ -88.02025, 42.117308 ] } },
+{ "type": "Feature", "properties": { "Honor": "", "Address": "133 Tefft Avenue", "Town": "Elgin", "Lat": 42.039944, "Long": -88.257684 }, "geometry": { "type": "Point", "coordinates": [ -88.257684, 42.039944 ] } }
+]
+}

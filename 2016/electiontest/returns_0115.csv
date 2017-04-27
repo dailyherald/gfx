@@ -1,0 +1,349 @@
+CandID,RaceID,Cat1,Cat2,Cat3,Cat4,Candidate,Incumbent,Referendum,VotesTotal,PrecTotal,RepTotal
+2,1,Nation,President,,"(Democrat) Vote for 1, 4-year term",Hilary Clinton,,,0,0,0
+5,1,Nation,President,,"(Democrat) Vote for 1, 4-year term",Bernie Sanders,,,0,0,0
+372,1,Nation,President,,"(Democrat) Vote for 1, 4-year term",Martin J. O'Malley,,,0,0,0
+381,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Rick Santorum,,,0,10448,0
+380,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Mike Huckabee,,,0,10448,0
+379,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Carly Fiorina,,,0,10448,0
+378,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Rand Paul,,,0,10448,0
+377,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Ted Cruz,,,0,10448,0
+376,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Jeb Bush,,,0,10448,0
+375,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Marco Rubio,,,0,10448,0
+374,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Donald J. Trump,,,0,10448,0
+373,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Chris Christie,,,0,10448,0
+382,2,Nation,President,,"(Republican) Vote for 1, 4-year term",John R. Kasich,,,0,10448,0
+383,2,Nation,President,,"(Republican) Vote for 1, 4-year term",Ben Carson,,,0,10448,0
+34,16,Statewide,Comptroller,,"(Democrat) Vote for 1, 4-year term",Susana Mendoza,,,0,0,0
+33,17,Statewide,Comptroller,,"(Republican) Vote for 1, 4-year term",Leslie Munger,*,,0,0,0
+32,22,Congress,U.S. Senate,,(Democrat) 6-year term,Napoleon Harris,,,0,0,0
+31,22,Congress,U.S. Senate,,(Democrat) 6-year term,Andrea Zopp,,,0,0,0
+30,22,Congress,U.S. Senate,,(Democrat) 6-year term,Tammy Duckworth,,,0,0,0
+312,23,Congress,U.S. Senate,,(Republican) 6-year term,Elizabeth Diane Pahlke,,,0,0,0
+29,23,Congress,U.S. Senate,,(Republican) 6-year term,James Marter,,,0,0,0
+28,23,Congress,U.S. Senate,,(Republican) 6-year term,Mark Kirk,*,,0,0,0
+38,28,Congress,U.S. Representative,5th District,"(Democrat) Vote for 1, 2-year term",Mike Quigley,*,,0,0,0
+279,30,Congress,U.S. Representative,5th District,(Green) 2-year term,Rob Sherman,,,0,0,0
+280,30,Congress,U.S. Representative,5th District,(Green) 2-year term,Warren Grimsely,,,0,0,0
+259,31,Congress,U.S. Representative,6th District,"(Democrat) Vote for 1, 2-year term",Amanda Howland,,,0,0,0
+37,31,Congress,U.S. Representative,6th District,"(Democrat) Vote for 1, 2-year term",Robert Marshall,,,0,0,0
+36,32,Congress,U.S. Representative,6th District,"(Republican) Vote for 1, 2-year term",Gordon Kinzler,,,0,0,0
+35,32,Congress,U.S. Representative,6th District,"(Republican) Vote for 1, 2-year term",Peter Roskam,*,,0,0,0
+310,34,Congress,U.S. Representative,8th District,"(Democrat) Vote for 1, 2-year term",Deborah Bullwinkel,,,0,0,0
+39,34,Congress,U.S. Representative,8th District,"(Democrat) Vote for 1, 2-year term",Michael Noland,,,0,0,0
+40,34,Congress,U.S. Representative,8th District,"(Democrat) Vote for 1, 2-year term",Raja Krishnamoorthi,,,0,0,0
+41,35,Congress,U.S. Representative,8th District,"(Republican) Vote for 1, 2-year term",Peter DiCianni,,,0,0,0
+42,37,Congress,U.S. Representative,9th District,"(Democrat) Vote for 1, 2-year term",Jan Schakowsky,*,,0,0,0
+43,38,Congress,U.S. Representative,9th District,"(Republican) Vote for 1, 2-year term",David Earl Williams III,,,0,0,0
+45,38,Congress,U.S. Representative,9th District,"(Republican) Vote for 1, 2-year term",Joan McCarthy Lasonde,,,0,0,0
+46,40,Congress,U.S. Representative,10th District,"(Democrat) Vote for 1, 2-year term",Brad Schneider,,,0,0,0
+47,40,Congress,U.S. Representative,10th District,"(Democrat) Vote for 1, 2-year term",Nancy Rotering,,,0,0,0
+48,41,Congress,U.S. Representative,10th District,"(Republican) Vote for 1, 2-year term",Robert Dold,*,,0,0,0
+49,43,Congress,U.S. Representative,11th District,"(Democrat) Vote for 1, 2-year term",Bill Foster,*,,0,0,0
+231,44,Congress,U.S. Representative,11th District,"(Republican) Vote for 1, 2-year term",Herman White,,,0,0,0
+230,44,Congress,U.S. Representative,11th District,"(Republican) Vote for 1, 2-year term",Nick Stella,,,0,0,0
+50,44,Congress,U.S. Representative,11th District,"(Republican) Vote for 1, 2-year term",Tonia Khouri,,,0,0,0
+53,46,Congress,U.S. Representative,14th District,"(Democrat) Vote for 1, 2-year term",John Hosta,,,0,0,0
+52,46,Congress,U.S. Representative,14th District,"(Democrat) Vote for 1, 2-year term",Jim Walz,,,0,0,0
+267,46,Congress,U.S. Representative,14th District,"(Democrat) Vote for 1, 2-year term",Jesse Maggitt,,,0,0,0
+51,47,Congress,U.S. Representative,14th District,"(Republican) Vote for 1, 2-year term",Randy Hultgren,*,,0,0,0
+130,52,State Legislature,Senate,10th District,"(Democrat) Vote for 1, 4-year term",John Mulroe,*,,0,0,0
+123,58,State Legislature,Senate,22nd District,"(Democrat) Vote for 1, 4-year term",Steve Caramelli,,,0,0,0
+122,58,State Legislature,Senate,22nd District,"(Democrat) Vote for 1, 4-year term",Cristina Castro,,,0,0,0
+131,61,State Legislature,Senate,23rd District,"(Democrat) Vote for 1, 2-year term",Thomas E. Cullerton,*,,0,0,0
+132,62,State Legislature,Senate,23rd District,"(Republican) Vote for 1, 2-year term",Seth Lewis,,,0,0,0
+133,67,State Legislature,Senate,25th District,"(Democrat) Vote for 1, 4-year term",Corinne Pierog,,,0,0,0
+134,68,State Legislature,Senate,25th District,"(Republican) Vote for 1, 4-year term",Jim Oberweis,*,,0,0,0
+136,71,State Legislature,Senate,26th District,"(Republican) Vote for 1, 2-year term",Martin McLaughlin,,,0,0,0
+135,71,State Legislature,Senate,26th District,"(Republican) Vote for 1, 2-year term",Dan McConchie,,,0,0,0
+282,71,State Legislature,Senate,26th District,"(Republican) Vote for 1, 2-year term",Casey Urlacher,,,0,0,0
+137,76,State Legislature,Senate,28th District,"(Democrat) Vote for 1, 4-year term",Laura Murphy,*,,0,0,0
+302,77,State Legislature,Senate,28th District,"(Republican) Vote for 1, 4-year term",Mel Thillens,,,0,0,0
+138,79,State Legislature,Senate,29th District,"(Democrat) Vote for 1, 2-year term",Julie Morrison,*,,0,0,0
+139,80,State Legislature,Senate,29th District,"(Republican) Vote for 1, 2-year term",Benjamin Salzberg,,,0,0,0
+140,85,State Legislature,Senate,31st District,"(Democrat) Vote for 1, 4-year term",Melinda Bush,*,,0,0,0
+141,86,State Legislature,Senate,31st District,"(Republican) Vote for 1, 4-year term",Michael Amrozowicz,,,0,0,0
+110,89,State Legislature,Senate,32nd District,"(Republican) Vote for 1, 2-year term",Pamela Althoff,*,,0,0,0
+142,95,State Legislature,Senate,35th District,"(Republican) Vote for 1, 2-year term",Dave Syverson,*,,0,0,0
+143,101,State Legislature,Senate,41st District,"(Republican) Vote for 1, 2-year term",Christine Radogno,*,,0,0,0
+144,106,State Legislature,Senate,49th District,"(Democrat) Vote for 1, 4-year term",Jennifer Bertino-Tarrant,*,,0,0,0
+320,107,State Legislature,Senate,49th District,"(Republican) Vote for 1, 4-year term",Michelle Smith,,,0,0,0
+54,109,State Legislature,Representative,17th District,"(Democrat) Vote for 1, 2-year term",Laura Fine,*,,0,0,0
+55,112,State Legislature,Representative,20th District,"(Democrat) Vote for 1, 2-year term",Merry Marwig,,,0,0,0
+56,113,State Legislature,Representative,20th District,"(Republican) Vote for 1, 2-year term",Michael McAuliffe,*,,0,0,0
+57,116,State Legislature,Representative,41st District,"(Republican) Vote for 1, 2-year term",Grant Wehrli,*,,0,0,0
+313,118,State Legislature,Representative,42nd District,"(Democrat) Vote for 1, 2-year term",Kathleen Carrier,,,0,0,0
+58,119,State Legislature,Representative,42nd District,"(Republican) Vote for 1, 2-year term",Jeanne Ives,*,,0,0,0
+59,121,State Legislature,Representative,43rd District,"(Democrat) Vote for 1, 2-year term",Anna Moeller,*,,0,0,0
+60,124,State Legislature,Representative,44th District,"(Democrat) Vote for 1, 2-year term",Fred Crespo,*,,0,0,0
+287,127,State Legislature,Representative,45th District,"(Democrat) Vote for 1, 2-year term",Cynthia Borbas,,,0,0,0
+61,128,State Legislature,Representative,45th District,"(Republican) Vote for 1, 2-year term",Christine Winger,*,,0,0,0
+62,130,State Legislature,Representative,46th District,"(Democrat) Vote for 1, 2-year term",Deb Conroy,*,,0,0,0
+63,131,State Legislature,Representative,46th District,"(Republican) Vote for 1, 2-year term",Heidi Holan,,,0,0,0
+64,134,State Legislature,Representative,47th District,"(Republican) Vote for 1, 2-year term",Patti Bellock,*,,0,0,0
+65,137,State Legislature,Representative,48th District,"(Republican) Vote for 1, 2-year term",Peter Breen,*,,0,0,0
+66,140,State Legislature,Representative,49th District,"(Republican) Vote for 1, 2-year term",Mike Fortner,*,,0,0,0
+67,143,State Legislature,Representative,50th District,"(Republican) Vote for 1, 2-year term",Keith Wheeler,*,,0,0,0
+68,146,State Legislature,Representative,51st District,"(Republican) Vote for 1, 2-year term",Nick Sauer,,,0,0,0
+85,149,State Legislature,Representative,52nd District,"(Republican) Vote for 1, 2-year term",David McSweeney,*,,0,0,0
+86,152,State Legislature,Representative,53rd District,"(Republican) Vote for 1, 2-year term",David Harris,*,,0,0,0
+88,155,State Legislature,Representative,54th District,"(Republican) Vote for 1, 2-year term",Tom Morrison,*,,0,0,0
+91,157,State Legislature,Representative,55th District,"(Democrat) Vote for 1, 2-year term",Martin J. Moylan,*,,0,0,0
+303,158,State Legislature,Representative,55th District,"(Republican) Vote for 1, 2-year term",Dan Gott,,,0,0,0
+93,160,State Legislature,Representative,56th District,"(Democrat) Vote for 1, 2-year term",Michelle Mussman,*,,0,0,0
+94,161,State Legislature,Representative,56th District,"(Republican) Vote for 1, 2-year term",Jillian Rose Bernas,,,0,0,0
+96,163,State Legislature,Representative,57th District,"(Democrat) Vote for 1, 2-year term",Elaine Nekritz,*,,0,0,0
+98,166,State Legislature,Representative,58th District,"(Democrat) Vote for 1, 2-year term",Scott Drury,*,,0,0,0
+102,169,State Legislature,Representative,59th District,"(Democrat) Vote for 1, 2-year term",Carol Sente,*,,0,0,0
+304,170,State Legislature,Representative,59th District,"(Republican) Vote for 1, 2-year term",Dawn Abernathy,,,0,0,0
+103,172,State Legislature,Representative,60th District,"(Democrat) Vote for 1, 2-year term",Rita Mayfield,*,,0,0,0
+314,173,State Legislature,Representative,60th District,"(Republican) Vote for 1, 2-year term",Robert Ochsner,,,0,0,0
+106,175,State Legislature,Representative,61st District,"(Democrat) Vote for 1, 2-year term",Nick Ciko,,,0,0,0
+104,176,State Legislature,Representative,61st District,"(Republican) Vote for 1, 2-year term",Sheri Jesiel,*,,0,0,0
+111,178,State Legislature,Representative,62nd District,"(Democrat) Vote for 1, 2-year term",Sam Yingling,*,,0,0,0
+315,179,State Legislature,Representative,62nd District,"(Republican) Vote for 1, 2-year term",Rod Drobinski,,,0,0,0
+114,181,State Legislature,Representative,63rd District,"(Democrat) Vote for 1, 2-year term",Jack Franks,*,,0,0,0
+316,182,State Legislature,Representative,63rd District,"(Republican) Vote for 1, 2-year term",Steven Reick,,,0,0,0
+317,182,State Legislature,Representative,63rd District,"(Republican) Vote for 1, 2-year term",Jeffery Lichte,,,0,0,0
+113,185,State Legislature,Representative,64th District,"(Republican) Vote for 1, 2-year term",Barbara Wheeler,*,,0,0,0
+243,188,State Legislature,Representative,65th District,"(Republican) Vote for 1, 2-year term",Steve Andersson,*,,0,0,0
+289,190,State Legislature,Representative,66th District,"(Democrat) Vote for 1, 2-year term",Nancy Zettler,,,0,0,0
+115,191,State Legislature,Representative,66th District,"(Republican) Vote for 1, 2-year term",Allen Skillicorn,,,0,0,0
+117,191,State Legislature,Representative,66th District,"(Republican) Vote for 1, 2-year term",Carolyn Schofield,,,0,0,0
+118,191,State Legislature,Representative,66th District,"(Republican) Vote for 1, 2-year term",Paul Serwatka,,,0,0,0
+116,191,State Legislature,Representative,66th District,"(Republican) Vote for 1, 2-year term",Dan Wilbrandt,,,0,0,0
+119,194,State Legislature,Representative,70th District,"(Republican) Vote for 1, 2-year term",Robert Pritchard,*,,0,0,0
+120,196,State Legislature,Representative,77th District,"(Democrat) Vote for 1, 2-year term",Kathleen Willis,*,,0,0,0
+121,197,State Legislature,Representative,77th District,"(Republican) Vote for 1, 2-year term",Anthony Airdo,,,0,0,0
+124,199,State Legislature,Representative,81st District,"(Democrat) Vote for 1, 2-year term",Greg Hose,,,0,0,0
+73,200,State Legislature,Representative,81st District,"(Republican) Vote for 1, 2-year term",Ron Sandack,*,,0,0,0
+125,202,State Legislature,Representative,83rd District,"(Democrat) Vote for 1, 2-year term",Linda Chapa LaVia,*,,0,0,0
+126,205,State Legislature,Representative,84th District,"(Democrat) Vote for 1, 2-year term",Stephanie Kifowit,*,,0,0,0
+127,206,State Legislature,Representative,84th District,"(Republican) Vote for 1, 2-year term",Mike Strick,,,0,0,0
+128,209,State Legislature,Representative,97th District,"(Republican) Vote for 1, 2-year term",Mark Batinick,*,,0,0,0
+129,211,State Legislature,Representative,98th District,"(Democrat) Vote for 1, 2-year term",Natalie Manley,*,,0,0,0
+307,1124,Cook County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",Donna More,,,0,1673,0
+157,1124,Cook County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",Anita Alvarez,*,,0,1673,0
+156,1124,Cook County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",Kim Foxx,,,0,1673,0
+291,1125,Cook County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Christopher E.K. Pfannkuche,,,0,0,0
+155,1127,Cook County,Recorder of deeds,,"(Democrat) Vote for 1, 4-year term",Karen A. Yarbrough,*,,0,1673,0
+342,1130,Cook County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Michelle A. Harris,,,0,4042,0
+154,1130,Cook County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Jacob Meister,,,0,4042,0
+153,1130,Cook County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Dorothy A. Brown,*,,0,4042,0
+290,1131,Cook County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Diane S. Shapiro,,,0,0,0
+159,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",Josina Morita,,,0,3973,0
+160,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",Barbara McGowan,*,,0,3973,0
+162,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",R. Cary Capparelli,,,0,3973,0
+163,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",Kevin McDevitt,,,0,3973,0
+164,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",Joseph Daniel Cook,,,0,3973,0
+161,1133,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 3, 6-year terms",Mariyana T. Spyropoulos,*,,0,3973,0
+349,1135,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 1, unexpired 2-year term",Martin J. Durkan,,,0,3973,0
+169,1135,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 1, unexpired 2-year term",Andrew Seo,,,0,3973,0
+167,1135,Cook County,Metro. Water Reclamation District,,"(Democrat) Vote for 1, unexpired 2-year term",Tom Greenhaw,,,0,3973,0
+293,1136,Cook County,Metro. Water Reclamation District,,"(Republican) Vote for 1, unexpired 2-year term",Herb Schumann,,,0,3973,0
+151,1143,Cook County,Board of Review,1st District,"(Republican) Vote for 1, 4-year term",Dan Patlak,*,,0,1194,0
+292,1144,Cook County,Board of Review,2nd District,"(Democrat) Vote for 1, 2-year term",Michael Cabonargi,,,0,1326,0
+223,3003,DuPage County,County Board,District 1,"(Democrat) Vote for 1, 4-year term","Roland ""Rolly"" Waller",,,0,117,0
+152,3004,DuPage County,County Board,District 1,"(Republican) Vote for 1, 4-year term",Donald Puchalski,*,,0,117,0
+211,3006,DuPage County,County Board,District 2,"(Republican) Vote for 1, 4-year term",Sean Noonan,*,,0,159,0
+297,3007,DuPage County,County Board,District 3,"(Democrat) Vote for 1, 4-year term",Anna M. Schiefelbein,,,0,128,0
+213,3008,DuPage County,County Board,District 3,"(Republican) Vote for 1, 4-year term",Brian Krajewski,*,,0,128,0
+283,3009,DuPage County,County Board,District 4,"(Democrat) Vote for 1, 4-year term",Khizar Jafri,,,0,134,0
+301,3010,DuPage County,County Board,District 4,"(Republican) Vote for 1, 4-year term",John Allen,,,0,134,0
+215,3010,DuPage County,County Board,District 4,"(Republican) Vote for 1, 4-year term",Tim Elliott,,,0,134,0
+216,3010,DuPage County,County Board,District 4,"(Republican) Vote for 1, 4-year term",Michelle L. Moore,,,0,134,0
+299,3011,DuPage County,County Board,District 5,"(Democrat) Vote for 1, 4-year term",Regina D. Brent,,,0,116,0
+220,3012,DuPage County,County Board,District 5,"(Republican) Vote for 1, 4-year term",James Healy,*,,0,116,0
+288,3013,DuPage County,County Board,District 6,"(Democrat) Vote for 1, 4-year term",Michael Dobosiewicz,,,0,110,0
+222,3014,DuPage County,County Board,District 6,"(Republican) Vote for 1, 4-year term","Robert ""Bob"" Larsen",,,0,110,0
+147,3024,DuPage County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Robert Berlin,*,,0,748,0
+148,3026,DuPage County,Coroner,,Republican) 4-year term,Richard Jorgensen,*,,0,748,0
+145,3028,DuPage County,Auditor,,"(Republican) Vote for 1, 4-year term",Bob Grogan,*,,0,748,0
+295,3029,DuPage County,Recorder of Deeds,,"(Democrat) Vote for 1, 4-year term",M. Moon Khan,,,0,0,0
+146,3030,DuPage County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Fred Bucholz,*,,0,748,0
+149,3032,DuPage County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Chris Kachiroubas,*,,0,748,0
+226,3038,DuPage County,Forest Preserve,District 2,"(Republican) Vote for 1, 4-year term",Jeff Redick,*,,0,117,0
+225,3041,DuPage County,Forest Preserve,District 4,"(Democrat) Vote for 1, 4-year term",Brian Wolter,,,0,134,0
+227,3042,DuPage County,Forest Preserve,District 4,"(Republican) Vote for 1, 4-year term",Tim Whelan,*,,0,134,0
+228,3044,DuPage County,Forest Preserve,District 5,"(Republican) Vote for 1, 4-year term",Carl Schultz,,,0,116,0
+229,3044,DuPage County,Forest Preserve,District 5,"(Republican) Vote for 1, 4-year term",Mary Lou Wehrli,*,,0,116,0
+254,5002,Kane County,Board Chairman,,"(Republican) Vote for 1, 4-year term",Chris Lauzen,*,,0,299,0
+352,5002,Kane County,Board Chairman,,"(Republican) Vote for 1, 4-year term",Kenneth Shepro,,,0,299,0
+260,5005,Kane County,County board,District 2,"(Democrat) Vote for 1, 4-year term",Theresa Barreiro,*,,0,12,0
+355,5009,Kane County,County board,District 4,"(Democrat) Vote for 1, 4-year term",Angela Clay Thomas,,,0,19,0
+257,5009,Kane County,County board,District 4,"(Democrat) Vote for 1, 4-year term",Brian Pollock,*,,0,19,0
+239,5013,Kane County,County board,District 6,"(Democrat) Vote for 1, 4-year term",Brian W. Dahl,*,,0,15,0
+232,5014,Kane County,County board,District 6,"(Republican) Vote for 1, 4-year term",Donald G. Baltzer,,,0,0,0
+263,5017,Kane County,County board,District 8,"(Democrat) Vote for 1, 4-year term","Margaret ""Maggy"" Ferguson",,,0,12,0
+262,5017,Kane County,County board,District 8,"(Democrat) Vote for 1, 4-year term",Barbara Hernanez,,,0,12,0
+251,5018,Kane County,County board,District 8,"(Republican) Vote for 1, 4-year term",Linda Pasetti-Olson,,,0,12,0
+354,5021,Kane County,County board,District 10,"(Democrat) Vote for 1, 4-year term",Todd A. Zies,,,0,0,0
+368,5022,Kane County,County board,District 10,"(Republican) Vote for 1, 4-year term",Doug Sullivan,,,0,15,0
+249,5022,Kane County,County board,District 10,"(Republican) Vote for 1, 4-year term",Susan Starrett,*,,0,15,0
+255,5026,Kane County,County board,District 12,"(Republican) Vote for 1, 4-year term",John Hoscheit,*,,0,15,0
+256,5030,Kane County,County board,District 14,"(Republican) Vote for 1, 4-year term",Mark Davoust,*,,0,11,0
+261,5034,Kane County,County board,District 16,"(Republican) Vote for 1, 4-year term",Mike Kenyon,*,,0,11,0
+240,5038,Kane County,County board,District 18,"(Republican) Vote for 1, 4-year term",Drew Frasz,*,,0,10,0
+241,5038,Kane County,County board,District 18,"(Republican) Vote for 1, 4-year term",James A. Macrunnels,,,0,10,0
+235,5041,Kane County,County board,District 20,"(Democrat) Vote for 1, 4-year term",Penny Wegman,,,0,13,0
+234,5041,Kane County,County board,District 20,"(Democrat) Vote for 1, 4-year term",Tom Armstrong,,,0,13,0
+253,5045,Kane County,County board,District 22,"(Democrat) Vote for 1, 4-year term",Randy Hopp,,,0,10,0
+237,5045,Kane County,County board,District 22,"(Democrat) Vote for 1, 4-year term",Willie Clements,,,0,10,0
+369,5046,Kane County,County board,District 22,"(Republican) Vote for 1, 4-year term",Doug Scheflow,*,,0,10,0
+238,5049,Kane County,County board,District 24,"(Democrat) Vote for 1, 4-year term",Joseph Haimann,*,,0,10,0
+233,5049,Kane County,County board,District 24,"(Democrat) Vote for 1, 4-year term",Jarett Sanchez,,,0,10,0
+353,5050,Kane County,County board,District 24,"(Republican) Vote for 1, 4-year term",Billita Jacobsen,,,0,0,0
+236,5050,Kane County,County board,District 24,"(Republican) Vote for 1, 4-year term",Roben B. Hall,,,0,0,0
+258,5061,Kane County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Joseph H. McMahon,*,,0,299,0
+252,5063,Kane County,Coroner,,"(Democrat) Vote for 1, 4-year term","Tao ""Tom"" Martinez",,,0,299,0
+367,5063,Kane County,Coroner,,"(Democrat) Vote for 1, 4-year term",John Shoemaker,,,0,299,0
+245,5064,Kane County,Coroner,,"(Republican) Vote for 1, 4-year term",Robert Tiballi,,,0,299,0
+246,5064,Kane County,Coroner,,"(Republican) Vote for 1, 4-year term",L. Robert Russell,*,,0,299,0
+248,5067,Kane County,Auditor,,"(Republican) Vote for 1, 4-year term",Craig P. Lee,,,0,299,0
+250,5067,Kane County,Auditor,,"(Republican) Vote for 1, 4-year term",Terry Hunt,*,,0,299,0
+247,5070,Kane County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Sandy Wegman,*,,0,299,0
+365,5073,Kane County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Thomas Hartwell,*,,0,299,0
+25,7002,Lake County,County board,District 1,"(Republican) Vote for 1, 4-year term",Linda Pedersen,*,,0,26,0
+20,7003,Lake County,County board,District 2,"(Democrat) Vote for 1, 4-year term",Diane Hewitt,*,,0,24,0
+271,7007,Lake County,County board,District 4,"(Democrat) Vote for 1, 4-year term",John Idleburg,,,0,26,0
+13,7008,Lake County,County board,District 4,"(Republican) Vote for 1, 4-year term",Brent Paxton,*,,0,26,0
+273,7009,Lake County,County board,District 5,"(Democrat) Vote for 1, 4-year term",Roger T. Smith Sr.,,,0,24,0
+272,7009,Lake County,County board,District 5,"(Democrat) Vote for 1, 4-year term",Gloria Charland,,,0,24,0
+274,7010,Lake County,County board,District 5,"(Republican) Vote for 1, 4-year term",David A. Zipp,,,0,24,0
+18,7010,Lake County,County board,District 5,"(Republican) Vote for 1, 4-year term",Judy Martini,,,0,24,0
+19,7010,Lake County,County board,District 5,"(Republican) Vote for 1, 4-year term",Denise Rotheimer,,,0,24,0
+360,7013,Lake County,County board,District 7,"(Democrat) Vote for 1, 4-year term",Mary Turley,,,0,0,0
+12,7014,Lake County,County board,District 7,"(Republican) Vote for 1, 4-year term",Steve Carlson,*,,0,27,0
+275,7021,Lake County,County board,District 11,"(Democrat) Vote for 1, 4-year term",Paul H. Frank,,,0,23,0
+276,7022,Lake County,County board,District 11,"(Republican) Vote for 1, 4-year term",Laura Lambrecht,,,0,0,0
+27,7024,Lake County,County board,District 12,"(Republican) Vote for 1, 4-year term",S. Michael Rummel,*,,0,29,0
+14,7025,Lake County,County board,District 13,"(Democrat) Vote for 1, 4-year term",Sandra Hart,*,,0,22,0
+277,7027,Lake County,County board,District 14,"(Democrat) Vote for 1, 4-year term",Audrey Nixon,*,,0,18,0
+15,7030,Lake County,County board,District 15,"(Republican) Vote for 1, 4-year term",Carol Calabresa,*,,0,22,0
+21,7032,Lake County,County board,District 16,"(Democrat) Vote for 1, 4-year term",Terry Wilke,*,,0,14,0
+278,7033,Lake County,County board,District 16,"(Republican) Vote for 1, 4-year term",Timothy Walsh,,,0,14,0
+362,7036,Lake County,County board,District 18,"(Democrat) Vote for 1, 4-year term",Gerri Songer,,,0,0,0
+16,7037,Lake County,County board,District 18,"(Republican) Vote for 1, 4-year term",Aaron Lawlor,*,,0,22,0
+26,7041,Lake County,County board,District 20,"(Republican) Vote for 1, 4-year term",Sidney Mathias,*,,0,25,0
+17,7043,Lake County,County board,District 21,"(Republican) Vote for 1, 4-year term",Ann B. Maine,*,,0,27,0
+361,7043,Lake County,County board,District 21,"(Republican) Vote for 1, 4-year term",Robert Haraden,,,0,27,0
+359,7054,Lake County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",Michael J. Perillo Jr.,,,0,415,0
+358,7054,Lake County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",Matt Stanton,,,0,415,0
+11,7055,Lake County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Michael Nerheim,*,,0,415,0
+357,7056,Lake County,Coroner,,"(Democrat) Vote for 1, 4-year term",Michael  P. Donnenwirth,,,0,415,0
+9,7056,Lake County,Coroner,,"(Democrat) Vote for 1, 4-year term",Thomas Rudd,*,,0,415,0
+294,7057,Lake County,Coroner,,"(Republican) Vote for 1, 4-year term",Howard Cooper,,,0,415,0
+10,7058,Lake County,Recorder of Deeds,,"(Democrat) Vote for 1, 4-year term",Mary Ellen Vanderventer,*,,0,415,0
+7,7060,Lake County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Erin Cartwright Weinstein,*,,0,415,0
+8,7061,Lake County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Keith Brin,*,,0,415,0
+22,7062,Lake County,North Shore Sanitary District,Ward 1,"(Democrat) Vote for 1, 4-year term",Preston Carter,*,,0,39,0
+356,7064,Lake County,North Shore Sanitary District,Ward 2,"(Democrat) Vote for 1, 4-year term",David Koss,,,0,35,0
+23,7064,Lake County,North Shore Sanitary District,Ward 2,"(Democrat) Vote for 1, 4-year term",Stephen Drew,*,,0,35,0
+270,7065,Lake County,North Shore Sanitary District,Ward 2,"(Republican) Vote for 1, 4-year term",Kenneth W. Arnold,,,0,0,0
+24,7069,Lake County,North Shore Sanitary District,Ward 4,"(Republican) Vote for 1, 4-year term",Thomas Swarthout,*,,0,27,0
+269,7069,Lake County,North Shore Sanitary District,Ward 4,"(Republican) Vote for 1, 4-year term","Frank ""Pony"" Swanton",,,0,27,0
+78,9001,McHenry County,County Board,District 1,"(Democrat) Vote for 2, 2-year terms",Kerri Barber,,,0,38,0
+328,9002,McHenry County,County Board,District 1,"(Republican) Vote for 2, 2-year terms",Terence Ferenc,,,0,38,0
+81,9002,McHenry County,County Board,District 1,"(Republican) Vote for 2, 2-year terms",Tom Wilbeck,,,0,38,0
+80,9002,McHenry County,County Board,District 1,"(Republican) Vote for 2, 2-year terms",Yvonne Barnes,*,,0,38,0
+79,9002,McHenry County,County Board,District 1,"(Republican) Vote for 2, 2-year terms",Anna May Miller,*,,0,38,0
+331,9003,McHenry County,County Board,District 2,"(Democrat) Vote for 2, 2-year terms",Dominique Miller,,,0,38,0
+168,9004,McHenry County,County Board,District 2,"(Republican) Vote for 2, 2-year terms",Jeffrey Thorsen,*,,0,38,0
+82,9004,McHenry County,County Board,District 2,"(Republican) Vote for 2, 2-year terms",Cameron Hubbard,,,0,38,0
+83,9004,McHenry County,County Board,District 2,"(Republican) Vote for 2, 2-year terms",John Reinert,,,0,38,0
+332,9005,McHenry County,County Board,District 3,"(Democrat) Vote for 2, 2-year terms",Kenneth Miller,,,0,41,0
+265,9006,McHenry County,County Board,District 3,"(Republican) Vote for 2, 2-year terms",Nancy Gonsiorek,,,0,41,0
+84,9006,McHenry County,County Board,District 3,"(Republican) Vote for 2, 2-year terms",Michael Walkup,*,,0,41,0
+87,9006,McHenry County,County Board,District 3,"(Republican) Vote for 2, 2-year terms",Nick Provenzano,*,,0,41,0
+89,9006,McHenry County,County Board,District 3,"(Republican) Vote for 2, 2-year terms",Cherie Rickert,,,0,41,0
+343,9008,McHenry County,County Board,District 4,"(Republican) Vote for 2, 2-year terms",Sue Draffkorn,*,,0,35,0
+90,9008,McHenry County,County Board,District 4,"(Republican) Vote for 2, 2-year terms",Craig Wilcox,,,0,35,0
+92,9008,McHenry County,County Board,District 4,"(Republican) Vote for 2, 2-year terms",Kay Bates,,,0,35,0
+264,9010,McHenry County,County Board,District 5,"(Democrat) Vote for 2, 2-year terms",Alex Wimmer,,,0,29,0
+329,9011,McHenry County,County Board,District 5,"(Republican) Vote for 2, 2-year terms",Michael Skala,*,,0,29,0
+95,9011,McHenry County,County Board,District 5,"(Republican) Vote for 2, 2-year terms",Andy Snarski,,,0,29,0
+97,9011,McHenry County,County Board,District 5,"(Republican) Vote for 2, 2-year terms",Joe Calomino,,,0,29,0
+333,9013,McHenry County,County Board,District 6,"(Democrat) Vote for 2, 2-year terms",Allison Barnard,,,0,31,0
+99,9014,McHenry County,County Board,District 6,"(Republican) Vote for 2, 2-year terms",Preston Rea,,,0,31,0
+100,9014,McHenry County,County Board,District 6,"(Republican) Vote for 2, 2-year terms",Ersel Schuster,,,0,31,0
+101,9014,McHenry County,County Board,District 6,"(Republican) Vote for 2, 2-year terms",Kelly Liebmann,,,0,31,0
+344,9014,McHenry County,County Board,District 6,"(Republican) Vote for 2, 2-year terms",James Kearns,,,0,31,0
+346,9014,McHenry County,County Board,District 6,"(Republican) Vote for 2, 2-year terms",Mary McCann,*,,0,31,0
+340,9024,McHenry County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Daniel Regna,,,0,212,0
+327,9024,McHenry County,State's Attorney,,"(Republican) Vote for 1, 4-year term",Patrick Kenneally,,,0,212,0
+77,9027,McHenry County,Coroner,,"(Republican) Vote for 1, 4-year term",Anne Majewski,*,,0,212,0
+75,9030,McHenry County,Auditor,,"(Republican) Vote for 1, 4-year term",Pamela Palmer,*,,0,212,0
+105,9033,McHenry County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Joni Smith,,,0,212,0
+107,9033,McHenry County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Tina Hill,,,0,212,0
+108,9033,McHenry County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Joe Tirio,,,0,212,0
+76,9036,McHenry County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Katherine Keefe,*,,0,212,0
+285,11001,Will County,Chief Executive Officer,,"(Democrat) Vote for 1, 4-year term",Lawrence M. Walsh,*,,0,303,0
+339,11002,Will County,Chief Executive Officer,,"(Republican) Vote for 1, 4-year term",Laurie McPhillips,,,0,303,0
+286,11015,Will County,State's Attorney,,"(Democrat) Vote for 1, 4-year term",James W. Glasgow,*,,0,303,0
+284,11017,Will County,Auditor,,"(Democrat) Vote for 1, 4-year term",Duffy Blackburn,*,,0,303,0
+337,11018,Will County,Auditor,,"(Republican) Vote for 1, 4-year term",Gary Good,,,0,303,0
+71,11019,Will County,Recorder of Deeds,,"(Democrat) Vote for 1, 4-year term",Karen A. Stukel,*,,0,303,0
+336,11020,Will County,Recorder of Deeds,,"(Republican) Vote for 1, 4-year term",Kristin Cross,,,0,303,0
+70,11021,Will County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Robert Bob Enright,,,0,303,0
+69,11021,Will County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Andrea Lynn Chasteen,,,0,303,0
+334,11021,Will County,Clerk of the Circuit Court,,"(Democrat) Vote for 1, 4-year term",Barbara Guerrero,,,0,303,0
+335,11022,Will County,Clerk of the Circuit Court,,"(Republican) Vote for 1, 4-year term",Marlene M. Carlson,,,0,303,0
+72,11023,Will County,Coroner,,"(Democrat) Vote for 1, 4-year term",Patrick K. O'Neil,*,,0,303,0
+170,13007,Judicial,Appellate Court,1st District (Epstein),(Democrat) Vote for 1,Eileen O'Neill Burke,,,0,0,0
+187,13009,Judicial,Cook Circuit,"Biebel, Jr. vacancy",(Democrat) Vote for 1,John Fitzgerald Lyke Jr.,,,0,0,0
+190,13011,Judicial,Cook Circuit,Elrod vacancy,(Democrat) Vote for 1,Scott Edward Lipinski,,,0,0,0
+191,13011,Judicial,Cook Circuit,Elrod vacancy,(Democrat) Vote for 1,Rossana Patricia Fernandez,,,0,0,0
+192,13013,Judicial,Cook Circuit,Hogan vacancy,(Democrat) Vote for 1,Michael J. O'Malley,,,0,0,0
+193,13013,Judicial,Cook Circuit,Hogan vacancy,(Democrat) Vote for 1,Alison C. Conlon,,,0,0,0
+194,13015,Judicial,Cook Circuit,"Howlett, Jr. vacancy",(Democrat) Vote for 1,"Aleksandra ""Alex"" Gillespie",,,0,0,0
+321,13015,Judicial,Cook Circuit,"Howlett, Jr. vacancy",(Democrat) Vote for 1,Thomas Maloney Cushing ,,,0,0,0
+197,13017,Judicial,Cook Circuit,Karnezis vacancy,(Democrat) Vote for 1,Mary Kathleen McHugh,,,0,0,0
+195,13017,Judicial,Cook Circuit,Karnezis vacancy,(Democrat) Vote for 1,Brian J. O'Hara,,,0,0,0
+198,13017,Judicial,Cook Circuit,Karnezis vacancy,(Democrat) Vote for 1,Devlin J. Schoop,,,0,0,0
+200,13019,Judicial,Cook Circuit,Love vacancy,(Democrat) Vote for 1,Brendan A. O'Brien,,,0,0,0
+201,13021,Judicial,Cook Circuit,O'Brien vacancy,(Democrat) Vote for 1,Maureen O'Donoghue Hannon,,,0,0,0
+202,13023,Judicial,Cook Circuit,Ruscitti Grussel vacancy,(Democrat) Vote for 1,William S. Wojcik,,,0,0,0
+203,13023,Judicial,Cook Circuit,Ruscitti Grussel vacancy,(Democrat) Vote for 1,John E. Marszalek,,,0,0,0
+204,13023,Judicial,Cook Circuit,Ruscitti Grussel vacancy,(Democrat) Vote for 1,Daniel Patrick Duffy,,,0,0,0
+322,13023,Judicial,Cook Circuit,Ruscitti Grussel vacancy,(Democrat) Vote for 1,Monica M. Torres-Linares,,,0,0,0
+208,13025,Judicial,Cook Circuit,Walsh vacancy,(Democrat) Vote for 1,Fredrick H. Bates,,,0,0,0
+207,13025,Judicial,Cook Circuit,Walsh vacancy,(Democrat) Vote for 1,Kevin Patrick Cunningham,,,0,0,0
+206,13025,Judicial,Cook Circuit,Walsh vacancy,(Democrat) Vote for 1,Patrick Joseph Powers,,,0,0,0
+184,13027,Judicial,Cook Circuit,10th Subcircuit (Howard),(Democrat) Vote for 1,Colleen Reardon Daly,,,0,0,0
+182,13027,Judicial,Cook Circuit,10th Subcircuit (Howard),(Democrat) Vote for 1,Eve Marie Reilly,,,0,0,0
+185,13027,Judicial,Cook Circuit,10th Subcircuit (Howard),(Democrat) Vote for 1,Michael John Malatesta,,,0,0,0
+186,13027,Judicial,Cook Circuit,10th Subcircuit (Howard),(Democrat) Vote for 1,Stephanie Saltouros,,,0,0,0
+183,13027,Judicial,Cook Circuit,10th Subcircuit (Howard),(Democrat) Vote for 1,"Richard ""Rick"" Cenar",,,0,0,0
+180,13029,Judicial,Cook Circuit,11th Subcircuit (Kelly),(Democrat) Vote for 1,Marc Martin,,,0,0,0
+325,13029,Judicial,Cook Circuit,11th Subcircuit (Kelly),(Democrat) Vote for 1,James DiChristofano,,,0,0,0
+326,13029,Judicial,Cook Circuit,11th Subcircuit (Kelly),(Democrat) Vote for 1,Catherine Ann Schneider,,,0,0,0
+181,13031,Judicial,Cook Circuit,11th Subcircuit (Zwick),(Democrat) Vote for 1,William B. Sullivan,,,0,0,0
+178,13033,Judicial,Cook Circuit,12th Subcircuit (Tristano),(Democrat) Vote for 1,Carrie Hamilton,,,0,0,0
+179,13034,Judicial,Cook Circuit,12th Subcircuit (Tristano),(Republican) Vote for 1,David Studenroth,,,0,0,0
+174,13035,Judicial,Cook Circuit,12th Subcircuit (Vacancy A),(Democrat) Vote for 1,James Edward Hanlon Jr.,,,0,0,0
+366,13035,Judicial,Cook Circuit,12th Subcircuit (Vacancy A),(Democrat) Vote for 1,Allan W. Masters,,,0,0,0
+175,13036,Judicial,Cook Circuit,12th Subcircuit (Vacancy A),(Republican) Vote for 1,Alex Kaplan,,,0,0,0
+176,13036,Judicial,Cook Circuit,12th Subcircuit (Vacancy A),(Republican) Vote for 1,Richard Montgomery Craig,,,0,0,0
+177,13036,Judicial,Cook Circuit,12th Subcircuit (Vacancy A),(Republican) Vote for 1,Steven A. Kozicki,,,0,0,0
+330,13037,Judicial,Cook Circuit,"13th Subcircuit (Fecarotta, Jr.)",(Democrat) Vote for 1,"Ketki ""Kay"" Steffen",,,0,0,0
+172,13038,Judicial,Cook Circuit,"13th Subcircuit (Fecarotta, Jr.)",(Republican) Vote for 1,Gary W. Seyring,,,0,0,0
+171,13038,Judicial,Cook Circuit,"13th Subcircuit (Fecarotta, Jr.)",(Republican) Vote for 1,Richard George Karwaczka,,,0,0,0
+173,13038,Judicial,Cook Circuit,"13th Subcircuit (Fecarotta, Jr.)",(Republican) Vote for 1,Kevin Michael O'Donnell,,,0,0,0
+266,13049,Judicial,Appellate Court,1st District (Quinn),(Democrat) Vote for 1,Bertina E. Lampkin,,,0,0,0
+323,13051,Judicial,Cook Circuit,4th Subcircuit (Kunkle),(Democrat) Vote for 1,Edward J. King,,,0,0,0
+363,30032,DuPage County,County Board,District 1,"(Democrat) Vote for 1, 2-year term",Richard Accomando,,,0,117,0
+150,30042,DuPage County,County Board,District 1,"(Republican) Vote for 1, 2-year term",Sam Tornatore,*,,0,117,0
+224,30052,DuPage County,County Board,District 2,"(Democrat) Vote for 1, 2-year term",Elizabeth (Liz) Chaplin,*,,0,117,0
+210,30062,DuPage County,County Board,District 2,"(Republican) Vote for 1, 2-year term",Elaine Zannis,,,0,117,0
+209,30062,DuPage County,County Board,District 2,"(Republican) Vote for 1, 2-year term",Richard Blass,,,0,117,0
+300,30062,DuPage County,County Board,District 2,"(Republican) Vote for 1, 2-year term",Anna Manzo,,,0,117,0
+350,30062,DuPage County,County Board,District 2,"(Republican) Vote for 1, 2-year term",Zachary Wilson,,,0,117,0
+296,30072,DuPage County,County Board,District 3,"(Democrat) Vote for 1, 2-year term",Joseph Heneghan,,,0,117,0
+212,30082,DuPage County,County Board,District 3,"(Republican) Vote for 1, 2-year term",Gary Grasso,*,,0,117,0
+214,30102,DuPage County,County Board,District 4,"(Republican) Vote for 1, 2-year term",Amy Grant,*,,0,117,0
+298,30112,DuPage County,County Board,District 5,"(Democrat) Vote for 1, 2-year term",Tony Michelassi,*,,0,117,0
+219,30122,DuPage County,County Board,District 5,"(Republican) Vote for 1, 2-year term",Janice Marie Anderson,,,0,117,0
+221,30142,DuPage County,County Board,District 6,"(Republican) Vote for 1, 2-year term",James Zay,*,,0,117,0
+370,30143,Referendum,Kane,,,Yes,,Put Content Here,0,0,0
+371,30143,Referendum,Kane,,,No,,Put Content Here,0,0,0
+4,30143,Referendum,Kane,,,No,,Put Content Here,0,0,0
+3,30143,Referendum,Kane,,,Yes,,Put Content Here,0,0,0

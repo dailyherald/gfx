@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    O'Hare Airport evening rotation schedule
+  </title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="content-language" content="en" />
+
+	<link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+	<script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<h2 class="topmargin"><strong>Tonight's scheduled runway useage</strong></h2>
+			<div id="timetxt"></div>
+			<p><a href='RunwayRotation.jpg' target='_blank'>Click here</a> for the complete runway rotation test schedule (as of July 6).<br>
+				<small>Source: O'Hare Noise Compatibility Commission</small>
+			</p>
+			<p><span style="color:white;"> - - </span></p>
+			<p><span style="color:white;">-30-</span></p>
+		</div>
+	</div>
+</div>
+
+<script>
+
+$(document).ready(function() {
+
+	var dt = new Date();
+//	var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+
+	// Month is expressed 0-11
+
+	var month = new Array();
+	month[0] = "January";
+	month[1] = "February";
+	month[2] = "March";
+	month[3] = "April";
+	month[4] = "May";
+	month[5] = "June";
+	month[6] = "July";
+	month[7] = "August";
+	month[8] = "September";
+	month[9] = "October";
+	month[10] = "November";
+	month[11] = "December";
+	var n = month[dt.getMonth()];
+
+	// Day is a standard number
+	// Year is 1 + 16, apparenly 1 = decade
+
+	var date = n + " " + dt.getDate() + ", 2016" ;
+
+
+	if( dt.getYear() == 116 && dt.getMonth() == 6 && ( dt.getDate() >= 10 && dt.getDate() < 17 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="07102016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting July 17</strong></h4><p class="topmargin"><img src="07172016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 6 && ( dt.getDate() >= 17 && dt.getDate() < 24 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="07172016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting July 24</strong></h4><p class="topmargin"><img src="07242016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 6 && ( dt.getDate() >= 24 && dt.getDate() < 31 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="07242016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting July 31</strong></h4><p class="topmargin"><img src="07312016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && ( dt.getMonth() == 6 && dt.getDate() >= 31 ) || ( dt.getMonth() == 7 && dt.getDate() < 7 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="07312016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting August 7</strong></h4><p class="topmargin"><img src="08072016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 7 && ( dt.getDate() >= 7 && dt.getDate() < 14 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="08072016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting August 14.</strong></h4><p class="topmargin"><img src="08142016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 7 && ( dt.getDate() >= 14 && dt.getDate() < 21 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="08142016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting August 21.</strong></h4><p class="topmargin"><img src="08212016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 7 && ( dt.getDate() >= 21 && dt.getDate() < 28 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="08212016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting August 28.</strong></h4><p class="topmargin"><img src="08282016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && ( dt.getMonth() == 7 && dt.getDate() >= 28 ) || ( dt.getMonth() == 8 && dt.getDate() < 4 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="08282016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting September 4.</strong></h4><p class="topmargin"><img src="09042016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 8 && ( dt.getDate() >= 4 && dt.getDate() < 11 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="09042016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting September 11.</strong></h4><p class="topmargin"><img src="09112016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 8 && ( dt.getDate() >= 11 && dt.getDate() < 18 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="09112016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting September 18.</strong></h4><p class="topmargin"><img src="09182016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 8 && ( dt.getDate() >= 18 && dt.getDate() < 25 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="09182016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting September 25.</strong></h4><p class="topmargin"><img src="09252016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && ( dt.getMonth() == 8 && dt.getDate() >= 25 ) || ( dt.getMonth() == 9 && dt.getDate() < 2 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="09252016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting October 2.</strong></h4><p class="topmargin"><img src="10022016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 9 && ( dt.getDate() >= 2 && dt.getDate() < 9 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="10022016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting October 9.</strong></h4><p class="topmargin"><img src="10092016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 9 && ( dt.getDate() >= 9 && dt.getDate() < 16 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="10092016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting October 16.</strong></h4><p class="topmargin"><img src="10162016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 9 && ( dt.getDate() >= 16 && dt.getDate() < 23 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="10162016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting October 23.</strong></h4><p class="topmargin"><img src="10232016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 9 && ( dt.getDate() >= 23 && dt.getDate() < 30 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="10232016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting October 30.</strong></h4><p class="topmargin"><img src="10302016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && ( dt.getMonth() == 9 && dt.getDate() >= 30 ) || ( dt.getMonth() == 10 && dt.getDate() < 6 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="10302016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting November 6.</strong></h4><p class="topmargin"><img src="11062016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 10 && ( dt.getDate() >= 6 && dt.getDate() < 13 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="11062016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting November 13.</strong></h4><p class="topmargin"><img src="11132016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 10 && ( dt.getDate() >= 13 && dt.getDate() < 20 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="11132016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting November 20.</strong></h4><p class="topmargin"><img src="11202016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 10 && ( dt.getDate() >= 20 && dt.getDate() < 27 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="11202016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting November 27.</strong></h4><p class="topmargin"><img src="11272016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && ( dt.getMonth() == 10 && dt.getDate() >= 27 ) || ( dt.getMonth() == 11 && dt.getDate() < 4 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="11272016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting December 4.</strong></h4><p class="topmargin"><img src="12042016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 11 && ( dt.getDate() >= 4 && dt.getDate() < 11 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="12042016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting December 11.</strong></h4><p class="topmargin"><img src="12112016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 11 && ( dt.getDate() >= 11 && dt.getDate() < 18 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="12112016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>Overnight runway useage starting December 18.</strong></h4><p class="topmargin"><img src="12182016.jpg" class="img-responsive center-block"></p>' + 
+			'<p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else if( dt.getYear() == 116 && dt.getMonth() == 11 && ( dt.getDate() >= 18 && dt.getDate() < 25 ) ){
+		$('#timetxt').html(
+			'<h4 class="topmargin"><strong>For ' + date + '</strong></h4><p class="topmargin"><img src="12182016.jpg" class="img-responsive center-block"></p><br>' +
+			'<h4 class="topmargin"><strong>The overnight runway rotation test schedule ends after this week.</strong></h4>' + 
+			'<br><p><img src="rotateGuide.jpg" class="img-responsive center-block"></p>'
+			);
+
+	} else {
+		$('#timetxt').html('<br><h4 class="topmargin"><strong>The overnight rotation test period has ended.</strong></h4><br>');
+	};
+
+	console.log( date );
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+body {
+	background: #FFF;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+
+.precincts {
+	background-color: #e6ebef;
+	padding:5px;
+}
+
+.divgfx {
+	-webkit-overflow-scrolling: touch;
+	overflow: scroll;
+	width: 100%;
+	height: 550px;
+	background-color: #ffffff;
+}
+
+.divgfx100 {
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+
+
+.divgfxembed {
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+	height: 400px;
+	background-color: #ffffff;
+}
+
+/* General styles */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p.indexmap {
+	margin-bottom: 0em;
+}
+
+.space {
+	margin: 1em 0 0 0;
+}
+
+.li_position {
+		    list-style-position: inside;
+}
+
+.gray {
+	background:#6E7272;
+}
+
+.lightgrey {
+	background:#BAC2C2;
+}
+
+.brown {
+	background:#A77954;
+}
+
+a.newsART:link {
+	color:#326464;
+	} 
+a.newsART:visited {
+	color:#BEBAB7;
+}
+
+	a {text-decoration:none;border-bottom:1px dotted #ccc;color:#003366;}
+	a:hover {color:#000;border-bottom:1px dotted #000;}
+	a.ahrefLite {color:#fff;border:0;}
+	a:hover.ahrefLite {color:#feeba0;border:0;}
+	strong {font-weight:bold;}
+
+#tableText {
+		width:600px;
+}
+
+table { 
+	width:600px;
+}
+
+table.fullTable { 
+	width:100%;
+}
+
+table.mapTable { 
+	width:200px;
+}
+
+td {text-align:right;}
+td.tdLEFT {text-align:left;}
+td.tdCENT {text-align:center;}
+
+th {text-align:right;}
+th.thLEFT {text-align:left;}
+th.thCENT {text-align:center;}
+
+td {
+	border-top-style:solid;
+	border-color:#ddd;
+	border-width:1px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:10px;
+	font-size: 1em;
+}
+
+.tr {
+	background-color:#FFF;
+}
+
+tr:nth-child(even) {background: #efefef;}
+
+/* Header styles */
+
+#opening_header {
+	color: #326464;
+	margin: 0 0 .2em .2em;
+}
+
+/* NAV styles */
+
+.navSpec {
+text-decoration: none;
+font-color: #FFF;
+height:2em;
+}
+
+nav a:link {
+	color:#FFF;
+	} 
+nav a:visited {
+	color:#BEBAB7;
+}
+
+
+/* Aside styles */
+
+
+/* Section styles */
+
+
+/* style for interactive graphics */
+
+#map { 
+	height: 180px; 
+}
+
+.wide200 {
+	float:left;
+	width: 200px;
+	height: 375px;
+}
+
+.wide400 {
+	float:left;
+	width: 400px;
+	height: 375px;
+}
+
+.wide600 {
+	float:left;
+	width: 600px;
+	height: 375px;
+}
+
+.center {
+	width: 601px;
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.center100 {
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#suburbs { 
+	width: 95%;
+	height: 500px; 
+}
+
+.high375 {
+	height: 375px;
+	background-color: #ffffff;
+}
+
+.high350 {
+	height: 350px;
+	background-color: #ffffff;
+}
+
+.high325 {
+	height: 325px;
+}
+
+#test {
+	width: 600px;
+	height: 200px;
+	background:#FFB173;
+}
+
+
+/* Article styles */
+
+
+article li {
+	color:#006561;
+	padding:.3em;
+}
+
+article li:hover{
+	background:#FFB173;
+}
+
+/*Graphic Styles */
+
+#reserveSPACE {
+  width:768px;
+  height:600px;
+}
+
+
+.hidden {
+	display:none;
+}
+
+/* Mapping Styles */
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.source {
+		font-size: 14px;
+}
+
+
+p.chartEmbed {
+	font-size: 14.5px;
+	margin-bottom: 0em;
+}
+
+
+/* Footer styles */

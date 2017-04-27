@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Courthouse in Waukegan
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+
+	<!-- This is the google api needed for development. Comment this out for production
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>-->
+
+
+	<!-- This is my API key, for personal use. Need to comment this out for development, but initiate it for production -->
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjc-UIpOjUgh456Dj9HMqXQG13cJ7EF7o"></script>
+	
+	<script src="../../scripts/Google.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="divgfx">
+
+<div class="row">
+<div class="small-12 lsmall-12 small-centered large-12 large-centered columns">
+<h4>Courthouse in Waukegan</h4>
+<p>To see a map of the April 4 shooting scene, <strong><a href="index2.html">please click here.</a></strong></p>
+<div id="mapContain" class="high375"></div>
+</div>
+</div>
+
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">-30-</span></p>
+
+</div>
+
+
+
+<script>
+
+
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]},
+    {"featureType": "road","elementType": "all","stylers": [{"saturation": -15},{"lightness": 40}]}
+	];
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+//var ggl = new L.Google('HYBRID');
+
+
+function initmap() {
+	var map = L.map('mapContain');
+	map.setView(new L.LatLng(42.360319, -87.833067),16);
+	map.addLayer(ggl);
+	var marker = L.marker([42.360319, -87.833067]).addTo(map);
+	marker.bindPopup("<b>Lake County<br>Courthouse</b>.").openPopup();
+
+ };
+
+//this initializes the map on the page
+
+initmap();
+
+
+</script>
+
+</body>
+
+
+

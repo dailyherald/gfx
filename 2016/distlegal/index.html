@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Searchable, sortable list of School District legal spending
+  </title>
+
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+
+  <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+ 
+<!-- Datatables -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/bs-3.3.6/dt-1.10.11,b-1.1.2,b-colvis-1.1.2,fc-3.2.1,r-2.0.2/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/t/bs-3.3.6/dt-1.10.11,b-1.1.2,b-colvis-1.1.2,fc-3.2.1,r-2.0.2/datatables.min.js"></script>
+<!-- End datatables -->
+
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+<script>
+$(document).ready(function() {
+    $('#gfx').DataTable();
+} );
+</script>
+
+  </head>
+
+  <body>
+    
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h2 class="topmargin"><strong>Legal Costs</strong></h2>
+        <h4 class="topmargin">Spending on legal fees varied wildly thoughout 92 suburban school districts in 2015.</h4>
+        <p class="topmargin"><strong>The list below is interactive: <span style="color:red">Sort</span> the list by clicking on the column headings, or <span style="color:red">look for your school district</span> using the search box. You can also <span style="color:red">choose to view</span> more districts at a time with the "Show entries" box.</strong></p>
+
+        <div class="table-responsive">
+          <p><table id="gfx" class="table table-hover table-striped table-condensed"><thead>
+            <th class="thLEFT text-nowrap">District</th>
+            <th class="text-nowrap">Legal fees ($)</th>
+            <th class="text-nowrap">Students</th>
+            <th class="text-nowrap">Cost per<br>student ($)</th>
+          </thead>
+<tbody>
+<tr><td class="tdLEFT text-nowrap"> Addison Elem. Dist. 4</td><td>15,233.59</td><td>4,275</td><td>3.56 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Antioch Elem. Dist. 34</td><td>218,070.43</td><td>2,957</td><td>73.75</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Antioch HS Dist. 117</td><td>58,626.80</td><td>2,760</td><td>21.24</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Aptakisic-Tripp Elem. Dist. 102</td><td>35,209.36</td><td>2,120</td><td>16.61</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Arlington Heights Elem. Dist. 25</td><td>137,685.69</td><td>5,432</td><td>25.35</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Barrington Unit Dist. 220</td><td>334,729.90</td><td>8,876</td><td>37.71</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Batavia Unit Dist. 101</td><td>125,257.41</td><td>6,152</td><td>20.36</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Benjamin Elem. Dist. 25</td><td>18,495.45</td><td>623</td><td>29.69</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Bensenville Elem. Dist. 2</td><td>66,479.48</td><td>2,164</td><td>30.72</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Big Hollow Elem. Dist. 38</td><td>84,956.91</td><td>1,775</td><td>47.86</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Bloomingdale Elem. Dist. 13</td><td>18,805.48</td><td>1,256</td><td>14.97</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Butler Elem. Dist. 53</td><td>46,855.71</td><td>490</td><td>95.62</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Carol Stream Elem. Dist. 93</td><td>93,321.36</td><td>3,879</td><td>24.06</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Cary Elem. Dist. 26</td><td>38,675.00</td><td>2,487</td><td>15.55</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Central Unit Dist. 301</td><td>152,015.18</td><td>3,715</td><td>40.92</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Community Unit Dist. 300</td><td>156,650.83</td><td>20,906</td><td>7.49 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Crystal Lake Elem. Dist. 47</td><td>174,622.43</td><td>7,704</td><td>22.67</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Crystal Lake HS Dist. 155</td><td>265,910.72</td><td>6,598</td><td>40.3 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Des Plaines Elem. Dist. 62</td><td>119,247.73</td><td>4,867</td><td>24.5 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Diamond Lake Elem. Dist. 76</td><td>100,603.73</td><td>1,087</td><td>92.55</td></tr>
+<tr><td class="tdLEFT text-nowrap"> DuPage HS Dist. 88</td><td>69,993.46</td><td>4,063</td><td>17.23</td></tr>
+<tr><td class="tdLEFT text-nowrap"> East Aurora Unit Dist. 131</td><td>70,404.46</td><td>14,437</td><td>4.88 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> East Maine Elem. Dist. 63</td><td>61,524.77</td><td>3,610</td><td>17.04</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Elgin Area Dist. U-46</td><td>1,877,408.14</td><td>40,487</td><td>46.37</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Elk Grove Elem. Dist. 59</td><td>54,472.89</td><td>7,022</td><td>7.76 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Emmons Elem. Dist. 33</td><td>17,845.10</td><td>302</td><td>59.09</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Fenton HS Dist. 100</td><td>71,931.44</td><td>1,553</td><td>46.32</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Fox Lake Elem. Dist. 114</td><td>22,869.52</td><td>778</td><td>29.4 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Fox River Grove Elem. Dist. 3</td><td>3,894.00</td><td>494</td><td>7.88 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Fremont Elem. Dist. 79</td><td>21,433.59</td><td>2,157</td><td>9.94 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Gavin Elem. Dist. 37</td><td>27,944.00</td><td>881</td><td>31.72</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Geneva Unit District 304</td><td>52,429.08</td><td>5,887</td><td>8.91 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Glen Ellyn Elem. Dist. 41</td><td>16,224.98</td><td>3,645</td><td>4.45 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Glen Ellyn Elem. Dist. 89</td><td>60,202.29</td><td>2,011</td><td>29.94</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Glenbard HS Dist. 87</td><td>213,510.39</td><td>8,292</td><td>25.75</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Grant HS Dist. 124</td><td>28,594.67</td><td>1,889</td><td>15.14</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Grass Lake Elem. Dist. 36</td><td>33,483.85</td><td>161</td><td>207.97 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Grayslake Elem. Dist. 46</td><td>100,410.24</td><td>3,921</td><td>25.61</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Grayslake HS Dist. 127</td><td>60,839.06</td><td>3,030</td><td>20.08</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Gurnee Elem. Dist. 56</td><td>16,936.00</td><td>2,108</td><td>8.03 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Hawthorn Elem. Dist. 78</td><td>200,490.67</td><td>4,280</td><td>46.84</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Huntley Unit Dist. 158</td><td>93,657.23</td><td>9,428</td><td>9.93 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Indian Prairie Unit Dist. 204</td><td>343,290.13</td><td>28,484</td><td>12.05</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Itasca Elem. Dist. 10</td><td>53,787.00</td><td>986</td><td>54.55</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Kaneland Unit Dist. 302</td><td>86,714.16</td><td>4,600</td><td>18.85</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Keeneyville Elem. Dist. 20</td><td>56,532.13</td><td>1,485</td><td>38.07</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Kildeer-Countryside Elem. Dist. 96</td><td>117,653.14</td><td>3,149</td><td>37.36</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lake Park HS Dist. 108</td><td>137,138.00</td><td>2,654</td><td>51.67</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lake Villa Elem. Dist. 41</td><td>127,113.34</td><td>2,747</td><td>46.27</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lake Zurich Unit Dist. 95</td><td>173,563.47</td><td>5,769</td><td>30.09</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Leyden HS Dist. 212</td><td>212,737.26</td><td>3,340</td><td>63.69</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Libertyville Elem. Dist. 70</td><td>12,479.00</td><td>2,594</td><td>4.81 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Libertyville HS Dist. 128</td><td>116,152.35</td><td>3,325</td><td>34.93</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lincolnshire-Prairie View Elem. Dist. 103</td><td>62,618.56</td><td>1,697</td><td>36.9 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lisle Unit Dist. 202</td><td>30,365.81</td><td>1,553</td><td>19.55</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Lombard Elem. Dist. 44</td><td>95,813.07</td><td>3,248</td><td>29.5 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Maine Township HS Dist. 207</td><td>189,553.50</td><td>6,260</td><td>30.28</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Marquardt Elem. Dist. 15</td><td>148,996.04</td><td>2,683</td><td>55.53</td></tr>
+<tr><td class="tdLEFT text-nowrap"> McHenry Elem. Dist. 15</td><td>43,728.40</td><td>4,583</td><td>9.54 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> McHenry HS Dist. 156</td><td>72,807.75</td><td>2,378</td><td>30.62</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Medinah Elem. Dist. 11</td><td>35,876.09</td><td>637</td><td>56.32</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Millburn Elem. Dist. 24</td><td>29,162.91</td><td>1,361</td><td>21.43</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Mount Prospect Elem. Dist. 57</td><td>70,477.77</td><td>2,284</td><td>30.86</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Mundelein Elem. Dist. 75</td><td>67,947.59</td><td>1,683</td><td>40.37</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Mundelein HS Dist. 120</td><td>67,627.20</td><td>2,126</td><td>31.81</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Naperville Unit Dist. 203</td><td>390,383.12</td><td>16,791</td><td>23.25</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Northwest Suburban HS Dist. 214</td><td>350,324.50</td><td>11,991</td><td>29.22</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Oak Grove Elem. Dist. 68</td><td>70,548.00</td><td>817</td><td>86.35</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Palatine Elem. Dist. 15</td><td>167,906.29</td><td>12,746</td><td>13.17</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Palatine-Schaumburg HS Dist. 211</td><td>263,382.83</td><td>12,203</td><td>21.58</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Prospect Heights Elem. Dist. 23</td><td>35,032.25</td><td>1,571</td><td>22.3 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Queen Bee Elem. Dist. 16</td><td>18,044.52</td><td>1,971</td><td>9.16 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> River Trails Elem. Dist. 26</td><td>58,571.78</td><td>1,485</td><td>39.44</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Rondout Elem. Dist. 72</td><td>10,105.84</td><td>148</td><td>68.28</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Roselle Elem. Dist. 12</td><td>7,511.97</td><td>696</td><td>10.79</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Rosemont Elem. Dist. 78</td><td>11,523.00</td><td>249</td><td>46.28</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Round Lake Unit Dist. 116</td><td>145,596.90</td><td>7,249</td><td>20.09</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Salt Creek Elem. Dist. 48</td><td>13,667.35</td><td>499</td><td>27.39</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Schaumburg Elem. Dist. 54</td><td>298,831.18</td><td>14,482</td><td>20.63</td></tr>
+<tr><td class="tdLEFT text-nowrap"> St. Charles Unit Dist. 303</td><td>180,859.51</td><td>13,145</td><td>13.76</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Stevenson HS Dist. 125</td><td>121,280.85</td><td>3,916</td><td>30.97</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Villa Park Elem. Dist. 45</td><td>113,479.36</td><td>3,575</td><td>31.74</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Warren Township HS Dist. 121</td><td>149,224.56</td><td>4,362</td><td>34.21</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Wauconda Unit Dist. 118</td><td>207,520.36</td><td>4,733</td><td>43.85</td></tr>
+<tr><td class="tdLEFT text-nowrap"> West Aurora Unit Dist. 129</td><td>286,548.37</td><td>12,560</td><td>22.81</td></tr>
+<tr><td class="tdLEFT text-nowrap"> West Chicago Elem. Dist. 33</td><td>98,545.87</td><td>4,513</td><td>21.84</td></tr>
+<tr><td class="tdLEFT text-nowrap"> West Chicago HS Dist. 94</td><td>50,654.45</td><td>1,980</td><td>25.58</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Wheaton Warrenville Unit Dist. 200</td><td>211,583.64</td><td>13,010</td><td>16.26</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Wheeling Elem. Dist. 21</td><td>54,138.71</td><td>6,920</td><td>7.82 </td></tr>
+<tr><td class="tdLEFT text-nowrap"> Winfield Elem. Dist. 34</td><td>9,891.92</td><td>334</td><td>29.62</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Wood Dale Elem. Dist. 7</td><td>28,548.08</td><td>1,230</td><td>23.21</td></tr>
+<tr><td class="tdLEFT text-nowrap"> Woodland Elem. Dist. 50</td><td>309,207.33</td><td>6,042</td><td>51.18</td></tr>
+
+          </tbody></table></p></div>
+
+          <p><small>Source: Analysis of Illinois State Board of Education records</small></p>
+          <p><span style="color:white;">-30-</span></p>
+          
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>

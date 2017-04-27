@@ -1,0 +1,372 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+   Suburban libraries spending
+  </title>
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" />
+
+  <script src="../static/js/jquery-1.9.1.min.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/highcharts.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Books or staff?</b></h2>
+        <p>An analysis of 54 suburban libraries shows more of them increased spending on staff than on new books and other materials from 2014 to 2015. <i>Not included:</i> Geneva Library, whose increased collection spending of 46.9% and reduced personnel spending of 10.6% put them outside the chart parameters.<br>
+          <strong>The chart below is interactive. <span style="color:red">Touch</span> or <span style="color:red">mouse over</span> the chart to see the percent change from 2014 to 2015 for each library's personnel and material costs.</strong></p>
+        </p>
+        <div id='gfxcontain'></div>
+        <p><small>Source: Library district and municipal audits.<br>
+          Note: Financial data comparing 2013 and 2014 spending was used for libraries with asterisks next to the name.</small></p>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+
+var chartdata = [
+        {Name: "Addison", x: 4.5, y: 17.2},
+        {Name: "Bensenville", x: 15, y: 16.9},
+        {Name: "Algonquin", x: 8.7, y: 15.9},
+        {Name: "Vernon Area (Lincolnshire)", x: 4.6, y: 14.5},
+        {Name: "Gail Borden (Elgin)", x: 5.6, y: 11.7},
+        {Name: "Naperville", x: 1.9, y: 11.2},
+        {Name: "Fox Lake", x: 13.4, y: 10.8},
+        {Name: "Messenger (North Aurora)", x: 1.8, y: 10.6},
+        {Name: "River East (McHenry)", x: -7.5, y: 9.2},
+        {Name: "Lake Villa", x: -2.7, y: 8},
+        {Name: "Glenside (Glendale Heights)", x: 2.8, y: 7.9},
+        {Name: "Oak Brook", x: 5.5, y: 7.5},
+        {Name: "Cook Memorial (Libertyville)", x: 4.2, y: 5},
+        {Name: "Elk Grove Village", x: -1.1, y: 4.3},
+        {Name: "Round Lake Area", x: 2, y: 3.7},
+        {Name: "Rolling Meadows", x: 4.1, y: 3.0},
+        {Name: "Lisle", x: 0.2, y: 2.9},
+        {Name: "Barrington", x: 2.6, y: 2.8},
+        {Name: "Glen Ellyn*", x: 3.5, y: 2.6},
+        {Name: "Prospect Heights", x: 1.7, y: 2.3},
+        {Name: "Aurora*", x: -1.9, y: 2.1},
+        {Name: "Arlington Heights", x: 0.3, y: 1.9},
+        {Name: "Warrenville", x: 1.5, y: 1.8},
+        {Name: "Roselle", x: 2.6, y: 1.7},
+        {Name: "Palatine", x: 1.3, y: 1.7},
+        {Name: "Grayslake", x: 0.7, y: 1.5},
+        {Name: "St. Charles", x: 2.5, y: 1.3},
+        {Name: "Crystal Lake", x: 8.4, y: 0.2},
+        {Name: "Bloomingdale", x: 2.7, y: 0.2},
+        {Name: "Villa Park", x: 8.9, y: 0.2},
+        {Name: "Winfield", x: -0.2, y: -0.8},
+        {Name: "Cary", x: -7.6, y: -0.9},
+        {Name: "Mount Prospect*", x: 4.5, y: -1.2},
+        {Name: "Des Plaines*", x: 0.9, y: -1.4},
+        {Name: "Ela Area (Lake Zurich)", x: 2.6, y: -2.2},
+        {Name: "Batavia", x: 3.2, y: -2.7},
+        {Name: "Fremont (Mundelein)", x: 2, y: -3.1},
+        {Name: "Poplar Creek (Streamwood)", x: 2.8, y: -3.1},
+        {Name: "Antioch", x: 8, y: -3.5},
+        {Name: "West Chicago", x: -2.8, y: -3.6},
+        {Name: "Huntley", x: 4.7, y: -4.2},
+        {Name: "Indian Trails (Wheeling)", x: 0.3, y: -4.2},
+        {Name: "Wood Dale", x: 8.4, y: -4.3},
+        {Name: "Schaumburg", x: 0.4, y: -5.5},
+        {Name: "Carol Stream", x: -2.1, y: -7.6},
+        {Name: "Wauconda", x: 9.8, y: -8.3},
+        {Name: "Town & Country (Elburn)", x: 6.7, y: -8.5},
+        {Name: "Wheaton", x: -4.9, y: -9},
+        {Name: "Warren-Newport (Gurnee)", x: 1.9, y: -11.3},
+        {Name: "Bartlett", x: 7.6, y: -12.2},
+        {Name: "Sugar Grove", x: 3.6, y: -16},
+        {Name: "Helen M. Plum (Lombard)", x: 4.7, y: -17.5},
+        {Name: "Fox River Valley (East Dundee)", x: 15.4, y: -18},
+      ]
+
+
+  var chartScatter = new Highcharts.Chart({
+
+    chart: {
+      renderTo: 'gfxcontain',
+      events: {
+          load: function() {
+
+              var renderer = this.renderer;
+              var width = this.plotBox.width / 2.0;
+              var height = this.plotBox.height / 2.0 + 1;
+                  
+              var topbox = renderer.rect(this.plotBox.x, this.plotBox.y, width, height, 1).attr({
+                fill: '#EDEBEB',
+                zIndex: 0,
+                id :'box1'
+              })//.add();
+
+              var bottombox = renderer.rect(this.plotBox.x + width, this.plotBox.y + height, width, height, 1).attr({
+                fill: '#EDEBEB',
+                zIndex: 0,
+                id :'box2'
+              })//.add();
+
+              topbox.add();
+              bottombox.add();
+
+//              $( window ).resize(function() {
+//                      $("#box1").remove() ;
+//                      $("#box2").remove() ;
+//               });
+          }
+      },
+      reflow: false,
+      height: '350',
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      zoomType: 'x'
+     },
+
+    title: {
+      text: null
+    },
+
+    xAxis: {
+      title: {
+        enabled: true,
+        text: '% PERSONNEL COST CHANGE'
+      },
+      plotLines: [{
+        color: 'red',
+        value: 0,
+        width: 2,
+        zIndex: 2  
+      }],
+      labels: {
+        overflow: 'justify',
+        staggerLines: 2
+      },
+      min: -20,
+      max: 20,
+      tickInterval: 5,
+      startOnTick: true,
+      endOnTick: true,
+      tickLength: 275,
+      tickPosition: 'inside',
+      showLastLabel: true
+    },
+
+    yAxis: {
+      title: {
+        text: '% MATERIALS COST CHANGE'
+      },
+      labels: {
+        overflow: 'justify'
+      },
+      min: -20,
+      max: 20,
+      tickInterval: 5
+    },
+    legend: {
+      enabled: false
+    },
+
+    plotOptions: {
+      scatter: {
+        marker: {
+          radius: 6,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(0,0,0)'
+              }
+            }
+        },
+        states: {
+          hover: {
+            marker: {
+              enabled: false
+            }
+          }
+        }
+      }
+    },
+
+    series: [{
+      tooltip: {
+        pointFormat: '{point.Name}<br>Personnel cost: <b>{point.x}</b>%<br>Materials cost: <b>{point.y}%</b>'
+      },
+      type: 'scatter',
+      zIndex: 5,
+      name: '% change, 2014-2015',
+      data: chartdata,
+      color: 'rgba(0, 107, 164, .6)'//'#006BA4'
+    },{
+            type: 'line',
+            animation: false,
+            width: 1,
+            data: [[-20, 0], [20, 0]],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            color: 'red',
+            enableMouseTracking: false
+        }]
+});
+
+
+$(window).resize(function() {
+  $("#gfxcontain").empty();
+
+  var chartScatter = new Highcharts.Chart({
+
+    chart: {
+      renderTo: 'gfxcontain',
+      events: {
+          load: function() {
+
+              var renderer = this.renderer;
+              var width = this.plotBox.width / 2.0;
+              var height = this.plotBox.height / 2.0 + 1;
+                  
+              var topbox = renderer.rect(this.plotBox.x, this.plotBox.y, width, height, 1).attr({
+                fill: '#EDEBEB',
+                zIndex: 0,
+                id :'box1'
+              })//.add();
+
+              var bottombox = renderer.rect(this.plotBox.x + width, this.plotBox.y + height, width, height, 1).attr({
+                fill: '#EDEBEB',
+                zIndex: 0,
+                id :'box2'
+              })//.add();
+
+              topbox.add();
+              bottombox.add();
+
+//              $( window ).resize(function() {
+//                      $("#box1").remove() ;
+//                      $("#box2").remove() ;
+//               });
+          }
+      },
+      reflow: false,
+      height: '350',
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+      zoomType: 'x'
+     },
+
+    title: {
+      text: null
+    },
+
+    xAxis: {
+      title: {
+        enabled: true,
+        text: '% PERSONNEL COST CHANGE'
+      },
+      plotLines: [{
+        color: 'red',
+        value: 0,
+        width: 2,
+        zIndex: 2  
+      }],
+      labels: {
+        overflow: 'justify',
+        staggerLines: 2
+      },
+      min: -20,
+      max: 20,
+      tickInterval: 5,
+      startOnTick: true,
+      endOnTick: true,
+      tickLength: 275,
+      tickPosition: 'inside',
+      showLastLabel: true
+    },
+
+    yAxis: {
+      title: {
+        text: '% MATERIALS COST CHANGE'
+      },
+      labels: {
+        overflow: 'justify'
+      },
+      min: -20,
+      max: 20,
+      tickInterval: 5
+    },
+    legend: {
+      enabled: false
+    },
+
+    plotOptions: {
+      scatter: {
+        marker: {
+          radius: 6,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(0,0,0)'
+              }
+            }
+        },
+        states: {
+          hover: {
+            marker: {
+              enabled: false
+            }
+          }
+        }
+      }
+    },
+
+    series: [{
+      tooltip: {
+        pointFormat: '{point.Name}<br>Personnel cost: <b>{point.x}</b>%<br>Materials cost: <b>{point.y}%</b>'
+      },
+      type: 'scatter',
+      zIndex: 5,
+      name: '% change, 2014-2015',
+      data: chartdata,
+      color:'rgba(0, 107, 164, .6)'//'#006BA4'
+    },{
+            type: 'line',
+            animation: false,
+            width: 1,
+            data: [[-20, 0], [20, 0]],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            color: 'red',
+            enableMouseTracking: false
+        }]
+});
+
+});
+
+  
+</script>
+
+</body>
+</html>

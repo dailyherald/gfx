@@ -1,0 +1,38 @@
+
+.choice1 {margin: 0 0 10px 30px; width: 750px;}
+.choice {margin: 0 0 10px 30px; width: 95%;}
+
+.meter1 {border:solid 1px black;width:100px;height:13px;padding: 0;}
+.meter {border:solid 1px black;height:13px;padding: 0;}
+.votes {background:#903;}
+
+.cand_row {
+	position:relative;
+	width:100%;
+}
+
+.cand_chartback {
+	width:100%;
+	background:#eee;
+	height:1.5em;
+	border-radius:3px;
+	vertical-align:bottom;
+	position:relative
+}
+
+
+.cand_chartback span {
+	position:absolute;
+	top:0;
+	bottom:0;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px
+}
+
+
+.cand_bar {
+	background:#5877CD;
+	height:1.5em;
+	vertical-align:bottom;
+	position:relative
+}

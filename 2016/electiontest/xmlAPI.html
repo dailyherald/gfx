@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Election test
+  </title>
+
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../../../styles/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../../../styles/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+  <link href="../../../styles/RCstyles.css" rel="stylesheet" type="text/css">
+
+  <script src="../../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../../scripts/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container divgfx">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Election results test</h2>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+
+$(document).ready(function(){
+  console.log("Begin test");
+
+  $.ajax({
+    type: "GET",
+    url: "http://prev.dailyherald.com/api/rest/elections.asp?candsp=dhsp_GetGeneral&rid=4",
+    dataType: "xml",
+    success: function(xml) {
+      console.log("got it");
+      }
+  });
+
+});
+
+
+</script>
+
+</body>

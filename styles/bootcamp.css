@@ -1,0 +1,58 @@
+body {
+	background: #f1f1f1;
+	font-family: Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+
+/* General styles */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+.li_position {
+		    list-style-position: inside;
+}
+
+.gray {
+	background:gray;
+}
+
+.lightteal {
+	background:#1F7A68;
+}
+
+.grayorange {
+	background:#BF6830;
+}
+
+/* Header styles */
+
+#opening_header {
+	color:#006561;
+/*	color: #FF7100; */
+	margin: 0 0 .5em .2em;
+}
+
+/* Aside styles */
+
+
+/* Section styles */
+
+
+
+/* Article styles */
+
+
+article li {
+	color:#006561;
+	padding:.3em;
+}
+
+article li:hover{
+	background:#FFB173;
+}
+
+/* Footer styles */

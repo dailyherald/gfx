@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Name": "Full interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -88.046179712437834, 41.992195925059178 ] } },
+{ "type": "Feature", "properties": { "Name": "Full interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -88.031415426741916, 41.987343150174908 ] } },
+{ "type": "Feature", "properties": { "Name": "Full interchange" }, "geometry": { "type": "Point", "coordinates": [ -88.023343021483271, 41.985389863554374 ] } },
+{ "type": "Feature", "properties": { "Name": "Full interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -88.00416745250395, 41.983634950058864 ] } },
+{ "type": "Feature", "properties": { "Name": "Partial interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -88.012493648823522, 41.983514152105563 ] } },
+{ "type": "Feature", "properties": { "Name": "Full interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -87.979966137529331, 41.984189640914437 ] } },
+{ "type": "Feature", "properties": { "Name": "Full Interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -87.959294550825263, 41.982672329379412 ] } },
+{ "type": "Feature", "properties": { "Name": "New full interchange, provides access to O'Hare from York Rd." }, "geometry": { "type": "Point", "coordinates": [ -87.937918099502511, 41.976149192420152 ] } },
+{ "type": "Feature", "properties": { "Name": "New, full-access interchange" }, "geometry": { "type": "Point", "coordinates": [ -87.940398658764082, 42.018186216663139 ] } },
+{ "type": "Feature", "properties": { "Name": "New full interchange" }, "geometry": { "type": "Point", "coordinates": [ -87.926545425391495, 42.014875733686047 ] } },
+{ "type": "Feature", "properties": { "Name": "Partial interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -87.926493838880901, 42.008349165034964 ] } },
+{ "type": "Feature", "properties": { "Name": "Partial interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -87.937680924689872, 41.960741475104264 ] } },
+{ "type": "Feature", "properties": { "Name": "Partial interchange improvements" }, "geometry": { "type": "Point", "coordinates": [ -87.915377256716269, 41.948320151176759 ] } },
+{ "type": "Feature", "properties": { "Name": "New I-294 interchange" }, "geometry": { "type": "Point", "coordinates": [ -87.914626513910719, 41.936666066895874 ] } }
+]
+}

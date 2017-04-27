@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    District reserves
+  </title>
+
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+
+  <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+ 
+<!-- Datatables -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.js"></script>
+
+<!-- End datatables -->
+
+<link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+<script>
+$(document).ready(function() {
+    $('#gfx').DataTable( {
+      responsive: true,
+      columnDefs: [
+        { responsivePriority: 1, targets: 0 },
+        { responsivePriority: 2, targets: 3 }
+    ]
+      } );
+
+} );
+</script>
+
+  </head>
+
+  <body>
+    
+    
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <img alt="Brand" src="../static/img/dh.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.dailyherald.com" target="_blank">Daily Herald</a></li>
+                <li><a href="http://reportcards.dailyherald.com/gfx/" target="_blank">Daily Herald News Art</a></li>
+            </ul>
+        </div>
+    </div><!-- end container-->
+</nav>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <br>
+        <h2 class="topmargin"><strong>In reserve</strong></h2>
+        <h4 class="topmargin">How much is your school district holding in reserve?</h4>
+        <p class="topmargin"><strong>The list below is interactive: <span style="color:red">Sort</span> the list by clicking on the column headings, or <span style="color:red">look for your school district</span> using the search box. You can also <span style="color:red">choose to view</span> more districts at a time with the "Show entries" box.</strong></p>
+
+        <!--<div class="table-responsive">-->
+          <div>
+          <p><table id="gfx" class="table table-hover table-striped table-condensed display" width="100%" ><thead>
+            <th class="thLEFT text-nowrap">District</th>
+            <th>Total Reserves</th>
+            <th>Expenses</th>
+            <th>% reserves<br>to expenses</th>
+            <th>Difference</th>
+          </thead>
+          <tbody>
+<tr><td class="tdLEFT text-nowrap">Addison Elem. Dist. 4</td><td>$41,334,214</td><td>$39,767,476</td><td>103.9%</td><td>$1,566,738</td></tr>
+<tr><td class="tdLEFT text-nowrap">Antioch Elem. Dist. 34</td><td>$22,253,980</td><td>$32,223,976</td><td>69.1%</td><td>-$9,969,996</td></tr>
+<tr><td class="tdLEFT text-nowrap">Antioch HS Dist. 117</td><td>$30,357,816</td><td>$43,167,011</td><td>70.3%</td><td>-$12,809,195</td></tr>
+<tr><td class="tdLEFT text-nowrap">Aptakisic-Tripp Elem. Dist. 102</td><td>$31,222,811</td><td>$32,450,036</td><td>96.2%</td><td>-$1,227,225</td></tr>
+<tr><td class="tdLEFT text-nowrap">Arlington Heights Elem. Dist. 25</td><td>$57,934,230</td><td>$67,821,600</td><td>85.4%</td><td>-$9,887,370</td></tr>
+<tr><td class="tdLEFT text-nowrap">Barrington Unit Dist. 220</td><td>$39,334,805</td><td>$130,479,076</td><td>30.1%</td><td>-$91,144,271</td></tr>
+<tr><td class="tdLEFT text-nowrap">Batavia Unit Dist. 101</td><td>$17,181,672</td><td>$75,058,934</td><td>22.9%</td><td>-$57,877,262</td></tr>
+<tr><td class="tdLEFT text-nowrap">Benjamin Elem. Dist. 25</td><td>$9,310,960</td><td>$9,973,818</td><td>93.4%</td><td>-$662,858</td></tr>
+<tr><td class="tdLEFT text-nowrap">Bensenville Elem. Dist. 2</td><td>$19,538,664</td><td>$31,901,354</td><td>61.2%</td><td>-$12,362,690</td></tr>
+<tr><td class="tdLEFT text-nowrap">Big Hollow Elem. Dist. 38</td><td>$2,313,308</td><td>$13,904,969</td><td>16.6%</td><td>-$11,591,661</td></tr>
+<tr><td class="tdLEFT text-nowrap">Bloomingdale Elem. Dist. 13</td><td>$16,758,218</td><td>$16,481,283</td><td>101.7%</td><td>$276,935</td></tr>
+<tr><td class="tdLEFT text-nowrap">Butler Elem. Dist. 53</td><td>$12,277,559</td><td>$9,443,658</td><td>130.0%</td><td>$2,833,901</td></tr>
+<tr><td class="tdLEFT text-nowrap">Carol Stream Elem. Dist. 93</td><td>$59,961,649</td><td>$59,623,500</td><td>100.6%</td><td>$338,149</td></tr>
+<tr><td class="tdLEFT text-nowrap">Cary Elem. Dist. 26</td><td>$9,471,205</td><td>$22,532,338</td><td>42.0%</td><td>-$13,061,133</td></tr>
+<tr><td class="tdLEFT text-nowrap">Central Unit Dist. 301</td><td>$24,720,713</td><td>$42,925,612</td><td>57.6%</td><td>-$18,204,899</td></tr>
+<tr><td class="tdLEFT text-nowrap">Community Unit Dist. 300</td><td>$79,254,037</td><td>$219,172,343</td><td>36.2%</td><td>-$139,918,306</td></tr>
+<tr><td class="tdLEFT text-nowrap">Crystal Lake Elem. Dist. 47</td><td>$52,614,503</td><td>$79,560,094</td><td>66.1%</td><td>-$26,945,591</td></tr>
+<tr><td class="tdLEFT text-nowrap">Crystal Lake HS Dist. 155</td><td>$46,816,548</td><td>$90,691,702</td><td>51.6%</td><td>-$43,875,154</td></tr>
+<tr><td class="tdLEFT text-nowrap">Des Plaines Elem. Dist. 62</td><td>$110,109,611</td><td>$69,499,304</td><td>158.4%</td><td>$40,610,307</td></tr>
+<tr><td class="tdLEFT text-nowrap">Diamond Lake Elem. Dist. 76</td><td>$10,575,298</td><td>$12,997,493</td><td>81.4%</td><td>-$2,422,195</td></tr>
+<tr><td class="tdLEFT text-nowrap">DuPage HS Dist. 88</td><td>$23,529,818</td><td>$61,805,294</td><td>38.1%</td><td>-$38,275,476</td></tr>
+<tr><td class="tdLEFT text-nowrap">East Aurora Unit Dist. 131</td><td>$66,316,448</td><td>$160,949,613</td><td>41.2%</td><td>-$94,633,165</td></tr>
+<tr><td class="tdLEFT text-nowrap">East Maine Elem. Dist. 63</td><td>$43,312,536</td><td>$40,942,970</td><td>105.8%</td><td>$2,369,566</td></tr>
+<tr><td class="tdLEFT text-nowrap">Elgin Area Dist. U-46</td><td>$217,105,329</td><td>$430,727,495</td><td>50.4%</td><td>-$213,622,166</td></tr>
+<tr><td class="tdLEFT text-nowrap">Elk Grove Township Elem. Dist. 59</td><td>$119,037,163</td><td>$98,678,565</td><td>120.6%</td><td>$20,358,598</td></tr>
+<tr><td class="tdLEFT text-nowrap">Elmhurst Unit Dist. 205</td><td>$55,437,464</td><td>$104,989,819</td><td>52.8%</td><td>-$49,552,355</td></tr>
+<tr><td class="tdLEFT text-nowrap">Emmons Elem. Dist. 33</td><td>$3,010,389</td><td>$4,082,600</td><td>73.7%</td><td>-$1,072,211</td></tr>
+<tr><td class="tdLEFT text-nowrap">Fenton HS 100</td><td>$20,661,089</td><td>$27,754,645</td><td>74.4%</td><td>-$7,093,556</td></tr>
+<tr><td class="tdLEFT text-nowrap">Fox Lake Elem. Dist. 114</td><td>$3,594,639</td><td>$9,284,315</td><td>38.7%</td><td>-$5,689,676</td></tr>
+<tr><td class="tdLEFT text-nowrap">Fox River Grove Elem. Dist. 3</td><td>$5,226,852</td><td>$5,918,337</td><td>88.3%</td><td>-$691,485</td></tr>
+<tr><td class="tdLEFT text-nowrap">Fremont Elem. Dist. 79</td><td>$31,370,918</td><td>$27,021,776</td><td>116.1%</td><td>$4,349,142</td></tr>
+<tr><td class="tdLEFT text-nowrap">Gavin Elem. Dist. 37</td><td>$2,009,468</td><td>$8,802,245</td><td>22.8%</td><td>-$6,792,777</td></tr>
+<tr><td class="tdLEFT text-nowrap">Geneva Unit Dist. 304</td><td>$41,507,070</td><td>$74,369,489</td><td>55.8%</td><td>-$32,862,419</td></tr>
+<tr><td class="tdLEFT text-nowrap">Glen Ellyn Elem. Dist. 41</td><td>$12,797,032</td><td>$43,436,973</td><td>29.5%</td><td>-$30,639,941</td></tr>
+<tr><td class="tdLEFT text-nowrap">Glen Ellyn Elem. Dist. 89</td><td>$13,894,555</td><td>$26,118,382</td><td>53.2%</td><td>-$12,223,827</td></tr>
+<tr><td class="tdLEFT text-nowrap">Glenbard HS Dist. 87</td><td>$71,671,586</td><td>$131,651,374</td><td>54.4%</td><td>-$59,979,788</td></tr>
+<tr><td class="tdLEFT text-nowrap">Grant HS Dist. 124</td><td>$40,401,761</td><td>$25,821,827</td><td>156.5%</td><td>$14,579,934</td></tr>
+<tr><td class="tdLEFT text-nowrap">Grass Lake Elem. Dist. 36</td><td>$6,131,948</td><td>$3,559,576</td><td>172.3%</td><td>$2,572,372</td></tr>
+<tr><td class="tdLEFT text-nowrap">Grayslake Elem. Dist. 46</td><td>$17,822,412</td><td>$40,855,412</td><td>43.6%</td><td>-$23,033,000</td></tr>
+<tr><td class="tdLEFT text-nowrap">Grayslake HS Dist. 127</td><td>$20,369,683</td><td>$46,967,095</td><td>43.4%</td><td>-$26,597,412</td></tr>
+<tr><td class="tdLEFT text-nowrap">Gurnee Elem. Dist. 56</td><td>$19,061,517</td><td>$24,998,629</td><td>76.3%</td><td>-$5,937,112</td></tr>
+<tr><td class="tdLEFT text-nowrap">Hawthorn Elem. Dist. 73</td><td>$34,538,230</td><td>$47,833,128</td><td>72.2%</td><td>-$13,294,898</td></tr>
+<tr><td class="tdLEFT text-nowrap">Huntley Unit Dist. 158</td><td>$34,287,199</td><td>$89,909,089</td><td>38.1%</td><td>-$55,621,890</td></tr>
+<tr><td class="tdLEFT text-nowrap">Indian Prairie Unit Dist. 204</td><td>$100,405,171</td><td>$306,099,502</td><td>32.8%</td><td>-$205,694,331</td></tr>
+<tr><td class="tdLEFT text-nowrap">Itasca Elem. Dist. 10</td><td>$13,080,228</td><td>$11,428,544</td><td>114.5%</td><td>$1,651,684</td></tr>
+<tr><td class="tdLEFT text-nowrap">Kaneland Unit Dist. 302</td><td>$8,501,718</td><td>$55,788,250</td><td>15.2%</td><td>-$47,286,532</td></tr>
+<tr><td class="tdLEFT text-nowrap">Keeneyville Elem. Dist. 20</td><td>$8,362,965</td><td>$17,187,230</td><td>48.7%</td><td>-$8,824,265</td></tr>
+<tr><td class="tdLEFT text-nowrap">Kildeer Countryside Elem. Dist. 96</td><td>$89,215,457</td><td>$48,792,547</td><td>182.8%</td><td>$40,422,910</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lake Park HS Dist. 108</td><td>$13,882,196</td><td>$43,591,976</td><td>31.8%</td><td>-$29,709,780</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lake Villa Elem. Dist. 41</td><td>$17,032,432</td><td>$26,288,169</td><td>64.8%</td><td>-$9,255,737</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lake Zurich Unit Dist. 95</td><td>$60,373,054</td><td>$81,495,306</td><td>74.1%</td><td>-$21,122,252</td></tr>
+<tr><td class="tdLEFT text-nowrap">Leyden HS Dist. 212</td><td>$82,715,186</td><td>$64,770,344</td><td>127.7%</td><td>$17,944,842</td></tr>
+<tr><td class="tdLEFT text-nowrap">Libertyville Elem. Dist. 70</td><td>$24,812,902</td><td>$37,212,244</td><td>66.7%</td><td>-$12,399,342</td></tr>
+<tr><td class="tdLEFT text-nowrap">Libertyville HS Dist. 128</td><td>$106,548,129</td><td>$74,844,636</td><td>142.4%</td><td>$31,703,493</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lincolnshire-Prairie View Elem. Dist. 103</td><td>$24,283,730</td><td>$28,023,320</td><td>86.7%</td><td>-$3,739,590</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lisle Unit Dist. 202</td><td>$44,445,332</td><td>$29,914,396</td><td>148.6%</td><td>$14,530,936</td></tr>
+<tr><td class="tdLEFT text-nowrap">Lombard Elem. Dist. 44</td><td>$42,869,742</td><td>$47,862,567</td><td>89.6%</td><td>-$4,992,825</td></tr>
+<tr><td class="tdLEFT text-nowrap">Maine Township HS Dist. 207</td><td>$110,929,670</td><td>$124,405,113</td><td>89.2%</td><td>-$13,475,443</td></tr>
+<tr><td class="tdLEFT text-nowrap">Marquardt Elem. Dist. 15</td><td>$46,499,833</td><td>$38,138,340</td><td>121.9%</td><td>$8,361,493</td></tr>
+<tr><td class="tdLEFT text-nowrap">McHenry Elem. Dist. 15</td><td>$54,058,575</td><td>$58,458,002</td><td>92.5%</td><td>-$4,399,427</td></tr>
+<tr><td class="tdLEFT text-nowrap">McHenry HS Dist. 156</td><td>$17,917,407</td><td>$28,165,071</td><td>63.6%</td><td>-$10,247,664</td></tr>
+<tr><td class="tdLEFT text-nowrap">Medinah Elem. Dist. 11</td><td>$11,589,201</td><td>$9,240,092</td><td>125.4%</td><td>$2,349,109</td></tr>
+<tr><td class="tdLEFT text-nowrap">Millburn Elem. Dist. 24</td><td>-$1,644,217</td><td>$14,299,065</td><td>-11.5%</td><td>-$15,943,282</td></tr>
+<tr><td class="tdLEFT text-nowrap">Mount Prospect Elem. Dist. 57</td><td>$9,643,339</td><td>$21,946,163</td><td>43.9%</td><td>-$12,302,824</td></tr>
+<tr><td class="tdLEFT text-nowrap">Mundelein Elem. Dist. 75</td><td>$12,749,272</td><td>$19,760,751</td><td>64.5%</td><td>-$7,011,479</td></tr>
+<tr><td class="tdLEFT text-nowrap">Mundelein HS Dist. 120</td><td>$17,678,513</td><td>$33,449,484</td><td>52.9%</td><td>-$15,770,971</td></tr>
+<tr><td class="tdLEFT text-nowrap">Naperville Unit Dist. 203</td><td>$167,049,745</td><td>$240,984,123</td><td>69.3%</td><td>-$73,934,378</td></tr>
+<tr><td class="tdLEFT text-nowrap">Northwest HS Dist. 214</td><td>$142,294,930</td><td>$222,326,169</td><td>64.0%</td><td>-$80,031,239</td></tr>
+<tr><td class="tdLEFT text-nowrap">Oak Grove Elem. Dist. 68</td><td>$93,757</td><td>$13,736,444</td><td>0.7%</td><td>-$13,642,687</td></tr>
+<tr><td class="tdLEFT text-nowrap">Palatine Elem. Dist. 15</td><td>$51,887,364</td><td>$140,895,493</td><td>36.8%</td><td>-$89,008,129</td></tr>
+<tr><td class="tdLEFT text-nowrap">Palatine-Schaumburg HS Dist. 211</td><td>$128,817,931</td><td>$224,335,194</td><td>57.4%</td><td>-$95,517,263</td></tr>
+<tr><td class="tdLEFT text-nowrap">Prospect Heights Elem. Dist. 23</td><td>$7,490,631</td><td>$20,016,950</td><td>37.4%</td><td>-$12,526,319</td></tr>
+<tr><td class="tdLEFT text-nowrap">Queen Bee Dist. 16</td><td>$8,427,480</td><td>$23,728,570</td><td>35.5%</td><td>-$15,301,090</td></tr>
+<tr><td class="tdLEFT text-nowrap">River Trails Elem. Dist. 26</td><td>$18,064,860</td><td>$23,341,928</td><td>77.4%</td><td>-$5,277,068</td></tr>
+<tr><td class="tdLEFT text-nowrap">Rondout Elem Dist. 72</td><td>$2,738,119</td><td>$4,228,704</td><td>64.8%</td><td>-$1,490,585</td></tr>
+<tr><td class="tdLEFT text-nowrap">Roselle Elem. Dist. 12</td><td>$3,857,541</td><td>$8,786,324</td><td>43.9%</td><td>-$4,928,783</td></tr>
+<tr><td class="tdLEFT text-nowrap">Rosemont Elem. Dist. 78</td><td>$2,122,886</td><td>$4,147,623</td><td>51.2%</td><td>-$2,024,737</td></tr>
+<tr><td class="tdLEFT text-nowrap">Round Lake Unit Dist. 116</td><td>$33,525,302</td><td>$83,390,446</td><td>40.2%</td><td>-$49,865,144</td></tr>
+<tr><td class="tdLEFT text-nowrap">Salt Creek Elem. Dist. 48</td><td>$6,995,887</td><td>$9,060,348</td><td>77.2%</td><td>-$2,064,461</td></tr>
+<tr><td class="tdLEFT text-nowrap">Schaumburg Elem. Dist. 54</td><td>$144,415,985</td><td>$185,908,634</td><td>77.7%</td><td>-$41,492,649</td></tr>
+<tr><td class="tdLEFT text-nowrap">St. Charles Unit Dist. 303</td><td>$80,156,258</td><td>$158,676,631</td><td>50.5%</td><td>-$78,520,373</td></tr>
+<tr><td class="tdLEFT text-nowrap">Stevenson HS Dist. 125</td><td>$128,384,768</td><td>$92,287,698</td><td>139.1%</td><td>$36,097,070</td></tr>
+<tr><td class="tdLEFT text-nowrap">Villa Park Elem. Dist. 45</td><td>$22,920,621</td><td>$41,555,588</td><td>55.2%</td><td>-$18,634,967</td></tr>
+<tr><td class="tdLEFT text-nowrap">Warren HS Dist. 121</td><td>$22,235,161</td><td>$54,212,679</td><td>41.0%</td><td>-$31,977,518</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wauconda Unit Dist. 118</td><td>$26,358,363</td><td>$50,645,198</td><td>52.0%</td><td>-$24,286,835</td></tr>
+<tr><td class="tdLEFT text-nowrap">West Aurora Unit Dist. 129</td><td>$10,606,459</td><td>$138,829,581</td><td>7.6%</td><td>-$128,223,122</td></tr>
+<tr><td class="tdLEFT text-nowrap">West Chicago Community HS Dist. 94</td><td>$15,566,614</td><td>$27,034,502</td><td>57.6%</td><td>-$11,467,888</td></tr>
+<tr><td class="tdLEFT text-nowrap">West Chicago Elem. Dist. 33</td><td>$34,767,172</td><td>$52,841,315</td><td>65.8%</td><td>-$18,074,143</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wheaton Warrenville Dist. 200</td><td>$47,254,604</td><td>$152,071,918</td><td>31.1%</td><td>-$104,817,314</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wheeling Elem. Dist. 21</td><td>$10,159,495</td><td>$98,573,263</td><td>10.3%</td><td>-$88,413,768</td></tr>
+<tr><td class="tdLEFT text-nowrap">Winfield Elem. Dist. 34</td><td>$3,099,121</td><td>$4,651,176</td><td>66.6%</td><td>-$1,552,055</td></tr>
+<tr><td class="tdLEFT text-nowrap">Wood Dale Elem. Dist. 7</td><td>$9,907,636</td><td>$14,548,377</td><td>68.1%</td><td>-$4,640,741</td></tr>
+<tr><td class="tdLEFT text-nowrap">Woodland Elem. Dist. 50</td><td>$34,957,538</td><td>$70,861,109</td><td>49.3%</td><td>-$35,903,571</td></tr>
+          </tbody></table></p></div>
+
+          <p><small>Source: Analysis of school district audits</small></p>
+          <p><span style="color:white;">-30-</span></p>
+          
+    </div>
+  </div>
+</div>
+
+
+<div id="creditBox">
+  <div class="row">
+    <div class="col-md-10 center-block center-blockfloat">
+      <p><small>Daily Herald web app by Tim Broderick <a href="mailto:tbroderick@dailyherald.com">tbroderick@dailyherald.com</a>. You can find some of our open source work at our <a href="https://github.com/dailyherald/SchoolReportCards">github site</a>.
+      </small></p>
+    </div>
+  </div>
+</div>
+<div id="underfoot"></div>
+
+  </body>
+</html>

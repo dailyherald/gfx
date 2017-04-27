@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    $.getJSON('https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=2ZO1PQOUAD5SXRAJOLZVH53RBQ1EB2C23FE2GUZLJYQUJ3SY&v=20121108',
+
+                    function (data) {
+                        console.log(data.response.venues.items[0].beenHere);
+                        //The number 23
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <button>Request a user's foursquare json</button>
+        <p>Console logs the item number of the first venue, which for now is "23"</p>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="content-language" content="en" />
+
+	<script src="../scripts/jquery-1.9.1.min.js"></script>
+
+</head>
+
+<body>
+<p>Testing a time script</p>
+
+<script>
+console.log("Test of getting time");
+
+var dt = new Date();
+var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+
+// Month is expressed 0-11
+
+var month = new Array();
+month[0] = "January";
+month[1] = "February";
+month[2] = "March";
+month[3] = "April";
+month[4] = "May";
+month[5] = "June";
+month[6] = "July";
+month[7] = "August";
+month[8] = "September";
+month[9] = "October";
+month[10] = "November";
+month[11] = "December";
+var n = month[dt.getMonth()];
+
+// Day is a standard number
+// Year is 1 + 16, apparenly 1 = decade
+
+var date = dt.getMonth() + "_" + dt.getDate() + "_" + dt.getYear();
+
+if(dt.getMonth() >= 8){
+	console.log( "It's September or later" );
+} else if(dt.getMonth() >= 5 || dt.getMonth() < 8){
+	console.log( "It's " + n + " " + dt.getDate() );
+} else {
+	console.log( "It's before June" );
+};
+
+console.log( date );
+console.log( time );
+
+</script>
+
+</body>
+</html>

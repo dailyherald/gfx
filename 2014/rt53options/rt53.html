@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StoryMapJS</title>
+    <meta charset="utf-8">
+    <meta name="description" content="TimelineJS Embed">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- CSS-->
+
+    <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+    <link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/storymap.css?v1">
+    <link rel="stylesheet" href="css/fonts/font.unicaone-vollkorn.css?v1">
+<!--scripts-->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../scripts/leaflet.js"></script>
+  <script src="js/storymap.js"></script>
+
+
+
+    <!-- Style-->
+    <style>
+      html, body {
+      	height:100%;
+      	width:100%;
+      	padding: 0px;
+      	margin: 0px;
+      }
+      
+    </style>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements-->
+    <!--if lt IE 9
+    script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    
+    -->
+  </head>
+  <body>
+    <div id="storymap"></div>
+    <!-- JavaScript-->
+    <script>
+      var storymap_data = 'rt53story.json';
+
+
+      $.getJSON("rt53optionsPath.geojson", function(data) {
+          RTgeojson = new L.tileLayer(data);
+//          RTgeojson = new L.GeoJSON(data);
+          console.log("loaded");
+      });
+
+// This one works
+      var storymap = new VCO.StoryMap('storymap', storymap_data);
+
+
+//       geojson.addTo(storymap);
+
+//       storymap_data.addTo(storymap);
+
+
+ //       storymap._map._map.add(storymap_data);
+
+ 
+
+      window.onresize = function(event) {
+      	storymap.updateDisplay();
+      }
+
+    </script>
+  </body>
+</html>

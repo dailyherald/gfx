@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		MLB playoff teams
+	</title>
+
+	<link href="../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../styles/newsArt.css" rel="stylesheet" type="text/css">
+
+	<script src="../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../scripts/highcharts.js"></script>
+
+
+</head>
+
+<body>
+<div class="divgfx">
+	<div class="row">
+		<div class="small-12 small-centered large-8 large-centered columns">
+			<h2>Who's hot, who's not</h2>
+			<p>The Chicago Cubs are the only playoff team that saw a significant late-season surge. Here are the regular-season winning percentages for each team.</p>
+			<p><strong>NATIONAL LEAGUE</strong></p>
+			<div id="cubs"></div>
+			<hr style="color:#919090; background-color:#919090; height:1px; border:none;">
+			<div id="mets"></div>
+			<hr style="color:#919090; background-color:#919090; height:3px; border:none;">
+			<p><strong>AMERICAN LEAGUE</strong></p>
+			<div id="jays"></div>
+			<hr style="color:#919090; background-color:#919090; height:1px; border:none;">
+			<div id="astros"></div>
+		<p class="source">Source: Daily Herald analysis, Baseball-reference.com</p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">---</span></p>
+		<p><span style="color:white;">-30-</span></p>
+		</div>
+	</div>
+</div>
+
+	<script>
+//----------------------------------	
+// Cubs v Cards
+
+var cubs = new Highcharts.Chart({
+	chart: {
+			renderTo: 'cubs',
+			height: 250,
+            type: 'line'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		title: {
+			text: null
+            },
+		categories: ['April','May','June','July','Aug.','Sept./Oct.'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	yAxis: {
+		title: {
+			text: '% WINS BY MONTH'
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 100,
+		tickInterval: 10
+	},
+
+	series: [{
+		name: 'Chicago Cubs',
+		data: [60.0,50.0,51.9,55.6,67.9,71.9]
+			}, {
+		name: 'St. Louis Cardinals',
+		data: [71.4,62.1,69.2,55.6,67.9,48.4]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            valueSuffix: '%'
+	},
+});
+
+//----------------------------------	
+// Dodgers v Mets
+
+var cubs = new Highcharts.Chart({
+	chart: {
+			renderTo: 'mets',
+			height: 250,
+            type: 'line'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		title: {
+			text: null
+            },
+		categories: ['April','May','June','July','Aug.','Sept./Oct.'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	yAxis: {
+		title: {
+			text: '% WINS BY MONTH'
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 100,
+		tickInterval: 10
+	},
+
+	series: [{
+		name: 'Los Angeles Dodgers',
+		data: [61.9,57.1,50.0,58.3,55.6,59.4]
+			}, {
+		name: 'New York Mets',
+		data: [65.2,46.4,44.4,52.0,71.4,54.8]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            valueSuffix: '%'
+	},
+});
+
+//----------------------------------	
+// Rangers v Blue Jays
+
+var cubs = new Highcharts.Chart({
+	chart: {
+			renderTo: 'jays',
+			height: 250,
+            type: 'line'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		title: {
+			text: null
+            },
+		categories: ['April','May','June','July','Aug.','Sept./Oct.'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	yAxis: {
+		title: {
+			text: '% WINS BY MONTH'
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 100,
+		tickInterval: 10
+	},
+
+	series: [{
+		name: 'Texas Rangers',
+		data: [33.3,63.3,51.9,41.7,64.3,62.5]
+			}, {
+		name: 'Toronto Blue Jays',
+		data: [47.8,41.4,66.7,48.0,77.8,61.3]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            valueSuffix: '%'
+	},
+});
+
+//----------------------------------	
+// Royals v Astros
+
+var cubs = new Highcharts.Chart({
+	chart: {
+			renderTo: 'astros',
+			height: 250,
+            type: 'line'
+        },
+
+	title: {
+	    	text: null
+    	},
+
+	xAxis: {
+		title: {
+			text: null
+            },
+		categories: ['April','May','June','July','Aug.','Sept./Oct.'],
+	},
+
+	labels: {
+			fontFamily: 'Arial, sans-serif',
+			style: {
+				color: '#000',
+                }
+			},
+
+	yAxis: {
+		title: {
+			text: '% WINS BY MONTH'
+		},
+			
+		labels: {
+			overflow: 'justify'
+		},
+		
+		min: 0,
+		max: 100,
+		tickInterval: 10
+	},
+
+	series: [{
+		name: 'Kansas City Royals',
+		data: [68.2,53.8,57.7,60.7,67.9,46.9]
+			}, {
+		name: 'Houston Astros',
+		data: [68.2,55.2,51.7,50.0,53.6,43.3]
+	}],
+
+
+	tooltip: {
+			crosshairs: true,
+            shared: true,
+            useHTML: true,
+            valueSuffix: '%'
+	},
+});
+
+</script>
+
+
+</body>
+
+
+

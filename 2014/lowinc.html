@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Low income students
+	</title>
+
+	<link href="styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="styles/styleSort.css" type="text/css" rel="stylesheet">
+	<link href="styles/leaflet.css" rel="stylesheet" type="text/css">
+	<link href="styles/MarkerCluster.css"  rel="stylesheet" type="text/css">
+	<link href="styles/MarkerCluster.Default.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+	<script stype="text/javascript" rc="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script type="text/javascript" src="scripts/highcharts.js"></script>
+	<script type="text/javascript" src="scripts/jquery.metadata.js"></script>
+	<script type="text/javascript" src="scripts/jquery.table.js"></script>
+	<script type="text/javascript" src="scripts/leaflet.js"></script>
+	<script type="text/javascript" src="scripts/leaflet.markercluster-src.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script type="text/javascript" src="scripts/Google.js"></script>
+</head>
+
+<body>
+
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div class="small-12 large-10 columns">
+<h1>Low income students</h1>
+</div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div class="small-12 large-6 columns">
+<p>Introductory text here</p>
+</div>
+<div class="small-12 large-4 columns">
+<p>
+
+<select name="RANGElist" size="1" id="LOWINClist">
+	<option value='90' >90%-100%</option>
+	<option value='80' >80%-89.9%</option>
+</select>
+<input type="button" name="searchSUBMIT" id="searchSUBMIT"
+	onclick="console.log( $('#LOWINClist').val() );"
+    value="Get low-income range" >
+	</p>
+</div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div class="small-12 large-4 columns">
+<p><strong>About the map:</strong> School locations in the map below are clustered for easier viewing. The color and number of each cluster indicates the number of school locations included. Click on a cluster and you can begin drilling down to see locations of individual schools. Clicking the name of a school will bring you to the school's entry in the chart below the map.
+</p>
+</div>	
+<div id="suburbs" class="small-12 large-6 columns"></div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+<div id="schoolsLIST" class="small-12 large-10 columns"></div>
+<div class="small-12 large-1 columns"></div>
+
+</div>
+
+
+<script>
+
+
+
+var GGLstyles = [
+	{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},
+	{"featureType":"landscape","stylers":[{"hue":"#B7C7A6"},{"lightness":-5}]},
+	{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c1b5a5"}]},
+	{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+	{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},
+	{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+	{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},
+	{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},
+	{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},
+	{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},
+	{"featureType":"road","stylers":[{"lightness":20}]}
+	];
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+//Create the variable for list of districts
+
+
+var distHTML = "";
+		distHTML += '<br><h3 align=left>Schools in 90% to 100% low-income range</h3>';
+		distHTML += '<p><strong>The chart below is sortable, allowing you to compare how schools with a similar percent of low-income students performed in ISAT and PASE composite scores as well as average ACT score.</strong></p><p>In addition, the average scores for schools in the other low-income ranges are included for comparison.</p><p>To sort the list, simply click the heading for each column - once for descending order, again for ascending order. Click the name of the school to visit the school\'s page on the <a href="http://reportcards.dailyherald.com">Daily Herald School Checker</a>.';
+		distHTML += '<p><table id="tableSCHOOLS" class="tablesorter {sortlist: [0,1]} fullTable">';
+
+		distHTML += '<thead><tr><th class="tdLEFT">' + "School" + '</th><th data-type="float">' + '% low<br>income</th><th data-type="float">' + "ISAT<br>Composite" + '</th><th data-type="float">' + "PSAE<br>Composite" + '</th><th data-type="float">' + "ACT<br>Score" + '</th></tr></thead><tbody>';
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>0-9.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>79.9</strong></td><td class="tdCENT"><strong>70.2</strong></td><td class="tdCENT"><strong>22.8</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>10-19.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>77.1</strong></td><td class="tdCENT"><strong>68.5</strong></td><td class="tdCENT"><strong>22.2</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>20-29.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>71.2</strong></td><td class="tdCENT"><strong>60.5</strong></td><td class="tdCENT"><strong>20.6</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>30-39.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>66.1</strong></td><td class="tdCENT"><strong>55.7</strong></td><td class="tdCENT"><strong>20.1</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>40-49.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>60.5</strong></td><td class="tdCENT"><strong>49.1</strong></td><td class="tdCENT"><strong>19.5</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>50-59.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>56.7</strong></td><td class="tdCENT"><strong>43.3</strong></td><td class="tdCENT"><strong>18.7</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>60-69.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>52.8</strong></td><td class="tdCENT"><strong>37.2</strong></td><td class="tdCENT"><strong>17.7</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>70-79.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>48.4</strong></td><td class="tdCENT"><strong>31.9</strong></td><td class="tdCENT"><strong>17.4</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>80-89.9% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>42.8</strong></td><td class="tdCENT"><strong>24.7</strong></td><td class="tdCENT"><strong>16.7</strong></td></tr>'
+		distHTML += '<tr class="group"><td class="tdLEFT"><strong>90-100% range average</strong></td><td class="tdCENT"><strong> </strong></td><td class="tdCENT"><strong>37.6</strong></td><td class="tdCENT"><strong>19.6</strong></td><td class="tdCENT"><strong>15.9</strong></td></tr>'
+
+
+//Create the map and load the geojson
+
+
+// Variable doesn't travel past the getJSON command.
+
+$('#searchSUBMIT').click(function() {
+
+	console.log( $('#LOWINClist').val() + " this" );
+		var lowVAL = $('#LOWINClist').val();
+			console.log( lowVAL + " here" );
+
+	$.getJSON("geojson/lowINCall.json", function(data) {
+
+
+console.log( $('#LOWINClist').val() + " this again" );
+		var lowVAL = $('#LOWINClist').val();
+			console.log( lowVAL + " here again" );
+
+
+
+
+		var map = L.map('suburbs');
+
+
+//	if(lowVAL == 90) {
+//		console.log( lowVAL );
+//		var jsonFILE = "geojson/lowINC90.json";
+
+//	} else if(lowVAL == 80){
+//		console.log( lowVAL );
+//		var jsonFILE = "geojson/lowINC80.json";
+
+//	};
+
+
+
+ 
+
+	    var geojson = L.geoJson(data, {
+		
+			onEachFeature: function (feature, layer) {
+
+				if(feature.properties.Range == lowVAL) {
+
+					layer.bindPopup(
+						'<strong><a href="#'  + feature.properties.RCDTS + '">' + feature.properties.School + '</a></strong>'
+					);
+
+					//Create the list of schools	
+
+					distHTML += '<tr class="group"><td class="tdLEFT" id="'  + feature.properties.RCDTS + '"><a href="../details/?id-name=' + feature.properties.RCDTS + '">' + feature.properties.School + ', ' + feature.properties.City + '</td><td class="tdCENT">' + feature.properties.demSCHOOLlow + '</td><td class="tdCENT">' + feature.properties.ISAT13 + '</td><td class="tdCENT">' + feature.properties.PSAE13 + '</td><td class="tdCENT">' + feature.properties.ACT13 + '</td></tr>';
+
+					//END list of schools
+
+				}
+			}
+		});
+
+		var info = L.control();
+
+			info.onAdd = function (map) {
+				this._div = L.DomUtil.create('div', 'info');
+				this._div.innerHTML = '<h4>Find a school</h4><p>Click on a cluster<br>to see individual schools</p>';
+					return this._div;
+			};
+
+		var markers = L.markerClusterGroup();
+		markers.addLayer(geojson);
+  
+		map.setView(new L.LatLng(42.1, -87.9),9);
+		map.addLayer(ggl);
+		map.addLayer(markers);
+		info.addTo(map);
+
+
+		distHTML += '</tbody></table></p>';
+				
+		$('#schoolsLIST').html(distHTML);
+
+		$("#tableSCHOOLS").table_sorter( { groupClass: 'group' } ).hover();
+
+	});
+
+});	
+
+</script>
+
+</body>
+
+
+

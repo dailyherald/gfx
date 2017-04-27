@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Schools_Low Income schools Table example</title>
+
+<link rel="stylesheet" href="styles/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/foundation.css" type="text/css" media="screen" />
+<link href="styles/smoothness/jquery-ui-1.10.3.customRC.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/lowincome_example.css" type="text/css" media="screen" />
+<!--<link rel="stylesheet" href="styles/styleSort.css" type="text/css" media="screen" />-->
+<link rel="stylesheet" href="styles/responsive-tables.css">
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+<!--<script src="scripts/jquery.table.js"></script>-->
+<script src="scripts/responsive-tables.js"></script>
+<!-- Activate responsiveness in the "child" page -->
+<script src="scripts/jquery.responsiveiframe.js"></script>
+
+<script>
+  var ri = responsiveIframe();
+  ri.allowResponsiveEmbedding();
+</script>
+
+<script>
+
+var aID = 1;
+	
+$(document).ready(function(e) {
+	
+		
+	$.getJSON('json/lowinc.json', function(data){
+
+		$('#reserveSPACE').hide();
+					
+		var distHTML = "";
+		distHTML += '<p><table id="tableSCHOOLS" class="tablesorter responsive" width="565px">';
+						distHTML += '<thead><tr><th>' + "District" + '</th><th data-type="float">' + "2006" + '</th><th data-type="float">' + "2007" + '</th><th data-type="float">' + "2008" + '</th><th data-type="float">' + "2009" + '</th><th data-type="float">' + "2010" + '</th><th data-type="float">' + "2011" + '</th><th data-type="float">' + "2012" + 
+						'</th></tr></thead><tbody>';
+					$.each(data, function(i) {
+						distHTML += '<tr class="group"><td>' + data[i].District + '</td><td align="center">' + data[i].low2006 + '</td><td align="center">' + data[i].low2007 + '</td><td align="center">' + data[i].low2008 + '</td><td align="center">' + data[i].low2009 + '</td><td align="center">' + data[i].low2010 + '</td><td align="center">' + data[i].low2011 + '</td><td align="center">' + data[i].low2012 + '</td></tr>';
+					});
+				distHTML += '</tbody></table></p>';
+
+
+		$('#LOWINCchart').html(distHTML);
+/* 		table_sorter( '#tableSCHOOLS', { groupClass: 'group' } ).hover(); */
+
+	});
+
+});
+	
+</script>
+
+</head>
+
+<body>
+
+<div class="row">
+	<div class="small-12 large-centered columns">
+		<h3>POVERTY RATES JUMP</h3>
+		<p>Suburban school districts have seen increases in low-income population. Here is the percent of low income students for each district from 2006 to 2012.</p>
+	</div>
+	<div class="small-12 large-centered columns" id="reserveSPACE"></div>
+	<div class="small-12 large-centered columns" id="LOWINCchart"></div>
+	<div class="small-12 large-centered columns">
+		<p>Source: Illinois Interactive Report Card, Daily Herald analysis</p>
+	</div>
+</div>
+
+</body>
+</html>

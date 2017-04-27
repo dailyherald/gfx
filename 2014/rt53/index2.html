@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Route 53 extension mobile
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/styleSort.css" type="text/css" rel="stylesheet">
+	<link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="../../scripts/jquery.table.js"></script>
+	<script src="../../scripts/highcharts.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="../../scripts/SliderControl.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div id="suburbs" class="small-12 small-centered large-8 large-centered columns">
+<div id="osm" class="high325"></div>
+<div id='actions'><p><a href='#'>Find me!</a></p></div>
+<div id='latlang'></div>
+
+<div>
+ <p> </p>
+ <p> </p>
+ <p><a href='index.html'>Desktop</a></p>
+</div>
+
+</div>
+</div>
+
+	<script>
+
+
+var ggl = new L.Google('HYBRID');
+
+var map = L.map('osm', {
+    center: [42.155, -88.02],
+    zoom: 15,
+    layers: [ggl]
+});
+
+var mylocation = "";
+
+$.getJSON("rt53_center.geojson", function(data) {
+    var geojsonLINES = L.geoJson(data, {
+		style: function (feature) {
+			return {
+				weight: 5,
+				opacity: .7,
+				color: 'red',
+			};
+    	},
+				
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<p>' + feature.properties.Name + '</p>'
+				);
+		}
+	});
+
+$.getJSON("parcels750.geojson", function(data) {
+    geojsonPARCELS = L.geoJson(data, {
+		style: function (feature) {
+			return {
+				fillColor: '#E5D698',
+				weight: 2,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.6
+			};
+		},
+
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<p>' + feature.properties.PIN + '</p>'
+				);
+		}
+	});
+
+
+
+var overlays = {
+	"Extension": geojsonLINES,
+	"Parcels": geojsonPARCELS
+};
+
+layerControl = L.control.layers(null, overlays);
+layerControl.addTo(map);
+
+
+function locateUser() {
+	this.map.locate({setView : true});	
+}
+
+$('#actions').find('a').on('click', function(){
+	locateUser();
+});
+
+
+// adding markers to the map, but just being able to delete the layer and latest marker
+
+//var markers = new L.FeatureGroup();
+
+map.on('click', onMapClick);
+
+var marker;
+
+function onMapClick(e) {
+	marker = new L.marker(e.latlng).bindPopup('<a href="#" class="removeMe">Remove ME</a>');
+//	marker = new L.marker(e.latlng).bindPopup($('<a href="#" class="removeMe">Remove ME</a>').click(function() {
+//            map.removeLayer(marker);
+//			$('#latlang').html("");
+//          })[0]);
+	$('#latlang').html("latitude: " + e.latlng.lat + "<br>longitude: " + e.latlng.lng);
+//	markers.addLayer(marker);
+	map.addLayer(marker);
+
+    marker.on("popupopen", onPopupOpen);
+
+	return marker;
+};
+
+function onPopupOpen() {
+	var tempMarker = this;
+
+	// To remove marker on click of delete button in the popup of marker
+	$(".removeMe:visible").click(function () {
+        map.removeLayer(tempMarker);
+		$('#latlang').html("");
+    });
+}
+
+
+});
+});
+
+
+	</script>
+
+</body>
+
+
+

@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+
+"features": [
+{ "type": "Feature", "properties": { "timestamp": "2014-03-07T15:31:24Z", "Note": "Features Farthest West"}, "geometry": { "type": "Point", "coordinates": [ -87.98067471945531, 42.0406950185444] } },
+{ "type": "Feature", "properties": {"timestamp": "2014-03-07T15:32:35Z", "Note": "Features Door"}, "geometry": { "type": "Point", "coordinates": [ -87.98037697238607, 42.04069532499854] } },
+{ "type": "Feature", "properties": {"timestamp": "014-03-07T15:33:46Z", "Note": "Main Hallway N"}, "geometry": { "type": "Point", "coordinates": [ -87.98011993951607, 42.04066747844395] } },
+{ "type": "Feature", "properties": {"timestamp": "2014-03-07T15:34:36Z", "Note": "Main Hallway S"}, "geometry": { "type": "Point", "coordinates": [ -87.97998103727592, 42.04054456146872] } },
+{ "type": "Feature", "properties": {"timestamp": "2014-03-07T15:35:55Z", "Note": "Editorial Door"}, "geometry": { "type": "Point", "coordinates": [ -87.97997111568733, 42.04040436970357] } },
+{ "type": "Feature", "properties": {"timestamp": "2014-03-07T15:37:39Z", "Note": "Editorial Farthest South"}, "geometry": { "type": "Point", "coordinates": [ -87.97997442288353, 42.04004339613585] } }
+]
+}

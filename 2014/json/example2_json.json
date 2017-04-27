@@ -1,0 +1,24 @@
+{
+    "timeline":
+    {
+        "headline":"Timeline test",
+        "type":"default",
+        "text":"Test for Knightlabs interactive timeline",
+        "startDate":"2012,1,26",
+        "date": [
+                    {
+                        "startDate":"2011,10,1",
+                        "endDate":"2011,10,2",
+                        "headline":"Google Spreadsheet Example",
+                        "text":"This is a test of using google spreadsheets as a source for the timeline tool",
+                    "asset":
+                            {
+                        "media":"http://www.flickr.com/photos/zachwise/6115056146/in/photostream",
+                        "credit":"Zach Wise/verite.co",
+                        "caption":"",
+                            }
+                    }
+                ]
+
+    }
+}

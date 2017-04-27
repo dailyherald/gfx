@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+   Percent homeless students
+  </title>
+
+<!-- STYLES --> 
+<!-- foundation responsive -->
+  <link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+
+<!-- Local styles, including custom UI jquery -->
+  <link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+  <link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+
+<!-- SCRIPTS -->
+<!-- jquery, including touch enabling -->
+  <script src="../../scripts/jquery-1.9.1.min.js"></script>
+  <script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+  <script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+<!-- Charts -->
+  <script src="../../scripts/highcharts.js"></script>
+  
+
+  </head>
+
+  <body>
+
+<div class="row">
+  <div class="small-12 large-6 centered columns">
+    <h4>Homeless students on rise</h4>
+    <p class="chartEmbed">Percent change in the number of homeless students in suburban public schools for the 2012-'13 school year, from the 2010-'11 school year.</p>
+    <div id='NEWchart'></div>
+  </div>
+</div>
+
+<script>
+
+var aID;  
+    
+$.getJSON('homeless1.json', function(data){
+  console.log(data[1].perchge);
+  
+  var statewide = parseFloat(data[0].perchge);
+  var ncook = parseFloat(data[1].perchge);
+  var chicago = parseFloat(data[2].perchge);
+  var dupage = parseFloat(data[3].perchge);
+  var kane = parseFloat(data[4].perchge);
+  var lake = parseFloat(data[5].perchge);
+  var mchenry = parseFloat(data[6].perchge);
+  var will = parseFloat(data[7].perchge);
+
+  var chartLOWINC = new Highcharts.Chart({
+    chart: {
+      renderTo: 'NEWchart',
+	  height: '300'
+    },
+    title: {
+      text: null
+    },
+
+    xAxis: {
+      title: {
+        text: 'COUNTY AREAS'
+      },
+      categories: ['North Cook', 'Chicago', 'DuPage', 'Kane', 'Lake', 'McHenry', 'Will']
+     },
+
+    yAxis: {
+      title: {
+        text: '% chg. in homeless students'
+      },
+      labels: {
+        overflow: 'justify'
+      },
+      min: 0,
+      max: 60,
+      tickInterval: 10
+    },
+
+    series: [{
+      type: 'bar',
+      name: '% change',
+      data: [ncook, chicago, dupage, kane, lake, mchenry, will]
+      }, {
+      type: 'line',
+      name: '% change statewide',
+      data: [statewide, statewide, statewide, statewide, statewide, statewide, statewide]
+      }],
+
+    tooltip: {
+      crosshairs: true,
+      shared: true,
+      useHTML: true,
+      valueSuffix: '%'
+  },
+
+
+  });
+
+
+});
+  
+</script>
+
+  </body>
+</html>

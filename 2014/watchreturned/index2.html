@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Returned taxes
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../../styles/dist/tablesaw.css">
+	<link rel="stylesheet" href="../../styles/dist/icons/icons.data.svg.css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../scripts/highcharts.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="../../scripts/SliderControl.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+	<script src="../../styles/dist/tablesaw.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+	<div class="small-12 large-12 columns">
+
+		<div class="row">
+			<div class="small-12 large-6 columns">
+				<h3>Taxes come home</h3>
+				<p>Suburban areas get back some of the income tax their residents paid to the state. But some areas get back a higher percentage of what was paid than others.</p>
+			</div>
+			<div class="small-12 large-5 columns">
+                  <style type="text/css">
+					div.bar {
+						display: inline-block;
+						width: 12px;
+						height: 12px;
+						border: 1px solid;
+						opacity: 0.8;
+						}
+					.cont1 {
+						background-color: #B30000;
+						}
+					.cont2 {
+						background-color: #F46856;
+						}
+					.cont3 {
+						background-color: #FDCC8A;
+						}
+					.cont4 {
+						background-color: #B190E4;
+						}
+					.cont5 {
+						background-color: #4E10AE;
+						}
+
+					.prog1 {
+						background-color: #B30000;
+						}
+					.prog2 {
+						background-color: #F46856;
+						}
+					.prog3 {
+						background-color: #FFA560;
+						}
+					.prog4 {
+						background-color: #FDCC8A;
+						}
+					.prog5 {
+						background-color: #FFEDA0;
+						}
+				</style>
+				
+				<strong>Percent returned</strong><br>
+				<div class="bar prog1"></div> 12% +<br>
+				<div class="bar prog2"></div> 9%+ to  12%<br>
+				<div class="bar prog3"></div> 6%+ to 9%<br>
+				<div class="bar prog4"></div> 3%+ to 6%<br>
+				<div class="bar prog5"></div> 0 to 3%<br><br>
+ 			</div>
+		</div>
+<div id="pageMap" class="high375"></div>
+<div id="zipList"><br>
+<h4 align=left>Income taxes paid, returned</h4>
+<p><table id="table2" class="tablesaw tablesaw-stack" data-mode="stack" data-sortable="" data-sortable-switch data-mode-switch data-mode-exclude="columntoggle">
+	<thead><tr>
+		<th data-sortable-col="" data-sortable-default-col data-priority="persist">Zip code</th><th data-sortable-col="" data-priority="1">Cities</th><th data-priority="2">$ paid in 2012</th><th data-priority="3">$ returned in 2012</th><th data-sortable-col="" data-priority="4">% returned</th></tr>
+	</thead><tbody id="tablebody">
+	</tbody></table></p><p class="source">Sources: Analysis of Illinois Department of Revenue and U.S. Census Bureau data</p>
+</div>
+</div>
+
+
+	<script>
+
+var distHTML = "";
+//		distHTML += '<br><h4 align=left>Income taxes paid, returned</h4><p><strong>The chart below is sortable.</strong> Click on any of the column headings once to sort in descending order, twice in ascending order.</p><p><table id="table2" class="tablesaw" data-mode="swipe" data-sortable data-sortable-switch data-minimap data-mode-switch><thead><tr><th data-sortable-col data-sortable-default-col data-priority="persist"><br>Zip code</th><th data-sortable-col data-priority="4"><br>Cities</th><th data-sortable-col data-priority="3">$ paid<br>in 2012</th><th data-sortable-col data-priority="2">$ returned<br>in 2012</th><th data-sortable-col data-priority="1"><br>% returned</th></tr></thead><tbody>';
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+	];
+
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+var map = L.map('pageMap');
+
+var geojson;
+
+	
+$.getJSON("taxReturned.geojson", function(data) {
+    geojson = L.geoJson(data, {
+
+//	For simple colors across the board
+//		style: function (feature) {
+//			return {
+//				fillColor: '#E5D698',
+//				weight: 2,
+//				opacity: 1,
+//				color: 'white',
+//				dashArray: '',
+//				fillOpacity: 0.6
+//			};
+//  	},
+
+//	For varying colors according to content
+
+	 	style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.pctNum),
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.6
+			};
+    	},
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<strong>Zip Code: ' + feature.properties.zipLabel + '</strong><br><table class="mapTable"><tr><td class="tdLEFT">Paid in 2012:</td><td>$' + feature.properties.paid2012 + '</td></tr><tr><td class="tdLEFT">Returned in 2012:</td><td class="tdRIGHT">$' + feature.properties.return2012 + '</td></tr><tr><td class="tdLEFT">Percent returned:</td><td>' + feature.properties.pctReturn + '</td></tr></table>'
+			);
+
+					distHTML += '<tr><td><b class="tablesaw-cell-label">ZIP code </b><strong>' + feature.properties.zipLabel + '</strong></td><td><b class="tablesaw-cell-label">Cities </b>' + feature.properties.Cities + '</td><td><b class="tablesaw-cell-label">2012 paid </b>$' + feature.properties.paid2012 + '</td><td><b class="tablesaw-cell-label">2012 returned </b>$' + feature.properties.return2012 + '</td><td><b class="tablesaw-cell-label">% returned </b>' + feature.properties.pctNum + '%</td></tr>';
+
+		}
+		
+
+//		onEachFeature: onEachFeature
+
+  });
+
+  		// get color depending on population percFOID value
+		function getColor(d) {
+			return d > 12 ?	'#B30000' :
+			       d > 9 ?	'#F46856' :
+			       d > 6 ?	'#FFA560' :
+			       d > 3 ?	'#FDCC8A' :
+			       d > 1 ?	'#FFEDA0' :
+			       			 	'#FFFFFF' ;
+    	};
+  
+
+ 
+ 	map.setView(new L.LatLng(42.1, -88.3),9);
+	map.addLayer(ggl);
+	geojson.addTo(map);
+
+//	distHTML += '</tbody></table></p><p class="source">Sources: Analysis of Illinois Department of Revenue and U.S. Census Bureau data</p>';
+				
+	$('#tablebody').html(distHTML);
+
+});
+
+
+	</script>
+
+</body>
+
+
+

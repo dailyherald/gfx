@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Schools_Low Income schools GFX example</title>
+
+<link rel="stylesheet" href="styles/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/foundation.css" type="text/css" media="screen" />
+<link href="styles/smoothness/jquery-ui-1.10.3.customRC.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/newsArt.css" type="text/css" media="screen" />
+
+
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+<script src="scripts/highcharts.js"></script>
+
+<!-- Activate responsiveness in the "child" page -->
+<script src="scripts/jquery.responsiveiframe.js"></script>
+<script>
+  var ri = responsiveIframe();
+  ri.allowResponsiveEmbedding();
+</script>
+
+<script>
+
+var aID = 1;
+	
+$(document).ready(function(e) {
+	
+		
+	$.getJSON('json/lowinc.json', function(data){
+			console.log(data[1].District);
+
+		$('#searchSUBMIT').click(function() {
+			var aID = $('#DISTRICTlist').val()
+			$('#reserveSPACE').hide();
+			$('#charttext').show();
+			$('#charttext').html(
+				'<p><strong>Since 2000, ' + data[aID].District + ' has seen a ' + data[aID].percchng + ' percentage-point increase in low-income students.</strong></p>'
+			);				
+
+	
+		var low2006num = parseFloat(data[aID].low2006);
+		var low2007num = parseFloat(data[aID].low2007);
+		var low2008num = parseFloat(data[aID].low2008);
+		var low2009num = parseFloat(data[aID].low2009);
+		var low2010num = parseFloat(data[aID].low2010);
+		var low2011num = parseFloat(data[aID].low2011);
+		var low2012num = parseFloat(data[aID].low2012);
+
+	var chartLOWINC = new Highcharts.Chart({
+        chart: {
+			renderTo: 'LOWINCchart',
+            type: 'column'
+        },
+        title: {
+	    	text: null
+    	},
+        xAxis: {
+            categories: ['2006', '2007', '2008', '2009', '2010', '2011', '2012']
+        },
+        yAxis: {
+        	min: 0,
+			max: 100,
+            title: {
+                text: 'Percent low income students'
+            }
+        },
+        series: [{
+			type: 'column',
+            name: 'Percent low income students',
+            data: [low2006num, low2007num, low2008num, low2009num, low2010num, low2011num, low2012num]
+			            }, {
+                type: 'line',
+                name: 'State avg.',
+                data: [40.0, 40.9,41.1, 42.9, 45.4, 48.1, 49.0]
+	    }],
+
+	});
+
+		});
+	});
+
+});
+	
+</script>
+
+</head>
+
+<body>
+
+<div class="row">
+ <div class="small-12 large-7 columns">
+<h3>POVERTY RATES JUMP</h3>
+<p>Suburban school districts have seen increases in low-income population. Select a district from the list at right and click "Get District" to see year-by-year low-income levels since 2006.</p>
+</div>
+<div class="small-12 large-5 columns">
+<br>
+<select name="DISTlist" size="5" id="DISTRICTlist">
+<option value="0">Addison Elem. Dist. 4</option>
+<option value="1">Antioch Elem. Dist. 34</option>
+<option value="2">Antioch HS Dist. 117</option>
+<option value="3">Aptakisic-Tripp Elem. Dist. 102</option>
+<option value="4">Arlington Heights Elem. Dist. 25</option>
+<option value="5">Barrington Unit Dist. 220</option>
+<option value="6">Batavia Unit Dist. 101</option>
+<option value="7">Benjamin Elem. Dist. 25</option>
+<option value="8">Bensenville Elem. Dist. 2</option>
+<option value="9">Bloomingdale Elem. Dist. 13</option>
+<option value="10">Butler Elem. Dist. 53</option>
+<option value="11">Carol Stream Elem. Dist. 93</option>
+<option value="12">Cary Elem. Dist. 26</option>
+<option value="13">Central Unit Dist. 301</option>
+<option value="14">Community HS Dist. 88</option>
+<option value="15">Community Unit Dist. 300</option>
+<option value="16">Crystal Lake Elem. Dist. 47</option>
+<option value="17">Crystal Lake HS Dist. 155</option>
+<option value="18">Des Plaines Elem. Dist. 62</option>
+<option value="19">Diamond Lake Elem. Dist. 76</option>
+<option value="20">East Aurora Unit Dist. 131</option>
+<option value="21">East Maine Elem. Dist. 63</option>
+<option value="22">Elgin Area Unit Dist. U-46</option>
+<option value="23">Elk Grove Twp. Elem. Dist. 59</option>
+<option value="24">Emmons Elem. Dist. 33</option>
+<option value="25">Fenton HS 100</option>
+<option value="26">Fox Lake Elem. Dist. 114</option>
+<option value="27">Fox River Grove Elem. Dist. 3</option>
+<option value="28">Fremont Elem. Dist. 79</option>
+<option value="29">Geneva Unit Dist. 304</option>
+<option value="30">Glen Ellyn Elem. Dist. 41</option>
+<option value="31">Glen Ellyn Elem. Dist. 89</option>
+<option value="32">Glenbard HS Dist. 87</option>
+<option value="33">Grant HS Dist. 124</option>
+<option value="34">Grayslake Elem. Dist. 46</option>
+<option value="35">Gurnee Elem. Dist. 56</option>
+<option value="36">Hawthorn Elem. Dist. 73</option>
+<option value="37">Huntley Unit Dist. 158</option>
+<option value="38">Indian Prairie Unit Dist. 204</option>
+<option value="39">Itasca Elem. Dist. 10</option>
+<option value="40">Kaneland Unit Dist. 302</option>
+<option value="41">Keeneyville Elem. Dist. 20</option>
+<option value="42">Kildeer Countryside Elem. Dist. 96</option>
+<option value="43">Lake Park HS Dist. 108</option>
+<option value="44">Lake Villa Elem. Dist. 41</option>
+<option value="45">Lake Zurich Unit Dist. 95</option>
+<option value="46">Libertyville Elem. Dist. 70</option>
+<option value="47">Libertyville HS Dist. 128</option>
+<option value="48">Lincolnshire-Prairie View Elem. Dist. 103</option>
+<option value="49">Lisle Unit Dist. 202</option>
+<option value="50">Lombard Elem. Dist. 44</option>
+<option value="51">Maine Twp. HS Dist. 207</option>
+<option value="52">Marquardt Elem. Dist. 15</option>
+<option value="53">Medinah Elem. Dist. 11</option>
+<option value="54">Mount Prospect Elem. Dist. 57</option>
+<option value="55">Mundelein Elem. Dist. 75</option>
+<option value="56">Mundelein HS Dist. 120</option>
+<option value="57">Naperville Unit Dist. 203</option>
+<option value="58">Northwest HS Dist. 214</option>
+<option value="59">Oak Grove Elem. Dist. 68</option>
+<option value="60">Palatine Elem. Dist. 15</option>
+<option value="61">Palatine-Schaumburg HS Dist. 211</option>
+<option value="62">Prospect Heights Elem. Dist. 23</option>
+<option value="63">Queen Bee Elem. Dist. 16</option>
+<option value="64">River Trails Elem. Dist. 26</option>
+<option value="65">Roselle Elem. Dist. 12</option>
+<option value="66">Rosemont Elem. Dist. 78</option>
+<option value="67">Round Lake Unit Dist. 116</option>
+<option value="68">Salt Creek Elem. Dist. 48</option>
+<option value="69">Schaumburg Elem. Dist. 54</option>
+<option value="70">St. Charles Unit Dist. 303</option>
+<option value="71">Stevenson HS Dist. 125</option>
+<option value="72">Villa Park Elem. Dist. 45</option>
+<option value="73">Warren HS Dist. 121</option>
+<option value="74">Wauconda Unit Dist. 118</option>
+<option value="75">West Aurora Unit Dist. 129</option>
+<option value="76">West Chicago Community HS Dist. 94</option>
+<option value="77">West Chicago Elem. Dist. 33</option>
+<option value="78">Wheaton Warrenville Unit Dist. 200</option>
+<option value="79">Wheeling Elem. Dist. 21</option>
+<option value="80">Winfield Elem. Dist. 34</option>
+<option value="81">Wood Dale Elem. Dist. 7</option>
+<option value="82">Woodland Elem. Dist. 50</option>
+</select>
+<input type="button" name="searchSUBMIT" id="searchSUBMIT"
+	onclick="console.log( $('#DISTRICTlist').val() );" 
+    value="Get District" >
+	</p>
+</div>  
+</div>
+
+<div class="row">
+<div class="small-12 large-centered columns" id="reserveSPACE">
+</div>
+<div class="small-12 large-centered columns hidden" id="charttext">
+</div>
+<div class="small-12 large-centered columns" id="LOWINCchart">
+</div>
+<div class="small-12 large-centered columns">
+<p>Source: Illinois Interactive Report Card, Daily Herald analysis</p>
+</div>
+</div>
+
+</body>
+</html>

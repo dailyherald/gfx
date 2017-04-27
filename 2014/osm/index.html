@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		DH third floor
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/highcharts.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div id="suburbs" class="small-12 small-centered large-8 large-centered columns">
+<h4>Walk through the third floor of the Daily Herald</h4>
+<div id="osm" class="high375"></div>
+<p class="source">Source: OSM data</p>
+</div>
+</div>
+
+	<script>
+
+
+var ggl = new L.Google('ROADMAP');
+
+    var map = L.map('osm');
+
+
+ $.getJSON("osmChange.geojson", function(data) {
+    var geojson = L.geoJson(data, {
+				
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<h4>' + feature.properties.Note + '</hr>'
+				);
+		}
+
+     });
+
+var myLines = [{
+	"type": "LineString", 
+	"coordinates": [[ -87.98067471945531, 42.0406950185444], [ -87.98037697238607, 42.04069532499854], [ -87.98011993951607, 42.04066747844395], [ -87.97998103727592, 42.04054456146872], [ -87.97997111568733, 42.04040436970357], [ -87.97997442288353, 42.04004339613585]]
+}];
+
+
+var myStyle = {
+ //   "color": "#ff7800",
+    "weight": 5,
+    "opacity": 0.65
+};
+
+L.geoJson(myLines, {
+    style: myStyle
+}).addTo(map);
+ 
+ 	map.setView(new L.LatLng(42.0399, -87.9799),17);
+	map.addLayer(ggl);
+	geojson.addTo(map);
+
+		});
+
+	</script>
+
+</body>
+
+
+

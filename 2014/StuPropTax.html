@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Property taxes per student
+	</title>
+
+<link rel="stylesheet" href="styles/normalize.css" type="text/css" media="screen" />
+<link href="styles/foundation.css" rel="stylesheet" type="text/css">
+<link href="styles/smoothness/jquery-ui-1.10.3.customRC.css" rel="stylesheet">
+<link rel="stylesheet" href="styles/styleSort.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="styles/newsArt.css" type="text/css" media="screen" />
+
+<script src="scripts/jquery-1.9.1.min.js"></script>
+<script src="scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+<script src="scripts/highcharts.js"></script>
+<script src="scripts/jquery.table.js"></script>
+
+
+</head>
+
+<body>
+<div class="row">
+<div class="small-12 small-centered large-9 large-centered columns">
+
+<h2>Property taxes per student</h2>
+<p>
+Suburban school districts rely heavily on property tax revenues to fund programming. Here’s how those tax dollars break down by student enrollment. To sort the list, simply click the heading for each column - once for ascending order, again for descending order.
+</p>
+<p>
+<table id="tableACT" class="tablesorter fullTable">
+
+<thead>
+
+<tr><th class="thLEFT">District</th><th class="thCENT" data-type="float">FY2014 property<br>taxes ($)</th><th data-type="float" class="thCENT">FY2014 enrollment</th><th class="thCENT" data-type="float">Property<br>taxes per<br>student ($)</th></tr>
+
+</thead><tbody>
+
+<tr class="group"><td class="tdLEFT">Addison Dist. 4</td><td class="tdCENT">28,672,624</td><td class="tdCENT">4,151</td><td class="tdCENT">6,907.40</td></tr>
+<tr class="group"><td class="tdLEFT">Antioch Dist. 34</td><td class="tdCENT">26,218,000</td><td class="tdCENT">2,899</td><td class="tdCENT">9,043.81</td></tr>
+<tr class="group"><td class="tdLEFT">Antioch H.S. Dist. 117</td><td class="tdCENT">39,413,517</td><td class="tdCENT">2,789</td><td class="tdCENT">14,131.77</td></tr>
+<tr class="group"><td class="tdLEFT">Aptakisic-Tripp Dist. 102</td><td class="tdCENT">28,898,700</td><td class="tdCENT">1,990</td><td class="tdCENT">14,521.96</td></tr>
+<tr class="group"><td class="tdLEFT">Arlington Heights Dist. 25</td><td class="tdCENT">60,391,583</td><td class="tdCENT">5,183</td><td class="tdCENT">11,651.86</td></tr>
+<tr class="group"><td class="tdLEFT">Barrington Unit Dist. 220</td><td class="tdCENT">122,359,577</td><td class="tdCENT">8,620</td><td class="tdCENT">14,194.85</td></tr>
+<tr class="group"><td class="tdLEFT">Batavia Unit Dist. 101</td><td class="tdCENT">67,856,173</td><td class="tdCENT">6,046</td><td class="tdCENT">11,223.32</td></tr>
+<tr class="group"><td class="tdLEFT">Benjamin Dist. 25</td><td class="tdCENT">10,444,653</td><td class="tdCENT">671</td><td class="tdCENT">15,565.80</td></tr>
+<tr class="group"><td class="tdLEFT">Bensenville Dist. 2</td><td class="tdCENT">25,208,042</td><td class="tdCENT">2,071</td><td class="tdCENT">12,171.92</td></tr>
+<tr class="group"><td class="tdLEFT">Big Hollow Dist. 38</td><td class="tdCENT">12,567,436</td><td class="tdCENT">1,736</td><td class="tdCENT">7,239.31</td></tr>
+<tr class="group"><td class="tdLEFT">Bloomingdale Dist. 13</td><td class="tdCENT">15,753,831</td><td class="tdCENT">1,201</td><td class="tdCENT">13,117.26</td></tr>
+<tr class="group"><td class="tdLEFT">Butler Dist. 53</td><td class="tdCENT">9,224,968</td><td class="tdCENT">458</td><td class="tdCENT">20,141.85</td></tr>
+<tr class="group"><td class="tdLEFT">Carol Stream Dist. 93</td><td class="tdCENT">51,333,510</td><td class="tdCENT">3,614</td><td class="tdCENT">14,204.07</td></tr>
+<tr class="group"><td class="tdLEFT">Cary Dist. 26</td><td class="tdCENT">23,594,782</td><td class="tdCENT">2,443</td><td class="tdCENT">9,658.12</td></tr>
+<tr class="group"><td class="tdLEFT">Central Unit Dist. 301</td><td class="tdCENT">41,584,141</td><td class="tdCENT">3,497</td><td class="tdCENT">11,891.38</td></tr>
+<tr class="group"><td class="tdLEFT">Community Unit Dist. 300</td><td class="tdCENT">170,527,828</td><td class="tdCENT">20,007</td><td class="tdCENT">8,523.41</td></tr>
+<tr class="group"><td class="tdLEFT">Crystal Lake Dist. 47</td><td class="tdCENT">69,176,866</td><td class="tdCENT">7,464</td><td class="tdCENT">9,268.07</td></tr>
+<tr class="group"><td class="tdLEFT">Crystal Lake H.S. Dist. 155</td><td class="tdCENT">71,479,600</td><td class="tdCENT">6,694</td><td class="tdCENT">10,678.16</td></tr>
+<tr class="group"><td class="tdLEFT">Des Plaines Dist. 62</td><td class="tdCENT">63,647,875</td><td class="tdCENT">4,603</td><td class="tdCENT">13,827.48</td></tr>
+<tr class="group"><td class="tdLEFT">Diamond Lake Dist. 76</td><td class="tdCENT">11,186,063</td><td class="tdCENT">990</td><td class="tdCENT">11,299.05</td></tr>
+<tr class="group"><td class="tdLEFT">DuPage H.S. Dist. 88</td><td class="tdCENT">60,575,459</td><td class="tdCENT">3,936</td><td class="tdCENT">15,390.11</td></tr>
+<tr class="group"><td class="tdLEFT">East Aurora Unit Dist. 131</td><td class="tdCENT">38,634,641</td><td class="tdCENT">13,722</td><td class="tdCENT">2,815.53</td></tr>
+<tr class="group"><td class="tdLEFT">East Maine Dist. 63</td><td class="tdCENT">35,452,884</td><td class="tdCENT">3,480</td><td class="tdCENT">10,187.61</td></tr>
+<tr class="group"><td class="tdLEFT">Elgin Area Dist. U-46</td><td class="tdCENT">294,205,833</td><td class="tdCENT">39,228</td><td class="tdCENT">7,499.89</td></tr>
+<tr class="group"><td class="tdLEFT">Elk Grove Twp. Dist. 59</td><td class="tdCENT">75,345,963</td><td class="tdCENT">6,756</td><td class="tdCENT">11,152.45</td></tr>
+<tr class="group"><td class="tdLEFT">Emmons Dist. 33</td><td class="tdCENT">4,132,500</td><td class="tdCENT">302</td><td class="tdCENT">13,683.77</td></tr>
+<tr class="group"><td class="tdLEFT">Fenton H.S. 100</td><td class="tdCENT">23,070,080</td><td class="tdCENT">1,460</td><td class="tdCENT">15,801.42</td></tr>
+<tr class="group"><td class="tdLEFT">Fox Lake Dist. 114</td><td class="tdCENT">7,776,688</td><td class="tdCENT">704</td><td class="tdCENT">11,046.43</td></tr>
+<tr class="group"><td class="tdLEFT">Fox River Grove Dist. 3</td><td class="tdCENT">5,636,479</td><td class="tdCENT">492</td><td class="tdCENT">11,456.26</td></tr>
+<tr class="group"><td class="tdLEFT">Fremont Dist. 79</td><td class="tdCENT">25,671,957</td><td class="tdCENT">2,149</td><td class="tdCENT">11,946.00</td></tr>
+<tr class="group"><td class="tdLEFT">Gavin Dist. 37</td><td class="tdCENT">7,166,900</td><td class="tdCENT">779</td><td class="tdCENT">9,200.13</td></tr>
+<tr class="group"><td class="tdLEFT">Geneva Unit Dist. 304</td><td class="tdCENT">78,466,342</td><td class="tdCENT">5,769</td><td class="tdCENT">13,601.38</td></tr>
+<tr class="group"><td class="tdLEFT">Glen Ellyn Dist. 41</td><td class="tdCENT">43,189,524</td><td class="tdCENT">3,456</td><td class="tdCENT">12,496.97</td></tr>
+<tr class="group"><td class="tdLEFT">Glen Ellyn Dist. 89</td><td class="tdCENT">24,397,489</td><td class="tdCENT">1,883</td><td class="tdCENT">12,956.71</td></tr>
+<tr class="group"><td class="tdLEFT">Glenbard H.S. Dist. 87</td><td class="tdCENT">116,089,600</td><td class="tdCENT">8,309</td><td class="tdCENT">13,971.55</td></tr>
+<tr class="group"><td class="tdLEFT">Grant H.S. Dist. 124</td><td class="tdCENT">24,995,266</td><td class="tdCENT">1,860</td><td class="tdCENT">13,438.32</td></tr>
+<tr class="group"><td class="tdLEFT">Grass Lake Dist. 36</td><td class="tdCENT">3,944,226</td><td class="tdCENT">154</td><td class="tdCENT">25,611.86</td></tr>
+<tr class="group"><td class="tdLEFT">Grayslake Dist. 46</td><td class="tdCENT">32,093,008</td><td class="tdCENT">3,879</td><td class="tdCENT">8,273.53</td></tr>
+<tr class="group"><td class="tdLEFT">Grayslake H.S. Dist. 127</td><td class="tdCENT">44,096,365</td><td class="tdCENT">2,959</td><td class="tdCENT">14,902.46</td></tr>
+<tr class="group"><td class="tdLEFT">Gurnee Dist. 56</td><td class="tdCENT">22,435,876</td><td class="tdCENT">2,082</td><td class="tdCENT">10,776.12</td></tr>
+<tr class="group"><td class="tdLEFT">Hawthorn Dist. 73</td><td class="tdCENT">45,602,730</td><td class="tdCENT">3,864</td><td class="tdCENT">11,801.95</td></tr>
+<tr class="group"><td class="tdLEFT">Huntley Unit Dist. 158</td><td class="tdCENT">62,607,411</td><td class="tdCENT">9,176</td><td class="tdCENT">6,822.95</td></tr>
+<tr class="group"><td class="tdLEFT">Indian Prairie Unit Dist. 204</td><td class="tdCENT">262,554,355</td><td class="tdCENT">27,997</td><td class="tdCENT">9,377.95</td></tr>
+<tr class="group"><td class="tdLEFT">Itasca Dist. 10</td><td class="tdCENT">10,792,146</td><td class="tdCENT">941</td><td class="tdCENT">11,468.81</td></tr>
+<tr class="group"><td class="tdLEFT">Kaneland Unit Dist. 302</td><td class="tdCENT">49,926,019</td><td class="tdCENT">4,558</td><td class="tdCENT">10,953.49</td></tr>
+<tr class="group"><td class="tdLEFT">Keeneyville Dist. 20</td><td class="tdCENT">14,072,836</td><td class="tdCENT">1,477</td><td class="tdCENT">9,527.99</td></tr>
+<tr class="group"><td class="tdLEFT">Kildeer Countryside Dist. 96</td><td class="tdCENT">22,785,000</td><td class="tdCENT">3,084</td><td class="tdCENT">7,388.13</td></tr>
+<tr class="group"><td class="tdLEFT">Lake Park H.S. Dist. 108</td><td class="tdCENT">44,866,459</td><td class="tdCENT">2,682</td><td class="tdCENT">16,728.73</td></tr>
+<tr class="group"><td class="tdLEFT">Lake Villa Dist. 41</td><td class="tdCENT">20,510,213</td><td class="tdCENT">2,822</td><td class="tdCENT">7,267.97</td></tr>
+<tr class="group"><td class="tdLEFT">Lake Zurich Unit Dist. 95</td><td class="tdCENT">75,237,931</td><td class="tdCENT">5,720</td><td class="tdCENT">13,153.48</td></tr>
+<tr class="group"><td class="tdLEFT">Leyden H.S. Dist. 212</td><td class="tdCENT">56,375,607</td><td class="tdCENT">3,347</td><td class="tdCENT">16,843.62</td></tr>
+<tr class="group"><td class="tdLEFT">Libertyville Dist. 70</td><td class="tdCENT">27,504,000</td><td class="tdCENT">2,455</td><td class="tdCENT">11,203.26</td></tr>
+<tr class="group"><td class="tdLEFT">Libertyville H.S. Dist. 128</td><td class="tdCENT">72,715,000</td><td class="tdCENT">3,272</td><td class="tdCENT">22,223.41</td></tr>
+<tr class="group"><td class="tdLEFT">Lincolnshire-Prairie View Dist. 103</td><td class="tdCENT">25,904,400</td><td class="tdCENT">1,643</td><td class="tdCENT">15,766.52</td></tr>
+<tr class="group"><td class="tdLEFT">Lisle Unit Dist. 202</td><td class="tdCENT">27,178,863</td><td class="tdCENT">1,451</td><td class="tdCENT">18,731.13</td></tr>
+<tr class="group"><td class="tdLEFT">Lombard Dist. 44</td><td class="tdCENT">42,625,627</td><td class="tdCENT">2,993</td><td class="tdCENT">14,241.77</td></tr>
+<tr class="group"><td class="tdLEFT">Maine Twp. H.S. Dist. 207</td><td class="tdCENT">108,403,350</td><td class="tdCENT">6,297</td><td class="tdCENT">17,215.08</td></tr>
+<tr class="group"><td class="tdLEFT">Marquardt Dist. 15</td><td class="tdCENT">29,460,000</td><td class="tdCENT">2,676</td><td class="tdCENT">11,008.97</td></tr>
+<tr class="group"><td class="tdLEFT">McHenry Dist. 15</td><td class="tdCENT">46,685,500</td><td class="tdCENT">4,578</td><td class="tdCENT">10,197.79</td></tr>
+<tr class="group"><td class="tdLEFT">McHenry H.S. Dist. 156</td><td class="tdCENT">25,629,500</td><td class="tdCENT">2,300</td><td class="tdCENT">11,143.26</td></tr>
+<tr class="group"><td class="tdLEFT">Medinah Dist. 11</td><td class="tdCENT">8,109,673</td><td class="tdCENT">656</td><td class="tdCENT">12,362.31</td></tr>
+<tr class="group"><td class="tdLEFT">Millburn Dist. 24</td><td class="tdCENT">11,336,399</td><td class="tdCENT">1,401</td><td class="tdCENT">8,091.65</td></tr>
+<tr class="group"><td class="tdLEFT">Mount Prospect Dist. 57</td><td class="tdCENT">19,108,726</td><td class="tdCENT">2,068</td><td class="tdCENT">9,240.20</td></tr>
+<tr class="group"><td class="tdLEFT">Mundelein Dist. 75</td><td class="tdCENT">15,070,035</td><td class="tdCENT">1,578</td><td class="tdCENT">9,550.09</td></tr>
+<tr class="group"><td class="tdLEFT">Mundelein H.S. Dist. 120</td><td class="tdCENT">30,725,592</td><td class="tdCENT">2,078</td><td class="tdCENT">14,786.14</td></tr>
+<tr class="group"><td class="tdLEFT">Naperville Unit Dist. 203</td><td class="tdCENT">212,932,213</td><td class="tdCENT">16,770</td><td class="tdCENT">12,697.21</td></tr>
+<tr class="group"><td class="tdLEFT">Northwest H.S. Dist. 214</td><td class="tdCENT">198,825,000</td><td class="tdCENT">11,836</td><td class="tdCENT">16,798.33</td></tr>
+<tr class="group"><td class="tdLEFT">Oak Grove Dist. 68</td><td class="tdCENT">13,871,000</td><td class="tdCENT">810</td><td class="tdCENT">17,124.69</td></tr>
+<tr class="group"><td class="tdLEFT">Palatine Dist. 15</td><td class="tdCENT">115,370,372</td><td class="tdCENT">12,249</td><td class="tdCENT">9,418.76</td></tr>
+<tr class="group"><td class="tdLEFT">Palatine-Schaumburg H.S. Dist. 211</td><td class="tdCENT">206,293,000</td><td class="tdCENT">12,058</td><td class="tdCENT">17,108.39</td></tr>
+<tr class="group"><td class="tdLEFT">Prospect Heights Dist. 23</td><td class="tdCENT">18,035,967</td><td class="tdCENT">1,467</td><td class="tdCENT">12,294.46</td></tr>
+<tr class="group"><td class="tdLEFT">Queen Bee Dist. 16</td><td class="tdCENT">19,016,000</td><td class="tdCENT">1,886</td><td class="tdCENT">10,082.71</td></tr>
+<tr class="group"><td class="tdLEFT">River Trails Dist. 26</td><td class="tdCENT">20,437,329</td><td class="tdCENT">1,322</td><td class="tdCENT">15,459.40</td></tr>
+<tr class="group"><td class="tdLEFT">Rondout Dist. 72</td><td class="tdCENT">4,496,321</td><td class="tdCENT">148</td><td class="tdCENT">30,380.55</td></tr>
+<tr class="group"><td class="tdLEFT">Roselle Dist. 12</td><td class="tdCENT">6,736,078</td><td class="tdCENT">721</td><td class="tdCENT">9,342.69</td></tr>
+<tr class="group"><td class="tdLEFT">Rosemont Dist. 78</td><td class="tdCENT">2,686,000</td><td class="tdCENT">255</td><td class="tdCENT">10,533.33</td></tr>
+<tr class="group"><td class="tdLEFT">Round Lake Unit Dist. 116</td><td class="tdCENT">33,152,774</td><td class="tdCENT">7,093</td><td class="tdCENT">4,674.01</td></tr>
+<tr class="group"><td class="tdLEFT">Salt Creek Dist. 48</td><td class="tdCENT">8,267,134</td><td class="tdCENT">493</td><td class="tdCENT">16,769.03</td></tr>
+<tr class="group"><td class="tdLEFT">Schaumburg Dist. 54</td><td class="tdCENT">158,666,341</td><td class="tdCENT">13,761</td><td class="tdCENT">11,530.15</td></tr>
+<tr class="group"><td class="tdLEFT">St. Charles Unit Dist. 303</td><td class="tdCENT">157,430,500</td><td class="tdCENT">13,059</td><td class="tdCENT">12,055.33</td></tr>
+<tr class="group"><td class="tdLEFT">Stevenson H.S. Dist. 125</td><td class="tdCENT">88,178,228</td><td class="tdCENT">3,761</td><td class="tdCENT">23,445.42</td></tr>
+<tr class="group"><td class="tdLEFT">Villa Park Dist. 45</td><td class="tdCENT">34,535,853</td><td class="tdCENT">3,306</td><td class="tdCENT">10,446.42</td></tr>
+<tr class="group"><td class="tdLEFT">Warren H.S. Dist. 121</td><td class="tdCENT">45,150,028</td><td class="tdCENT">4,262</td><td class="tdCENT">10,593.62</td></tr>
+<tr class="group"><td class="tdLEFT">Wauconda Unit Dist. 118</td><td class="tdCENT">45,706,025</td><td class="tdCENT">4,413</td><td class="tdCENT">10,357.13</td></tr>
+<tr class="group"><td class="tdLEFT">West Aurora Unit Dist. 129</td><td class="tdCENT">83,668,914</td><td class="tdCENT">12,436</td><td class="tdCENT">6,727.96</td></tr>
+<tr class="group"><td class="tdLEFT">West Chicago Com. H.S. Dist. 94</td><td class="tdCENT">24,595,224</td><td class="tdCENT">1,968</td><td class="tdCENT">12,497.57</td></tr>
+<tr class="group"><td class="tdLEFT">West Chicago Dist. 33</td><td class="tdCENT">33,254,427</td><td class="tdCENT">4,159</td><td class="tdCENT">7,995.77</td></tr>
+<tr class="group"><td class="tdLEFT">Wheaton Warrenville Unit Dist. 200</td><td class="tdCENT">138,100,000</td><td class="tdCENT">13,003</td><td class="tdCENT">10,620.63</td></tr>
+<tr class="group"><td class="tdLEFT">Wheeling Dist. 21</td><td class="tdCENT">85,575,933</td><td class="tdCENT">6,472</td><td class="tdCENT">13,222.49</td></tr>
+<tr class="group"><td class="tdLEFT">Winfield Dist. 34</td><td class="tdCENT">5,018,000</td><td class="tdCENT">288</td><td class="tdCENT">17,423.61</td></tr>
+<tr class="group"><td class="tdLEFT">Wood Dale Dist. 7</td><td class="tdCENT">11,612,400</td><td class="tdCENT">1,071</td><td class="tdCENT">10,842.58</td></tr>
+<tr class="group"><td class="tdLEFT">Woodland Dist. 50</td><td class="tdCENT">66,430,544</td><td class="tdCENT">6,184</td><td class="tdCENT">10,742.33</td></tr>
+<tr class="group"><td class="tdLEFT"><strong>MEDIAN</strong></td><td class="tdCENT"><strong>32,622,891</strong></td><td class="tdCENT"><strong>2,976</strong></td><td class="tdCENT"><strong>11,591.00</strong></td></tr>
+<tr class="group"><td class="tdLEFT"><strong>AVERAGE</strong></td><td class="tdCENT"><strong>53,377,672</strong></td><td class="tdCENT"><strong>4,857</strong></td><td class="tdCENT"><strong>12,432.07</strong></td></tr>
+
+</tbody></table>
+</p>
+
+<p class="source"><i>Note: Kildeer Countryside Elementary District 96 budget does not reflect anticipated taxes for May and June of current fiscal year.</i> Source: Illinois State Board of Education</p>
+</div>
+</div>
+<script>
+		table_sorter( '#tableACT', { groupClass: 'group' } ).hover();
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>
+		Property taxes by townships
+	</title>
+
+	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/foundation.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/newsArt.css" rel="stylesheet" type="text/css">
+	<link href="../../styles/smoothness/jquery-ui-1.10.3.customRC.css"  rel="stylesheet" type="text/css">
+	<link href="../../styles/leaflet.css" rel="stylesheet" type="text/css">
+
+	<script src="../../scripts/jquery-1.9.1.min.js"></script>
+	<script src="../../scripts/jquery-ui-1.10.3.customRC.min.js"></script>
+	<script src="../../scripts/jquery.ui.touch-punch.min.js"></script>
+	<script src="../../scripts/highcharts.js"></script>
+	<script src="../../scripts/leaflet.js"></script>
+	<script src="../../scripts/SliderControl.js"></script>
+	<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+	<script src="../../scripts/Google.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="row">
+<div class="small-12 large-1 columns"></div>
+	<div class="small-12 large-10 columns">
+
+		<div class="row">
+			<div class="small-12 large-6 columns">
+				<h4>Taxed townships</h4>
+				<p>Click each township* to view its change in property taxes from 2009-2012.</p>
+			</div>
+			<div class="small-12 large-5 columns">
+				<p>
+                  <style type="text/css">
+					div.bar {
+						display: inline-block;
+						width: 12px;
+						height: 12px;
+						border: 1px solid;
+						}
+					.darkRed {
+						background-color: #B30000;
+						}
+					.lightRed {
+						background-color: #E34A33;
+						}
+					.darkBlue {
+						background-color: #4E10AE;
+						}
+					.lightBlue {
+						background-color: #7D44D6;
+						}
+				</style>
+                <strong>Percent change, 2009-2012</strong><br>
+                <div class="bar darkRed"></div> More than 10% increase<br>
+				<div class="bar lightRed"></div> 0-10% increase<br>
+				<div class="bar lightBlue"></div> 0-10% decrease<br>
+				<div class="bar darkBlue"></div> More than 10% decrease<br>
+                </p>
+			</div>
+		</div>
+
+		<div id="twpWatch" class="high375"></div>
+		<div><p class="source">* For townships in the Daily Herald circulation area. | Source: Daily Herald analysis of county clerk tax extension data</p></div>
+        
+	</div>
+<div class="small-12 large-1 columns"></div>
+</div>
+
+
+<script>
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}
+//	{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},
+//	{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},
+//	{"featureType":"landscape","stylers":[{"hue":"#B7C7A6"},{"lightness":-5}]},
+//	{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c1b5a5"}]},
+//	{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+//	{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},
+//	{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":40}]},
+//	{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},
+//	{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},
+//	{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},
+//	{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},
+//	{"featureType":"road","stylers":[{"lightness":20}]}
+	];
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+var map = L.map('twpWatch');
+
+$.getJSON("twpwatch.geojson", function(data) {
+    var geojson = L.geoJson(data, {
+
+	 	style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.totalChgNu),
+				weight: 1,
+				opacity: 1,
+				color: '#b5b5b5',
+				dashArray: '',
+				fillOpacity: 0.7
+			};
+    	},
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<strong>' + feature.properties.twpNAME + ' Township property taxes</strong><br><br><table class="mapTable"><tr><td class="tdLEFT">Total taxes, 2009</td><td>' + feature.properties.total2009 + '</td></tr><tr><td class="tdLEFT">Total taxes, 2012</td><td>' + feature.properties.total2012 + '</td></tr><tr><td class="tdLEFT">% change</td><td>' + feature.properties.totalChg + '</td></tr></table>'
+			);
+		}
+
+//		onEachFeature: onEachFeature
+
+  });
+
+  		// get color depending on value
+		function getColor(d) {
+			return d > 10 ?		'#B30000' :
+			       d > 0.01 ?	'#E34A33' :
+			       d > -10 ?	'#7D44D6' :
+			       d > -30 ?	'#4E10AE' :
+			       			 	'#FFEDA0' ;
+    	};
+  
+
+ 
+ 	map.setView(new L.LatLng(42.08, -88),9);
+	map.addLayer(ggl);
+	geojson.addTo(map);
+
+	var legend = L.control({position: 'topright'});
+
+		legend.onAdd = function (map) {
+
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				labels = [];
+
+				labels.push(
+					'<p><strong>Percent change, 2009-2012</strong><br><i style="background:#B30000"></i> More than 10% increase<br><i style="background:#E34A33"></i> 0-10% increase<br><i style="background:#7D44D6"></i> 0-10% decrease<br><i style="background:#4E10AE"></i> More than 10% decrease</p>');
+
+			div.innerHTML = labels;
+			return div;
+		};
+
+//	legend.addTo(map);
+
+});
+
+</script>
+
+</body>
+
+
+
