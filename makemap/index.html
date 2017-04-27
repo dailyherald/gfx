@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Locator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="static/css/normalize-css.css">
+    <link rel="stylesheet" href="static/css/leaflet.css">
+    <link rel="stylesheet" href="static/css/Control.MiniMap.min.css">
+    <link rel="stylesheet" href="static/css/leaflet.draw.css">
+    <link rel="stylesheet" href="static/css/locator.css">
+  </head>
+  <body>
+
+    
+    <div class="locator-container"></div>
+
+    <!--<script src='http://cdn.ractivejs.org/latest/ractive.js'></script>-->
+    <script src="static/js/ractive-min.js"></script>
+    <script src="static/js/ractive-events-tap.umd.js"></script>
+    <script src="static/js/ractive-transitions-slide.js"></script>
+    <script src="static/js/underscore.js"></script>
+    <script src="static/js/leaflet.js"></script>
+    <script src="static/js/Control.MiniMap.min.js"></script>
+    <script src="static/js/leaflet.draw.js"></script>
+
+    <script src="static/js/locator.js"></script>
+
+    <script type="text/javascript">
+      // Create locator
+      var l = new window.Locator({
+        el: ".locator-container"
+      });
+    </script>
+
+  </body>
+</html>
