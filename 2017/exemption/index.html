@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Homeowner exemptions
+  </title>
+
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+  <!-- mapping -->
+ 
+  <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+
+<!-- mapping -->
+  <link rel="stylesheet" href="../static/css/leaflet.css" type="text/css">
+  <script src="../static/js/leaflet.js"></script>
+
+  <!-- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+
+  <!-- This is the google api needed for development. Comment this out for production -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+
+
+  <!-- This is my API key, for personal use. Need to comment this out for development, but initiate it for production  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjc-UIpOjUgh456Dj9HMqXQG13cJ7EF7o"></script>
+-->
+  <script src="../static/js/Google.js"></script>
+
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--- begin map -->
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="row">
+    			<div class="col-md-7 col-sm-12">
+    				<h3><strong>Who's getting tax breaks?</strong></h3>
+    				<p>Homestead exemptions, granted for homes occupied by their owners, make up as much as 95 percent of eligible property in some townships but as little as 70 percent in others. That's because some townships have more renters and some have assessors who are better at finding improper exemptions. 
+    				<br><strong>The map below is interactive.</strong> Click or touch a township to see the number of homes with a homestead exemption and the percent of homes in the township with the exemption, for the year 2015.</p>
+    			</div>
+    			<div class="col-md-5 col-sm-12">
+    				<style type="text/css">
+						div.bar {
+							display: inline-block;
+							width: 12px;
+							height: 12px;
+							border: 1px solid;
+							opacity: 0.8;
+							}
+						.cont2 {
+							background-color: #ffffcc;
+							}
+						.cont3 {
+							background-color: #a1dab4;
+							}
+						.cont4 {
+							background-color: #41b6c4;
+							}
+						.cont5 {
+							background-color: #225ea8;
+							}
+					</style>
+				
+					<strong>Percent returned</strong><br>
+					<div class="bar cont5"></div> 89.5% to 95.1%<br>
+					<div class="bar cont4"></div> 84.8% to 89.5%<br>
+					<div class="bar cont3"></div> 77.1% to 84.8%<br>
+					<div class="bar cont2"></div> 70.0% to 77.1%<br>
+	 			</div>
+			</div>
+			<div id="pageMap" class="high375"></div>
+			<br>
+			<p><small>Source: County assessment offices</small></p>
+			<p><span style="color:white;">-30-</span></p>
+		</div>
+	</div>
+</div>
+
+
+<script>
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+	];
+
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+var map = L.map('pageMap');
+
+var geojson;
+
+	
+$.getJSON("exemptions.geojson", function(data) {
+    geojson = L.geoJson(data, {
+
+	 	style: function (feature) {
+			return {
+				fillColor: getColor(feature.properties.rate),
+				weight: 1,
+				opacity: 1,
+				color: 'white',
+				dashArray: '',
+				fillOpacity: 0.6
+			};
+    	},
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<strong>' + feature.properties.Township + ' Township</strong><br><table class="mapTable table table-striped table-condensed"><tr><td class="tdLEFT">2015 residential parcels:</td><td>' + feature.properties.parcels + '</td></tr><tr><td class="tdLEFT">Numer with<br>homestead exemptions:</td><td class="tdRIGHT">' + feature.properties.exemptions + '</td></tr><tr><td class="tdLEFT">% with<br>exemption:</td><td>' + feature.properties.rate + '%</td></tr></table>'
+			);
+		}
+	});
+
+	// get color depending on population percFOID value
+	function getColor(d) {
+		return d > 89.475 ?	'#225ea8' :
+		       d > 84.75 ?	'#41b6c4' :
+		       d > 77.075 ?	'#a1dab4' :
+		       d > 69 ?	'#ffffcc' :
+		       			 	'#FFFFFF' ;
+	};
+
+ 	map.setView(new L.LatLng(42.1, -88.3),9);
+	map.addLayer(ggl);
+	geojson.addTo(map);
+
+});
+
+</script>
+
+</body>
+
+
+
