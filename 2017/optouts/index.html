@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Cook County minimum wage/family leave ordinance
+  </title>
+
+
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+  <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../static/css/bootstrap-theme.min.css" type="text/css" media="screen" />
+
+  <!-- mapping -->
+ 
+  <script type="text/javascript" src="../static/js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+
+<!-- mapping -->
+  <link rel="stylesheet" href="../static/css/leaflet.css" type="text/css">
+  <script src="../static/js/leaflet.js"></script>
+
+  <!-- <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>-->
+
+  <!-- This is the google api needed for development. Comment this out for production -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> 
+
+
+  <!-- This is my API key, for personal use. Need to comment this out for development, but initiate it for production  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjc-UIpOjUgh456Dj9HMqXQG13cJ7EF7o"></script>-->
+  
+  <script src="../static/js/Google.js"></script>
+
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css" media="screen" >
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!--- begin map -->
+    <div class="row">
+    	<div class="col-md-12">
+    		<div class="row">
+    			<div class="col-md-7 col-sm-12">
+    				<h3><strong>Who's in, who's out?</strong></h3>
+    				<p>Here are the positions of suburban Cook County towns on two county ordinances that would raise the minimum wage and mandate businesses pay employees for sick days. <i>As of June 23.</i> 
+    				<br><strong>The map below is interactive.</strong> Click or touch a municipality to see their positions on the ordinances.</p>
+    			</div>
+    			<div class="col-md-5 col-sm-12">
+    				<style type="text/css">
+						div.bar {
+							display: inline-block;
+							width: 12px;
+							height: 12px;
+							border: 1px solid;
+							opacity: 0.8;
+							}
+						.cont2 {
+							background-color: #ffffcc;
+							}
+						.cont3 {
+							background-color: #a1dab4;
+							}
+						.cont4 {
+							background-color: #41b6c4;
+							}
+						.cont5 {
+							background-color: #225ea8;
+							}
+					</style>
+				
+					<strong>Decision</strong><br>
+					<div class="bar cont3"></div> <strong>Yes</strong>, opted out or plan to<br>
+					<div class="bar cont4"></div> <strong>No</strong>, have not opted out or do not plan to<br>
+					<div class="bar cont2"></div> <strong>TBD</strong>, no decision made or no response<br>
+					<div class="bar cont5"></div> <strong>Mixed</strong> decisions<br>
+	 			</div>
+			</div>
+			<div id="pageMap" class="high375"></div>
+			<br>
+			<p><small>Note: For communities with only a portion in Cook County, their decision only applies to that portion.
+				<br>Sources: Daily Herald reporting, offices of Cook County Board President Toni Preckwinkle and Commissioner Sean Morrison</small></p>
+			<p><span style="color:white;">-30-</span></p>
+		</div>
+	</div>
+</div>
+
+
+<script>
+
+
+var GGLstyles = [
+	{"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+	];
+
+
+var ggl = new L.Google('ROADMAP', {
+	mapOptions: {
+		styles: GGLstyles
+	}
+});
+
+
+var map = L.map('pageMap');
+
+var geojson;
+
+
+
+	
+		$.getJSON("optouts.geojson", function(data) {
+		    geojson = L.geoJson(data, {
+
+			 	style: function (feature) {
+					return {
+						fillColor: getColor(feature.properties.optcolor),
+						weight: 1,
+						opacity: 1,
+						color: 'white',
+						dashArray: '',
+						fillOpacity: 0.6
+					};
+		    	},
+
+//----------
+
+    	onEachFeature: function (feature, layer) {
+			layer.bindPopup(
+				'<strong>' + feature.properties.muni + '</strong><br><table class="mapTable table table-striped table-condensed"><tr><td class="tdLEFT">Minimum wage:</td><td>' + feature.properties.wage + '</td></tr><tr><td class="tdLEFT">Sick days:</td><td class="tdRIGHT">' + feature.properties.leave + '</td></tr></table>'
+			);
+		}
+	});
+
+	// get color depending on population percFOID value
+	function getColor(d) {
+		return d == 'mix' ?	'#225ea8' :
+		       d == 'No' ?	'#41b6c4' :
+		       d == 'Yes' ?	'#a1dab4' :
+		       d == 'TBD' ?	'#ffffcc' :
+		       			 	'#FFFFFF' ;
+	};
+
+//----------
+
+
+	 	map.setView(new L.LatLng(41.8, -88),9);
+		map.addLayer(ggl);
+		geojson.addTo(map);
+
+});
+
+</script>
+
+</body>
+
+
+
