@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Rolling Meadows H.S. - H.S. football participation
+  </title>
+
+    <link rel="stylesheet" href="../static/normalize.css" />
+
+    <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+     <script type="text/javascript" src="../static/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="../static/highcharts.js"></script>
+ 
+    <!--Begin Datatables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.7/dt-1.10.13/fc-3.2.2/fh-3.1.2/r-2.1.0/datatables.min.js"></script>
+    <!--end Datatables-->
+
+    <link rel="stylesheet" href="../static/newsArt.css" />
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-default navbar-static-top" style="margin : 0 !important;">
+    <div class="container-fluid">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <img alt="Brand" src="../static/img/dh.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="http://www.dailyherald.com" target="_blank">Daily Herald</a></li>
+                <li><a href="http://reportcards.dailyherald.com/gfx/" target="_blank">Daily Herald News Art</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" >
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+
+
+      <!-- use this line for use with local server
+      <p><strong><span style="color:red">FRIDAY NIGHT FLIGHT </span></strong>| <a href="../">RETURN TO MAIN PAGE</a></p>
+      <br>-->
+
+      <!-- use this line for use when freezing the app -->
+      <p><span style="color:red"><strong>FRIDAY NIGHT FLIGHT </strong></span>| <a href="../index.html">RETURN TO MAIN PAGE</a></p>
+      <img src="../static/img/flight.jpg" class="img-responsive center-block"><br>
+      <br>
+
+
+      <h1>Rolling Meadows H.S.,<small> Northwest HS Dist. 214</small></h1>
+      <br>
+      <h3>Participation in the Rolling Meadows H.S. football program changed <strong> -25.8% </strong>since 2008.<br>
+        <small>Estimated enrollment changed 3.7% from 2008 to 2016</small>
+      </h3>
+      <br>
+      <div id="chartDiv"></div>
+      
+        <br>
+        
+    </div>
+  </div>
+</div>
+
+
+<div id="creditBox">
+  <div class="row">
+    <div class="col-md-10 center-block center-blockfloat">
+      <p><small>Daily Herald web app by Tim Broderick <a href="mailto:tbroderick@dailyherald.com">tbroderick@dailyherald.com</a>. Source: School districts; Daily Herald and Chicago Sun-Times analysis<br>
+        All files and data are available at our <a href="https://github.com/dailyherald/" target="_blank">github site</a>. App based on <a href="https://first-news-app.readthedocs.io/en/latest/" target="_blank">First News App</a> by <a href="http://palewi.re/who-is-ben-welsh/" target="_blank">Ben Welsh</a>. 
+      </small></p>
+    </div>
+  </div>
+</div>
+<div id="underfoot"></div>
+
+<script>
+  var chartRate = new Highcharts.Chart({
+        chart: {
+      renderTo: 'chartDiv',
+      backgroundColor: '#fafafa',
+      height: 325,
+      spacingBottom: 15,
+      spacingTop: 10,
+      spacingLeft: 10,
+      spacingRight: 10,
+            type: 'line'
+        },
+        title: {
+            text: null,
+        },
+        xAxis: {
+            categories: ['2008', '2009', '2010', '2011', '2012','2013', '2014', '2015', '2016', '2017'],
+              labels: {
+                staggerLines: 2
+            }
+        },
+        yAxis: {
+      tickInterval: 50,
+      minorTickInterval: 'auto',
+      min: 0,
+      //max: 6,
+            title: {
+                text: 'FOOTBALL PARTICIPATION'
+            }
+        },
+        series: [{  
+            name: 'Rolling Meadows H.S.',
+            data: $.map(["151", "158", "142", "108", "139", "127", "134", "143", "142", "112"], function (valueTown) {
+        return isNaN(valueTown) ? { y: null } : parseFloat(valueTown);
+            })
+        }],
+        tooltip: {
+          crosshairs: true,
+          shared: true
+        },
+    });
+</script>
+
+</body>
+</html>

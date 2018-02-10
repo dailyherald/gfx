@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width" />
 
 	<title>
-		Snowfall for the 2013-2014 season
+		2013-2014 winter season
 	</title>
 
 	<link href="../../styles/normalize.css" rel="stylesheet" type="text/css">
@@ -25,38 +25,43 @@
 
 <body>
 
+
+<div>
+
 <div class="row">
-	<div class="small-12 large-1 columns"></div>
-	<div id="head"class="small-12 large-10 columns">
+	<div id="head"class="small-12 small-centered large-12 large-centered columns">
 		<h2>The Winter of 2013-2014</h2>
 	</div>
-	<div class="small-12 large-1 columns"></div>
 </div>
 
 <div class="row">
-	<div class="small-12 large-1 columns"></div>
-	<div class="small-12 large-6 columns">
-		<p><strong>Inches of snow,</strong> by month, for the winter of 2013-'14. January2014 was the third snowiest January on record.</p>
+	<div class="small-12 large-7 columns">
+		<p><strong>Inches of snow,</strong> by month. January 2014 was the third snowiest January on record.</p>
 		<div id="snow"></div>
 	</div>
-	<div class="small-12 large-4 columns">
-		<p><strong>Top five winter snowfalls. </strong> There has been 79.3 inches of snow recorded at Chicago-O'Hare, making this season the second snowiest on record.</p>
+	<div class="small-12 large-5 columns">
+		<p><strong>Top five snow seasons. </strong> There has been 79.3 inches of snow recorded at Chicago-O'Hare, making this season the third-snowiest on record.</p>
 		<div id="yearsnow"></div>
 	</div>
-	<div class="small-12 large-1 columns"></div>
 </div>
-
 
 <div class="row">
-	<div class="small-12 large-1 columns"></div>
-	<div class="small-12 large-10 columns">
-		<p><strong>Daily temperatures </strong> since December 1.</p>
+	<div class="small-12 small-centered large-12 large-centered columns">
+		<p><strong>Daily temperatures </strong> since December 1. The lowest temperature was -16 on Jan. 6.</p>
 		<div id="temps"></div>
-		<p class="source">*Through Sunday, March. 16. Normal value is for the entire month.<br>
+		<p class="source">*Through Tuesday, March. 18. Normal value is for the entire month.<br>
 		Source: National Weather Service monthly climate records for Chicago-O'Hare</p>
 	</div>
-	<div class="small-12 large-1 columns"></div>
 </div>
+
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">---</span></p>
+<p><span style="color:white;">-30-</span></p>
+
+</div>
+
 
 	<script>
 // snowfall chart
@@ -139,7 +144,7 @@ var snowfallyear = new Highcharts.Chart({
 		title: {
 			text: 'WINTER SEASONS'
             },
-		categories: ['1966-1967','1917-1918','1977-1978','2013-2014','1978-1979'],
+		categories: ['1966-1967','1969-1970','2013-2014','1977-1978','1978-1979'],
 	},
 
 	labels: {
@@ -170,7 +175,7 @@ var snowfallyear = new Highcharts.Chart({
 
 	series: [{
 		name: 'Inches of snow',
-		data: [58.1,59.9,71.2,79.3,80.6]
+		data: [68.4,77.0,79.3,82.3,89.7]
 	}],
 
 	tooltip: {
@@ -289,7 +294,9 @@ var ranges = [
 [1394668800000, 39, 11],
 [1394755200000, 53, 37],
 [1394841600000, 40, 27],
-[1394928000000, 27, 19]
+[1394928000000, 27, 19],
+[1395014400000, 40, 20],
+[1395100800000, 52, 27]
 			];
 
 var averages1 = [
@@ -398,7 +405,9 @@ var averages1 = [
 [1394668800000, 25],
 [1394755200000, 45],
 [1394841600000, 34],
-[1394928000000, 23]
+[1394928000000, 23],
+[1395014400000, 30],
+[1395100800000, 40]
 			];
 
 var averages2 = [
@@ -507,7 +516,9 @@ var averages2 = [
 [1394668800000, 37],
 [1394755200000, 37],
 [1394841600000, 38],
-[1394928000000, 38]
+[1394928000000, 38],
+[1395014400000, 38],
+[1395100800000, 39]
 			];
 
 var temperatures = new Highcharts.Chart({
