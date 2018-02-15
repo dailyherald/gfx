@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>
+    Shootings and schools in 2018
+  </title>
+
+<!-- STYLES -->
+
+  <!-- responsive style sheets -->
+  <link rel="stylesheet" href="../static/css/normalize.css" type="text/css">
+      <!-- BOOTSTRAP Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Local styles -->
+  <link rel="stylesheet" href="../static/css/newsArt.css" type="text/css">
+
+  <!-- mapping -->
+  <link rel="stylesheet" href="../static/css/leaflet.css" type="text/css">
+
+<!-- SCRIPTS -->
+  <!-- jquery is what a lot of the web is based on -->
+  <script src="../static/js/jquery-1.11.3.min.js"></script>
+  <!-- responsive js. needs jquery loaded first -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- mapping -->
+<script src="../static/js/leaflet.js"></script>
+
+
+  <!-- This is the google api needed for development. Comment this out for production
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>  -->
+
+
+  <!-- This is my API key, for personal use. Need to comment this out for development, but initiate it for production   -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjc-UIpOjUgh456Dj9HMqXQG13cJ7EF7o"></script>
+
+<script src="../static/js/Google.js"></script>
+
+<script>
+var $ = jQuery;
+</script>
+
+  </head>
+
+  <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+            <h3><strong>Shootings and schools, 2018</strong></h3>
+            <p>With the latest shooting in Florida, Everytown for Gun Safety has counted 18 incidents at schools involving guns.</p>
+        <div id="pageMap" class="high375"></div>
+        <p><small>Source: Everytown for Gun Safety, news reports.</small></p>
+        <p><span style="color:white;">-30-</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+var GGLstyles = [
+  {"featureType":"all","stylers":[{"saturation":-85},{"gamma":1}]}
+  ];
+
+
+var ggl = new L.Google('ROADMAP', {
+  mapOptions: {
+    styles: GGLstyles
+  }
+});
+
+
+var map = L.map('pageMap');
+
+
+$.getJSON("shootings.geojson", function(data) {
+
+  var geojson = L.geoJson(data, {
+
+
+      onEachFeature: function (feature, layer) {
+      layer.bindPopup(
+        '<h5><strong>' + feature.properties.date + '</strong></h5><table class="mapTable table table-hover table-striped table-condensed"><tbody><tr><td class="tdLEFT"><strong>City:</strong> ' + feature.properties.City + '</td></tr><tr><td class="tdLEFT"><strong>Place:</strong> ' + feature.properties.Place + '</td></tr><tr><td class="tdLEFT"><strong>What happened:</strong> ' + feature.properties.Details + '</td></tr></table>',
+      {maxWidth: 210} );
+    }
+
+  });
+
+map.setView(new L.LatLng(38.3, -95.6),4);
+map.addLayer(ggl);
+geojson.addTo(map);
+
+});
+
+
+  </script>
+  </body>
+</html>
